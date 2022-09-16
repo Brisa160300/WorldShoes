@@ -49,7 +49,6 @@ Partial Class AñadirCliente
         Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.BVolver = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -87,7 +86,7 @@ Partial Class AñadirCliente
         Me.TBCorreoCliente.Location = New System.Drawing.Point(384, 130)
         Me.TBCorreoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBCorreoCliente.Name = "TBCorreoCliente"
-        Me.TBCorreoCliente.Size = New System.Drawing.Size(172, 23)
+        Me.TBCorreoCliente.Size = New System.Drawing.Size(172, 27)
         Me.TBCorreoCliente.TabIndex = 15
         '
         'LCorreoCliente
@@ -98,7 +97,7 @@ Partial Class AñadirCliente
         Me.LCorreoCliente.Location = New System.Drawing.Point(325, 134)
         Me.LCorreoCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LCorreoCliente.Name = "LCorreoCliente"
-        Me.LCorreoCliente.Size = New System.Drawing.Size(54, 16)
+        Me.LCorreoCliente.Size = New System.Drawing.Size(74, 22)
         Me.LCorreoCliente.TabIndex = 14
         Me.LCorreoCliente.Text = "E-mail:"
         '
@@ -132,7 +131,7 @@ Partial Class AñadirCliente
         Me.DateTimeCliente.Location = New System.Drawing.Point(494, 84)
         Me.DateTimeCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimeCliente.Name = "DateTimeCliente"
-        Me.DateTimeCliente.Size = New System.Drawing.Size(109, 23)
+        Me.DateTimeCliente.Size = New System.Drawing.Size(109, 27)
         Me.DateTimeCliente.TabIndex = 11
         '
         'TBTelCliente
@@ -140,7 +139,7 @@ Partial Class AñadirCliente
         Me.TBTelCliente.Location = New System.Drawing.Point(133, 130)
         Me.TBTelCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBTelCliente.Name = "TBTelCliente"
-        Me.TBTelCliente.Size = New System.Drawing.Size(132, 23)
+        Me.TBTelCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBTelCliente.TabIndex = 10
         '
         'TBLocalidadCliente
@@ -148,7 +147,7 @@ Partial Class AñadirCliente
         Me.TBLocalidadCliente.Location = New System.Drawing.Point(133, 178)
         Me.TBLocalidadCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBLocalidadCliente.Name = "TBLocalidadCliente"
-        Me.TBLocalidadCliente.Size = New System.Drawing.Size(132, 23)
+        Me.TBLocalidadCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBLocalidadCliente.TabIndex = 9
         '
         'TBApellidoCliente
@@ -156,7 +155,7 @@ Partial Class AñadirCliente
         Me.TBApellidoCliente.Location = New System.Drawing.Point(425, 34)
         Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBApellidoCliente.Name = "TBApellidoCliente"
-        Me.TBApellidoCliente.Size = New System.Drawing.Size(178, 23)
+        Me.TBApellidoCliente.Size = New System.Drawing.Size(178, 27)
         Me.TBApellidoCliente.TabIndex = 8
         '
         'TBDniCliente
@@ -164,7 +163,7 @@ Partial Class AñadirCliente
         Me.TBDniCliente.Location = New System.Drawing.Point(133, 84)
         Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBDniCliente.Name = "TBDniCliente"
-        Me.TBDniCliente.Size = New System.Drawing.Size(132, 23)
+        Me.TBDniCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBDniCliente.TabIndex = 7
         '
         'TBNombreCliente
@@ -172,7 +171,7 @@ Partial Class AñadirCliente
         Me.TBNombreCliente.Location = New System.Drawing.Point(133, 34)
         Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBNombreCliente.Name = "TBNombreCliente"
-        Me.TBNombreCliente.Size = New System.Drawing.Size(168, 23)
+        Me.TBNombreCliente.Size = New System.Drawing.Size(168, 27)
         Me.TBNombreCliente.TabIndex = 6
         '
         'LDateBdayCliente
@@ -183,7 +182,7 @@ Partial Class AñadirCliente
         Me.LDateBdayCliente.Location = New System.Drawing.Point(325, 87)
         Me.LDateBdayCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LDateBdayCliente.Name = "LDateBdayCliente"
-        Me.LDateBdayCliente.Size = New System.Drawing.Size(151, 16)
+        Me.LDateBdayCliente.Size = New System.Drawing.Size(196, 22)
         Me.LDateBdayCliente.TabIndex = 5
         Me.LDateBdayCliente.Text = "Fecha de nacimiento:"
         '
@@ -195,7 +194,7 @@ Partial Class AñadirCliente
         Me.LApellidoCliente.Location = New System.Drawing.Point(325, 38)
         Me.LApellidoCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LApellidoCliente.Name = "LApellidoCliente"
-        Me.LApellidoCliente.Size = New System.Drawing.Size(64, 16)
+        Me.LApellidoCliente.Size = New System.Drawing.Size(87, 22)
         Me.LApellidoCliente.TabIndex = 4
         Me.LApellidoCliente.Text = "Apellido:"
         '
@@ -207,7 +206,7 @@ Partial Class AñadirCliente
         Me.LTelCliente.Location = New System.Drawing.Point(36, 134)
         Me.LTelCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LTelCliente.Name = "LTelCliente"
-        Me.LTelCliente.Size = New System.Drawing.Size(71, 16)
+        Me.LTelCliente.Size = New System.Drawing.Size(90, 22)
         Me.LTelCliente.TabIndex = 3
         Me.LTelCliente.Text = "Telefono:"
         '
@@ -219,7 +218,7 @@ Partial Class AñadirCliente
         Me.LLocalidadCliente.Location = New System.Drawing.Point(36, 181)
         Me.LLocalidadCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LLocalidadCliente.Name = "LLocalidadCliente"
-        Me.LLocalidadCliente.Size = New System.Drawing.Size(75, 16)
+        Me.LLocalidadCliente.Size = New System.Drawing.Size(98, 22)
         Me.LLocalidadCliente.TabIndex = 2
         Me.LLocalidadCliente.Text = "Localidad:"
         '
@@ -231,7 +230,7 @@ Partial Class AñadirCliente
         Me.Label3.Location = New System.Drawing.Point(36, 87)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 16)
+        Me.Label3.Size = New System.Drawing.Size(52, 22)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "DNI:"
         '
@@ -243,7 +242,7 @@ Partial Class AñadirCliente
         Me.LNombreCliente.Location = New System.Drawing.Point(36, 38)
         Me.LNombreCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LNombreCliente.Name = "LNombreCliente"
-        Me.LNombreCliente.Size = New System.Drawing.Size(63, 16)
+        Me.LNombreCliente.Size = New System.Drawing.Size(86, 22)
         Me.LNombreCliente.TabIndex = 0
         Me.LNombreCliente.Text = "Nombre:"
         '
@@ -256,7 +255,7 @@ Partial Class AñadirCliente
         Me.LRegistroCliente.Location = New System.Drawing.Point(51, 39)
         Me.LRegistroCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LRegistroCliente.Name = "LRegistroCliente"
-        Me.LRegistroCliente.Size = New System.Drawing.Size(171, 22)
+        Me.LRegistroCliente.Size = New System.Drawing.Size(218, 28)
         Me.LRegistroCliente.TabIndex = 1
         Me.LRegistroCliente.Text = "Registrar Cliente:"
         '
@@ -268,43 +267,58 @@ Partial Class AñadirCliente
         Me.DataGridViewRegistroCliente.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewRegistroCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroCliente.Name = "DataGridViewRegistroCliente"
+        Me.DataGridViewRegistroCliente.RowHeadersWidth = 51
         Me.DataGridViewRegistroCliente.Size = New System.Drawing.Size(805, 144)
         Me.DataGridViewRegistroCliente.TabIndex = 2
         '
         'Colum_Nombre
         '
         Me.Colum_Nombre.HeaderText = "Nombre"
+        Me.Colum_Nombre.MinimumWidth = 6
         Me.Colum_Nombre.Name = "Colum_Nombre"
+        Me.Colum_Nombre.Width = 125
         '
         'Colum_Apellido
         '
         Me.Colum_Apellido.HeaderText = "Apellido"
+        Me.Colum_Apellido.MinimumWidth = 6
         Me.Colum_Apellido.Name = "Colum_Apellido"
+        Me.Colum_Apellido.Width = 125
         '
         'Colum_DNI
         '
         Me.Colum_DNI.HeaderText = "DNI"
+        Me.Colum_DNI.MinimumWidth = 6
         Me.Colum_DNI.Name = "Colum_DNI"
+        Me.Colum_DNI.Width = 125
         '
         'Colum_FechaNaci
         '
         Me.Colum_FechaNaci.HeaderText = "Fecha de Nacimiento"
+        Me.Colum_FechaNaci.MinimumWidth = 6
         Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
+        Me.Colum_FechaNaci.Width = 125
         '
         'Colum_Telefono
         '
         Me.Colum_Telefono.HeaderText = "Telefono"
+        Me.Colum_Telefono.MinimumWidth = 6
         Me.Colum_Telefono.Name = "Colum_Telefono"
+        Me.Colum_Telefono.Width = 125
         '
         'Colum_email
         '
         Me.Colum_email.HeaderText = "E-mail"
+        Me.Colum_email.MinimumWidth = 6
         Me.Colum_email.Name = "Colum_email"
+        Me.Colum_email.Width = 125
         '
         'Colum_Localidad
         '
         Me.Colum_Localidad.HeaderText = "Localidad"
+        Me.Colum_Localidad.MinimumWidth = 6
         Me.Colum_Localidad.Name = "Colum_Localidad"
+        Me.Colum_Localidad.Width = 125
         '
         'Panel2
         '
@@ -315,28 +329,12 @@ Partial Class AñadirCliente
         Me.Panel2.Size = New System.Drawing.Size(805, 144)
         Me.Panel2.TabIndex = 3
         '
-        'BVolver
-        '
-        Me.BVolver.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_atrás_50
-        Me.BVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BVolver.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.BVolver.IconColor = System.Drawing.Color.Black
-        Me.BVolver.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVolver.IconSize = 30
-        Me.BVolver.Location = New System.Drawing.Point(3, 1)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
-        Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(34, 30)
-        Me.BVolver.TabIndex = 4
-        Me.BVolver.UseVisualStyleBackColor = True
-        '
         'AñadirCliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(807, 521)
-        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.LRegistroCliente)
         Me.Controls.Add(Me.Panel1)
@@ -381,5 +379,4 @@ Partial Class AñadirCliente
     Friend WithEvents Colum_Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Colum_email As DataGridViewTextBoxColumn
     Friend WithEvents Colum_Localidad As DataGridViewTextBoxColumn
-    Friend WithEvents BVolver As FontAwesome.Sharp.IconButton
 End Class

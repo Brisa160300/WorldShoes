@@ -62,10 +62,7 @@
         End If
     End Sub
 
-    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
-        MenuVendedor.Show()
-        Me.Hide()
-    End Sub
+
 
     Private Sub DataGridViewRegistroCliente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewRegistroCliente.CellContentClick
 
