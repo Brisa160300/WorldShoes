@@ -114,10 +114,28 @@
     <Compile Include="Presentación\Administrador\MenuAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\AñadirCliente.Designer.vb">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Vendedor\AñadirCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarClientes.Designer.vb">
+      <DependentUpon>ListarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarProductos.Designer.vb">
+      <DependentUpon>ListarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
@@ -140,8 +158,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\AñadirCliente.resx">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\ListarClientes.resx">
+      <DependentUpon>ListarClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\ListarProductos.resx">
+      <DependentUpon>ListarProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
       <DependentUpon>MenuV.vb</DependentUpon>
@@ -166,6 +193,7 @@
   <ItemGroup>
     <Folder Include="Datos\" />
     <Folder Include="Negocio\" />
+    <Folder Include="Presentación\Gerente\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backazul.jpg" />
@@ -232,6 +260,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-libreta-de-direcciones-2-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_user_icon_195427 %282%29.png" />
+    <None Include="Resources\icono user.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\icon user.png" />
+    <None Include="Resources\iconlist.png" />
+    <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

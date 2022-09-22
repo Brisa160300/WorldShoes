@@ -40,18 +40,18 @@ Partial Class AñadirCliente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LNombreCliente = New System.Windows.Forms.Label()
         Me.LRegistroCliente = New System.Windows.Forms.Label()
-        Me.DataGridViewRegistroCliente = New System.Windows.Forms.DataGridView()
-        Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewRegistroCliente = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -259,6 +259,64 @@ Partial Class AñadirCliente
         Me.LRegistroCliente.TabIndex = 1
         Me.LRegistroCliente.Text = "Registrar Cliente:"
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.DataGridViewRegistroCliente)
+        Me.Panel2.Location = New System.Drawing.Point(3, 389)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(805, 144)
+        Me.Panel2.TabIndex = 3
+        '
+        'Colum_Localidad
+        '
+        Me.Colum_Localidad.HeaderText = "Localidad"
+        Me.Colum_Localidad.MinimumWidth = 6
+        Me.Colum_Localidad.Name = "Colum_Localidad"
+        Me.Colum_Localidad.Width = 125
+        '
+        'Colum_email
+        '
+        Me.Colum_email.HeaderText = "E-mail"
+        Me.Colum_email.MinimumWidth = 6
+        Me.Colum_email.Name = "Colum_email"
+        Me.Colum_email.Width = 125
+        '
+        'Colum_Telefono
+        '
+        Me.Colum_Telefono.HeaderText = "Telefono"
+        Me.Colum_Telefono.MinimumWidth = 6
+        Me.Colum_Telefono.Name = "Colum_Telefono"
+        Me.Colum_Telefono.Width = 125
+        '
+        'Colum_FechaNaci
+        '
+        Me.Colum_FechaNaci.HeaderText = "Fecha de Nacimiento"
+        Me.Colum_FechaNaci.MinimumWidth = 6
+        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
+        Me.Colum_FechaNaci.Width = 125
+        '
+        'Colum_DNI
+        '
+        Me.Colum_DNI.HeaderText = "DNI"
+        Me.Colum_DNI.MinimumWidth = 6
+        Me.Colum_DNI.Name = "Colum_DNI"
+        Me.Colum_DNI.Width = 125
+        '
+        'Colum_Apellido
+        '
+        Me.Colum_Apellido.HeaderText = "Apellido"
+        Me.Colum_Apellido.MinimumWidth = 6
+        Me.Colum_Apellido.Name = "Colum_Apellido"
+        Me.Colum_Apellido.Width = 125
+        '
+        'Colum_Nombre
+        '
+        Me.Colum_Nombre.HeaderText = "Nombre"
+        Me.Colum_Nombre.MinimumWidth = 6
+        Me.Colum_Nombre.Name = "Colum_Nombre"
+        Me.Colum_Nombre.Width = 125
+        '
         'DataGridViewRegistroCliente
         '
         Me.DataGridViewRegistroCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -270,64 +328,6 @@ Partial Class AñadirCliente
         Me.DataGridViewRegistroCliente.RowHeadersWidth = 51
         Me.DataGridViewRegistroCliente.Size = New System.Drawing.Size(805, 144)
         Me.DataGridViewRegistroCliente.TabIndex = 2
-        '
-        'Colum_Nombre
-        '
-        Me.Colum_Nombre.HeaderText = "Nombre"
-        Me.Colum_Nombre.MinimumWidth = 6
-        Me.Colum_Nombre.Name = "Colum_Nombre"
-        Me.Colum_Nombre.Width = 125
-        '
-        'Colum_Apellido
-        '
-        Me.Colum_Apellido.HeaderText = "Apellido"
-        Me.Colum_Apellido.MinimumWidth = 6
-        Me.Colum_Apellido.Name = "Colum_Apellido"
-        Me.Colum_Apellido.Width = 125
-        '
-        'Colum_DNI
-        '
-        Me.Colum_DNI.HeaderText = "DNI"
-        Me.Colum_DNI.MinimumWidth = 6
-        Me.Colum_DNI.Name = "Colum_DNI"
-        Me.Colum_DNI.Width = 125
-        '
-        'Colum_FechaNaci
-        '
-        Me.Colum_FechaNaci.HeaderText = "Fecha de Nacimiento"
-        Me.Colum_FechaNaci.MinimumWidth = 6
-        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
-        Me.Colum_FechaNaci.Width = 125
-        '
-        'Colum_Telefono
-        '
-        Me.Colum_Telefono.HeaderText = "Telefono"
-        Me.Colum_Telefono.MinimumWidth = 6
-        Me.Colum_Telefono.Name = "Colum_Telefono"
-        Me.Colum_Telefono.Width = 125
-        '
-        'Colum_email
-        '
-        Me.Colum_email.HeaderText = "E-mail"
-        Me.Colum_email.MinimumWidth = 6
-        Me.Colum_email.Name = "Colum_email"
-        Me.Colum_email.Width = 125
-        '
-        'Colum_Localidad
-        '
-        Me.Colum_Localidad.HeaderText = "Localidad"
-        Me.Colum_Localidad.MinimumWidth = 6
-        Me.Colum_Localidad.Name = "Colum_Localidad"
-        Me.Colum_Localidad.Width = 125
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.DataGridViewRegistroCliente)
-        Me.Panel2.Location = New System.Drawing.Point(3, 389)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(805, 144)
-        Me.Panel2.TabIndex = 3
         '
         'AñadirCliente
         '
@@ -345,8 +345,8 @@ Partial Class AñadirCliente
         Me.Text = "AñadirCliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -370,8 +370,8 @@ Partial Class AñadirCliente
     Friend WithEvents LCorreoCliente As Label
     Friend WithEvents BRegistrarCliente As Button
     Friend WithEvents BCancelar As Button
-    Friend WithEvents DataGridViewRegistroCliente As DataGridView
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents DataGridViewRegistroCliente As DataGridView
     Friend WithEvents Colum_Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Colum_Apellido As DataGridViewTextBoxColumn
     Friend WithEvents Colum_DNI As DataGridViewTextBoxColumn
