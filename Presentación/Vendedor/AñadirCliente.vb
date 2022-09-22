@@ -56,7 +56,7 @@
         If EspacioEnBlanco() = False Then
             MsgBox("¿Realmente desea cancelar la operación de registro?", vbExclamation + vbYesNo + vbDefaultButton2, "Confirmar Eliminación")
             If vbYes Then
-                MenuVendedor.Show()
+                MenuV.Show()
                 Me.Hide()
             End If
         End If
@@ -67,4 +67,12 @@
     Private Sub DataGridViewRegistroCliente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewRegistroCliente.CellContentClick
 
     End Sub
+    Private Sub TBApellidoCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBApellidoCliente.KeyPress
+
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MsgBox("Solo se aceptan letras", vbCritical, "Error")
+        End If
+    End Sub
+
 End Class

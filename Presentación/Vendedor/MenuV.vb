@@ -1,9 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class MenuVendedor
-
-    Private m_ChildFormNumber As Integer
-
+﻿Public Class MenuV
     Private Sub AñadirClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirClienteToolStripMenuItem.Click
         AñadirCliente.MdiParent = Me
         AñadirCliente.Show()

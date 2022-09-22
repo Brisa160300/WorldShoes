@@ -120,6 +120,12 @@
     <Compile Include="Presentación\Vendedor\AñadirCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
+      <DependentUpon>MenuV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\MenuV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\MenuVendedor.Designer.vb">
       <DependentUpon>MenuVendedor.vb</DependentUpon>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\AñadirCliente.resx">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
+      <DependentUpon>MenuV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\MenuVendedor.resx">
       <DependentUpon>MenuVendedor.vb</DependentUpon>
