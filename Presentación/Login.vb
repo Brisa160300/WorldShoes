@@ -11,12 +11,16 @@
         Dim contraseña As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
             If (usuario = "BRISA") And (contraseña = "123") Then
-                MenuVendedor.Show()
+                'MenuVendedor.Show()
+                MenuGerente.Show()
                 Me.Hide()
             End If
         ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
-            MenuAdmin.Show()
+            MenuGerente.Show()
             Me.Hide()
+
+
+
         End If
 
     End Sub
