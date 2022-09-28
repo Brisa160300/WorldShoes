@@ -1,22 +1,19 @@
 ﻿Public Class AñadirCliente
-
+    Dim objNcliente = New NCliente
     Public Function EspacioEnBlanco()
         Dim Ask As MsgBoxResult
         Dim nombre As String = TBNombreCliente.Text
         Dim apellido As String = TBApellidoCliente.Text
         Dim dni As String = TBDniCliente.Text
-        'Dim fechaNacimiento = DateTimeCliente
         Dim tel As String = TBTelCliente.Text
         Dim correo As String = TBCorreoCliente.Text
-        Dim localidad As String = TBLocalidadCliente.Text
 
 
         If String.IsNullOrWhiteSpace(apellido) Or
            String.IsNullOrWhiteSpace(nombre) Or
            String.IsNullOrWhiteSpace(dni) Or
            String.IsNullOrWhiteSpace(tel) Or
-           String.IsNullOrWhiteSpace(correo) Or
-           String.IsNullOrWhiteSpace(localidad) Then
+           String.IsNullOrWhiteSpace(correo) Then
             Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
             Return Ask
         Else
@@ -26,13 +23,33 @@
 
 
     Private Sub BRegistrarCliente_Click(sender As Object, e As EventArgs) Handles BRegistrarCliente.Click
+        Dim nombre As String = TBNombreCliente.Text
+        Dim apellido As String = TBApellidoCliente.Text
+        Dim dni As String = TBDniCliente.Text
+        Dim tel As String = TBTelCliente.Text
+        Dim direccion As String = TBDireccion.Text
+        Dim email As String = TBCorreoCliente.Text
 
         If EspacioEnBlanco() = False Then
             MsgBox("Seguro que desea insertar un nuevo Cliente?", vbQuestion + vbYesNo, "Confirmar Inserción")
             If vbYes Then
-                MsgBox("El Cliente: " + TBApellidoCliente.Text + " " + TBNombreCliente.Text + " se insertó correctamente", vbInformation, "Guardar")
+                If (objNcliente.agregar_cliente(nombre, apellido, CInt(dni), CInt(tel), direccion, email)) Then
+                    MsgBox("El Cliente: " + TBApellidoCliente.Text + " " + TBNombreCliente.Text + " se registró correctamente", vbOKOnly + MsgBoxStyle.Information, "Registro exitoso")
+                    objNcliente.cargarGrid(DataGridViewRegistroClientes)
+                    MsgBox("error")
+                Else
+                    MsgBox("El Cliente: " + TBApellidoCliente.Text + " " + TBNombreCliente.Text + " ya existe", vbOKOnly + MsgBoxStyle.Critical, "Error de registro")
+                    TBDniCliente.Focus()
+                End If
             End If
         End If
+        TBDniCliente.Clear()
+        TBNombreCliente.Clear()
+        TBApellidoCliente.Clear()
+        TBTelCliente.Clear()
+        TBDireccion.Clear()
+        TBCorreoCliente.Clear()
+
     End Sub
 
     Private Sub TBNombreCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreCliente.KeyPress
@@ -57,17 +74,11 @@
         If EspacioEnBlanco() = False Then
             MsgBox("¿Realmente desea cancelar la operación de registro?", vbExclamation + vbYesNo + vbDefaultButton2, "Confirmar Eliminación")
             If vbYes Then
-                MenuV.Show()
-                Me.Hide()
+                Me.Close()
             End If
         End If
     End Sub
 
-
-
-    Private Sub DataGridViewRegistroCliente_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewRegistroCliente.CellContentClick
-
-    End Sub
     Private Sub TBApellidoCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBApellidoCliente.KeyPress
 
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
@@ -76,4 +87,7 @@
         End If
     End Sub
 
+    Private Sub AñadirCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        objNcliente.cargarGrid(DataGridViewRegistroClientes)
+    End Sub
 End Class

@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,15 +63,24 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
@@ -80,17 +104,38 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="form.Designer.vb">
-      <DependentUpon>form.vb</DependentUpon>
+    <Compile Include="Categoria.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
     </Compile>
-    <Compile Include="form.vb">
-      <SubType>Form</SubType>
+    <Compile Include="clientes.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Datos\Dcliente.vb" />
+    <Compile Include="Logica\NCliente.vb" />
+    <Compile Include="ModelBadeDatos.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBadeDatos.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="ModelBadeDatos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBadeDatos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBDD.Designer.vb">
+      <DependentUpon>ModelBDD.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ModelBDD.vb">
+      <DependentUpon>ModelBDD.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -108,10 +153,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Presentación\Gerente\AñadirCategoria.Designer.vb">
+      <DependentUpon>AñadirCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\AñadirCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Gerente\añadirProducto.Designer.vb">
       <DependentUpon>añadirProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Gerente\añadirProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarCategoria.Designer.vb">
+      <DependentUpon>GestionarCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\MenuGerente.Designer.vb">
@@ -156,6 +213,18 @@
     <Compile Include="Presentación\Vendedor\MenuVendedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Productos.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="talle.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="talle_producto.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -190,6 +259,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="ModelBadeDatos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelBadeDatos.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelBDD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelBDD.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="ModelBadeDatos.edmx.diagram">
+      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -199,11 +280,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Datos\" />
     <Folder Include="Negocio\" />
     <Folder Include="Presentación\Administrador\" />
   </ItemGroup>
@@ -287,7 +366,38 @@
     <None Include="Resources\iconadd.png" />
     <None Include="Resources\iconlista.png" />
     <None Include="Resources\iconventas.png" />
+    <None Include="Resources\pngaaa.com-4979905.png" />
+    <Content Include="ModelBadeDatos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+      <LastGenOutput>ModelBadeDatos.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="ModelBadeDatos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+      <LastGenOutput>ModelBadeDatos.vb</LastGenOutput>
+    </Content>
+    <Content Include="ModelBDD.tt">
+      <DependentUpon>ModelBDD.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelBDD.vb</LastGenOutput>
+    </Content>
     <Content Include="Resources\user_locked_21967.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

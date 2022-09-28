@@ -14,13 +14,10 @@
                 'MenuVendedor.Show()
                 MenuGerente.Show()
                 Me.Hide()
+            ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
+                MenuVendedor.Show()
+                Me.Hide()
             End If
-        ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
-            MenuGerente.Show()
-            Me.Hide()
-
-
-
         End If
 
     End Sub
@@ -44,4 +41,13 @@
         TBUsuario.Text = UCase(TBUsuario.Text)
         TBUsuario.SelectionStart = Len(TBUsuario.Text)
     End Sub
+
+    Private Sub IconMinimizarLogin_Click(sender As Object, e As EventArgs) Handles IconMinimizarLogin.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub IconCerrarLogin_Click(sender As Object, e As EventArgs) Handles IconCerrarLogin.Click
+        Application.Exit()
+    End Sub
+
 End Class

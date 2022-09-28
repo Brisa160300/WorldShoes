@@ -31,13 +31,13 @@
         Dim categoria As String = TBCateoriaProducto.Text
         Dim stock As String = TBStock.Text
         Dim precio As String = TBPrecio.Text
-        Dim imagen As String = TBImagen.Text
+        'Dim imagen As String = TBImagen.Text
 
         If String.IsNullOrWhiteSpace(nombre) Or
            String.IsNullOrWhiteSpace(categoria) Or
            String.IsNullOrWhiteSpace(stock) Or
-           String.IsNullOrWhiteSpace(precio) Or
-           String.IsNullOrWhiteSpace(imagen) Then
+           String.IsNullOrWhiteSpace(precio) Then
+            'String.IsNullOrWhiteSpace(imagen) Then
             Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
             Return Ask
         Else

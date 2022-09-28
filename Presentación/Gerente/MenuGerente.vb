@@ -2,7 +2,7 @@
 
 Public Class MenuGerente
 
-    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click
+    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Conviértalo en un elemento secundario de este formulario MDI antes de mostrarlo.
@@ -14,7 +14,7 @@ Public Class MenuGerente
         ChildForm.Show()
     End Sub
 
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click
+    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs)
         Dim OpenFileDialog As New OpenFileDialog
         OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         OpenFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
@@ -24,7 +24,7 @@ Public Class MenuGerente
         End If
     End Sub
 
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Dim SaveFileDialog As New SaveFileDialog
         SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         SaveFileDialog.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*"
@@ -36,7 +36,7 @@ Public Class MenuGerente
     End Sub
 
 
-    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.Close()
     End Sub
 
@@ -52,13 +52,13 @@ Public Class MenuGerente
         'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
     End Sub
 
-    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
-        Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
-    End Sub
+    'Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ToolBarToolStripMenuItem.Click
+    '    Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
+    'End Sub
 
-    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles StatusBarToolStripMenuItem.Click
-        Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
-    End Sub
+    'Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+    '    Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
+    'End Sub
 
     Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.Cascade)
@@ -85,12 +85,23 @@ Public Class MenuGerente
 
     Private m_ChildFormNumber As Integer
 
-    Private Sub AddProducto_Click(sender As Object, e As EventArgs) Handles AddProducto.Click
+    Private Sub AddProducto_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub AñadirProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirProductoToolStripMenuItem.Click
+    Private Sub AñadirProductoToolStripMenuItem_Click(sender As Object, e As EventArgs)
         añadirProducto.MdiParent = Me
         añadirProducto.Show()
+    End Sub
+
+    Private Sub CerrarMenu_Click(sender As Object, e As EventArgs) Handles CerrarMenu.Click
+        Me.Close()
+        Login.Show()
+        Login.TBUsuario.Clear()
+        Login.TBContraseña.Clear()
+    End Sub
+
+    Private Sub IconCerrar_Click(sender As Object, e As EventArgs) Handles IconCerrar.Click
+
     End Sub
 End Class

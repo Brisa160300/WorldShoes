@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AñadirCliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,231 +20,205 @@ Partial Class AñadirCliente
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.PanelRegClientes = New System.Windows.Forms.Panel()
+        Me.TBDireccion = New System.Windows.Forms.TextBox()
+        Me.LDireccion = New System.Windows.Forms.Label()
         Me.TBCorreoCliente = New System.Windows.Forms.TextBox()
         Me.LCorreoCliente = New System.Windows.Forms.Label()
         Me.BRegistrarCliente = New System.Windows.Forms.Button()
         Me.BCancelar = New System.Windows.Forms.Button()
-        Me.DateTimeCliente = New System.Windows.Forms.DateTimePicker()
         Me.TBTelCliente = New System.Windows.Forms.TextBox()
-        Me.TBLocalidadCliente = New System.Windows.Forms.TextBox()
         Me.TBApellidoCliente = New System.Windows.Forms.TextBox()
         Me.TBDniCliente = New System.Windows.Forms.TextBox()
         Me.TBNombreCliente = New System.Windows.Forms.TextBox()
-        Me.LDateBdayCliente = New System.Windows.Forms.Label()
         Me.LApellidoCliente = New System.Windows.Forms.Label()
         Me.LTelCliente = New System.Windows.Forms.Label()
-        Me.LLocalidadCliente = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LNombreCliente = New System.Windows.Forms.Label()
         Me.LRegistroCliente = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.DataGridViewRegistroCliente = New System.Windows.Forms.DataGridView()
-        Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPageListaClientes = New System.Windows.Forms.TabPage()
+        Me.DataGridViewRegistroClientes = New System.Windows.Forms.DataGridView()
+        Me.TabControlRegClientes = New System.Windows.Forms.TabControl()
+        Me.PanelRegClientes.SuspendLayout()
+        Me.TabPageListaClientes.SuspendLayout()
+        CType(Me.DataGridViewRegistroClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlRegClientes.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'PanelRegClientes
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.TBCorreoCliente)
-        Me.Panel1.Controls.Add(Me.LCorreoCliente)
-        Me.Panel1.Controls.Add(Me.BRegistrarCliente)
-        Me.Panel1.Controls.Add(Me.BCancelar)
-        Me.Panel1.Controls.Add(Me.DateTimeCliente)
-        Me.Panel1.Controls.Add(Me.TBTelCliente)
-        Me.Panel1.Controls.Add(Me.TBLocalidadCliente)
-        Me.Panel1.Controls.Add(Me.TBApellidoCliente)
-        Me.Panel1.Controls.Add(Me.TBDniCliente)
-        Me.Panel1.Controls.Add(Me.TBNombreCliente)
-        Me.Panel1.Controls.Add(Me.LDateBdayCliente)
-        Me.Panel1.Controls.Add(Me.LApellidoCliente)
-        Me.Panel1.Controls.Add(Me.LTelCliente)
-        Me.Panel1.Controls.Add(Me.LLocalidadCliente)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.LNombreCliente)
-        Me.Panel1.Location = New System.Drawing.Point(56, 82)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(672, 283)
-        Me.Panel1.TabIndex = 0
+        Me.PanelRegClientes.BackColor = System.Drawing.Color.Black
+        Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PanelRegClientes.Controls.Add(Me.TBDireccion)
+        Me.PanelRegClientes.Controls.Add(Me.LDireccion)
+        Me.PanelRegClientes.Controls.Add(Me.TBCorreoCliente)
+        Me.PanelRegClientes.Controls.Add(Me.LCorreoCliente)
+        Me.PanelRegClientes.Controls.Add(Me.BRegistrarCliente)
+        Me.PanelRegClientes.Controls.Add(Me.BCancelar)
+        Me.PanelRegClientes.Controls.Add(Me.TBTelCliente)
+        Me.PanelRegClientes.Controls.Add(Me.TBApellidoCliente)
+        Me.PanelRegClientes.Controls.Add(Me.TBDniCliente)
+        Me.PanelRegClientes.Controls.Add(Me.TBNombreCliente)
+        Me.PanelRegClientes.Controls.Add(Me.LApellidoCliente)
+        Me.PanelRegClientes.Controls.Add(Me.LTelCliente)
+        Me.PanelRegClientes.Controls.Add(Me.Label3)
+        Me.PanelRegClientes.Controls.Add(Me.LNombreCliente)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(13, 91)
+        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelRegClientes.Name = "PanelRegClientes"
+        Me.PanelRegClientes.Size = New System.Drawing.Size(430, 439)
+        Me.PanelRegClientes.TabIndex = 0
+        '
+        'TBDireccion
+        '
+        Me.TBDireccion.Location = New System.Drawing.Point(150, 216)
+        Me.TBDireccion.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBDireccion.Name = "TBDireccion"
+        Me.TBDireccion.Size = New System.Drawing.Size(131, 27)
+        Me.TBDireccion.TabIndex = 17
+        '
+        'LDireccion
+        '
+        Me.LDireccion.AutoSize = True
+        Me.LDireccion.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.LDireccion.ForeColor = System.Drawing.Color.White
+        Me.LDireccion.Location = New System.Drawing.Point(36, 216)
+        Me.LDireccion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LDireccion.Name = "LDireccion"
+        Me.LDireccion.Size = New System.Drawing.Size(102, 22)
+        Me.LDireccion.TabIndex = 16
+        Me.LDireccion.Text = "Direccion:"
         '
         'TBCorreoCliente
         '
-        Me.TBCorreoCliente.Location = New System.Drawing.Point(384, 130)
+        Me.TBCorreoCliente.Location = New System.Drawing.Point(149, 268)
         Me.TBCorreoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBCorreoCliente.Name = "TBCorreoCliente"
-        Me.TBCorreoCliente.Size = New System.Drawing.Size(172, 23)
+        Me.TBCorreoCliente.Size = New System.Drawing.Size(131, 27)
         Me.TBCorreoCliente.TabIndex = 15
         '
         'LCorreoCliente
         '
         Me.LCorreoCliente.AutoSize = True
-        Me.LCorreoCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LCorreoCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LCorreoCliente.ForeColor = System.Drawing.Color.White
-        Me.LCorreoCliente.Location = New System.Drawing.Point(325, 134)
+        Me.LCorreoCliente.Location = New System.Drawing.Point(40, 273)
         Me.LCorreoCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LCorreoCliente.Name = "LCorreoCliente"
-        Me.LCorreoCliente.Size = New System.Drawing.Size(54, 16)
+        Me.LCorreoCliente.Size = New System.Drawing.Size(70, 22)
         Me.LCorreoCliente.TabIndex = 14
         Me.LCorreoCliente.Text = "E-mail:"
         '
         'BRegistrarCliente
         '
-        Me.BRegistrarCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BRegistrarCliente.ForeColor = System.Drawing.Color.Black
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(505, 219)
+        Me.BRegistrarCliente.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BRegistrarCliente.FlatAppearance.BorderSize = 2
+        Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
+        Me.BRegistrarCliente.Location = New System.Drawing.Point(41, 336)
         Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarCliente.Name = "BRegistrarCliente"
-        Me.BRegistrarCliente.Size = New System.Drawing.Size(100, 28)
+        Me.BRegistrarCliente.Size = New System.Drawing.Size(113, 46)
         Me.BRegistrarCliente.TabIndex = 13
         Me.BRegistrarCliente.Text = "Registrar"
         Me.BRegistrarCliente.UseVisualStyleBackColor = True
         '
         'BCancelar
         '
-        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.BCancelar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCancelar.ForeColor = System.Drawing.Color.Black
-        Me.BCancelar.Location = New System.Drawing.Point(371, 219)
+        Me.BCancelar.FlatAppearance.BorderSize = 2
+        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BCancelar.ForeColor = System.Drawing.Color.White
+        Me.BCancelar.Location = New System.Drawing.Point(166, 336)
         Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(100, 28)
+        Me.BCancelar.Size = New System.Drawing.Size(115, 48)
         Me.BCancelar.TabIndex = 12
         Me.BCancelar.Text = "Cancelar"
         Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BCancelar.UseVisualStyleBackColor = True
         '
-        'DateTimeCliente
-        '
-        Me.DateTimeCliente.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimeCliente.Location = New System.Drawing.Point(494, 84)
-        Me.DateTimeCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimeCliente.Name = "DateTimeCliente"
-        Me.DateTimeCliente.Size = New System.Drawing.Size(109, 23)
-        Me.DateTimeCliente.TabIndex = 11
-        '
         'TBTelCliente
         '
-        Me.TBTelCliente.Location = New System.Drawing.Point(133, 130)
+        Me.TBTelCliente.Location = New System.Drawing.Point(149, 156)
         Me.TBTelCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBTelCliente.Name = "TBTelCliente"
-        Me.TBTelCliente.Size = New System.Drawing.Size(132, 23)
+        Me.TBTelCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBTelCliente.TabIndex = 10
-        '
-        'TBLocalidadCliente
-        '
-        Me.TBLocalidadCliente.Location = New System.Drawing.Point(133, 178)
-        Me.TBLocalidadCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBLocalidadCliente.Name = "TBLocalidadCliente"
-        Me.TBLocalidadCliente.Size = New System.Drawing.Size(132, 23)
-        Me.TBLocalidadCliente.TabIndex = 9
         '
         'TBApellidoCliente
         '
-        Me.TBApellidoCliente.Location = New System.Drawing.Point(425, 34)
+        Me.TBApellidoCliente.Location = New System.Drawing.Point(147, 66)
         Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBApellidoCliente.Name = "TBApellidoCliente"
-        Me.TBApellidoCliente.Size = New System.Drawing.Size(178, 23)
+        Me.TBApellidoCliente.Size = New System.Drawing.Size(133, 27)
         Me.TBApellidoCliente.TabIndex = 8
         '
         'TBDniCliente
         '
-        Me.TBDniCliente.Location = New System.Drawing.Point(133, 84)
+        Me.TBDniCliente.Location = New System.Drawing.Point(148, 107)
         Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBDniCliente.Name = "TBDniCliente"
-        Me.TBDniCliente.Size = New System.Drawing.Size(132, 23)
+        Me.TBDniCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBDniCliente.TabIndex = 7
         '
         'TBNombreCliente
         '
-        Me.TBNombreCliente.Location = New System.Drawing.Point(133, 34)
+        Me.TBNombreCliente.Location = New System.Drawing.Point(147, 22)
         Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBNombreCliente.Name = "TBNombreCliente"
-        Me.TBNombreCliente.Size = New System.Drawing.Size(168, 23)
+        Me.TBNombreCliente.Size = New System.Drawing.Size(132, 27)
         Me.TBNombreCliente.TabIndex = 6
-        '
-        'LDateBdayCliente
-        '
-        Me.LDateBdayCliente.AutoSize = True
-        Me.LDateBdayCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LDateBdayCliente.ForeColor = System.Drawing.Color.White
-        Me.LDateBdayCliente.Location = New System.Drawing.Point(325, 87)
-        Me.LDateBdayCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LDateBdayCliente.Name = "LDateBdayCliente"
-        Me.LDateBdayCliente.Size = New System.Drawing.Size(151, 16)
-        Me.LDateBdayCliente.TabIndex = 5
-        Me.LDateBdayCliente.Text = "Fecha de nacimiento:"
         '
         'LApellidoCliente
         '
         Me.LApellidoCliente.AutoSize = True
-        Me.LApellidoCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LApellidoCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LApellidoCliente.ForeColor = System.Drawing.Color.White
-        Me.LApellidoCliente.Location = New System.Drawing.Point(325, 38)
+        Me.LApellidoCliente.Location = New System.Drawing.Point(40, 67)
         Me.LApellidoCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LApellidoCliente.Name = "LApellidoCliente"
-        Me.LApellidoCliente.Size = New System.Drawing.Size(64, 16)
+        Me.LApellidoCliente.Size = New System.Drawing.Size(86, 22)
         Me.LApellidoCliente.TabIndex = 4
         Me.LApellidoCliente.Text = "Apellido:"
         '
         'LTelCliente
         '
         Me.LTelCliente.AutoSize = True
-        Me.LTelCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LTelCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LTelCliente.ForeColor = System.Drawing.Color.White
-        Me.LTelCliente.Location = New System.Drawing.Point(36, 134)
+        Me.LTelCliente.Location = New System.Drawing.Point(37, 161)
         Me.LTelCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LTelCliente.Name = "LTelCliente"
-        Me.LTelCliente.Size = New System.Drawing.Size(71, 16)
+        Me.LTelCliente.Size = New System.Drawing.Size(90, 22)
         Me.LTelCliente.TabIndex = 3
         Me.LTelCliente.Text = "Telefono:"
-        '
-        'LLocalidadCliente
-        '
-        Me.LLocalidadCliente.AutoSize = True
-        Me.LLocalidadCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LLocalidadCliente.ForeColor = System.Drawing.Color.White
-        Me.LLocalidadCliente.Location = New System.Drawing.Point(36, 181)
-        Me.LLocalidadCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LLocalidadCliente.Name = "LLocalidadCliente"
-        Me.LLocalidadCliente.Size = New System.Drawing.Size(75, 16)
-        Me.LLocalidadCliente.TabIndex = 2
-        Me.LLocalidadCliente.Text = "Localidad:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(36, 87)
+        Me.Label3.Location = New System.Drawing.Point(40, 112)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 16)
+        Me.Label3.Size = New System.Drawing.Size(47, 22)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "DNI:"
         '
         'LNombreCliente
         '
         Me.LNombreCliente.AutoSize = True
-        Me.LNombreCliente.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreCliente.ForeColor = System.Drawing.Color.White
-        Me.LNombreCliente.Location = New System.Drawing.Point(36, 38)
+        Me.LNombreCliente.Location = New System.Drawing.Point(39, 22)
         Me.LNombreCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LNombreCliente.Name = "LNombreCliente"
-        Me.LNombreCliente.Size = New System.Drawing.Size(63, 16)
+        Me.LNombreCliente.Size = New System.Drawing.Size(85, 22)
         Me.LNombreCliente.TabIndex = 0
         Me.LNombreCliente.Text = "Nombre:"
         '
@@ -252,119 +226,86 @@ Partial Class AñadirCliente
         '
         Me.LRegistroCliente.AutoSize = True
         Me.LRegistroCliente.BackColor = System.Drawing.Color.Transparent
-        Me.LRegistroCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LRegistroCliente.ForeColor = System.Drawing.Color.Black
-        Me.LRegistroCliente.Location = New System.Drawing.Point(51, 39)
+        Me.LRegistroCliente.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LRegistroCliente.ForeColor = System.Drawing.Color.Transparent
+        Me.LRegistroCliente.Location = New System.Drawing.Point(109, 28)
         Me.LRegistroCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LRegistroCliente.Name = "LRegistroCliente"
-        Me.LRegistroCliente.Size = New System.Drawing.Size(171, 22)
+        Me.LRegistroCliente.Size = New System.Drawing.Size(239, 33)
         Me.LRegistroCliente.TabIndex = 1
-        Me.LRegistroCliente.Text = "Registrar Cliente:"
+        Me.LRegistroCliente.Text = "Registrar Cliente"
         '
-        'Panel2
+        'TabPageListaClientes
         '
-        Me.Panel2.Controls.Add(Me.DataGridViewRegistroCliente)
-        Me.Panel2.Location = New System.Drawing.Point(3, 389)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(805, 144)
-        Me.Panel2.TabIndex = 3
+        Me.TabPageListaClientes.Controls.Add(Me.DataGridViewRegistroClientes)
+        Me.TabPageListaClientes.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPageListaClientes.ForeColor = System.Drawing.Color.White
+        Me.TabPageListaClientes.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaClientes.Name = "TabPageListaClientes"
+        Me.TabPageListaClientes.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageListaClientes.Size = New System.Drawing.Size(604, 501)
+        Me.TabPageListaClientes.TabIndex = 0
+        Me.TabPageListaClientes.Text = "Lista de Clientes"
+        Me.TabPageListaClientes.UseVisualStyleBackColor = True
         '
-        'DataGridViewRegistroCliente
+        'DataGridViewRegistroClientes
         '
-        Me.DataGridViewRegistroCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewRegistroCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_email, Me.Colum_Localidad})
-        Me.DataGridViewRegistroCliente.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewRegistroCliente.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridViewRegistroCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewRegistroCliente.Name = "DataGridViewRegistroCliente"
-        Me.DataGridViewRegistroCliente.RowHeadersWidth = 51
-        Me.DataGridViewRegistroCliente.Size = New System.Drawing.Size(805, 144)
-        Me.DataGridViewRegistroCliente.TabIndex = 2
+        Me.DataGridViewRegistroClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(1, Byte), Integer))
+        Me.DataGridViewRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewRegistroClientes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewRegistroClientes.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridViewRegistroClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridViewRegistroClientes.Name = "DataGridViewRegistroClientes"
+        Me.DataGridViewRegistroClientes.RowHeadersWidth = 51
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewRegistroClientes.RowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewRegistroClientes.Size = New System.Drawing.Size(598, 495)
+        Me.DataGridViewRegistroClientes.TabIndex = 2
         '
-        'Colum_Nombre
+        'TabControlRegClientes
         '
-        Me.Colum_Nombre.HeaderText = "Nombre"
-        Me.Colum_Nombre.MinimumWidth = 6
-        Me.Colum_Nombre.Name = "Colum_Nombre"
-        Me.Colum_Nombre.Width = 125
-        '
-        'Colum_Apellido
-        '
-        Me.Colum_Apellido.HeaderText = "Apellido"
-        Me.Colum_Apellido.MinimumWidth = 6
-        Me.Colum_Apellido.Name = "Colum_Apellido"
-        Me.Colum_Apellido.Width = 125
-        '
-        'Colum_DNI
-        '
-        Me.Colum_DNI.HeaderText = "DNI"
-        Me.Colum_DNI.MinimumWidth = 6
-        Me.Colum_DNI.Name = "Colum_DNI"
-        Me.Colum_DNI.Width = 125
-        '
-        'Colum_FechaNaci
-        '
-        Me.Colum_FechaNaci.HeaderText = "Fecha de Nacimiento"
-        Me.Colum_FechaNaci.MinimumWidth = 6
-        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
-        Me.Colum_FechaNaci.Width = 125
-        '
-        'Colum_Telefono
-        '
-        Me.Colum_Telefono.HeaderText = "Telefono"
-        Me.Colum_Telefono.MinimumWidth = 6
-        Me.Colum_Telefono.Name = "Colum_Telefono"
-        Me.Colum_Telefono.Width = 125
-        '
-        'Colum_email
-        '
-        Me.Colum_email.HeaderText = "E-mail"
-        Me.Colum_email.MinimumWidth = 6
-        Me.Colum_email.Name = "Colum_email"
-        Me.Colum_email.Width = 125
-        '
-        'Colum_Localidad
-        '
-        Me.Colum_Localidad.HeaderText = "Localidad"
-        Me.Colum_Localidad.MinimumWidth = 6
-        Me.Colum_Localidad.Name = "Colum_Localidad"
-        Me.Colum_Localidad.Width = 125
+        Me.TabControlRegClientes.Controls.Add(Me.TabPageListaClientes)
+        Me.TabControlRegClientes.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControlRegClientes.Location = New System.Drawing.Point(472, 28)
+        Me.TabControlRegClientes.Name = "TabControlRegClientes"
+        Me.TabControlRegClientes.SelectedIndex = 0
+        Me.TabControlRegClientes.Size = New System.Drawing.Size(612, 533)
+        Me.TabControlRegClientes.TabIndex = 4
         '
         'AñadirCliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(807, 521)
-        Me.Controls.Add(Me.Panel2)
+        Me.BackColor = System.Drawing.Color.Black
+        Me.ClientSize = New System.Drawing.Size(1081, 562)
+        Me.Controls.Add(Me.TabControlRegClientes)
         Me.Controls.Add(Me.LRegistroCliente)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.PanelRegClientes)
         Me.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
+        Me.Location = New System.Drawing.Point(228, 41)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AñadirCliente"
         Me.Text = "AñadirCliente"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.DataGridViewRegistroCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelRegClientes.ResumeLayout(False)
+        Me.PanelRegClientes.PerformLayout()
+        Me.TabPageListaClientes.ResumeLayout(False)
+        CType(Me.DataGridViewRegistroClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlRegClientes.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents DateTimeCliente As DateTimePicker
+    Friend WithEvents PanelRegClientes As Panel
     Friend WithEvents TBTelCliente As TextBox
-    Friend WithEvents TBLocalidadCliente As TextBox
     Friend WithEvents TBApellidoCliente As TextBox
     Friend WithEvents TBDniCliente As TextBox
     Friend WithEvents TBNombreCliente As TextBox
-    Friend WithEvents LDateBdayCliente As Label
     Friend WithEvents LApellidoCliente As Label
     Friend WithEvents LTelCliente As Label
-    Friend WithEvents LLocalidadCliente As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents LNombreCliente As Label
     Friend WithEvents LRegistroCliente As Label
@@ -372,13 +313,9 @@ Partial Class AñadirCliente
     Friend WithEvents LCorreoCliente As Label
     Friend WithEvents BRegistrarCliente As Button
     Friend WithEvents BCancelar As Button
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents DataGridViewRegistroCliente As DataGridView
-    Friend WithEvents Colum_Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Apellido As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_FechaNaci As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_email As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Localidad As DataGridViewTextBoxColumn
+    Friend WithEvents TabPageListaClientes As TabPage
+    Friend WithEvents DataGridViewRegistroClientes As DataGridView
+    Friend WithEvents TabControlRegClientes As TabControl
+    Friend WithEvents TBDireccion As TextBox
+    Friend WithEvents LDireccion As Label
 End Class
