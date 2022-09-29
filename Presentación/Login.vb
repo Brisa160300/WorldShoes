@@ -13,10 +13,8 @@
             If (usuario = "BRISA") And (contraseña = "123") Then
                 'MenuVendedor.Show()
                 MenuGerente.Show()
-                Me.Hide()
             ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
                 MenuVendedor.Show()
-                Me.Hide()
             End If
         End If
 
@@ -50,4 +48,32 @@
         Application.Exit()
     End Sub
 
+    Private Sub IconMaximizar_Click(sender As Object, e As EventArgs) Handles IconMaximizar.Click
+        IconMaximizar.Visible = False
+        IconRestaurarWin.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub IconRestaurarWin_Click(sender As Object, e As EventArgs) Handles IconRestaurarWin.Click
+        IconRestaurarWin.Visible = False
+        IconMaximizar.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub PictureBoxContraseña_Click(sender As Object, e As EventArgs) Handles PictureBoxContraseña.Click
+        If Not PictureBoxContraseña.Tag = "cerrado" Then
+            PictureBoxContraseña.Tag = "cerrado"
+            TBContraseña.PasswordChar = "*"
+            PictureBoxContraseña.BackgroundImage = My.Resources.ojo_cerrado
+
+        Else
+            PictureBoxContraseña.Tag = "abierto"
+            TBContraseña.PasswordChar = ""
+            PictureBoxContraseña.BackgroundImage = My.Resources.ojo_abierto
+        End If
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs)
+        TBUsuario.Focus()
+    End Sub
 End Class

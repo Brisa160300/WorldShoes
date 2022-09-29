@@ -120,4 +120,5 @@ Public Class MenuGerente
     Private Sub BtnMinimizar_Click(sender As Object, e As EventArgs) Handles BtnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
 End Class

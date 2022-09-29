@@ -5,34 +5,11 @@ Public Class MenuVendedor
     Private m_ChildFormNumber As Integer
 
     Private Sub AñadirClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirClienteToolStripMenuItem.Click
-        Dim frmRegCliente As New AñadirCliente
-        Dim prueba As New form()
-        frmRegCliente.TopMost = False
-        frmRegCliente.Dock = DockStyle.Fill
-        'frmRegCliente.WindowState = FormWindowState.Maximized
-        frmRegCliente.Visible = True
-        frmRegCliente.TopLevel = False
-        PanelContenedor.Controls.Add(frmRegCliente)
-        frmRegCliente.Show()
-
-
-
-        'If PanelContenedor.Controls.Count > 0 Then
-        '    PanelContenedor.Controls.RemoveAt(0)
-        '    frmRegCliente.Dock = DockStyle.Fill
-        '    PanelContenedor.Controls.Add(frmRegCliente)
-        '    PanelContenedor.Tag = frmRegCliente
-        '    frmRegCliente.MdiParent = Me
-        '    frmRegCliente.Show()
-        '    FModUsuario.Show()
-        '    FModUsuario.MdiParent = Me
-        '    HideSubMenu()
-        'End If
+        MostrarSubMenuVendedor(New AñadirCliente)
     End Sub
 
-    Private Sub ListarClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirClienteToolStripMenuItem.Click
-        'ListarClientes.MdiParent = Me
-        'ListarClientes.Show()
+    Private Sub ListarClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarClientesToolStripMenuItem.Click
+        MostrarSubMenuVendedor(New ListarClientes)
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -48,11 +25,47 @@ Public Class MenuVendedor
         ListarProductos.Show()
     End Sub
 
-    Private Sub IconCerrar_Click(sender As Object, e As EventArgs) Handles IconCerrar.Click
+    Private Sub IconCerrarVendedor_Click(sender As Object, e As EventArgs) Handles IconCerrarVendedor.Click
         Application.Exit()
     End Sub
 
-    Private Sub IconMinimizar_Click(sender As Object, e As EventArgs) Handles IconMinimizar.Click
+    Private Sub IconMinimizarVendedor_Click(sender As Object, e As EventArgs) Handles IconMinimizarVendedor.Click
         WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub BtnMaximizarVendedor_Click(sender As Object, e As EventArgs) Handles BtnMaximizarVendedor.Click
+        BtnMaximizarVendedor.Visible = False
+        BtnRestaurarWinVendedor.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub BtnRestaurarWinVendedor_Click(sender As Object, e As EventArgs) Handles BtnRestaurarWinVendedor.Click
+        BtnRestaurarWinVendedor.Visible = False
+        BtnMaximizarVendedor.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
+        Login.Show()
+        Login.TBUsuario.Clear()
+        Login.TBContraseña.Clear()
+    End Sub
+
+    Function MostrarSubMenuVendedor(submenu As Form) As Boolean
+        PanelContenedorVendedor.Controls.Clear()
+        Dim frmHijo As Form = TryCast(submenu, Form)
+        frmHijo.TopMost = False
+        frmHijo.Dock = DockStyle.Fill
+        frmHijo.Visible = True
+        frmHijo.TopLevel = False
+        PanelContenedorVendedor.Controls.Add(frmHijo)
+        PanelContenedorVendedor.Tag = frmHijo
+        frmHijo.Show()
+        'If Not PanelContenedorVendedor.Controls.Count > 0 Then
+        '    PanelContenedorVendedor.Controls.RemoveAt(0)
+        'End If
+        Return True
+    End Function
+
 End Class

@@ -23,7 +23,6 @@ Partial Class MenuGerente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.Inicio = New FontAwesome.Sharp.IconMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,21 +33,17 @@ Partial Class MenuGerente
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.StatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
-        Me.BtnRestaurarWin = New FontAwesome.Sharp.IconButton()
         Me.BtnMaximizar = New FontAwesome.Sharp.IconButton()
         Me.BtnMinimizar = New FontAwesome.Sharp.IconButton()
         Me.BtnCerrar = New FontAwesome.Sharp.IconButton()
-        Me.PanelContenedor = New System.Windows.Forms.Panel()
+        Me.BtnRestaurarWin = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.PanelContenedorGerente = New System.Windows.Forms.Panel()
         Me.MenuStrip.SuspendLayout()
-        Me.StatusStrip.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,10 +55,10 @@ Partial Class MenuGerente
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Inicio, Me.ProductosToolStripMenuItem, Me.ToolsMenu, Me.CategoriasToolStripMenuItem, Me.CerrarMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MenuStrip.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(6, 49, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(173, 468)
+        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(8, 60, 0, 2)
+        Me.MenuStrip.Size = New System.Drawing.Size(207, 650)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -77,7 +72,7 @@ Partial Class MenuGerente
         Me.Inicio.Margin = New System.Windows.Forms.Padding(0, 0, 0, 20)
         Me.Inicio.Name = "Inicio"
         Me.Inicio.Padding = New System.Windows.Forms.Padding(0, 10, 4, 10)
-        Me.Inicio.Size = New System.Drawing.Size(160, 47)
+        Me.Inicio.Size = New System.Drawing.Size(190, 53)
         Me.Inicio.Text = "World Shoes"
         '
         'ProductosToolStripMenuItem
@@ -90,22 +85,22 @@ Partial Class MenuGerente
         Me.ProductosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
         Me.ProductosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 5, 18, 5)
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(160, 34)
-        Me.ProductosToolStripMenuItem.Text = " &Productos"
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(190, 39)
+        Me.ProductosToolStripMenuItem.Text = "&Productos"
         Me.ProductosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'AñadirProductosToolStripMenuItem
         '
         Me.AñadirProductosToolStripMenuItem.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.AñadirProductosToolStripMenuItem.Name = "AñadirProductosToolStripMenuItem"
-        Me.AñadirProductosToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
+        Me.AñadirProductosToolStripMenuItem.Size = New System.Drawing.Size(280, 26)
         Me.AñadirProductosToolStripMenuItem.Text = "Añadir Productos"
         '
         'ListarProductosToolStripMenuItem
         '
         Me.ListarProductosToolStripMenuItem.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.ListarProductosToolStripMenuItem.Name = "ListarProductosToolStripMenuItem"
-        Me.ListarProductosToolStripMenuItem.Size = New System.Drawing.Size(224, 22)
+        Me.ListarProductosToolStripMenuItem.Size = New System.Drawing.Size(280, 26)
         Me.ListarProductosToolStripMenuItem.Text = "Gestionar Productos"
         '
         'ToolsMenu
@@ -118,14 +113,14 @@ Partial Class MenuGerente
         Me.ToolsMenu.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.ToolsMenu.Name = "ToolsMenu"
         Me.ToolsMenu.Padding = New System.Windows.Forms.Padding(18, 5, 18, 5)
-        Me.ToolsMenu.Size = New System.Drawing.Size(160, 34)
-        Me.ToolsMenu.Text = " &Ventas"
+        Me.ToolsMenu.Size = New System.Drawing.Size(190, 39)
+        Me.ToolsMenu.Text = "&Ventas"
         Me.ToolsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(215, 24)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(262, 30)
         Me.OptionsToolStripMenuItem.Text = "Gestionar Ventas"
         '
         'CategoriasToolStripMenuItem
@@ -137,8 +132,8 @@ Partial Class MenuGerente
         Me.CategoriasToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
         Me.CategoriasToolStripMenuItem.Padding = New System.Windows.Forms.Padding(5, 2, 5, 2)
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(160, 28)
-        Me.CategoriasToolStripMenuItem.Text = "Categorias"
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(190, 33)
+        Me.CategoriasToolStripMenuItem.Text = "&Categorias"
         Me.CategoriasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'CerrarMenu
@@ -151,64 +146,28 @@ Partial Class MenuGerente
         Me.CerrarMenu.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.CerrarMenu.Name = "CerrarMenu"
         Me.CerrarMenu.Padding = New System.Windows.Forms.Padding(18, 5, 18, 5)
-        Me.CerrarMenu.Size = New System.Drawing.Size(160, 34)
-        Me.CerrarMenu.Text = " Sali&r"
+        Me.CerrarMenu.Size = New System.Drawing.Size(190, 39)
+        Me.CerrarMenu.Text = "&Salir"
         Me.CerrarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(57, 6)
-        '
-        'StatusStrip
-        '
-        Me.StatusStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
-        Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 468)
-        Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(962, 22)
-        Me.StatusStrip.TabIndex = 7
-        Me.StatusStrip.Text = "StatusStrip"
-        '
-        'ToolStripStatusLabel
-        '
-        Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
-        Me.ToolStripStatusLabel.Text = "Estado"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(71, 6)
         '
         'PanelBarraMenu
         '
         Me.PanelBarraMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.PanelBarraMenu.Controls.Add(Me.BtnRestaurarWin)
         Me.PanelBarraMenu.Controls.Add(Me.BtnMaximizar)
         Me.PanelBarraMenu.Controls.Add(Me.BtnMinimizar)
         Me.PanelBarraMenu.Controls.Add(Me.BtnCerrar)
+        Me.PanelBarraMenu.Controls.Add(Me.BtnRestaurarWin)
         Me.PanelBarraMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBarraMenu.Location = New System.Drawing.Point(173, 0)
-        Me.PanelBarraMenu.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelBarraMenu.Location = New System.Drawing.Point(207, 0)
+        Me.PanelBarraMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PanelBarraMenu.Name = "PanelBarraMenu"
-        Me.PanelBarraMenu.Size = New System.Drawing.Size(789, 76)
+        Me.PanelBarraMenu.Size = New System.Drawing.Size(1093, 94)
         Me.PanelBarraMenu.TabIndex = 13
-        '
-        'BtnRestaurarWin
-        '
-        Me.BtnRestaurarWin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRestaurarWin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.restaurarventana
-        Me.BtnRestaurarWin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnRestaurarWin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRestaurarWin.FlatAppearance.BorderSize = 0
-        Me.BtnRestaurarWin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnRestaurarWin.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.BtnRestaurarWin.IconColor = System.Drawing.Color.Black
-        Me.BtnRestaurarWin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BtnRestaurarWin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnRestaurarWin.Location = New System.Drawing.Point(720, 11)
-        Me.BtnRestaurarWin.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnRestaurarWin.Name = "BtnRestaurarWin"
-        Me.BtnRestaurarWin.Size = New System.Drawing.Size(25, 25)
-        Me.BtnRestaurarWin.TabIndex = 3
-        Me.BtnRestaurarWin.UseVisualStyleBackColor = True
         '
         'BtnMaximizar
         '
@@ -222,10 +181,10 @@ Partial Class MenuGerente
         Me.BtnMaximizar.IconColor = System.Drawing.Color.Black
         Me.BtnMaximizar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnMaximizar.Location = New System.Drawing.Point(720, 11)
-        Me.BtnMaximizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnMaximizar.Location = New System.Drawing.Point(1001, 14)
+        Me.BtnMaximizar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnMaximizar.Name = "BtnMaximizar"
-        Me.BtnMaximizar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnMaximizar.Size = New System.Drawing.Size(33, 31)
         Me.BtnMaximizar.TabIndex = 2
         Me.BtnMaximizar.UseVisualStyleBackColor = True
         '
@@ -241,10 +200,10 @@ Partial Class MenuGerente
         Me.BtnMinimizar.IconColor = System.Drawing.Color.Black
         Me.BtnMinimizar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnMinimizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnMinimizar.Location = New System.Drawing.Point(691, 11)
-        Me.BtnMinimizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnMinimizar.Location = New System.Drawing.Point(962, 14)
+        Me.BtnMinimizar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnMinimizar.Name = "BtnMinimizar"
-        Me.BtnMinimizar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnMinimizar.Size = New System.Drawing.Size(33, 31)
         Me.BtnMinimizar.TabIndex = 1
         Me.BtnMinimizar.UseVisualStyleBackColor = True
         '
@@ -260,78 +219,97 @@ Partial Class MenuGerente
         Me.BtnCerrar.IconColor = System.Drawing.Color.Black
         Me.BtnCerrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BtnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnCerrar.Location = New System.Drawing.Point(749, 11)
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrar.Location = New System.Drawing.Point(1040, 14)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.UseVisualStyleBackColor = True
         '
-        'PanelContenedor
+        'BtnRestaurarWin
         '
-        Me.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
-        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenedor.Location = New System.Drawing.Point(173, 76)
-        Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(789, 392)
-        Me.PanelContenedor.TabIndex = 15
+        Me.BtnRestaurarWin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnRestaurarWin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.restaurarventana
+        Me.BtnRestaurarWin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnRestaurarWin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRestaurarWin.FlatAppearance.BorderSize = 0
+        Me.BtnRestaurarWin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRestaurarWin.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.BtnRestaurarWin.IconColor = System.Drawing.Color.Black
+        Me.BtnRestaurarWin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BtnRestaurarWin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRestaurarWin.Location = New System.Drawing.Point(1001, 14)
+        Me.BtnRestaurarWin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnRestaurarWin.Name = "BtnRestaurarWin"
+        Me.BtnRestaurarWin.Size = New System.Drawing.Size(33, 31)
+        Me.BtnRestaurarWin.TabIndex = 3
+        Me.BtnRestaurarWin.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, 115)
+        Me.Panel1.Location = New System.Drawing.Point(0, 142)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(5, 34)
+        Me.Panel1.Size = New System.Drawing.Size(7, 42)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(0, 155)
+        Me.Panel2.Location = New System.Drawing.Point(0, 191)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(5, 34)
+        Me.Panel2.Size = New System.Drawing.Size(7, 42)
         Me.Panel2.TabIndex = 1
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(0, 195)
+        Me.Panel3.Location = New System.Drawing.Point(0, 240)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(5, 34)
+        Me.Panel3.Size = New System.Drawing.Size(7, 42)
         Me.Panel3.TabIndex = 1
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(0, 235)
+        Me.Panel4.Location = New System.Drawing.Point(0, 289)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(5, 34)
+        Me.Panel4.Size = New System.Drawing.Size(7, 42)
         Me.Panel4.TabIndex = 1
+        '
+        'PanelContenedorGerente
+        '
+        Me.PanelContenedorGerente.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.PanelContenedorGerente.Location = New System.Drawing.Point(207, 92)
+        Me.PanelContenedorGerente.Name = "PanelContenedorGerente"
+        Me.PanelContenedorGerente.Size = New System.Drawing.Size(1093, 558)
+        Me.PanelContenedorGerente.TabIndex = 17
         '
         'MenuGerente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(962, 490)
+        Me.ClientSize = New System.Drawing.Size(1300, 650)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PanelContenedor)
         Me.Controls.Add(Me.PanelBarraMenu)
         Me.Controls.Add(Me.MenuStrip)
-        Me.Controls.Add(Me.StatusStrip)
+        Me.Controls.Add(Me.PanelContenedorGerente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MenuGerente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuGerente"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
-        Me.StatusStrip.ResumeLayout(False)
-        Me.StatusStrip.PerformLayout()
         Me.PanelBarraMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -340,9 +318,6 @@ Partial Class MenuGerente
     Friend WithEvents CerrarMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents OptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
@@ -353,11 +328,11 @@ Partial Class MenuGerente
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AñadirProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListarProductosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PanelContenedor As Panel
     Friend WithEvents BtnMaximizar As FontAwesome.Sharp.IconButton
     Friend WithEvents BtnRestaurarWin As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents PanelContenedorGerente As Panel
 End Class
