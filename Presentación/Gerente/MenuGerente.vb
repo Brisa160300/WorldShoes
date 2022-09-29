@@ -1,7 +1,6 @@
 ﻿Imports System.Windows.Forms
 
 Public Class MenuGerente
-
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -78,7 +77,7 @@ Public Class MenuGerente
 
     Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Cierre todos los formularios secundarios del principal.
-        For Each ChildForm As form In Me.MdiChildren
+        For Each ChildForm As Form In Me.MdiChildren
             ChildForm.Close()
         Next
     End Sub
@@ -101,7 +100,4 @@ Public Class MenuGerente
         Login.TBContraseña.Clear()
     End Sub
 
-    Private Sub IconCerrar_Click(sender As Object, e As EventArgs) Handles IconCerrar.Click
-
-    End Sub
 End Class

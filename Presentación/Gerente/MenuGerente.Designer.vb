@@ -165,7 +165,7 @@ Partial Class MenuGerente
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(71, 6)
         '
         'CategoriasToolStripMenuItem
         '

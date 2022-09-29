@@ -127,16 +127,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelBadeDatos.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelBDD.Designer.vb">
-      <DependentUpon>ModelBDD.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="ModelBDD.vb">
-      <DependentUpon>ModelBDD.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -216,6 +206,12 @@
     <Compile Include="Productos.vb">
       <DependentUpon>ModelBadeDatos.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.vb">
+      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.vb">
       <DependentUpon>ModelBadeDatos.tt</DependentUpon>
     </Compile>
@@ -262,10 +258,6 @@
     <EntityDeploy Include="ModelBadeDatos.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelBadeDatos.Designer.vb</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="ModelBDD.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBDD.Designer.vb</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
     <None Include="ModelBadeDatos.edmx.diagram">
@@ -376,11 +368,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
       <LastGenOutput>ModelBadeDatos.vb</LastGenOutput>
-    </Content>
-    <Content Include="ModelBDD.tt">
-      <DependentUpon>ModelBDD.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelBDD.vb</LastGenOutput>
     </Content>
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
