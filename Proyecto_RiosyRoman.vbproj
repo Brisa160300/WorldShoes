@@ -189,6 +189,12 @@
     <Compile Include="Presentación\Vendedor\AñadirCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\AñadirVenta.Designer.vb">
+      <DependentUpon>AñadirVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\AñadirVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\ListarClientes.Designer.vb">
       <DependentUpon>ListarClientes.vb</DependentUpon>
     </Compile>
@@ -251,11 +257,17 @@
     <EmbeddedResource Include="Presentación\Vendedor\AñadirCliente.resx">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\AñadirVenta.resx">
+      <DependentUpon>AñadirVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\ListarClientes.resx">
       <DependentUpon>ListarClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\ListarProductos.resx">
       <DependentUpon>ListarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\ListarVentas.resx">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
       <DependentUpon>MenuV.vb</DependentUpon>
@@ -397,6 +409,8 @@
     <None Include="Resources\restaurarventana.png" />
     <None Include="Resources\maximizarBlanco.png" />
     <None Include="Resources\icons8-buscar-contactos-50.png" />
+    <None Include="Resources\búsquedaNaranja.png" />
+    <None Include="Resources\icons8-agregar-a-carrito-de-compras-50.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

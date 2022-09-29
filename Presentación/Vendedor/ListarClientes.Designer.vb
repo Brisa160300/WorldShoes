@@ -22,6 +22,9 @@ Partial Class ListarClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LTituloListarClientes = New System.Windows.Forms.Label()
         Me.BBuscar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -37,9 +40,11 @@ Partial Class ListarClientes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PBListaClientes = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,7 +53,7 @@ Partial Class ListarClientes
         Me.LTituloListarClientes.AutoSize = True
         Me.LTituloListarClientes.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.LTituloListarClientes.ForeColor = System.Drawing.Color.White
-        Me.LTituloListarClientes.Location = New System.Drawing.Point(18, 60)
+        Me.LTituloListarClientes.Location = New System.Drawing.Point(13, 36)
         Me.LTituloListarClientes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LTituloListarClientes.Name = "LTituloListarClientes"
         Me.LTituloListarClientes.Size = New System.Drawing.Size(97, 27)
@@ -57,6 +62,8 @@ Partial Class ListarClientes
         '
         'BBuscar
         '
+        Me.BBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
         Me.BBuscar.ForeColor = System.Drawing.Color.White
@@ -66,10 +73,11 @@ Partial Class ListarClientes
         Me.BBuscar.Size = New System.Drawing.Size(98, 32)
         Me.BBuscar.TabIndex = 2
         Me.BBuscar.Text = "Buscar"
-        Me.BBuscar.UseVisualStyleBackColor = True
+        Me.BBuscar.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.No
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
         Me.Button2.ForeColor = System.Drawing.Color.White
@@ -83,6 +91,7 @@ Partial Class ListarClientes
         '
         'Button3
         '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
         Me.Button3.ForeColor = System.Drawing.Color.White
@@ -96,13 +105,35 @@ Partial Class ListarClientes
         '
         'DataGridViewListarCliente
         '
-        Me.DataGridViewListarCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewListarCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.DataGridViewListarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridViewListarCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewListarCliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewListarCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_email, Me.Colum_Localidad})
         Me.DataGridViewListarCliente.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewListarCliente.EnableHeadersVisualStyles = False
         Me.DataGridViewListarCliente.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewListarCliente.Name = "DataGridViewListarCliente"
+        Me.DataGridViewListarCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewListarCliente.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewListarCliente.RowHeadersWidth = 51
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        Me.DataGridViewListarCliente.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewListarCliente.Size = New System.Drawing.Size(645, 236)
         Me.DataGridViewListarCliente.TabIndex = 5
         '
@@ -183,12 +214,24 @@ Partial Class ListarClientes
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "DNI:"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.LTituloListarClientes)
+        Me.Panel2.Controls.Add(Me.PBListaClientes)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(646, 100)
+        Me.Panel2.TabIndex = 10
+        '
         'PBListaClientes
         '
-        Me.PBListaClientes.BackColor = System.Drawing.Color.Transparent
-        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_contactos_50
+        Me.PBListaClientes.BackColor = System.Drawing.Color.White
+        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.iconlist
         Me.PBListaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBListaClientes.Location = New System.Drawing.Point(119, 48)
+        Me.PBListaClientes.Location = New System.Drawing.Point(114, 24)
         Me.PBListaClientes.Margin = New System.Windows.Forms.Padding(2)
         Me.PBListaClientes.Name = "PBListaClientes"
         Me.PBListaClientes.Size = New System.Drawing.Size(40, 39)
@@ -199,21 +242,22 @@ Partial Class ListarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(646, 423)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.PBListaClientes)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.BBuscar)
-        Me.Controls.Add(Me.LTituloListarClientes)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ListarClientes"
         Me.Text = "ListaClientes"
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -236,4 +280,5 @@ Partial Class ListarClientes
     Friend WithEvents PBListaClientes As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
 End Class

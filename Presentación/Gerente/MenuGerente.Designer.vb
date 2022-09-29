@@ -47,6 +47,7 @@ Partial Class MenuGerente
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.ListarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class MenuGerente
         '
         'MenuStrip
         '
-        Me.MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.MenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.MenuStrip.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip.GripMargin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -110,7 +111,7 @@ Partial Class MenuGerente
         '
         'ToolsMenu
         '
-        Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem})
+        Me.ToolsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OptionsToolStripMenuItem, Me.ListarVentasToolStripMenuItem})
         Me.ToolsMenu.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.ToolsMenu.ForeColor = System.Drawing.Color.White
         Me.ToolsMenu.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.ventas
@@ -125,8 +126,8 @@ Partial Class MenuGerente
         'OptionsToolStripMenuItem
         '
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(215, 24)
-        Me.OptionsToolStripMenuItem.Text = "Gestionar Ventas"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.OptionsToolStripMenuItem.Text = "Añadir Venta"
         '
         'CategoriasToolStripMenuItem
         '
@@ -162,7 +163,7 @@ Partial Class MenuGerente
         '
         'StatusStrip
         '
-        Me.StatusStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.StatusStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 468)
@@ -179,7 +180,7 @@ Partial Class MenuGerente
         '
         'PanelBarraMenu
         '
-        Me.PanelBarraMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.PanelBarraMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.PanelBarraMenu.Controls.Add(Me.BtnRestaurarWin)
         Me.PanelBarraMenu.Controls.Add(Me.BtnMaximizar)
         Me.PanelBarraMenu.Controls.Add(Me.BtnMinimizar)
@@ -269,7 +270,7 @@ Partial Class MenuGerente
         '
         'PanelContenedor
         '
-        Me.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedor.Location = New System.Drawing.Point(173, 76)
         Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2)
@@ -308,6 +309,12 @@ Partial Class MenuGerente
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(5, 34)
         Me.Panel4.TabIndex = 1
+        '
+        'ListarVentasToolStripMenuItem
+        '
+        Me.ListarVentasToolStripMenuItem.Name = "ListarVentasToolStripMenuItem"
+        Me.ListarVentasToolStripMenuItem.Size = New System.Drawing.Size(184, 24)
+        Me.ListarVentasToolStripMenuItem.Text = "Listar Ventas"
         '
         'MenuGerente
         '
@@ -360,4 +367,5 @@ Partial Class MenuGerente
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents ListarVentasToolStripMenuItem As ToolStripMenuItem
 End Class
