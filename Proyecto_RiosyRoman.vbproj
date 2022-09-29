@@ -105,37 +105,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="clientes.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Logica\NCliente.vb" />
-    <Compile Include="ModelBadeDatos.Context.vb">
+    <Compile Include="ModelProyecto.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBadeDatos.Context.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelBadeDatos.Designer.vb">
+    <Compile Include="ModelProyecto.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ModelBadeDatos.vb">
+    <Compile Include="ModelProyecto.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelBDD.Designer.vb">
-      <DependentUpon>ModelBDD.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="ModelBDD.vb">
-      <DependentUpon>ModelBDD.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -201,6 +191,12 @@
     <Compile Include="Presentación\Vendedor\ListarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\ListarVentas.Designer.vb">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
       <DependentUpon>MenuV.vb</DependentUpon>
     </Compile>
@@ -214,16 +210,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Productos.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+    <Compile Include="sp_helpdiagramdefinition_Result.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="talle.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="talle_producto.vb">
-      <DependentUpon>ModelBadeDatos.tt</DependentUpon>
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -259,17 +258,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ModelBadeDatos.edmx">
+    <EntityDeploy Include="ModelProyecto.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBadeDatos.Designer.vb</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="ModelBDD.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBDD.Designer.vb</LastGenOutput>
+      <LastGenOutput>ModelProyecto.Designer.vb</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="ModelBadeDatos.edmx.diagram">
-      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
+    <None Include="ModelProyecto.edmx.diagram">
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -356,6 +351,7 @@
     <None Include="Resources\icon-user.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ventas.png" />
     <None Include="Resources\lock_user_icon_195427 %282%29.png" />
     <None Include="Resources\icono user.png" />
     <None Include="Resources\icon.png" />
@@ -367,21 +363,27 @@
     <None Include="Resources\iconlista.png" />
     <None Include="Resources\iconventas.png" />
     <None Include="Resources\pngaaa.com-4979905.png" />
-    <Content Include="ModelBadeDatos.Context.tt">
+    <None Include="Resources\icons8-minimizar-la-ventana-50.png" />
+    <None Include="Resources\cerrarventana.png" />
+    <None Include="Resources\minimizar_blanco.png" />
+    <None Include="Resources\minimizar_white.png" />
+    <None Include="Resources\icons8-categorizar-50.png" />
+    <None Include="Resources\restaurarventana.png" />
+    <None Include="Resources\maximizarBlanco.png" />
+    <None Include="Resources\icons8-buscar-contactos-50.png" />
+    <Content Include="ModelProyecto.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
-      <LastGenOutput>ModelBadeDatos.Context.vb</LastGenOutput>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
     </Content>
-    <Content Include="ModelBadeDatos.tt">
+    <Content Include="ModelProyecto.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBadeDatos.edmx</DependentUpon>
-      <LastGenOutput>ModelBadeDatos.vb</LastGenOutput>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.vb</LastGenOutput>
     </Content>
-    <Content Include="ModelBDD.tt">
-      <DependentUpon>ModelBDD.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelBDD.vb</LastGenOutput>
-    </Content>
+    <None Include="Resources\ojo abierto.png" />
+    <None Include="Resources\ojo cerrado.png" />
+    <None Include="Resources\impresora.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

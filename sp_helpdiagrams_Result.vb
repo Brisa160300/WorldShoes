@@ -10,11 +10,11 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sysdiagrams
-    Public Property name As String
-    Public Property principal_id As Integer
-    Public Property diagram_id As Integer
-    Public Property version As Nullable(Of Integer)
-    Public Property definition As Byte()
+Partial Public Class sp_helpdiagrams_Result
+    Public Property Database As String
+    Public Property Name As String
+    Public Property ID As Integer
+    Public Property Owner As String
+    Public Property OwnerID As Integer
 
 End Class

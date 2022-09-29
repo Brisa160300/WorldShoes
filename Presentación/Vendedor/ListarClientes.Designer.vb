@@ -25,18 +25,18 @@ Partial Class ListarClientes
         Me.LTituloListarClientes = New System.Windows.Forms.Label()
         Me.BBuscar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridViewListarCliente = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ComboBoxBuscarDni = New System.Windows.Forms.ComboBox()
         Me.PBListaClientes = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,55 +45,71 @@ Partial Class ListarClientes
         'LTituloListarClientes
         '
         Me.LTituloListarClientes.AutoSize = True
-        Me.LTituloListarClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.8!, System.Drawing.FontStyle.Bold)
+        Me.LTituloListarClientes.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.LTituloListarClientes.ForeColor = System.Drawing.Color.White
-        Me.LTituloListarClientes.Location = New System.Drawing.Point(43, 60)
+        Me.LTituloListarClientes.Location = New System.Drawing.Point(43, 40)
+        Me.LTituloListarClientes.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LTituloListarClientes.Name = "LTituloListarClientes"
-        Me.LTituloListarClientes.Size = New System.Drawing.Size(139, 37)
+        Me.LTituloListarClientes.Size = New System.Drawing.Size(120, 33)
         Me.LTituloListarClientes.TabIndex = 0
         Me.LTituloListarClientes.Text = "Clientes"
         '
         'BBuscar
         '
-        Me.BBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.BBuscar.Location = New System.Drawing.Point(467, 139)
+        Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.BBuscar.ForeColor = System.Drawing.Color.White
+        Me.BBuscar.Location = New System.Drawing.Point(495, 82)
+        Me.BBuscar.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(107, 57)
+        Me.BBuscar.Size = New System.Drawing.Size(164, 49)
         Me.BBuscar.TabIndex = 2
         Me.BBuscar.Text = "Buscar"
         Me.BBuscar.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(590, 139)
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(667, 82)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(107, 57)
+        Me.Button2.Size = New System.Drawing.Size(164, 49)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.Button3.Location = New System.Drawing.Point(717, 139)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 57)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Imprimir"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'DataGridViewListarCliente
         '
+        Me.DataGridViewListarCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.DataGridViewListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewListarCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_email, Me.Colum_Localidad})
+        Me.DataGridViewListarCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_Telefono, Me.Colum_Direccion, Me.Colum_email})
         Me.DataGridViewListarCliente.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewListarCliente.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridViewListarCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridViewListarCliente.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.DataGridViewListarCliente.Name = "DataGridViewListarCliente"
         Me.DataGridViewListarCliente.RowHeadersWidth = 51
-        Me.DataGridViewListarCliente.Size = New System.Drawing.Size(860, 291)
+        Me.DataGridViewListarCliente.Size = New System.Drawing.Size(1075, 362)
         Me.DataGridViewListarCliente.TabIndex = 5
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.DataGridViewListarCliente)
+        Me.Panel1.Location = New System.Drawing.Point(1, 291)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1075, 362)
+        Me.Panel1.TabIndex = 6
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(144, 228)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(290, 29)
+        Me.TextBox1.TabIndex = 8
         '
         'Colum_Nombre
         '
@@ -116,19 +132,19 @@ Partial Class ListarClientes
         Me.Colum_DNI.Name = "Colum_DNI"
         Me.Colum_DNI.Width = 125
         '
-        'Colum_FechaNaci
-        '
-        Me.Colum_FechaNaci.HeaderText = "Fecha de Nacimiento"
-        Me.Colum_FechaNaci.MinimumWidth = 6
-        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
-        Me.Colum_FechaNaci.Width = 125
-        '
         'Colum_Telefono
         '
         Me.Colum_Telefono.HeaderText = "Telefono"
         Me.Colum_Telefono.MinimumWidth = 6
         Me.Colum_Telefono.Name = "Colum_Telefono"
         Me.Colum_Telefono.Width = 125
+        '
+        'Colum_Direccion
+        '
+        Me.Colum_Direccion.HeaderText = "Direccion"
+        Me.Colum_Direccion.MinimumWidth = 6
+        Me.Colum_Direccion.Name = "Colum_Direccion"
+        Me.Colum_Direccion.Width = 125
         '
         'Colum_email
         '
@@ -137,45 +153,50 @@ Partial Class ListarClientes
         Me.Colum_email.Name = "Colum_email"
         Me.Colum_email.Width = 125
         '
-        'Colum_Localidad
+        'ComboBoxBuscarDni
         '
-        Me.Colum_Localidad.HeaderText = "Localidad"
-        Me.Colum_Localidad.MinimumWidth = 6
-        Me.Colum_Localidad.Name = "Colum_Localidad"
-        Me.Colum_Localidad.Width = 125
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.DataGridViewListarCliente)
-        Me.Panel1.Location = New System.Drawing.Point(1, 233)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(860, 291)
-        Me.Panel1.TabIndex = 6
+        Me.ComboBoxBuscarDni.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.ComboBoxBuscarDni.FormattingEnabled = True
+        Me.ComboBoxBuscarDni.Location = New System.Drawing.Point(12, 228)
+        Me.ComboBoxBuscarDni.Name = "ComboBoxBuscarDni"
+        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(125, 30)
+        Me.ComboBoxBuscarDni.TabIndex = 10
+        Me.ComboBoxBuscarDni.Text = "DNI"
         '
         'PBListaClientes
         '
-        Me.PBListaClientes.BackColor = System.Drawing.Color.White
-        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.iconlist
+        Me.PBListaClientes.BackColor = System.Drawing.Color.Transparent
+        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_contactos_50
         Me.PBListaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBListaClientes.Location = New System.Drawing.Point(197, 49)
+        Me.PBListaClientes.Location = New System.Drawing.Point(197, 22)
+        Me.PBListaClientes.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.PBListaClientes.Name = "PBListaClientes"
-        Me.PBListaClientes.Size = New System.Drawing.Size(83, 69)
+        Me.PBListaClientes.Size = New System.Drawing.Size(66, 60)
         Me.PBListaClientes.TabIndex = 7
         Me.PBListaClientes.TabStop = False
         '
-        'TextBox1
+        'Button3
         '
-        Me.TextBox1.Location = New System.Drawing.Point(293, 157)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(158, 22)
-        Me.TextBox1.TabIndex = 8
+        Me.Button3.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.impresora
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(839, 82)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(164, 49)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Imprimir"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'ListarClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.ClientSize = New System.Drawing.Size(862, 521)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1074, 512)
+        Me.Controls.Add(Me.ComboBoxBuscarDni)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PBListaClientes)
         Me.Controls.Add(Me.Panel1)
@@ -183,8 +204,12 @@ Partial Class ListarClientes
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.BBuscar)
         Me.Controls.Add(Me.LTituloListarClientes)
+        Me.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Name = "ListarClientes"
-        Me.Text = "ListatClientes"
+        Me.Text = "5q2"
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).EndInit()
@@ -198,14 +223,14 @@ Partial Class ListarClientes
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridViewListarCliente As DataGridView
-    Friend WithEvents Colum_Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Apellido As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_FechaNaci As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_email As DataGridViewTextBoxColumn
-    Friend WithEvents Colum_Localidad As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PBListaClientes As PictureBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Colum_Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents Colum_Apellido As DataGridViewTextBoxColumn
+    Friend WithEvents Colum_DNI As DataGridViewTextBoxColumn
+    Friend WithEvents Colum_Telefono As DataGridViewTextBoxColumn
+    Friend WithEvents Colum_Direccion As DataGridViewTextBoxColumn
+    Friend WithEvents Colum_email As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBoxBuscarDni As ComboBox
 End Class
