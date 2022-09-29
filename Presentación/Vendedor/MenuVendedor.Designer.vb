@@ -48,8 +48,9 @@ Partial Class MenuVendedor
         Me.PanelBarraMenu.Controls.Add(Me.IconMinimizar)
         Me.PanelBarraMenu.Controls.Add(Me.IconCerrar)
         Me.PanelBarraMenu.Location = New System.Drawing.Point(1, -1)
+        Me.PanelBarraMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelBarraMenu.Name = "PanelBarraMenu"
-        Me.PanelBarraMenu.Size = New System.Drawing.Size(1280, 45)
+        Me.PanelBarraMenu.Size = New System.Drawing.Size(960, 37)
         Me.PanelBarraMenu.TabIndex = 12
         '
         'IconMinimizar
@@ -62,9 +63,10 @@ Partial Class MenuVendedor
         Me.IconMinimizar.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconMinimizar.IconColor = System.Drawing.Color.Black
         Me.IconMinimizar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconMinimizar.Location = New System.Drawing.Point(1193, 7)
+        Me.IconMinimizar.Location = New System.Drawing.Point(895, 6)
+        Me.IconMinimizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IconMinimizar.Name = "IconMinimizar"
-        Me.IconMinimizar.Size = New System.Drawing.Size(35, 35)
+        Me.IconMinimizar.Size = New System.Drawing.Size(26, 28)
         Me.IconMinimizar.TabIndex = 1
         Me.IconMinimizar.UseVisualStyleBackColor = True
         '
@@ -78,9 +80,10 @@ Partial Class MenuVendedor
         Me.IconCerrar.IconChar = FontAwesome.Sharp.IconChar.None
         Me.IconCerrar.IconColor = System.Drawing.Color.Black
         Me.IconCerrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCerrar.Location = New System.Drawing.Point(1234, 7)
+        Me.IconCerrar.Location = New System.Drawing.Point(926, 6)
+        Me.IconCerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IconCerrar.Name = "IconCerrar"
-        Me.IconCerrar.Size = New System.Drawing.Size(35, 35)
+        Me.IconCerrar.Size = New System.Drawing.Size(26, 28)
         Me.IconCerrar.TabIndex = 0
         Me.IconCerrar.UseVisualStyleBackColor = True
         '
@@ -93,8 +96,8 @@ Partial Class MenuVendedor
         Me.MenuStripVendedor.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Inicio, Me.InicioToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.FacturaciónToolStripMenuItem, Me.CerrarToolStripMenuItem})
         Me.MenuStripVendedor.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripVendedor.Name = "MenuStripVendedor"
-        Me.MenuStripVendedor.Padding = New System.Windows.Forms.Padding(8, 60, 0, 2)
-        Me.MenuStripVendedor.Size = New System.Drawing.Size(197, 603)
+        Me.MenuStripVendedor.Padding = New System.Windows.Forms.Padding(6, 49, 0, 2)
+        Me.MenuStripVendedor.Size = New System.Drawing.Size(162, 490)
         Me.MenuStripVendedor.TabIndex = 14
         Me.MenuStripVendedor.Text = "MenuStripVendedor"
         '
@@ -106,7 +109,7 @@ Partial Class MenuVendedor
         Me.Inicio.IconColor = System.Drawing.Color.Black
         Me.Inicio.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.Inicio.Name = "Inicio"
-        Me.Inicio.Size = New System.Drawing.Size(180, 33)
+        Me.Inicio.Size = New System.Drawing.Size(149, 27)
         Me.Inicio.Text = "World Shoes"
         '
         'InicioToolStripMenuItem
@@ -118,7 +121,7 @@ Partial Class MenuVendedor
         Me.InicioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
         Me.InicioToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 0, 18, 0)
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(180, 79)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(149, 74)
         Me.InicioToolStripMenuItem.Text = "&Inicio"
         Me.InicioToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.InicioToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -126,7 +129,7 @@ Partial Class MenuVendedor
         'MenúInicioToolStripMenuItem
         '
         Me.MenúInicioToolStripMenuItem.Name = "MenúInicioToolStripMenuItem"
-        Me.MenúInicioToolStripMenuItem.Size = New System.Drawing.Size(210, 30)
+        Me.MenúInicioToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
         Me.MenúInicioToolStripMenuItem.Text = "Menú Inicio"
         '
         'ClientesToolStripMenuItem
@@ -138,7 +141,7 @@ Partial Class MenuVendedor
         Me.ClientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 0, 18, 0)
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 79)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(149, 74)
         Me.ClientesToolStripMenuItem.Text = "&Clientes"
         Me.ClientesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ClientesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -148,7 +151,7 @@ Partial Class MenuVendedor
         Me.AñadirClienteToolStripMenuItem.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.AñadirClienteToolStripMenuItem.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_añadir_usuario_masculino_50
         Me.AñadirClienteToolStripMenuItem.Name = "AñadirClienteToolStripMenuItem"
-        Me.AñadirClienteToolStripMenuItem.Size = New System.Drawing.Size(236, 30)
+        Me.AñadirClienteToolStripMenuItem.Size = New System.Drawing.Size(194, 24)
         Me.AñadirClienteToolStripMenuItem.Text = "Añadir Cliente"
         '
         'ListarClientesToolStripMenuItem
@@ -156,7 +159,7 @@ Partial Class MenuVendedor
         Me.ListarClientesToolStripMenuItem.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.ListarClientesToolStripMenuItem.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_libreta_de_direcciones_2_50
         Me.ListarClientesToolStripMenuItem.Name = "ListarClientesToolStripMenuItem"
-        Me.ListarClientesToolStripMenuItem.Size = New System.Drawing.Size(236, 30)
+        Me.ListarClientesToolStripMenuItem.Size = New System.Drawing.Size(194, 24)
         Me.ListarClientesToolStripMenuItem.Text = "Listar Clientes"
         '
         'ProductosToolStripMenuItem
@@ -169,7 +172,7 @@ Partial Class MenuVendedor
         Me.ProductosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
         Me.ProductosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 0, 18, 0)
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 79)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(149, 74)
         Me.ProductosToolStripMenuItem.Text = "&Productos"
         Me.ProductosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ProductosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -177,7 +180,7 @@ Partial Class MenuVendedor
         'ListarProductosToolStripMenuItem
         '
         Me.ListarProductosToolStripMenuItem.Name = "ListarProductosToolStripMenuItem"
-        Me.ListarProductosToolStripMenuItem.Size = New System.Drawing.Size(258, 30)
+        Me.ListarProductosToolStripMenuItem.Size = New System.Drawing.Size(213, 24)
         Me.ListarProductosToolStripMenuItem.Text = "Listar Productos"
         '
         'FacturaciónToolStripMenuItem
@@ -188,7 +191,7 @@ Partial Class MenuVendedor
         Me.FacturaciónToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.FacturaciónToolStripMenuItem.Name = "FacturaciónToolStripMenuItem"
         Me.FacturaciónToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 0, 18, 0)
-        Me.FacturaciónToolStripMenuItem.Size = New System.Drawing.Size(180, 79)
+        Me.FacturaciónToolStripMenuItem.Size = New System.Drawing.Size(149, 74)
         Me.FacturaciónToolStripMenuItem.Text = "&Facturación"
         Me.FacturaciónToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.FacturaciónToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -201,7 +204,7 @@ Partial Class MenuVendedor
         Me.CerrarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
         Me.CerrarToolStripMenuItem.Padding = New System.Windows.Forms.Padding(18, 0, 18, 0)
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(180, 79)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(149, 74)
         Me.CerrarToolStripMenuItem.Text = "Salir"
         Me.CerrarToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CerrarToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -209,24 +212,24 @@ Partial Class MenuVendedor
         'PanelContenedor
         '
         Me.PanelContenedor.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PanelContenedor.Location = New System.Drawing.Point(192, 43)
+        Me.PanelContenedor.Location = New System.Drawing.Point(144, 35)
+        Me.PanelContenedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(1089, 560)
+        Me.PanelContenedor.Size = New System.Drawing.Size(817, 455)
         Me.PanelContenedor.TabIndex = 20
         '
         'MenuVendedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1282, 603)
+        Me.ClientSize = New System.Drawing.Size(962, 490)
         Me.Controls.Add(Me.PanelContenedor)
         Me.Controls.Add(Me.PanelBarraMenu)
         Me.Controls.Add(Me.MenuStripVendedor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MenuVendedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuVendedor"

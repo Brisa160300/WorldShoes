@@ -201,6 +201,12 @@
     <Compile Include="Presentación\Vendedor\ListarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\ListarVentas.Designer.vb">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\ListarVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
       <DependentUpon>MenuV.vb</DependentUpon>
     </Compile>
@@ -356,6 +362,7 @@
     <None Include="Resources\icon-user.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ventas.png" />
     <None Include="Resources\lock_user_icon_195427 %282%29.png" />
     <None Include="Resources\icono user.png" />
     <None Include="Resources\icon.png" />
@@ -382,6 +389,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelBDD.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-minimizar-la-ventana-50.png" />
+    <None Include="Resources\cerrarventana.png" />
+    <None Include="Resources\minimizar_blanco.png" />
+    <None Include="Resources\minimizar_white.png" />
+    <None Include="Resources\icons8-categorizar-50.png" />
+    <None Include="Resources\restaurarventana.png" />
+    <None Include="Resources\maximizarBlanco.png" />
+    <None Include="Resources\icons8-buscar-contactos-50.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

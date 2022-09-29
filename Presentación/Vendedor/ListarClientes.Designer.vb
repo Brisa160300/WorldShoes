@@ -35,8 +35,9 @@ Partial Class ListarClientes
         Me.Colum_email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Colum_Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PBListaClientes = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PBListaClientes = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,54 +46,64 @@ Partial Class ListarClientes
         'LTituloListarClientes
         '
         Me.LTituloListarClientes.AutoSize = True
-        Me.LTituloListarClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.8!, System.Drawing.FontStyle.Bold)
+        Me.LTituloListarClientes.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.LTituloListarClientes.ForeColor = System.Drawing.Color.White
-        Me.LTituloListarClientes.Location = New System.Drawing.Point(43, 60)
+        Me.LTituloListarClientes.Location = New System.Drawing.Point(18, 60)
+        Me.LTituloListarClientes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LTituloListarClientes.Name = "LTituloListarClientes"
-        Me.LTituloListarClientes.Size = New System.Drawing.Size(139, 37)
+        Me.LTituloListarClientes.Size = New System.Drawing.Size(97, 27)
         Me.LTituloListarClientes.TabIndex = 0
         Me.LTituloListarClientes.Text = "Clientes"
         '
         'BBuscar
         '
+        Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.BBuscar.Location = New System.Drawing.Point(467, 139)
+        Me.BBuscar.ForeColor = System.Drawing.Color.White
+        Me.BBuscar.Location = New System.Drawing.Point(281, 140)
+        Me.BBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(107, 57)
+        Me.BBuscar.Size = New System.Drawing.Size(98, 32)
         Me.BBuscar.TabIndex = 2
         Me.BBuscar.Text = "Buscar"
         Me.BBuscar.UseVisualStyleBackColor = True
         '
         'Button2
         '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(590, 139)
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(396, 140)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(107, 57)
+        Me.Button2.Size = New System.Drawing.Size(98, 32)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Eliminar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.Button3.Location = New System.Drawing.Point(717, 139)
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(511, 140)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(107, 57)
+        Me.Button3.Size = New System.Drawing.Size(98, 32)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "Imprimir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'DataGridViewListarCliente
         '
+        Me.DataGridViewListarCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.DataGridViewListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewListarCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_email, Me.Colum_Localidad})
         Me.DataGridViewListarCliente.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewListarCliente.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridViewListarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewListarCliente.Name = "DataGridViewListarCliente"
         Me.DataGridViewListarCliente.RowHeadersWidth = 51
-        Me.DataGridViewListarCliente.Size = New System.Drawing.Size(860, 291)
+        Me.DataGridViewListarCliente.Size = New System.Drawing.Size(645, 236)
         Me.DataGridViewListarCliente.TabIndex = 5
         '
         'Colum_Nombre
@@ -147,35 +158,50 @@ Partial Class ListarClientes
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DataGridViewListarCliente)
-        Me.Panel1.Location = New System.Drawing.Point(1, 233)
+        Me.Panel1.Location = New System.Drawing.Point(1, 189)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(860, 291)
+        Me.Panel1.Size = New System.Drawing.Size(645, 236)
         Me.Panel1.TabIndex = 6
-        '
-        'PBListaClientes
-        '
-        Me.PBListaClientes.BackColor = System.Drawing.Color.White
-        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.iconlist
-        Me.PBListaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBListaClientes.Location = New System.Drawing.Point(197, 49)
-        Me.PBListaClientes.Name = "PBListaClientes"
-        Me.PBListaClientes.Size = New System.Drawing.Size(83, 69)
-        Me.PBListaClientes.TabIndex = 7
-        Me.PBListaClientes.TabStop = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(293, 157)
+        Me.TextBox1.Location = New System.Drawing.Point(73, 147)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(158, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
         Me.TextBox1.TabIndex = 8
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(15, 150)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 17)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "DNI:"
+        '
+        'PBListaClientes
+        '
+        Me.PBListaClientes.BackColor = System.Drawing.Color.Transparent
+        Me.PBListaClientes.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_contactos_50
+        Me.PBListaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBListaClientes.Location = New System.Drawing.Point(119, 48)
+        Me.PBListaClientes.Margin = New System.Windows.Forms.Padding(2)
+        Me.PBListaClientes.Name = "PBListaClientes"
+        Me.PBListaClientes.Size = New System.Drawing.Size(40, 39)
+        Me.PBListaClientes.TabIndex = 7
+        Me.PBListaClientes.TabStop = False
         '
         'ListarClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.ClientSize = New System.Drawing.Size(862, 521)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(646, 423)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PBListaClientes)
         Me.Controls.Add(Me.Panel1)
@@ -183,8 +209,9 @@ Partial Class ListarClientes
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.BBuscar)
         Me.Controls.Add(Me.LTituloListarClientes)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ListarClientes"
-        Me.Text = "ListatClientes"
+        Me.Text = "ListaClientes"
         CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).EndInit()
@@ -208,4 +235,5 @@ Partial Class ListarClientes
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PBListaClientes As PictureBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
 End Class
