@@ -24,19 +24,21 @@ Partial Class ListarProductos
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PBListaClientes = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridViewListarCliente = New System.Windows.Forms.DataGridView()
-        Me.BBuscar = New System.Windows.Forms.Button()
-        Me.LTituloListarProductos = New System.Windows.Forms.Label()
-        Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewListaProductos = New System.Windows.Forms.DataGridView()
         Me.Colum_Localidad = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Colum_Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_FechaNaci = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Colum_Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabControlListaProductos = New System.Windows.Forms.TabControl()
+        Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
+        Me.TBBuscarProducto = New System.Windows.Forms.TextBox()
+        Me.BBuscarCategoria = New System.Windows.Forms.Button()
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewListaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControlListaProductos.SuspendLayout()
+        Me.TabPageListaProducto.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -57,81 +59,18 @@ Partial Class ListarProductos
         Me.PBListaClientes.TabIndex = 14
         Me.PBListaClientes.TabStop = False
         '
-        'Panel1
+        'DataGridViewListaProductos
         '
-        Me.Panel1.Controls.Add(Me.DataGridViewListarCliente)
-        Me.Panel1.Location = New System.Drawing.Point(1, 207)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(860, 291)
-        Me.Panel1.TabIndex = 13
-        '
-        'DataGridViewListarCliente
-        '
-        Me.DataGridViewListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewListarCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_Localidad})
-        Me.DataGridViewListarCliente.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewListarCliente.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridViewListarCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewListarCliente.Name = "DataGridViewListarCliente"
-        Me.DataGridViewListarCliente.RowHeadersWidth = 51
-        Me.DataGridViewListarCliente.Size = New System.Drawing.Size(860, 291)
-        Me.DataGridViewListarCliente.TabIndex = 5
-        '
-        'BBuscar
-        '
-        Me.BBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.BBuscar.Location = New System.Drawing.Point(716, 113)
-        Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(107, 57)
-        Me.BBuscar.TabIndex = 10
-        Me.BBuscar.Text = "Buscar"
-        Me.BBuscar.UseVisualStyleBackColor = True
-        '
-        'LTituloListarProductos
-        '
-        Me.LTituloListarProductos.AutoSize = True
-        Me.LTituloListarProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.8!, System.Drawing.FontStyle.Bold)
-        Me.LTituloListarProductos.ForeColor = System.Drawing.Color.White
-        Me.LTituloListarProductos.Location = New System.Drawing.Point(43, 34)
-        Me.LTituloListarProductos.Name = "LTituloListarProductos"
-        Me.LTituloListarProductos.Size = New System.Drawing.Size(171, 37)
-        Me.LTituloListarProductos.TabIndex = 9
-        Me.LTituloListarProductos.Text = "Productos"
-        '
-        'Colum_Nombre
-        '
-        Me.Colum_Nombre.HeaderText = "Codigo"
-        Me.Colum_Nombre.MinimumWidth = 6
-        Me.Colum_Nombre.Name = "Colum_Nombre"
-        Me.Colum_Nombre.Width = 125
-        '
-        'Colum_Apellido
-        '
-        Me.Colum_Apellido.HeaderText = "Nombre"
-        Me.Colum_Apellido.MinimumWidth = 6
-        Me.Colum_Apellido.Name = "Colum_Apellido"
-        Me.Colum_Apellido.Width = 125
-        '
-        'Colum_DNI
-        '
-        Me.Colum_DNI.HeaderText = "Categoria"
-        Me.Colum_DNI.MinimumWidth = 6
-        Me.Colum_DNI.Name = "Colum_DNI"
-        Me.Colum_DNI.Width = 125
-        '
-        'Colum_FechaNaci
-        '
-        Me.Colum_FechaNaci.HeaderText = "Stock"
-        Me.Colum_FechaNaci.MinimumWidth = 6
-        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
-        Me.Colum_FechaNaci.Width = 125
-        '
-        'Colum_Telefono
-        '
-        Me.Colum_Telefono.HeaderText = "Precio"
-        Me.Colum_Telefono.MinimumWidth = 6
-        Me.Colum_Telefono.Name = "Colum_Telefono"
-        Me.Colum_Telefono.Width = 125
+        Me.DataGridViewListaProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewListaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Colum_Nombre, Me.Colum_Apellido, Me.Colum_DNI, Me.Colum_FechaNaci, Me.Colum_Telefono, Me.Colum_Localidad})
+        Me.DataGridViewListaProductos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewListaProductos.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridViewListaProductos.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridViewListaProductos.Name = "DataGridViewListaProductos"
+        Me.DataGridViewListaProductos.RowHeadersWidth = 51
+        Me.DataGridViewListaProductos.Size = New System.Drawing.Size(704, 484)
+        Me.DataGridViewListaProductos.TabIndex = 5
         '
         'Colum_Localidad
         '
@@ -142,22 +81,107 @@ Partial Class ListarProductos
         Me.Colum_Localidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.Colum_Localidad.Width = 125
         '
+        'Colum_Telefono
+        '
+        Me.Colum_Telefono.HeaderText = "Precio"
+        Me.Colum_Telefono.MinimumWidth = 6
+        Me.Colum_Telefono.Name = "Colum_Telefono"
+        Me.Colum_Telefono.Width = 125
+        '
+        'Colum_FechaNaci
+        '
+        Me.Colum_FechaNaci.HeaderText = "Stock"
+        Me.Colum_FechaNaci.MinimumWidth = 6
+        Me.Colum_FechaNaci.Name = "Colum_FechaNaci"
+        Me.Colum_FechaNaci.Width = 125
+        '
+        'Colum_DNI
+        '
+        Me.Colum_DNI.HeaderText = "Categoria"
+        Me.Colum_DNI.MinimumWidth = 6
+        Me.Colum_DNI.Name = "Colum_DNI"
+        Me.Colum_DNI.Width = 125
+        '
+        'Colum_Apellido
+        '
+        Me.Colum_Apellido.HeaderText = "Nombre"
+        Me.Colum_Apellido.MinimumWidth = 6
+        Me.Colum_Apellido.Name = "Colum_Apellido"
+        Me.Colum_Apellido.Width = 125
+        '
+        'Colum_Nombre
+        '
+        Me.Colum_Nombre.HeaderText = "Codigo"
+        Me.Colum_Nombre.MinimumWidth = 6
+        Me.Colum_Nombre.Name = "Colum_Nombre"
+        Me.Colum_Nombre.Width = 125
+        '
+        'TabControlListaProductos
+        '
+        Me.TabControlListaProductos.Controls.Add(Me.TabPageListaProducto)
+        Me.TabControlListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControlListaProductos.Location = New System.Drawing.Point(37, 22)
+        Me.TabControlListaProductos.Name = "TabControlListaProductos"
+        Me.TabControlListaProductos.SelectedIndex = 0
+        Me.TabControlListaProductos.Size = New System.Drawing.Size(718, 522)
+        Me.TabControlListaProductos.TabIndex = 16
+        '
+        'TabPageListaProducto
+        '
+        Me.TabPageListaProducto.Controls.Add(Me.DataGridViewListaProductos)
+        Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
+        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaProducto.Name = "TabPageListaProducto"
+        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(710, 490)
+        Me.TabPageListaProducto.TabIndex = 0
+        Me.TabPageListaProducto.Text = "Lista de Producto"
+        Me.TabPageListaProducto.UseVisualStyleBackColor = True
+        '
+        'TBBuscarProducto
+        '
+        Me.TBBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBBuscarProducto.Location = New System.Drawing.Point(782, 101)
+        Me.TBBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBBuscarProducto.Name = "TBBuscarProducto"
+        Me.TBBuscarProducto.Size = New System.Drawing.Size(173, 30)
+        Me.TBBuscarProducto.TabIndex = 17
+        '
+        'BBuscarCategoria
+        '
+        Me.BBuscarCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BBuscarCategoria.FlatAppearance.BorderSize = 2
+        Me.BBuscarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BBuscarCategoria.ForeColor = System.Drawing.Color.White
+        Me.BBuscarCategoria.Location = New System.Drawing.Point(963, 99)
+        Me.BBuscarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarCategoria.Name = "BBuscarCategoria"
+        Me.BBuscarCategoria.Size = New System.Drawing.Size(84, 32)
+        Me.BBuscarCategoria.TabIndex = 18
+        Me.BBuscarCategoria.Text = "Buscar"
+        Me.BBuscarCategoria.UseVisualStyleBackColor = False
+        '
         'ListarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.ClientSize = New System.Drawing.Size(862, 521)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1093, 556)
+        Me.Controls.Add(Me.BBuscarCategoria)
+        Me.Controls.Add(Me.TBBuscarProducto)
+        Me.Controls.Add(Me.TabControlListaProductos)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PBListaClientes)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.BBuscar)
-        Me.Controls.Add(Me.LTituloListarProductos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ListarProductos"
         Me.Text = "ListarProductos"
         CType(Me.PBListaClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridViewListarCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewListaProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControlListaProductos.ResumeLayout(False)
+        Me.TabPageListaProducto.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -165,14 +189,15 @@ Partial Class ListarProductos
 
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PBListaClientes As PictureBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridViewListarCliente As DataGridView
-    Friend WithEvents BBuscar As Button
-    Friend WithEvents LTituloListarProductos As Label
+    Friend WithEvents DataGridViewListaProductos As DataGridView
     Friend WithEvents Colum_Nombre As DataGridViewTextBoxColumn
     Friend WithEvents Colum_Apellido As DataGridViewTextBoxColumn
     Friend WithEvents Colum_DNI As DataGridViewTextBoxColumn
     Friend WithEvents Colum_FechaNaci As DataGridViewTextBoxColumn
     Friend WithEvents Colum_Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Colum_Localidad As DataGridViewImageColumn
+    Friend WithEvents TabControlListaProductos As TabControl
+    Friend WithEvents TabPageListaProducto As TabPage
+    Friend WithEvents TBBuscarProducto As TextBox
+    Friend WithEvents BBuscarCategoria As Button
 End Class

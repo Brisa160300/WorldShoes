@@ -29,10 +29,10 @@ Partial Class Login
         Me.BLogin = New System.Windows.Forms.Button()
         Me.LTituloLogin = New System.Windows.Forms.Label()
         Me.PanelBarraMenuLogin = New System.Windows.Forms.Panel()
-        Me.IconMaximizar = New FontAwesome.Sharp.IconButton()
-        Me.IconMinimizarLogin = New FontAwesome.Sharp.IconButton()
-        Me.IconCerrarLogin = New FontAwesome.Sharp.IconButton()
-        Me.IconRestaurarWin = New FontAwesome.Sharp.IconButton()
+        Me.BMinimizarLogin = New System.Windows.Forms.Button()
+        Me.BMaximizarLogin = New System.Windows.Forms.Button()
+        Me.BCerrarLogin = New System.Windows.Forms.Button()
+        Me.BRestaurarLogin = New System.Windows.Forms.Button()
         Me.PanelContenedorLogin = New System.Windows.Forms.Panel()
         Me.PictureBoxContraseña = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -116,10 +116,10 @@ Partial Class Login
         'PanelBarraMenuLogin
         '
         Me.PanelBarraMenuLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.PanelBarraMenuLogin.Controls.Add(Me.IconMaximizar)
-        Me.PanelBarraMenuLogin.Controls.Add(Me.IconMinimizarLogin)
-        Me.PanelBarraMenuLogin.Controls.Add(Me.IconCerrarLogin)
-        Me.PanelBarraMenuLogin.Controls.Add(Me.IconRestaurarWin)
+        Me.PanelBarraMenuLogin.Controls.Add(Me.BMinimizarLogin)
+        Me.PanelBarraMenuLogin.Controls.Add(Me.BMaximizarLogin)
+        Me.PanelBarraMenuLogin.Controls.Add(Me.BCerrarLogin)
+        Me.PanelBarraMenuLogin.Controls.Add(Me.BRestaurarLogin)
         Me.PanelBarraMenuLogin.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelBarraMenuLogin.Location = New System.Drawing.Point(0, 0)
         Me.PanelBarraMenuLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -127,81 +127,49 @@ Partial Class Login
         Me.PanelBarraMenuLogin.Size = New System.Drawing.Size(1076, 94)
         Me.PanelBarraMenuLogin.TabIndex = 14
         '
-        'IconMaximizar
+        'BMinimizarLogin
         '
-        Me.IconMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconMaximizar.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.maximizarBlanco
-        Me.IconMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.IconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconMaximizar.FlatAppearance.BorderSize = 0
-        Me.IconMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconMaximizar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconMaximizar.IconColor = System.Drawing.Color.Black
-        Me.IconMaximizar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconMaximizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconMaximizar.Location = New System.Drawing.Point(984, 14)
-        Me.IconMaximizar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.IconMaximizar.Name = "IconMaximizar"
-        Me.IconMaximizar.Size = New System.Drawing.Size(33, 31)
-        Me.IconMaximizar.TabIndex = 2
-        Me.IconMaximizar.UseVisualStyleBackColor = True
+        Me.BMinimizarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.minimizar_blanco
+        Me.BMinimizarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BMinimizarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BMinimizarLogin.Location = New System.Drawing.Point(992, 12)
+        Me.BMinimizarLogin.Name = "BMinimizarLogin"
+        Me.BMinimizarLogin.Size = New System.Drawing.Size(33, 31)
+        Me.BMinimizarLogin.TabIndex = 7
+        Me.BMinimizarLogin.UseVisualStyleBackColor = True
         '
-        'IconMinimizarLogin
+        'BMaximizarLogin
         '
-        Me.IconMinimizarLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconMinimizarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.minimizar_blanco
-        Me.IconMinimizarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.IconMinimizarLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconMinimizarLogin.FlatAppearance.BorderSize = 0
-        Me.IconMinimizarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconMinimizarLogin.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconMinimizarLogin.IconColor = System.Drawing.Color.Black
-        Me.IconMinimizarLogin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconMinimizarLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconMinimizarLogin.Location = New System.Drawing.Point(945, 14)
-        Me.IconMinimizarLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.IconMinimizarLogin.Name = "IconMinimizarLogin"
-        Me.IconMinimizarLogin.Size = New System.Drawing.Size(33, 31)
-        Me.IconMinimizarLogin.TabIndex = 1
-        Me.IconMinimizarLogin.UseVisualStyleBackColor = True
+        Me.BMaximizarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.maximizarBlanco
+        Me.BMaximizarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BMaximizarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BMaximizarLogin.Location = New System.Drawing.Point(992, 12)
+        Me.BMaximizarLogin.Name = "BMaximizarLogin"
+        Me.BMaximizarLogin.Size = New System.Drawing.Size(33, 31)
+        Me.BMaximizarLogin.TabIndex = 8
+        Me.BMaximizarLogin.UseVisualStyleBackColor = True
         '
-        'IconCerrarLogin
+        'BCerrarLogin
         '
-        Me.IconCerrarLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconCerrarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.cerrarventana
-        Me.IconCerrarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.IconCerrarLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconCerrarLogin.FlatAppearance.BorderSize = 0
-        Me.IconCerrarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconCerrarLogin.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconCerrarLogin.IconColor = System.Drawing.Color.Black
-        Me.IconCerrarLogin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCerrarLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconCerrarLogin.Location = New System.Drawing.Point(1023, 14)
-        Me.IconCerrarLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.IconCerrarLogin.Name = "IconCerrarLogin"
-        Me.IconCerrarLogin.Size = New System.Drawing.Size(33, 31)
-        Me.IconCerrarLogin.TabIndex = 0
-        Me.IconCerrarLogin.UseVisualStyleBackColor = True
+        Me.BCerrarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.cerrarventana
+        Me.BCerrarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BCerrarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BCerrarLogin.Location = New System.Drawing.Point(1031, 12)
+        Me.BCerrarLogin.Name = "BCerrarLogin"
+        Me.BCerrarLogin.Size = New System.Drawing.Size(33, 31)
+        Me.BCerrarLogin.TabIndex = 6
+        Me.BCerrarLogin.UseVisualStyleBackColor = True
         '
-        'IconRestaurarWin
+        'BRestaurarLogin
         '
-        Me.IconRestaurarWin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconRestaurarWin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.restaurarventana
-        Me.IconRestaurarWin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.IconRestaurarWin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.IconRestaurarWin.FlatAppearance.BorderSize = 0
-        Me.IconRestaurarWin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconRestaurarWin.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconRestaurarWin.IconColor = System.Drawing.Color.Black
-        Me.IconRestaurarWin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconRestaurarWin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconRestaurarWin.Location = New System.Drawing.Point(984, 14)
-        Me.IconRestaurarWin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.IconRestaurarWin.Name = "IconRestaurarWin"
-        Me.IconRestaurarWin.Size = New System.Drawing.Size(33, 31)
-        Me.IconRestaurarWin.TabIndex = 3
-        Me.IconRestaurarWin.UseVisualStyleBackColor = True
+        Me.BRestaurarLogin.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.restaurarventana
+        Me.BRestaurarLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BRestaurarLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BRestaurarLogin.Location = New System.Drawing.Point(992, 12)
+        Me.BRestaurarLogin.Name = "BRestaurarLogin"
+        Me.BRestaurarLogin.Size = New System.Drawing.Size(33, 31)
+        Me.BRestaurarLogin.TabIndex = 9
+        Me.BRestaurarLogin.UseVisualStyleBackColor = True
         '
         'PanelContenedorLogin
         '
@@ -273,10 +241,10 @@ Partial Class Login
     Friend WithEvents BLogin As Button
     Friend WithEvents LTituloLogin As Label
     Friend WithEvents PanelBarraMenuLogin As Panel
-    Friend WithEvents IconMaximizar As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconMinimizarLogin As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconCerrarLogin As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconRestaurarWin As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelContenedorLogin As Panel
     Friend WithEvents PictureBoxContraseña As PictureBox
+    Friend WithEvents BMinimizarLogin As Button
+    Friend WithEvents BMaximizarLogin As Button
+    Friend WithEvents BCerrarLogin As Button
+    Friend WithEvents BRestaurarLogin As Button
 End Class

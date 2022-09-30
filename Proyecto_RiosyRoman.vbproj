@@ -110,6 +110,12 @@
     <Compile Include="clientes.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cuenta.Designer.vb">
+      <DependentUpon>Cuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Logica\NCliente.vb" />
     <Compile Include="ModelProyecto.Context.vb">
@@ -155,10 +161,34 @@
     <Compile Include="Presentación\Gerente\añadirProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Gerente\AñadirTalle.Designer.vb">
+      <DependentUpon>AñadirTalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\AñadirTalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Gerente\GestionarCategoria.Designer.vb">
       <DependentUpon>GestionarCategoria.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Gerente\GestionarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarProductos.Designer.vb">
+      <DependentUpon>GestionarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarTalle.Designer.vb">
+      <DependentUpon>GestionarTalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarTalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarVentas.Designer.vb">
+      <DependentUpon>GestionarVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\GestionarVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\MenuGerente.Designer.vb">
@@ -197,10 +227,10 @@
     <Compile Include="Presentación\Vendedor\ListarVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
-      <DependentUpon>MenuV.vb</DependentUpon>
+    <Compile Include="Presentación\Vendedor\AñadirVenta.Designer.vb">
+      <DependentUpon>AñadirVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Vendedor\MenuV.vb">
+    <Compile Include="Presentación\Vendedor\AñadirVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Vendedor\MenuVendedor.Designer.vb">
@@ -226,14 +256,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cuenta.resx">
+      <DependentUpon>Cuenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\AñadirCategoria.resx">
+      <DependentUpon>AñadirCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\añadirProducto.resx">
       <DependentUpon>añadirProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\AñadirTalle.resx">
+      <DependentUpon>AñadirTalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\GestionarCategoria.resx">
+      <DependentUpon>GestionarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\GestionarProductos.resx">
+      <DependentUpon>GestionarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\GestionarTalle.resx">
+      <DependentUpon>GestionarTalle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\MenuGerente.resx">
       <DependentUpon>MenuGerente.vb</DependentUpon>
@@ -250,8 +298,8 @@
     <EmbeddedResource Include="Presentación\Vendedor\ListarProductos.resx">
       <DependentUpon>ListarProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
-      <DependentUpon>MenuV.vb</DependentUpon>
+    <EmbeddedResource Include="Presentación\Vendedor\AñadirVenta.resx">
+      <DependentUpon>AñadirVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\MenuVendedor.resx">
       <DependentUpon>MenuVendedor.vb</DependentUpon>

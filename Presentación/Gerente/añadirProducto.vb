@@ -28,7 +28,7 @@
     Public Function EspacioEnBlanco()
         Dim Ask As MsgBoxResult
         Dim nombre As String = TBNombreProducto.Text
-        Dim categoria As String = TBCateoriaProducto.Text
+        Dim categoria As String = ComboBoxCategoria.Text
         Dim stock As String = TBStock.Text
         Dim precio As String = TBPrecio.Text
         'Dim imagen As String = TBImagen.Text

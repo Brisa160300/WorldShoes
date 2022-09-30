@@ -1,6 +1,9 @@
 ﻿Imports System.Windows.Forms
 
 Public Class MenuGerente
+    Dim state As Integer
+    Dim px, py As Integer
+    Dim mover As Boolean
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Cree una nueva instancia del formulario secundario.
@@ -78,7 +81,7 @@ Public Class MenuGerente
 
     Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Cierre todos los formularios secundarios del principal.
-        For Each ChildForm As form In Me.MdiChildren
+        For Each ChildForm As Form In Me.MdiChildren
             ChildForm.Close()
         Next
     End Sub
@@ -94,31 +97,91 @@ Public Class MenuGerente
         añadirProducto.Show()
     End Sub
 
-    Private Sub CerrarMenu_Click(sender As Object, e As EventArgs) Handles CerrarMenu.Click
+
+    Private Sub BCerrarMenuGerente_Click(sender As Object, e As EventArgs) Handles BCerrarMenuGerente.Click
         Me.Close()
         Login.Show()
         Login.TBUsuario.Clear()
         Login.TBContraseña.Clear()
     End Sub
 
-    Private Sub IconCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
-        Me.Close()
-    End Sub
-
-    Private Sub BotonMaximizar_Click(sender As Object, e As EventArgs) Handles BtnMaximizar.Click
-        BtnMaximizar.Visible = False
-        BtnRestaurarWin.Visible = True
+    Private Sub BMaximizarMenuGerente_Click(sender As Object, e As EventArgs) Handles BMaximizarMenuGerente.Click
+        BMaximizarMenuGerente.Visible = False
+        BRestaurarMenuGerente.Visible = True
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub BtnRestaurarWin_Click(sender As Object, e As EventArgs) Handles BtnRestaurarWin.Click
-        BtnRestaurarWin.Visible = False
-        BtnMaximizar.Visible = True
+    Private Sub BRestaurarMenuGerente_Click(sender As Object, e As EventArgs) Handles BRestaurarMenuGerente.Click
+        BRestaurarMenuGerente.Visible = False
+        BMaximizarMenuGerente.Visible = True
         Me.WindowState = FormWindowState.Normal
     End Sub
 
-    Private Sub BtnMinimizar_Click(sender As Object, e As EventArgs) Handles BtnMinimizar.Click
+    Private Sub BMinimizarMenuGerente_Click(sender As Object, e As EventArgs) Handles BMinimizarMenuGerente.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub PanelBarraMenu_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseDown
+        px = e.X
+        py = e.Y
+        mover = True
+    End Sub
+
+    Private Sub PanelBarraMenu_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseUp
+        mover = False
+    End Sub
+
+    Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove
+        If mover Then
+            Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))
+
+        End If
+    End Sub
+
+    Private Sub AñadirCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirCategoriaToolStripMenuItem.Click
+        MostrarSubMenuVendedor(New Añadir_Categoria)
+    End Sub
+
+    Private Sub GestionarCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionarCategoriaToolStripMenuItem.Click
+        MostrarSubMenuVendedor(New GestionarCategoria)
+    End Sub
+
+    Private Sub ToolsMenu_Click(sender As Object, e As EventArgs) Handles ToolsMenu.Click
+        MostrarSubMenuVendedor(New GestionarVentas)
+    End Sub
+
+    Private Sub ListarProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarProductosToolStripMenuItem.Click
+        MostrarSubMenuVendedor(New GestionarProductos)
+    End Sub
+
+    Private Sub AñadirProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirProductosToolStripMenuItem.Click
+        MostrarSubMenuVendedor(New añadirProducto)
+    End Sub
+
+    Private Sub CerrarMenu_Click(sender As Object, e As EventArgs) Handles CerrarMenu.Click
+        Login.Show()
+        Login.TBUsuario.Clear()
+        Login.TBContraseña.Clear()
+        Me.Close()
+    End Sub
+
+    Function MostrarSubMenuVendedor(submenu As Form) As Boolean
+        FlowPanelGerente.Controls.Clear()
+        Dim frmHijo As Form = TryCast(submenu, Form)
+        frmHijo.TopMost = False
+        frmHijo.Dock = DockStyle.None
+        frmHijo.Visible = True
+        frmHijo.TopLevel = False
+
+        FlowPanelGerente.AutoScroll = True
+        FlowPanelGerente.Controls.Add(frmHijo)
+        FlowPanelGerente.Tag = frmHijo
+        frmHijo.BringToFront()
+        frmHijo.Show()
+        'If Not PanelContenedorVendedor.Controls.Count > 0 Then
+        '    PanelContenedorVendedor.Controls.RemoveAt(0)
+        'End If
+        Return True
+    End Function
 
 End Class

@@ -22,8 +22,8 @@ Partial Class AñadirCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
         Me.TBDireccion = New System.Windows.Forms.TextBox()
         Me.LDireccion = New System.Windows.Forms.Label()
@@ -51,7 +51,7 @@ Partial Class AñadirCliente
         '
         'PanelRegClientes
         '
-        Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PanelRegClientes.Controls.Add(Me.TBDireccion)
         Me.PanelRegClientes.Controls.Add(Me.LDireccion)
@@ -115,33 +115,35 @@ Partial Class AñadirCliente
         '
         'BRegistrarCliente
         '
+        Me.BRegistrarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BRegistrarCliente.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.BRegistrarCliente.FlatAppearance.BorderSize = 2
         Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(216, 326)
+        Me.BRegistrarCliente.Location = New System.Drawing.Point(91, 326)
         Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarCliente.Name = "BRegistrarCliente"
         Me.BRegistrarCliente.Size = New System.Drawing.Size(97, 32)
         Me.BRegistrarCliente.TabIndex = 13
         Me.BRegistrarCliente.Text = "Registrar"
-        Me.BRegistrarCliente.UseVisualStyleBackColor = True
+        Me.BRegistrarCliente.UseVisualStyleBackColor = False
         '
         'BCancelar
         '
+        Me.BCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BCancelar.FlatAppearance.BorderSize = 2
         Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(97, 326)
+        Me.BCancelar.Location = New System.Drawing.Point(215, 326)
         Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(98, 32)
         Me.BCancelar.TabIndex = 12
         Me.BCancelar.Text = "Cancelar"
         Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelar.UseVisualStyleBackColor = True
+        Me.BCancelar.UseVisualStyleBackColor = False
         '
         'TBTelCliente
         '
@@ -251,23 +253,23 @@ Partial Class AñadirCliente
         '
         'DataGridViewRegistroClientes
         '
-        Me.DataGridViewRegistroClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewRegistroClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
         Me.DataGridViewRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewRegistroClientes.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewRegistroClientes.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewRegistroClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewRegistroClientes.Location = New System.Drawing.Point(3, 3)
         Me.DataGridViewRegistroClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroClientes.Name = "DataGridViewRegistroClientes"
         Me.DataGridViewRegistroClientes.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewRegistroClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewRegistroClientes.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewRegistroClientes.Size = New System.Drawing.Size(501, 422)
         Me.DataGridViewRegistroClientes.TabIndex = 2
         '
@@ -285,8 +287,8 @@ Partial Class AñadirCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1074, 512)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1107, 565)
         Me.Controls.Add(Me.TabControlRegClientes)
         Me.Controls.Add(Me.LRegistroCliente)
         Me.Controls.Add(Me.PanelRegClientes)

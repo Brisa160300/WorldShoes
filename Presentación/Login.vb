@@ -1,4 +1,7 @@
 ﻿Public Class Login
+    Dim state As Integer
+    Dim px, py As Integer
+    Dim mover As Boolean
     Private Sub TBUsuario_Keypress(sender As Object, e As KeyPressEventArgs) Handles TBUsuario.KeyPress
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -11,10 +14,13 @@
         Dim contraseña As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
             If (usuario = "BRISA") And (contraseña = "123") Then
-                'MenuVendedor.Show()
                 MenuGerente.Show()
+                Me.Close()
+
             ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
                 MenuVendedor.Show()
+                Me.Close()
+
             End If
         End If
 
@@ -40,23 +46,23 @@
         TBUsuario.SelectionStart = Len(TBUsuario.Text)
     End Sub
 
-    Private Sub IconMinimizarLogin_Click(sender As Object, e As EventArgs) Handles IconMinimizarLogin.Click
+    Private Sub BMinimizarLogin_Click(sender As Object, e As EventArgs) Handles BMinimizarLogin.Click
         WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub IconCerrarLogin_Click(sender As Object, e As EventArgs) Handles IconCerrarLogin.Click
+    Private Sub BCerrarLogin_Click(sender As Object, e As EventArgs) Handles BCerrarLogin.Click
         Application.Exit()
     End Sub
 
-    Private Sub IconMaximizar_Click(sender As Object, e As EventArgs) Handles IconMaximizar.Click
-        IconMaximizar.Visible = False
-        IconRestaurarWin.Visible = True
+    Private Sub BMaximizarLogin_Click(sender As Object, e As EventArgs) Handles BMaximizarLogin.Click
+        BMaximizarLogin.Visible = False
+        BRestaurarLogin.Visible = True
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub IconRestaurarWin_Click(sender As Object, e As EventArgs) Handles IconRestaurarWin.Click
-        IconRestaurarWin.Visible = False
-        IconMaximizar.Visible = True
+    Private Sub BRestaurarLogin_Click(sender As Object, e As EventArgs) Handles BRestaurarLogin.Click
+        BRestaurarLogin.Visible = False
+        BMaximizarLogin.Visible = True
         Me.WindowState = FormWindowState.Normal
     End Sub
 
@@ -75,5 +81,23 @@
 
     Private Sub Login_Load(sender As Object, e As EventArgs)
         TBUsuario.Focus()
+    End Sub
+
+    Private Sub PanelBarraMenuLogin_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelBarraMenuLogin.MouseDown
+        px = e.X
+        py = e.Y
+        mover = True
+    End Sub
+
+    Private Sub PanelBarraMenuLogin_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelBarraMenuLogin.MouseUp
+        mover = False
+    End Sub
+
+
+    Private Sub PanelBarraMenuLogin_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenuLogin.MouseMove
+        If mover Then
+            Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))
+
+        End If
     End Sub
 End Class
