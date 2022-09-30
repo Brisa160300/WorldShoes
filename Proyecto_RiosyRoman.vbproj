@@ -110,12 +110,6 @@
     <Compile Include="clientes.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cuenta.Designer.vb">
-      <DependentUpon>Cuenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cuenta.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Logica\NCliente.vb" />
     <Compile Include="ModelProyecto.Context.vb">
@@ -256,9 +250,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Cuenta.resx">
-      <DependentUpon>Cuenta.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
