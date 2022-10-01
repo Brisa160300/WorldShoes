@@ -66,11 +66,11 @@ Partial Class añadirProducto
         'BCancelProducto
         '
         Me.BCancelProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelProducto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BCancelProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.BCancelProducto.ForeColor = System.Drawing.Color.White
-        Me.BCancelProducto.Location = New System.Drawing.Point(186, 487)
+        Me.BCancelProducto.Location = New System.Drawing.Point(182, 487)
         Me.BCancelProducto.Name = "BCancelProducto"
-        Me.BCancelProducto.Size = New System.Drawing.Size(107, 39)
+        Me.BCancelProducto.Size = New System.Drawing.Size(121, 36)
         Me.BCancelProducto.TabIndex = 3
         Me.BCancelProducto.Text = "Cancelar"
         Me.BCancelProducto.UseVisualStyleBackColor = True
@@ -102,7 +102,7 @@ Partial Class añadirProducto
         Me.ComboBoxCategoria.FormattingEnabled = True
         Me.ComboBoxCategoria.Location = New System.Drawing.Point(132, 121)
         Me.ComboBoxCategoria.Name = "ComboBoxCategoria"
-        Me.ComboBoxCategoria.Size = New System.Drawing.Size(174, 36)
+        Me.ComboBoxCategoria.Size = New System.Drawing.Size(174, 30)
         Me.ComboBoxCategoria.TabIndex = 15
         '
         'ComboBoxMarca
@@ -110,7 +110,7 @@ Partial Class añadirProducto
         Me.ComboBoxMarca.FormattingEnabled = True
         Me.ComboBoxMarca.Location = New System.Drawing.Point(132, 319)
         Me.ComboBoxMarca.Name = "ComboBoxMarca"
-        Me.ComboBoxMarca.Size = New System.Drawing.Size(174, 36)
+        Me.ComboBoxMarca.Size = New System.Drawing.Size(174, 30)
         Me.ComboBoxMarca.TabIndex = 14
         '
         'LMarca
@@ -121,7 +121,7 @@ Partial Class añadirProducto
         Me.LMarca.Location = New System.Drawing.Point(24, 333)
         Me.LMarca.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LMarca.Name = "LMarca"
-        Me.LMarca.Size = New System.Drawing.Size(78, 22)
+        Me.LMarca.Size = New System.Drawing.Size(61, 17)
         Me.LMarca.TabIndex = 13
         Me.LMarca.Text = "Marca: "
         '
@@ -129,7 +129,7 @@ Partial Class añadirProducto
         '
         Me.TBCodigoProducto.Location = New System.Drawing.Point(132, 23)
         Me.TBCodigoProducto.Name = "TBCodigoProducto"
-        Me.TBCodigoProducto.Size = New System.Drawing.Size(174, 35)
+        Me.TBCodigoProducto.Size = New System.Drawing.Size(174, 29)
         Me.TBCodigoProducto.TabIndex = 12
         '
         'ComboBoxTalle
@@ -137,7 +137,7 @@ Partial Class añadirProducto
         Me.ComboBoxTalle.FormattingEnabled = True
         Me.ComboBoxTalle.Location = New System.Drawing.Point(132, 271)
         Me.ComboBoxTalle.Name = "ComboBoxTalle"
-        Me.ComboBoxTalle.Size = New System.Drawing.Size(174, 36)
+        Me.ComboBoxTalle.Size = New System.Drawing.Size(174, 30)
         Me.ComboBoxTalle.TabIndex = 11
         '
         'LCodigoProducto
@@ -148,7 +148,7 @@ Partial Class añadirProducto
         Me.LCodigoProducto.ForeColor = System.Drawing.Color.White
         Me.LCodigoProducto.Location = New System.Drawing.Point(22, 30)
         Me.LCodigoProducto.Name = "LCodigoProducto"
-        Me.LCodigoProducto.Size = New System.Drawing.Size(78, 22)
+        Me.LCodigoProducto.Size = New System.Drawing.Size(63, 17)
         Me.LCodigoProducto.TabIndex = 11
         Me.LCodigoProducto.Text = "Código:"
         '
@@ -160,7 +160,7 @@ Partial Class añadirProducto
         Me.Label6.Location = New System.Drawing.Point(22, 279)
         Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 22)
+        Me.Label6.Size = New System.Drawing.Size(50, 17)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Talle: "
         '
@@ -172,7 +172,7 @@ Partial Class añadirProducto
         Me.Label3.Location = New System.Drawing.Point(21, 129)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 22)
+        Me.Label3.Size = New System.Drawing.Size(87, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Categoría: "
         '
@@ -181,7 +181,7 @@ Partial Class añadirProducto
         Me.TBNombreProducto.Location = New System.Drawing.Point(132, 73)
         Me.TBNombreProducto.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.TBNombreProducto.Name = "TBNombreProducto"
-        Me.TBNombreProducto.Size = New System.Drawing.Size(174, 35)
+        Me.TBNombreProducto.Size = New System.Drawing.Size(174, 29)
         Me.TBNombreProducto.TabIndex = 5
         '
         'Label2
@@ -192,7 +192,7 @@ Partial Class añadirProducto
         Me.Label2.Location = New System.Drawing.Point(21, 80)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 22)
+        Me.Label2.Size = New System.Drawing.Size(69, 17)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nombre:"
         '
@@ -204,7 +204,7 @@ Partial Class añadirProducto
         Me.Label5.Location = New System.Drawing.Point(22, 230)
         Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 22)
+        Me.Label5.Size = New System.Drawing.Size(64, 17)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Precio: "
         '
@@ -213,7 +213,7 @@ Partial Class añadirProducto
         Me.TBPrecio.Location = New System.Drawing.Point(132, 223)
         Me.TBPrecio.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.TBPrecio.Name = "TBPrecio"
-        Me.TBPrecio.Size = New System.Drawing.Size(174, 35)
+        Me.TBPrecio.Size = New System.Drawing.Size(174, 29)
         Me.TBPrecio.TabIndex = 8
         '
         'Label4
@@ -224,7 +224,7 @@ Partial Class añadirProducto
         Me.Label4.Location = New System.Drawing.Point(22, 179)
         Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 22)
+        Me.Label4.Size = New System.Drawing.Size(52, 17)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Stock:"
         '
@@ -233,7 +233,7 @@ Partial Class añadirProducto
         Me.TBStock.Location = New System.Drawing.Point(132, 172)
         Me.TBStock.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.TBStock.Name = "TBStock"
-        Me.TBStock.Size = New System.Drawing.Size(174, 35)
+        Me.TBStock.Size = New System.Drawing.Size(174, 29)
         Me.TBStock.TabIndex = 7
         '
         'Label1
@@ -244,7 +244,7 @@ Partial Class añadirProducto
         Me.Label1.Location = New System.Drawing.Point(44, 40)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(249, 33)
+        Me.Label1.Size = New System.Drawing.Size(200, 27)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Añadir Producto: "
         '
@@ -263,10 +263,10 @@ Partial Class añadirProducto
         Me.TabPageListaProducto.Controls.Add(Me.DataGridViewRegistroCategorias)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 25)
         Me.TabPageListaProducto.Name = "TabPageListaProducto"
         Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageListaProducto.Size = New System.Drawing.Size(630, 490)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(630, 493)
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Producto"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
@@ -290,12 +290,12 @@ Partial Class añadirProducto
         Me.DataGridViewRegistroCategorias.RowHeadersWidth = 51
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         Me.DataGridViewRegistroCategorias.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(624, 484)
+        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(624, 487)
         Me.DataGridViewRegistroCategorias.TabIndex = 2
         '
         'añadirProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(15.0!, 28.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1093, 556)

@@ -24,7 +24,7 @@ Partial Class Añadir_Categoria
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.TBNombreCliente = New System.Windows.Forms.TextBox()
+        Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
         Me.LNombreCategoria = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
         Me.TabControlRegVentas = New System.Windows.Forms.TabControl()
@@ -39,24 +39,22 @@ Partial Class Añadir_Categoria
         Me.PanelRegClientes.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TBNombreCliente
+        'TBNombreCategoria
         '
-        Me.TBNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBNombreCliente.Location = New System.Drawing.Point(27, 72)
-        Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBNombreCliente.Name = "TBNombreCliente"
-        Me.TBNombreCliente.Size = New System.Drawing.Size(371, 30)
-        Me.TBNombreCliente.TabIndex = 6
+        Me.TBNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBNombreCategoria.Location = New System.Drawing.Point(20, 58)
+        Me.TBNombreCategoria.Name = "TBNombreCategoria"
+        Me.TBNombreCategoria.Size = New System.Drawing.Size(279, 25)
+        Me.TBNombreCategoria.TabIndex = 6
         '
         'LNombreCategoria
         '
         Me.LNombreCategoria.AutoSize = True
         Me.LNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreCategoria.ForeColor = System.Drawing.Color.White
-        Me.LNombreCategoria.Location = New System.Drawing.Point(112, 28)
-        Me.LNombreCategoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNombreCategoria.Location = New System.Drawing.Point(84, 23)
         Me.LNombreCategoria.Name = "LNombreCategoria"
-        Me.LNombreCategoria.Size = New System.Drawing.Size(199, 22)
+        Me.LNombreCategoria.Size = New System.Drawing.Size(159, 17)
         Me.LNombreCategoria.TabIndex = 0
         Me.LNombreCategoria.Text = "Nombre de Categoria"
         '
@@ -66,10 +64,9 @@ Partial Class Añadir_Categoria
         Me.LCategoria.BackColor = System.Drawing.Color.Transparent
         Me.LCategoria.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LCategoria.ForeColor = System.Drawing.Color.Transparent
-        Me.LCategoria.Location = New System.Drawing.Point(29, 20)
-        Me.LCategoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LCategoria.Location = New System.Drawing.Point(22, 16)
         Me.LCategoria.Name = "LCategoria"
-        Me.LCategoria.Size = New System.Drawing.Size(231, 33)
+        Me.LCategoria.Size = New System.Drawing.Size(186, 27)
         Me.LCategoria.TabIndex = 2
         Me.LCategoria.Text = "Nueva Categoria"
         '
@@ -77,10 +74,11 @@ Partial Class Añadir_Categoria
         '
         Me.TabControlRegVentas.Controls.Add(Me.TabPageListaCategoria)
         Me.TabControlRegVentas.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlRegVentas.Location = New System.Drawing.Point(511, 21)
+        Me.TabControlRegVentas.Location = New System.Drawing.Point(383, 17)
+        Me.TabControlRegVentas.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControlRegVentas.Name = "TabControlRegVentas"
         Me.TabControlRegVentas.SelectedIndex = 0
-        Me.TabControlRegVentas.Size = New System.Drawing.Size(515, 460)
+        Me.TabControlRegVentas.Size = New System.Drawing.Size(386, 374)
         Me.TabControlRegVentas.TabIndex = 5
         '
         'TabPageListaCategoria
@@ -88,10 +86,11 @@ Partial Class Añadir_Categoria
         Me.TabPageListaCategoria.Controls.Add(Me.DataGridViewRegistroCategorias)
         Me.TabPageListaCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaCategoria.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 25)
+        Me.TabPageListaCategoria.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPageListaCategoria.Name = "TabPageListaCategoria"
-        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageListaCategoria.Size = New System.Drawing.Size(507, 428)
+        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaCategoria.Size = New System.Drawing.Size(378, 345)
         Me.TabPageListaCategoria.TabIndex = 0
         Me.TabPageListaCategoria.Text = "Lista de Categoria"
         Me.TabPageListaCategoria.UseVisualStyleBackColor = True
@@ -109,13 +108,12 @@ Partial Class Añadir_Categoria
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewRegistroCategorias.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewRegistroCategorias.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewRegistroCategorias.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridViewRegistroCategorias.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridViewRegistroCategorias.Location = New System.Drawing.Point(2, 2)
         Me.DataGridViewRegistroCategorias.Name = "DataGridViewRegistroCategorias"
         Me.DataGridViewRegistroCategorias.RowHeadersWidth = 51
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         Me.DataGridViewRegistroCategorias.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(501, 422)
+        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(374, 341)
         Me.DataGridViewRegistroCategorias.TabIndex = 2
         '
         'BCancelarCategoria
@@ -125,10 +123,9 @@ Partial Class Añadir_Categoria
         Me.BCancelarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancelarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BCancelarCategoria.Location = New System.Drawing.Point(300, 155)
-        Me.BCancelarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BCancelarCategoria.Location = New System.Drawing.Point(225, 126)
         Me.BCancelarCategoria.Name = "BCancelarCategoria"
-        Me.BCancelarCategoria.Size = New System.Drawing.Size(98, 32)
+        Me.BCancelarCategoria.Size = New System.Drawing.Size(74, 26)
         Me.BCancelarCategoria.TabIndex = 12
         Me.BCancelarCategoria.Text = "Cancelar"
         Me.BCancelarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -142,10 +139,9 @@ Partial Class Añadir_Categoria
         Me.BRegistrarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BRegistrarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCategoria.Location = New System.Drawing.Point(178, 155)
-        Me.BRegistrarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BRegistrarCategoria.Location = New System.Drawing.Point(134, 126)
         Me.BRegistrarCategoria.Name = "BRegistrarCategoria"
-        Me.BRegistrarCategoria.Size = New System.Drawing.Size(97, 32)
+        Me.BRegistrarCategoria.Size = New System.Drawing.Size(73, 26)
         Me.BRegistrarCategoria.TabIndex = 13
         Me.BRegistrarCategoria.Text = "Registrar"
         Me.BRegistrarCategoria.UseVisualStyleBackColor = False
@@ -156,25 +152,25 @@ Partial Class Añadir_Categoria
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PanelRegClientes.Controls.Add(Me.BRegistrarCategoria)
         Me.PanelRegClientes.Controls.Add(Me.BCancelarCategoria)
-        Me.PanelRegClientes.Controls.Add(Me.TBNombreCliente)
+        Me.PanelRegClientes.Controls.Add(Me.TBNombreCategoria)
         Me.PanelRegClientes.Controls.Add(Me.LNombreCategoria)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(35, 84)
-        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(26, 68)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(425, 221)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(319, 180)
         Me.PanelRegClientes.TabIndex = 1
         '
         'Añadir_Categoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1093, 556)
+        Me.ClientSize = New System.Drawing.Size(820, 452)
         Me.Controls.Add(Me.TabControlRegVentas)
         Me.Controls.Add(Me.LCategoria)
         Me.Controls.Add(Me.PanelRegClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Añadir_Categoria"
         Me.Text = "Añadir_Categoria"
         Me.TabControlRegVentas.ResumeLayout(False)
@@ -186,7 +182,7 @@ Partial Class Añadir_Categoria
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TBNombreCliente As TextBox
+    Friend WithEvents TBNombreCategoria As TextBox
     Friend WithEvents LNombreCategoria As Label
     Friend WithEvents LCategoria As Label
     Friend WithEvents TabControlRegVentas As TabControl

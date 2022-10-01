@@ -90,4 +90,6 @@
     Private Sub AñadirCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNcliente.cargarGrid(DataGridViewRegistroClientes)
     End Sub
+
+
 End Class
