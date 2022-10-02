@@ -24,99 +24,29 @@ Partial Class GestionarTalle
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.TBBuscarTalle = New System.Windows.Forms.TextBox()
-        Me.BBuscarTalle = New System.Windows.Forms.Button()
-        Me.BModificarTalle = New System.Windows.Forms.Button()
-        Me.BEliminarTalle = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TabGestionTalles = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
         Me.DataGridViewRegistroTalle = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBoxGestionarTalles = New System.Windows.Forms.GroupBox()
+        Me.BBuscarTalle = New System.Windows.Forms.Button()
+        Me.BModificarTalle = New System.Windows.Forms.Button()
+        Me.TBBuscarTalle = New System.Windows.Forms.TextBox()
+        Me.BEliminarTalle = New System.Windows.Forms.Button()
         Me.TabGestionTalles.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
         CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.GroupBoxGestionarTalles.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TBBuscarTalle
-        '
-        Me.TBBuscarTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBBuscarTalle.Location = New System.Drawing.Point(20, 35)
-        Me.TBBuscarTalle.Name = "TBBuscarTalle"
-        Me.TBBuscarTalle.Size = New System.Drawing.Size(131, 25)
-        Me.TBBuscarTalle.TabIndex = 9
-        '
-        'BBuscarTalle
-        '
-        Me.BBuscarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BBuscarTalle.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BBuscarTalle.FlatAppearance.BorderSize = 2
-        Me.BBuscarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BBuscarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BBuscarTalle.ForeColor = System.Drawing.Color.White
-        Me.BBuscarTalle.Location = New System.Drawing.Point(157, 34)
-        Me.BBuscarTalle.Name = "BBuscarTalle"
-        Me.BBuscarTalle.Size = New System.Drawing.Size(72, 26)
-        Me.BBuscarTalle.TabIndex = 15
-        Me.BBuscarTalle.Text = "Buscar"
-        Me.BBuscarTalle.UseVisualStyleBackColor = False
-        '
-        'BModificarTalle
-        '
-        Me.BModificarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BModificarTalle.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BModificarTalle.FlatAppearance.BorderSize = 2
-        Me.BModificarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BModificarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BModificarTalle.ForeColor = System.Drawing.Color.White
-        Me.BModificarTalle.Location = New System.Drawing.Point(550, 34)
-        Me.BModificarTalle.Name = "BModificarTalle"
-        Me.BModificarTalle.Size = New System.Drawing.Size(79, 26)
-        Me.BModificarTalle.TabIndex = 16
-        Me.BModificarTalle.Text = "Modificar"
-        Me.BModificarTalle.UseVisualStyleBackColor = False
-        '
-        'BEliminarTalle
-        '
-        Me.BEliminarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BEliminarTalle.FlatAppearance.BorderSize = 2
-        Me.BEliminarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BEliminarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BEliminarTalle.ForeColor = System.Drawing.Color.White
-        Me.BEliminarTalle.Location = New System.Drawing.Point(644, 34)
-        Me.BEliminarTalle.Name = "BEliminarTalle"
-        Me.BEliminarTalle.Size = New System.Drawing.Size(80, 26)
-        Me.BEliminarTalle.TabIndex = 17
-        Me.BEliminarTalle.Text = "Eliminar"
-        Me.BEliminarTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BEliminarTalle.UseVisualStyleBackColor = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.BBuscarTalle)
-        Me.GroupBox1.Controls.Add(Me.BModificarTalle)
-        Me.GroupBox1.Controls.Add(Me.TBBuscarTalle)
-        Me.GroupBox1.Controls.Add(Me.BEliminarTalle)
-        Me.GroupBox1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 15)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(747, 81)
-        Me.GroupBox1.TabIndex = 18
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Búsqueda de talles"
         '
         'TabGestionTalles
         '
         Me.TabGestionTalles.Controls.Add(Me.TabPageListaTalle)
         Me.TabGestionTalles.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabGestionTalles.Location = New System.Drawing.Point(22, 151)
-        Me.TabGestionTalles.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabGestionTalles.Location = New System.Drawing.Point(40, 220)
+        Me.TabGestionTalles.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabGestionTalles.Name = "TabGestionTalles"
         Me.TabGestionTalles.SelectedIndex = 0
-        Me.TabGestionTalles.Size = New System.Drawing.Size(772, 296)
+        Me.TabGestionTalles.Size = New System.Drawing.Size(1042, 385)
         Me.TabGestionTalles.TabIndex = 19
         '
         'TabPageListaTalle
@@ -124,18 +54,18 @@ Partial Class GestionarTalle
         Me.TabPageListaTalle.Controls.Add(Me.DataGridViewRegistroTalle)
         Me.TabPageListaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaTalle.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaTalle.Name = "TabPageListaTalle"
-        Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPageListaTalle.Size = New System.Drawing.Size(764, 267)
+        Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaTalle.Size = New System.Drawing.Size(1034, 353)
         Me.TabPageListaTalle.TabIndex = 0
         Me.TabPageListaTalle.Text = "Lista de Talles"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
         'DataGridViewRegistroTalle
         '
-        Me.DataGridViewRegistroTalle.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewRegistroTalle.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.DataGridViewRegistroTalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
@@ -146,51 +76,115 @@ Partial Class GestionarTalle
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewRegistroTalle.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewRegistroTalle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewRegistroTalle.Location = New System.Drawing.Point(2, 2)
+        Me.DataGridViewRegistroTalle.Location = New System.Drawing.Point(3, 2)
+        Me.DataGridViewRegistroTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroTalle.Name = "DataGridViewRegistroTalle"
         Me.DataGridViewRegistroTalle.RowHeadersWidth = 51
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         Me.DataGridViewRegistroTalle.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroTalle.Size = New System.Drawing.Size(760, 263)
+        Me.DataGridViewRegistroTalle.Size = New System.Drawing.Size(1028, 349)
         Me.DataGridViewRegistroTalle.TabIndex = 2
         '
-        'Panel1
+        'GroupBoxGestionarTalles
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Location = New System.Drawing.Point(22, 24)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(772, 111)
-        Me.Panel1.TabIndex = 20
+        Me.GroupBoxGestionarTalles.Controls.Add(Me.BBuscarTalle)
+        Me.GroupBoxGestionarTalles.Controls.Add(Me.BModificarTalle)
+        Me.GroupBoxGestionarTalles.Controls.Add(Me.TBBuscarTalle)
+        Me.GroupBoxGestionarTalles.Controls.Add(Me.BEliminarTalle)
+        Me.GroupBoxGestionarTalles.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.GroupBoxGestionarTalles.ForeColor = System.Drawing.Color.White
+        Me.GroupBoxGestionarTalles.Location = New System.Drawing.Point(40, 63)
+        Me.GroupBoxGestionarTalles.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxGestionarTalles.Name = "GroupBoxGestionarTalles"
+        Me.GroupBoxGestionarTalles.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxGestionarTalles.Size = New System.Drawing.Size(1042, 117)
+        Me.GroupBoxGestionarTalles.TabIndex = 20
+        Me.GroupBoxGestionarTalles.TabStop = False
+        Me.GroupBoxGestionarTalles.Text = "Búsqueda de talles"
+        '
+        'BBuscarTalle
+        '
+        Me.BBuscarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscarTalle.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BBuscarTalle.FlatAppearance.BorderSize = 2
+        Me.BBuscarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BBuscarTalle.ForeColor = System.Drawing.Color.White
+        Me.BBuscarTalle.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
+        Me.BBuscarTalle.Location = New System.Drawing.Point(208, 31)
+        Me.BBuscarTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarTalle.Name = "BBuscarTalle"
+        Me.BBuscarTalle.Size = New System.Drawing.Size(65, 50)
+        Me.BBuscarTalle.TabIndex = 15
+        Me.BBuscarTalle.UseVisualStyleBackColor = False
+        '
+        'BModificarTalle
+        '
+        Me.BModificarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BModificarTalle.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BModificarTalle.FlatAppearance.BorderSize = 2
+        Me.BModificarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BModificarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BModificarTalle.ForeColor = System.Drawing.Color.White
+        Me.BModificarTalle.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
+        Me.BModificarTalle.Location = New System.Drawing.Point(874, 33)
+        Me.BModificarTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BModificarTalle.Name = "BModificarTalle"
+        Me.BModificarTalle.Size = New System.Drawing.Size(65, 50)
+        Me.BModificarTalle.TabIndex = 16
+        Me.BModificarTalle.UseVisualStyleBackColor = False
+        '
+        'TBBuscarTalle
+        '
+        Me.TBBuscarTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBBuscarTalle.Location = New System.Drawing.Point(27, 43)
+        Me.TBBuscarTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBBuscarTalle.Name = "TBBuscarTalle"
+        Me.TBBuscarTalle.Size = New System.Drawing.Size(173, 30)
+        Me.TBBuscarTalle.TabIndex = 9
+        '
+        'BEliminarTalle
+        '
+        Me.BEliminarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BEliminarTalle.FlatAppearance.BorderSize = 2
+        Me.BEliminarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BEliminarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BEliminarTalle.ForeColor = System.Drawing.Color.White
+        Me.BEliminarTalle.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
+        Me.BEliminarTalle.Location = New System.Drawing.Point(947, 33)
+        Me.BEliminarTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BEliminarTalle.Name = "BEliminarTalle"
+        Me.BEliminarTalle.Size = New System.Drawing.Size(65, 50)
+        Me.BEliminarTalle.TabIndex = 17
+        Me.BEliminarTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BEliminarTalle.UseVisualStyleBackColor = False
         '
         'GestionarTalle
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(820, 468)
-        Me.Controls.Add(Me.Panel1)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.Controls.Add(Me.GroupBoxGestionarTalles)
         Me.Controls.Add(Me.TabGestionTalles)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "GestionarTalle"
         Me.Text = "GestionarTalle"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.TabGestionTalles.ResumeLayout(False)
         Me.TabPageListaTalle.ResumeLayout(False)
         CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
+        Me.GroupBoxGestionarTalles.ResumeLayout(False)
+        Me.GroupBoxGestionarTalles.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TBBuscarTalle As TextBox
-    Friend WithEvents BBuscarTalle As Button
-    Friend WithEvents BModificarTalle As Button
-    Friend WithEvents BEliminarTalle As Button
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TabGestionTalles As TabControl
     Friend WithEvents TabPageListaTalle As TabPage
     Friend WithEvents DataGridViewRegistroTalle As DataGridView
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents GroupBoxGestionarTalles As GroupBox
+    Friend WithEvents BBuscarTalle As Button
+    Friend WithEvents BModificarTalle As Button
+    Friend WithEvents TBBuscarTalle As TextBox
+    Friend WithEvents BEliminarTalle As Button
 End Class

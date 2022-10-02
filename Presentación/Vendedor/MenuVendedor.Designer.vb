@@ -223,7 +223,7 @@ Partial Class MenuVendedor
         Me.BMinimizarMenuVendedor.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.minimizar_blanco
         Me.BMinimizarMenuVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BMinimizarMenuVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BMinimizarMenuVendedor.Location = New System.Drawing.Point(1216, 12)
+        Me.BMinimizarMenuVendedor.Location = New System.Drawing.Point(1177, 12)
         Me.BMinimizarMenuVendedor.Name = "BMinimizarMenuVendedor"
         Me.BMinimizarMenuVendedor.Size = New System.Drawing.Size(33, 31)
         Me.BMinimizarMenuVendedor.TabIndex = 1

@@ -14,19 +14,20 @@
         Dim contraseña As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
             If (usuario = "BRISA") And (contraseña = "123") Then
-                MenuGerente.Show()
-                Me.Close()
+                MenuG.Show()
+                Me.Hide()
 
             ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
-                MenuVendedor.Show()
-                Me.Close()
+                Me.Hide()
+                MenuV.Show()
 
             End If
         End If
 
     End Sub
 
-    Public Function EspacioEnBlanco()
+
+    Public Function EspacioEnBlanco() As Boolean
         Dim Ask As MsgBoxResult
         Dim usuario As String = TBUsuario.Text
         Dim contraseña As String = TBContraseña.Text
@@ -46,26 +47,6 @@
         TBUsuario.SelectionStart = Len(TBUsuario.Text)
     End Sub
 
-    Private Sub BMinimizarLogin_Click(sender As Object, e As EventArgs) Handles BMinimizarLogin.Click
-        WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub BCerrarLogin_Click(sender As Object, e As EventArgs) Handles BCerrarLogin.Click
-        Application.Exit()
-    End Sub
-
-    Private Sub BMaximizarLogin_Click(sender As Object, e As EventArgs) Handles BMaximizarLogin.Click
-        BMaximizarLogin.Visible = False
-        BRestaurarLogin.Visible = True
-        Me.WindowState = FormWindowState.Maximized
-    End Sub
-
-    Private Sub BRestaurarLogin_Click(sender As Object, e As EventArgs) Handles BRestaurarLogin.Click
-        BRestaurarLogin.Visible = False
-        BMaximizarLogin.Visible = True
-        Me.WindowState = FormWindowState.Normal
-    End Sub
-
     Private Sub PictureBoxContraseña_Click(sender As Object, e As EventArgs) Handles PictureBoxContraseña.Click
         If Not PictureBoxContraseña.Tag = "cerrado" Then
             PictureBoxContraseña.Tag = "cerrado"
@@ -79,7 +60,7 @@
         End If
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs)
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBUsuario.Focus()
     End Sub
 
@@ -93,11 +74,32 @@
         mover = False
     End Sub
 
-
     Private Sub PanelBarraMenuLogin_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenuLogin.MouseMove
         If mover Then
             Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))
 
         End If
     End Sub
+
+    Private Sub BCerrarMenu_Click(sender As Object, e As EventArgs) Handles BCerrarMenu.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub BMaximizarMenu_Click(sender As Object, e As EventArgs) Handles BMaximizarMenu.Click
+        BMaximizarMenu.Visible = False
+        BRestaurarMenu.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub BRestaurarMenu_Click(sender As Object, e As EventArgs) Handles BRestaurarMenu.Click
+        BRestaurarMenu.Visible = False
+        BMaximizarMenu.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub BMinimizarMenu_Click(sender As Object, e As EventArgs) Handles BMinimizarMenu.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+
 End Class

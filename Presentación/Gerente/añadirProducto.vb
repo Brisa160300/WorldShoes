@@ -1,4 +1,4 @@
-﻿Public Class añadirProducto
+﻿Public Class AñadirProducto
 
     'botón "añadir" del formulario añadir producto.
     Private Sub BAñadirProducto_Click(sender As Object, e As EventArgs) Handles BAñadirProducto.Click

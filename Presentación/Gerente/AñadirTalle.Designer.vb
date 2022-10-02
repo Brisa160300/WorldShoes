@@ -22,8 +22,8 @@ Partial Class AñadirTalle
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LTalle = New System.Windows.Forms.Label()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
         Me.BRegistrarTalle = New System.Windows.Forms.Button()
@@ -45,7 +45,7 @@ Partial Class AñadirTalle
         Me.LTalle.BackColor = System.Drawing.Color.Transparent
         Me.LTalle.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LTalle.ForeColor = System.Drawing.Color.Transparent
-        Me.LTalle.Location = New System.Drawing.Point(29, 20)
+        Me.LTalle.Location = New System.Drawing.Point(29, 65)
         Me.LTalle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LTalle.Name = "LTalle"
         Me.LTalle.Size = New System.Drawing.Size(166, 33)
@@ -54,13 +54,13 @@ Partial Class AñadirTalle
         '
         'PanelRegClientes
         '
-        Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PanelRegClientes.Controls.Add(Me.BRegistrarTalle)
         Me.PanelRegClientes.Controls.Add(Me.BCancelarTalle)
         Me.PanelRegClientes.Controls.Add(Me.TBNombreCliente)
         Me.PanelRegClientes.Controls.Add(Me.LNombreTalle)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(35, 84)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(35, 164)
         Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelRegClientes.Name = "PanelRegClientes"
         Me.PanelRegClientes.Size = New System.Drawing.Size(425, 221)
@@ -77,7 +77,7 @@ Partial Class AñadirTalle
         Me.BRegistrarTalle.Location = New System.Drawing.Point(178, 155)
         Me.BRegistrarTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarTalle.Name = "BRegistrarTalle"
-        Me.BRegistrarTalle.Size = New System.Drawing.Size(97, 32)
+        Me.BRegistrarTalle.Size = New System.Drawing.Size(102, 42)
         Me.BRegistrarTalle.TabIndex = 13
         Me.BRegistrarTalle.Text = "Registrar"
         Me.BRegistrarTalle.UseVisualStyleBackColor = False
@@ -92,7 +92,7 @@ Partial Class AñadirTalle
         Me.BCancelarTalle.Location = New System.Drawing.Point(300, 155)
         Me.BCancelarTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.BCancelarTalle.Name = "BCancelarTalle"
-        Me.BCancelarTalle.Size = New System.Drawing.Size(98, 32)
+        Me.BCancelarTalle.Size = New System.Drawing.Size(98, 42)
         Me.BCancelarTalle.TabIndex = 12
         Me.BCancelarTalle.Text = "Cancelar"
         Me.BCancelarTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -123,10 +123,10 @@ Partial Class AñadirTalle
         '
         Me.TabControlRegVentas.Controls.Add(Me.TabPageListaTalles)
         Me.TabControlRegVentas.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlRegVentas.Location = New System.Drawing.Point(511, 21)
+        Me.TabControlRegVentas.Location = New System.Drawing.Point(513, 103)
         Me.TabControlRegVentas.Name = "TabControlRegVentas"
         Me.TabControlRegVentas.SelectedIndex = 0
-        Me.TabControlRegVentas.Size = New System.Drawing.Size(515, 460)
+        Me.TabControlRegVentas.Size = New System.Drawing.Size(584, 511)
         Me.TabControlRegVentas.TabIndex = 6
         '
         'TabPageListaTalles
@@ -137,39 +137,39 @@ Partial Class AñadirTalle
         Me.TabPageListaTalles.Location = New System.Drawing.Point(4, 28)
         Me.TabPageListaTalles.Name = "TabPageListaTalles"
         Me.TabPageListaTalles.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPageListaTalles.Size = New System.Drawing.Size(507, 428)
+        Me.TabPageListaTalles.Size = New System.Drawing.Size(576, 479)
         Me.TabPageListaTalles.TabIndex = 0
         Me.TabPageListaTalles.Text = "Lista de Talles"
         Me.TabPageListaTalles.UseVisualStyleBackColor = True
         '
         'DataGridViewRegistroTalles
         '
-        Me.DataGridViewRegistroTalles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.DataGridViewRegistroTalles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.DataGridViewRegistroTalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewRegistroTalles.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewRegistroTalles.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewRegistroTalles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewRegistroTalles.Location = New System.Drawing.Point(3, 3)
         Me.DataGridViewRegistroTalles.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroTalles.Name = "DataGridViewRegistroTalles"
         Me.DataGridViewRegistroTalles.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewRegistroTalles.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridViewRegistroTalles.Size = New System.Drawing.Size(501, 422)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.DataGridViewRegistroTalles.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewRegistroTalles.Size = New System.Drawing.Size(570, 473)
         Me.DataGridViewRegistroTalles.TabIndex = 2
         '
         'AñadirTalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1093, 556)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1150, 656)
         Me.Controls.Add(Me.TabControlRegVentas)
         Me.Controls.Add(Me.PanelRegClientes)
         Me.Controls.Add(Me.LTalle)

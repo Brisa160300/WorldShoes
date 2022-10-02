@@ -149,16 +149,28 @@
     <Compile Include="Presentación\Gerente\AñadirCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\añadirProducto.Designer.vb">
-      <DependentUpon>añadirProducto.vb</DependentUpon>
+    <Compile Include="Presentación\Gerente\AñadirMarca.Designer.vb">
+      <DependentUpon>AñadirMarca.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\añadirProducto.vb">
+    <Compile Include="Presentación\Gerente\AñadirMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\AñadirProducto.Designer.vb">
+      <DependentUpon>AñadirProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\AñadirProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\AñadirTalle.Designer.vb">
       <DependentUpon>AñadirTalle.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Gerente\AñadirTalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\MenuG.Designer.vb">
+      <DependentUpon>MenuG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\MenuG.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\GestionarCategoria.Designer.vb">
@@ -183,6 +195,18 @@
       <DependentUpon>GestionarVentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Gerente\GestionarVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ListarMarcas.Designer.vb">
+      <DependentUpon>ListarMarcas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ListarMarcas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ListaVendedores.Designer.vb">
+      <DependentUpon>ListaVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ListaVendedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\MenuGerente.Designer.vb">
@@ -251,6 +275,12 @@
     <Compile Include="Presentación\Vendedor\AñadirVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
+      <DependentUpon>MenuV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\MenuV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\MenuVendedor.Designer.vb">
       <DependentUpon>MenuVendedor.vb</DependentUpon>
     </Compile>
@@ -289,11 +319,17 @@
     <EmbeddedResource Include="Presentación\Gerente\AñadirCategoria.resx">
       <DependentUpon>AñadirCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\añadirProducto.resx">
-      <DependentUpon>añadirProducto.vb</DependentUpon>
+    <EmbeddedResource Include="Presentación\Gerente\AñadirMarca.resx">
+      <DependentUpon>AñadirMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\AñadirProducto.resx">
+      <DependentUpon>AñadirProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\AñadirTalle.resx">
       <DependentUpon>AñadirTalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\MenuG.resx">
+      <DependentUpon>MenuG.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\GestionarCategoria.resx">
       <DependentUpon>GestionarCategoria.vb</DependentUpon>
@@ -306,6 +342,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\GestionarVentas.resx">
       <DependentUpon>GestionarVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\ListarMarcas.resx">
+      <DependentUpon>ListarMarcas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\ListaVendedores.resx">
+      <DependentUpon>ListaVendedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\MenuGerente.resx">
       <DependentUpon>MenuGerente.vb</DependentUpon>
@@ -336,6 +378,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\AñadirVenta.resx">
       <DependentUpon>AñadirVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\ListarVentas.resx">
+      <DependentUpon>ListarVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
+      <DependentUpon>MenuV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\MenuVendedor.resx">
       <DependentUpon>MenuVendedor.vb</DependentUpon>
@@ -471,6 +519,27 @@
     <None Include="Resources\ojo abierto.png" />
     <None Include="Resources\ojo cerrado.png" />
     <None Include="Resources\impresora.png" />
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\icono.jpg" />
+    <None Include="Resources\icono1.jpg" />
+    <None Include="Resources\icc1.png" />
+    <None Include="Resources\buscar -blanco.png" />
+    <None Include="Resources\editar - icon.png" />
+    <None Include="Resources\edit-12-16.png" />
+    <None Include="Resources\edit-12-24.png" />
+    <None Include="Resources\plus-16.png" />
+    <None Include="Resources\plus-24.png" />
+    <None Include="Resources\search-3-16.png" />
+    <None Include="Resources\search-3-24.png" />
+    <None Include="Resources\trash-6-16.png" />
+    <None Include="Resources\trash-6-24.png" />
+    <None Include="Resources\trash-6-32.png" />
+    <None Include="Resources\edit-12-32.png" />
+    <None Include="Resources\plus-32.png" />
+    <None Include="Resources\search-3-32.png" />
+    <None Include="Resources\trash-6-321.png" />
+    <None Include="Resources\printer-4-24.png" />
+    <None Include="Resources\printer-4-32.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

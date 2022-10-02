@@ -23,68 +23,78 @@ Partial Class ModificarCategoria
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelModCategoria = New System.Windows.Forms.Panel()
-        Me.BCancelarModifCliente = New System.Windows.Forms.Button()
+        Me.BCancelarModifCategoria = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BModificarCategoria = New System.Windows.Forms.Button()
         Me.TBModCategoria = New System.Windows.Forms.TextBox()
+        Me.LNombreCategoria = New System.Windows.Forms.Label()
+        Me.BModificarCategoria = New System.Windows.Forms.Button()
         Me.PanelModCategoria.SuspendLayout()
         Me.GroupBoxDatosCliente.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelModCategoria
         '
-        Me.PanelModCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(88, Byte), Integer))
+        Me.PanelModCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelModCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PanelModCategoria.Controls.Add(Me.BCancelarModifCliente)
+        Me.PanelModCategoria.Controls.Add(Me.BCancelarModifCategoria)
         Me.PanelModCategoria.Controls.Add(Me.GroupBoxDatosCliente)
         Me.PanelModCategoria.Controls.Add(Me.BModificarCategoria)
-        Me.PanelModCategoria.Location = New System.Drawing.Point(59, 56)
-        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelModCategoria.Location = New System.Drawing.Point(79, 69)
+        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelModCategoria.Name = "PanelModCategoria"
-        Me.PanelModCategoria.Size = New System.Drawing.Size(435, 275)
+        Me.PanelModCategoria.Size = New System.Drawing.Size(610, 383)
         Me.PanelModCategoria.TabIndex = 3
         '
-        'BCancelarModifCliente
+        'BCancelarModifCategoria
         '
-        Me.BCancelarModifCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelarModifCliente.FlatAppearance.BorderSize = 2
-        Me.BCancelarModifCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelarModifCliente.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCancelarModifCliente.ForeColor = System.Drawing.Color.White
-        Me.BCancelarModifCliente.Location = New System.Drawing.Point(295, 225)
-        Me.BCancelarModifCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.BCancelarModifCliente.Name = "BCancelarModifCliente"
-        Me.BCancelarModifCliente.Size = New System.Drawing.Size(98, 32)
-        Me.BCancelarModifCliente.TabIndex = 12
-        Me.BCancelarModifCliente.Text = "Cancelar"
-        Me.BCancelarModifCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelarModifCliente.UseVisualStyleBackColor = False
+        Me.BCancelarModifCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BCancelarModifCategoria.FlatAppearance.BorderSize = 2
+        Me.BCancelarModifCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BCancelarModifCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BCancelarModifCategoria.ForeColor = System.Drawing.Color.White
+        Me.BCancelarModifCategoria.Location = New System.Drawing.Point(456, 320)
+        Me.BCancelarModifCategoria.Margin = New System.Windows.Forms.Padding(5)
+        Me.BCancelarModifCategoria.Name = "BCancelarModifCategoria"
+        Me.BCancelarModifCategoria.Size = New System.Drawing.Size(131, 39)
+        Me.BCancelarModifCategoria.TabIndex = 12
+        Me.BCancelarModifCategoria.Text = "Cancelar"
+        Me.BCancelarModifCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BCancelarModifCategoria.UseVisualStyleBackColor = False
         '
         'GroupBoxDatosCliente
         '
         Me.GroupBoxDatosCliente.Controls.Add(Me.TBModCategoria)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.Label3)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.LNombreCategoria)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(38, 18)
+        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(51, 22)
+        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxDatosCliente.Name = "GroupBoxDatosCliente"
-        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(355, 200)
+        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(473, 246)
         Me.GroupBoxDatosCliente.TabIndex = 19
         Me.GroupBoxDatosCliente.TabStop = False
-        Me.GroupBoxDatosCliente.Text = "Categoría"
+        Me.GroupBoxDatosCliente.Text = "Modificar Categoría"
         '
-        'Label3
+        'TBModCategoria
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(92, 69)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 17)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Categoría: "
+        Me.TBModCategoria.Location = New System.Drawing.Point(139, 121)
+        Me.TBModCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBModCategoria.Name = "TBModCategoria"
+        Me.TBModCategoria.Size = New System.Drawing.Size(221, 30)
+        Me.TBModCategoria.TabIndex = 16
+        '
+        'LNombreCategoria
+        '
+        Me.LNombreCategoria.AutoSize = True
+        Me.LNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.LNombreCategoria.ForeColor = System.Drawing.Color.White
+        Me.LNombreCategoria.Location = New System.Drawing.Point(135, 79)
+        Me.LNombreCategoria.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.LNombreCategoria.Name = "LNombreCategoria"
+        Me.LNombreCategoria.Size = New System.Drawing.Size(109, 22)
+        Me.LNombreCategoria.TabIndex = 15
+        Me.LNombreCategoria.Text = "Categoria: "
         '
         'BModificarCategoria
         '
@@ -94,29 +104,25 @@ Partial Class ModificarCategoria
         Me.BModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BModificarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BModificarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BModificarCategoria.Location = New System.Drawing.Point(178, 225)
-        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BModificarCategoria.Location = New System.Drawing.Point(317, 320)
+        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.BModificarCategoria.Name = "BModificarCategoria"
-        Me.BModificarCategoria.Size = New System.Drawing.Size(97, 32)
+        Me.BModificarCategoria.Size = New System.Drawing.Size(129, 39)
         Me.BModificarCategoria.TabIndex = 13
         Me.BModificarCategoria.Text = "Modificar"
         Me.BModificarCategoria.UseVisualStyleBackColor = False
         '
-        'TBModCategoria
-        '
-        Me.TBModCategoria.Location = New System.Drawing.Point(95, 98)
-        Me.TBModCategoria.Name = "TBModCategoria"
-        Me.TBModCategoria.Size = New System.Drawing.Size(167, 25)
-        Me.TBModCategoria.TabIndex = 16
-        '
         'ModificarCategoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(568, 379)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(775, 500)
         Me.Controls.Add(Me.PanelModCategoria)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ModificarCategoria"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ModificarCategoria"
         Me.PanelModCategoria.ResumeLayout(False)
         Me.GroupBoxDatosCliente.ResumeLayout(False)
@@ -126,9 +132,9 @@ Partial Class ModificarCategoria
     End Sub
 
     Friend WithEvents PanelModCategoria As Panel
-    Friend WithEvents BCancelarModifCliente As Button
+    Friend WithEvents BCancelarModifCategoria As Button
     Friend WithEvents GroupBoxDatosCliente As GroupBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents LNombreCategoria As Label
     Friend WithEvents BModificarCategoria As Button
     Friend WithEvents TBModCategoria As TextBox
 End Class

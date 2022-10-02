@@ -158,13 +158,6 @@ Public Class MenuGerente
         MostrarSubMenuVendedor(New añadirProducto)
     End Sub
 
-    Private Sub CerrarMenu_Click(sender As Object, e As EventArgs) Handles CerrarMenu.Click
-        Login.Show()
-        Login.TBUsuario.Clear()
-        Login.TBContraseña.Clear()
-        Me.Close()
-    End Sub
-
     Function MostrarSubMenuVendedor(submenu As Form) As Boolean
         FlowPanelGerente.Controls.Clear()
         Dim frmHijo As Form = TryCast(submenu, Form)
