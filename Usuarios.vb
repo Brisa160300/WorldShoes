@@ -10,11 +10,13 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class Categoria
-    Public Property id_categoria As Integer
-    Public Property descripcion_categoria As String
-    Public Property id_estado_categoria As Integer
+Partial Public Class Usuarios
+    Public Property id_Usuario As Integer
+    Public Property Nombre As String
+    Public Property Contraseña As String
+    Public Property id_Perfil As Integer
+    Public Property estado As Integer
 
-    Public Overridable Property Productos As ICollection(Of Productos) = New HashSet(Of Productos)
+    Public Overridable Property Perfiles As Perfiles
 
 End Class

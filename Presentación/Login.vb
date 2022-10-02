@@ -21,8 +21,17 @@
                 Me.Hide()
                 MenuV.Show()
 
+            ElseIf (usuario = "ABI") And (contraseña = "123") Then
+                Me.Hide()
+                MenuA.Show()
+            Else
+                MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
+                TBUsuario.Clear()
+                TBContraseña.Clear()
+                TBUsuario.Focus()
             End If
         End If
+
 
     End Sub
 

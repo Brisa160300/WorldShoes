@@ -18,5 +18,6 @@ Partial Public Class clientes
     Public Property telefono As Integer
     Public Property direccion As String
     Public Property email As String
+    Public Property id_estado_cliente As Nullable(Of Integer)
 
 End Class

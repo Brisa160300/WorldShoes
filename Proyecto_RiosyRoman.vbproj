@@ -110,8 +110,17 @@
     <Compile Include="clientes.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Datos\DCategoria.vb" />
     <Compile Include="Datos\Dcliente.vb" />
+    <Compile Include="Datos\DMarca.vb" />
+    <Compile Include="Datos\DTalle.vb" />
+    <Compile Include="Logica\NMarca.vb" />
+    <Compile Include="Logica\NTalle.vb" />
+    <Compile Include="Logica\NCategoria.vb" />
     <Compile Include="Logica\NCliente.vb" />
+    <Compile Include="Marcas.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelProyecto.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +151,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Perfiles.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\añadirUsuario.Designer.vb">
+      <DependentUpon>añadirUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\añadirUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Administrador\GestionarUsuarios.Designer.vb">
+      <DependentUpon>GestionarUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\GestionarUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Administrador\MenuA.Designer.vb">
+      <DependentUpon>MenuA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\MenuA.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\AñadirCategoria.Designer.vb">
       <DependentUpon>AñadirCategoria.vb</DependentUpon>
@@ -302,10 +332,16 @@
     <Compile Include="sp_helpdiagrams_Result.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
     <Compile Include="talle.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="talle_producto.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -315,6 +351,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\añadirUsuario.resx">
+      <DependentUpon>añadirUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\GestionarUsuarios.resx">
+      <DependentUpon>GestionarUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\MenuA.resx">
+      <DependentUpon>MenuA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\AñadirCategoria.resx">
       <DependentUpon>AñadirCategoria.vb</DependentUpon>
@@ -393,11 +438,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="ModelProyecto.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelProyecto.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
     <None Include="ModelProyecto.edmx.diagram">
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
     </None>
@@ -414,7 +459,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Negocio\" />
-    <Folder Include="Presentación\Administrador\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backazul.jpg" />
@@ -506,16 +550,6 @@
     <None Include="Resources\restaurarventana.png" />
     <None Include="Resources\maximizarBlanco.png" />
     <None Include="Resources\icons8-buscar-contactos-50.png" />
-    <Content Include="ModelProyecto.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
-    </Content>
-    <Content Include="ModelProyecto.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.vb</LastGenOutput>
-    </Content>
     <None Include="Resources\ojo abierto.png" />
     <None Include="Resources\ojo cerrado.png" />
     <None Include="Resources\impresora.png" />
@@ -540,6 +574,17 @@
     <None Include="Resources\trash-6-321.png" />
     <None Include="Resources\printer-4-24.png" />
     <None Include="Resources\printer-4-32.png" />
+    <None Include="Resources\user-32.png" />
+    <Content Include="ModelProyecto.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="ModelProyecto.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.vb</LastGenOutput>
+    </Content>
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

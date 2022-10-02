@@ -1,7 +1,7 @@
 ﻿Public Class MenuG
-    Dim state As Integer
-    Dim px, py As Integer
-    Dim mover As Boolean
+    Private state As Integer
+    Private px, py As Integer
+    Private mover As Boolean
 
     Private Sub G_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
@@ -115,14 +115,23 @@
 
 
     Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
-        Me.Close()
-        Login.Show()
-        Login.TBUsuario.Clear()
-        Login.TBContraseña.Clear()
+        Dim ask As MsgBoxResult
+        ask = MsgBox("¿Esta segruro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Aplicación")
+        If ask = vbYes Then
+            Me.Close()
+            Login.Show()
+            Login.TBUsuario.Clear()
+            Login.TBContraseña.Clear()
+        End If
+
     End Sub
 
     Private Sub BCerrarMenuGerente_Click(sender As Object, e As EventArgs) Handles BCerrarMenuGerente.Click
-        Application.Exit()
+        Dim ask As MsgBoxResult
+        ask = MsgBox("¿Esta segruro de que quiere cerrar la aplicación?", vbExclamation + vbYesNo, "Cerrar Aplicación")
+        If ask = vbYes Then
+            Application.Exit()
+        End If
     End Sub
 
     Private Sub BMaximizarMenuGerente_Click(sender As Object, e As EventArgs) Handles BMaximizarMenuGerente.Click

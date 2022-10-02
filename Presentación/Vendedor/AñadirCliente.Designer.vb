@@ -237,7 +237,7 @@ Partial Class AñadirCliente
         Me.LRegistroCliente.BackColor = System.Drawing.Color.Transparent
         Me.LRegistroCliente.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRegistroCliente.ForeColor = System.Drawing.Color.Transparent
-        Me.LRegistroCliente.Location = New System.Drawing.Point(41, 55)
+        Me.LRegistroCliente.Location = New System.Drawing.Point(41, 56)
         Me.LRegistroCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LRegistroCliente.Name = "LRegistroCliente"
         Me.LRegistroCliente.Size = New System.Drawing.Size(239, 33)

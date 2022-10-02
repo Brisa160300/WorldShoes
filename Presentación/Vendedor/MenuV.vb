@@ -1,4 +1,9 @@
 ﻿Public Class MenuV
+
+    Private state As Integer
+    Private px, py As Integer
+    Private mover As Boolean
+
     Private Sub MenuV_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
         hideSubMenu()
@@ -51,10 +56,15 @@
     End Sub
 
     Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
-        Me.Close()
-        Login.Show()
-        Login.TBUsuario.Clear()
-        Login.TBContraseña.Clear()
+        Dim ask As MsgBoxResult
+        ask = MsgBox("¿Esta segruro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
+        If ask = vbYes Then
+            Me.Close()
+            Login.Show()
+            Login.TBUsuario.Clear()
+            Login.TBContraseña.Clear()
+        End If
+
     End Sub
 
     Private formActivo As Form = Nothing
@@ -83,25 +93,26 @@
     End Sub
 
     Private Sub BCerrarMenu_Click(sender As Object, e As EventArgs) Handles BCerrarMenu.Click
-        Me.Close()
-        Login.Show()
-        Login.TBUsuario.Clear()
-        Login.TBContraseña.Clear()
+        Dim ask As MsgBoxResult
+        ask = MsgBox("¿Esta segruro de que quiere cerrar la Aplicación?", vbExclamation + vbYesNo, "Cerrar Aplicación")
+        If ask = vbYes Then
+            Application.Exit()
+        End If
     End Sub
 
-    Private Sub BMaximizarMenuGerente_Click(sender As Object, e As EventArgs) Handles BMaximizarMenu.Click
+    Private Sub BMaximizarMenu_Click(sender As Object, e As EventArgs) Handles BMaximizarMenu.Click
         BMaximizarMenu.Visible = False
         BRestaurarMenu.Visible = True
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub BRestaurarMenuGerente_Click(sender As Object, e As EventArgs) Handles BRestaurarMenu.Click
+    Private Sub BRestaurarMenu_Click(sender As Object, e As EventArgs) Handles BRestaurarMenu.Click
         BRestaurarMenu.Visible = False
         BMaximizarMenu.Visible = True
         Me.WindowState = FormWindowState.Normal
     End Sub
 
-    Private Sub BMinimizarMenuGerente_Click(sender As Object, e As EventArgs) Handles BMinimizarMenu.Click
+    Private Sub BMinimizarMenu_Click(sender As Object, e As EventArgs) Handles BMinimizarMenu.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 

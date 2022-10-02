@@ -144,9 +144,9 @@ Partial Class Login
         Me.PictureBoxContraseña.BackColor = System.Drawing.Color.White
         Me.PictureBoxContraseña.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.ojo_cerrado
         Me.PictureBoxContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBoxContraseña.Location = New System.Drawing.Point(810, 296)
+        Me.PictureBoxContraseña.Location = New System.Drawing.Point(811, 299)
         Me.PictureBoxContraseña.Name = "PictureBoxContraseña"
-        Me.PictureBoxContraseña.Size = New System.Drawing.Size(42, 35)
+        Me.PictureBoxContraseña.Size = New System.Drawing.Size(41, 29)
         Me.PictureBoxContraseña.TabIndex = 23
         Me.PictureBoxContraseña.TabStop = False
         Me.PictureBoxContraseña.Tag = ""

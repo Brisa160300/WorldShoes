@@ -12,7 +12,8 @@ Imports System.Collections.Generic
 
 Partial Public Class talle
     Public Property id_talle As Integer
-    Public Property descripcion As String
+    Public Property descripcion As Integer
+    Public Property estado_talle As Integer
 
     Public Overridable Property talle_producto As ICollection(Of talle_producto) = New HashSet(Of talle_producto)
 

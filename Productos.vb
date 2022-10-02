@@ -16,9 +16,11 @@ Partial Public Class Productos
     Public Property id_categoria As Integer
     Public Property stock As Integer
     Public Property precio As Decimal
-    Public Property imagen As String
+    Public Property id_marca As Integer
+    Public Property id_estado_producto As Integer
 
     Public Overridable Property Categoria As Categoria
+    Public Overridable Property Marcas As Marcas
     Public Overridable Property talle_producto As ICollection(Of talle_producto) = New HashSet(Of talle_producto)
 
 End Class
