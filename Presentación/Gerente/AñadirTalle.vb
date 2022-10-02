@@ -22,4 +22,8 @@
         End If
         TBNombreTalle.Clear()
     End Sub
+
+    Private Sub BCancelarTalle_Click(sender As Object, e As EventArgs) Handles BCancelarTalle.Click
+        Me.Close()
+    End Sub
 End Class
