@@ -22,19 +22,19 @@ Partial Class GestionarCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabListaClientes = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
-        Me.DataGridViewRegistroTalle = New System.Windows.Forms.DataGridView()
+        Me.dgvRegistroClientes = New System.Windows.Forms.DataGridView()
         Me.GroupBoxGestionClientes = New System.Windows.Forms.GroupBox()
+        Me.TBGestionClientes = New System.Windows.Forms.TextBox()
         Me.BEliminarCliente = New System.Windows.Forms.Button()
         Me.BModificarCliente = New System.Windows.Forms.Button()
         Me.BBuscarCliente = New System.Windows.Forms.Button()
-        Me.TBGestionClientes = New System.Windows.Forms.TextBox()
         Me.TabListaClientes.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
-        CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvRegistroClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxGestionClientes.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +51,7 @@ Partial Class GestionarCliente
         '
         'TabPageListaTalle
         '
-        Me.TabPageListaTalle.Controls.Add(Me.DataGridViewRegistroTalle)
+        Me.TabPageListaTalle.Controls.Add(Me.dgvRegistroClientes)
         Me.TabPageListaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaTalle.ForeColor = System.Drawing.Color.White
         Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 28)
@@ -63,27 +63,27 @@ Partial Class GestionarCliente
         Me.TabPageListaTalle.Text = "Lista de Clientes"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
-        'DataGridViewRegistroTalle
+        'dgvRegistroClientes
         '
-        Me.DataGridViewRegistroTalle.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewRegistroTalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewRegistroTalle.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewRegistroTalle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewRegistroTalle.Location = New System.Drawing.Point(3, 2)
-        Me.DataGridViewRegistroTalle.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewRegistroTalle.Name = "DataGridViewRegistroTalle"
-        Me.DataGridViewRegistroTalle.RowHeadersWidth = 51
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewRegistroTalle.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroTalle.Size = New System.Drawing.Size(1057, 402)
-        Me.DataGridViewRegistroTalle.TabIndex = 2
+        Me.dgvRegistroClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRegistroClientes.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvRegistroClientes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvRegistroClientes.Location = New System.Drawing.Point(3, 2)
+        Me.dgvRegistroClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvRegistroClientes.Name = "dgvRegistroClientes"
+        Me.dgvRegistroClientes.RowHeadersWidth = 51
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.dgvRegistroClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvRegistroClientes.Size = New System.Drawing.Size(1057, 402)
+        Me.dgvRegistroClientes.TabIndex = 2
         '
         'GroupBoxGestionClientes
         '
@@ -102,6 +102,15 @@ Partial Class GestionarCliente
         Me.GroupBoxGestionClientes.TabIndex = 23
         Me.GroupBoxGestionClientes.TabStop = False
         Me.GroupBoxGestionClientes.Text = "Gestión de Clientes"
+        '
+        'TBGestionClientes
+        '
+        Me.TBGestionClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBGestionClientes.Location = New System.Drawing.Point(27, 43)
+        Me.TBGestionClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBGestionClientes.Name = "TBGestionClientes"
+        Me.TBGestionClientes.Size = New System.Drawing.Size(173, 30)
+        Me.TBGestionClientes.TabIndex = 6
         '
         'BEliminarCliente
         '
@@ -151,15 +160,6 @@ Partial Class GestionarCliente
         Me.BBuscarCliente.TabIndex = 14
         Me.BBuscarCliente.UseVisualStyleBackColor = False
         '
-        'TBGestionClientes
-        '
-        Me.TBGestionClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBGestionClientes.Location = New System.Drawing.Point(27, 43)
-        Me.TBGestionClientes.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBGestionClientes.Name = "TBGestionClientes"
-        Me.TBGestionClientes.Size = New System.Drawing.Size(173, 30)
-        Me.TBGestionClientes.TabIndex = 6
-        '
         'GestionarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -174,7 +174,7 @@ Partial Class GestionarCliente
         Me.Text = "GestionarCliente"
         Me.TabListaClientes.ResumeLayout(False)
         Me.TabPageListaTalle.ResumeLayout(False)
-        CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRegistroClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxGestionClientes.ResumeLayout(False)
         Me.GroupBoxGestionClientes.PerformLayout()
         Me.ResumeLayout(False)
@@ -183,7 +183,7 @@ Partial Class GestionarCliente
 
     Friend WithEvents TabListaClientes As TabControl
     Friend WithEvents TabPageListaTalle As TabPage
-    Friend WithEvents DataGridViewRegistroTalle As DataGridView
+    Friend WithEvents dgvRegistroClientes As DataGridView
     Friend WithEvents GroupBoxGestionClientes As GroupBox
     Friend WithEvents BEliminarCliente As Button
     Friend WithEvents BModificarCliente As Button

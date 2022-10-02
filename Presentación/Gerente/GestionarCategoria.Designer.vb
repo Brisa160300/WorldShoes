@@ -26,7 +26,7 @@ Partial Class GestionarCategoria
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabListaCategorias = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
-        Me.DataGridViewListarCategoria = New System.Windows.Forms.DataGridView()
+        Me.dgvListarCategorias = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BEliminarCategoria = New System.Windows.Forms.Button()
         Me.BEditarCategoria = New System.Windows.Forms.Button()
@@ -34,7 +34,7 @@ Partial Class GestionarCategoria
         Me.TBGestionCategoria = New System.Windows.Forms.TextBox()
         Me.TabListaCategorias.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
-        CType(Me.DataGridViewListarCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListarCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +51,7 @@ Partial Class GestionarCategoria
         '
         'TabPageListaTalle
         '
-        Me.TabPageListaTalle.Controls.Add(Me.DataGridViewListarCategoria)
+        Me.TabPageListaTalle.Controls.Add(Me.dgvListarCategorias)
         Me.TabPageListaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaTalle.ForeColor = System.Drawing.Color.White
         Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 28)
@@ -63,10 +63,10 @@ Partial Class GestionarCategoria
         Me.TabPageListaTalle.Text = "Lista de Categorias"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
-        'DataGridViewListarCategoria
+        'dgvListarCategorias
         '
-        Me.DataGridViewListarCategoria.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewListarCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListarCategorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListarCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -74,16 +74,16 @@ Partial Class GestionarCategoria
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewListarCategoria.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewListarCategoria.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewListarCategoria.Location = New System.Drawing.Point(3, 2)
-        Me.DataGridViewListarCategoria.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewListarCategoria.Name = "DataGridViewListarCategoria"
-        Me.DataGridViewListarCategoria.RowHeadersWidth = 51
+        Me.dgvListarCategorias.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvListarCategorias.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListarCategorias.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListarCategorias.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListarCategorias.Name = "dgvListarCategorias"
+        Me.dgvListarCategorias.RowHeadersWidth = 51
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewListarCategoria.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewListarCategoria.Size = New System.Drawing.Size(1048, 353)
-        Me.DataGridViewListarCategoria.TabIndex = 2
+        Me.dgvListarCategorias.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvListarCategorias.Size = New System.Drawing.Size(1048, 353)
+        Me.dgvListarCategorias.TabIndex = 2
         '
         'GroupBox1
         '
@@ -173,7 +173,7 @@ Partial Class GestionarCategoria
         Me.Text = "GestionarCategoria"
         Me.TabListaCategorias.ResumeLayout(False)
         Me.TabPageListaTalle.ResumeLayout(False)
-        CType(Me.DataGridViewListarCategoria, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListarCategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -181,7 +181,7 @@ Partial Class GestionarCategoria
     End Sub
     Friend WithEvents TabListaCategorias As TabControl
     Friend WithEvents TabPageListaTalle As TabPage
-    Friend WithEvents DataGridViewListarCategoria As DataGridView
+    Friend WithEvents dgvListarCategorias As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BEliminarCategoria As Button
     Friend WithEvents BEditarCategoria As Button

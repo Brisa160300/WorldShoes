@@ -25,7 +25,7 @@ Partial Class ModificarCategoria
         Me.PanelModCategoria = New System.Windows.Forms.Panel()
         Me.BCancelarModifCategoria = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
-        Me.TBModCategoria = New System.Windows.Forms.TextBox()
+        Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
         Me.LNombreCategoria = New System.Windows.Forms.Label()
         Me.BModificarCategoria = New System.Windows.Forms.Button()
         Me.PanelModCategoria.SuspendLayout()
@@ -63,7 +63,7 @@ Partial Class ModificarCategoria
         '
         'GroupBoxDatosCliente
         '
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBModCategoria)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBNombreCategoria)
         Me.GroupBoxDatosCliente.Controls.Add(Me.LNombreCategoria)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
@@ -76,13 +76,13 @@ Partial Class ModificarCategoria
         Me.GroupBoxDatosCliente.TabStop = False
         Me.GroupBoxDatosCliente.Text = "Modificar Categoría"
         '
-        'TBModCategoria
+        'TBNombreCategoria
         '
-        Me.TBModCategoria.Location = New System.Drawing.Point(139, 121)
-        Me.TBModCategoria.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBModCategoria.Name = "TBModCategoria"
-        Me.TBModCategoria.Size = New System.Drawing.Size(221, 30)
-        Me.TBModCategoria.TabIndex = 16
+        Me.TBNombreCategoria.Location = New System.Drawing.Point(139, 121)
+        Me.TBNombreCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreCategoria.Name = "TBNombreCategoria"
+        Me.TBNombreCategoria.Size = New System.Drawing.Size(221, 30)
+        Me.TBNombreCategoria.TabIndex = 16
         '
         'LNombreCategoria
         '
@@ -136,5 +136,5 @@ Partial Class ModificarCategoria
     Friend WithEvents GroupBoxDatosCliente As GroupBox
     Friend WithEvents LNombreCategoria As Label
     Friend WithEvents BModificarCategoria As Button
-    Friend WithEvents TBModCategoria As TextBox
+    Friend WithEvents TBNombreCategoria As TextBox
 End Class

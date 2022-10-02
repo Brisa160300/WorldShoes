@@ -91,5 +91,4 @@
         objNcliente.cargarGrid(DataGridViewRegistroClientes)
     End Sub
 
-
 End Class

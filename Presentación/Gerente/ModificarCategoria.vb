@@ -5,6 +5,5 @@
 
     Private Sub BCancelarModifCategoria_Click(sender As Object, e As EventArgs) Handles BCancelarModifCategoria.Click
         Me.Close()
-        Me.Dispose()
     End Sub
 End Class

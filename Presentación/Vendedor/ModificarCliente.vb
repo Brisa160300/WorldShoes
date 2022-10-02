@@ -1,7 +1,8 @@
-﻿Public Class modificarCliente
-    Private Sub PanelModClientes_Paint(sender As Object, e As PaintEventArgs) Handles PanelModUsuarios.Paint
+﻿
 
+Public Class ModificarCliente
+
+    Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
+        Me.Close()
     End Sub
-
-
 End Class
