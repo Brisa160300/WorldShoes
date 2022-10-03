@@ -43,11 +43,11 @@ Partial Class AñadirMarca
         '
         Me.TabControlRegCategoria.Controls.Add(Me.TabPageListaCategoria)
         Me.TabControlRegCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlRegCategoria.Location = New System.Drawing.Point(373, 102)
-        Me.TabControlRegCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControlRegCategoria.Location = New System.Drawing.Point(497, 126)
+        Me.TabControlRegCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlRegCategoria.Name = "TabControlRegCategoria"
         Me.TabControlRegCategoria.SelectedIndex = 0
-        Me.TabControlRegCategoria.Size = New System.Drawing.Size(464, 392)
+        Me.TabControlRegCategoria.Size = New System.Drawing.Size(619, 482)
         Me.TabControlRegCategoria.TabIndex = 8
         '
         'TabPageListaCategoria
@@ -55,11 +55,11 @@ Partial Class AñadirMarca
         Me.TabPageListaCategoria.Controls.Add(Me.dgvRegistroMarca)
         Me.TabPageListaCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaCategoria.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageListaCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaCategoria.Name = "TabPageListaCategoria"
-        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPageListaCategoria.Size = New System.Drawing.Size(456, 363)
+        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaCategoria.Size = New System.Drawing.Size(611, 450)
         Me.TabPageListaCategoria.TabIndex = 0
         Me.TabPageListaCategoria.Text = "Lista de Marcas"
         Me.TabPageListaCategoria.UseVisualStyleBackColor = True
@@ -83,8 +83,8 @@ Partial Class AñadirMarca
         Me.dgvRegistroMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvRegistroMarca.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistroMarca.EnableHeadersVisualStyles = False
-        Me.dgvRegistroMarca.Location = New System.Drawing.Point(2, 2)
-        Me.dgvRegistroMarca.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvRegistroMarca.Location = New System.Drawing.Point(3, 2)
+        Me.dgvRegistroMarca.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvRegistroMarca.Name = "dgvRegistroMarca"
         Me.dgvRegistroMarca.ReadOnly = True
         Me.dgvRegistroMarca.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -99,7 +99,7 @@ Partial Class AñadirMarca
         Me.dgvRegistroMarca.RowHeadersWidth = 51
         Me.dgvRegistroMarca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvRegistroMarca.RowTemplate.Height = 24
-        Me.dgvRegistroMarca.Size = New System.Drawing.Size(452, 359)
+        Me.dgvRegistroMarca.Size = New System.Drawing.Size(605, 446)
         Me.dgvRegistroMarca.TabIndex = 0
         '
         'LMarca
@@ -108,9 +108,10 @@ Partial Class AñadirMarca
         Me.LMarca.BackColor = System.Drawing.Color.Transparent
         Me.LMarca.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LMarca.ForeColor = System.Drawing.Color.Transparent
-        Me.LMarca.Location = New System.Drawing.Point(25, 38)
+        Me.LMarca.Location = New System.Drawing.Point(33, 47)
+        Me.LMarca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LMarca.Name = "LMarca"
-        Me.LMarca.Size = New System.Drawing.Size(149, 27)
+        Me.LMarca.Size = New System.Drawing.Size(185, 33)
         Me.LMarca.TabIndex = 7
         Me.LMarca.Text = "Nueva Marca"
         '
@@ -122,9 +123,10 @@ Partial Class AñadirMarca
         Me.PanelRegClientes.Controls.Add(Me.BCancelar)
         Me.PanelRegClientes.Controls.Add(Me.TBNombreMarca)
         Me.PanelRegClientes.Controls.Add(Me.LNombreMarca)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(29, 102)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(39, 126)
+        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(319, 180)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(425, 222)
         Me.PanelRegClientes.TabIndex = 6
         '
         'BRegistrarMarca
@@ -135,9 +137,10 @@ Partial Class AñadirMarca
         Me.BRegistrarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BRegistrarMarca.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarMarca.Location = New System.Drawing.Point(134, 126)
+        Me.BRegistrarMarca.Location = New System.Drawing.Point(179, 155)
+        Me.BRegistrarMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BRegistrarMarca.Name = "BRegistrarMarca"
-        Me.BRegistrarMarca.Size = New System.Drawing.Size(73, 26)
+        Me.BRegistrarMarca.Size = New System.Drawing.Size(97, 32)
         Me.BRegistrarMarca.TabIndex = 13
         Me.BRegistrarMarca.Text = "Registrar"
         Me.BRegistrarMarca.UseVisualStyleBackColor = False
@@ -149,9 +152,10 @@ Partial Class AñadirMarca
         Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(225, 126)
+        Me.BCancelar.Location = New System.Drawing.Point(300, 155)
+        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(74, 26)
+        Me.BCancelar.Size = New System.Drawing.Size(99, 32)
         Me.BCancelar.TabIndex = 12
         Me.BCancelar.Text = "Cancelar"
         Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -160,9 +164,10 @@ Partial Class AñadirMarca
         'TBNombreMarca
         '
         Me.TBNombreMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBNombreMarca.Location = New System.Drawing.Point(20, 58)
+        Me.TBNombreMarca.Location = New System.Drawing.Point(27, 71)
+        Me.TBNombreMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TBNombreMarca.Name = "TBNombreMarca"
-        Me.TBNombreMarca.Size = New System.Drawing.Size(279, 25)
+        Me.TBNombreMarca.Size = New System.Drawing.Size(371, 30)
         Me.TBNombreMarca.TabIndex = 6
         '
         'LNombreMarca
@@ -170,23 +175,24 @@ Partial Class AñadirMarca
         Me.LNombreMarca.AutoSize = True
         Me.LNombreMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreMarca.ForeColor = System.Drawing.Color.White
-        Me.LNombreMarca.Location = New System.Drawing.Point(84, 23)
+        Me.LNombreMarca.Location = New System.Drawing.Point(112, 28)
+        Me.LNombreMarca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LNombreMarca.Name = "LNombreMarca"
-        Me.LNombreMarca.Size = New System.Drawing.Size(151, 17)
+        Me.LNombreMarca.Size = New System.Drawing.Size(190, 22)
         Me.LNombreMarca.TabIndex = 0
         Me.LNombreMarca.Text = "Nombre de la Marca"
         '
         'AñadirMarca
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(862, 533)
+        Me.ClientSize = New System.Drawing.Size(1149, 656)
         Me.Controls.Add(Me.TabControlRegCategoria)
         Me.Controls.Add(Me.LMarca)
         Me.Controls.Add(Me.PanelRegClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AñadirMarca"
         Me.Text = "AñadirMarca"
         Me.TabControlRegCategoria.ResumeLayout(False)

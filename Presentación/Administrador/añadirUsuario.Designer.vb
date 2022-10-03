@@ -33,12 +33,12 @@ Partial Class añadirUsuario
         Me.PanelRegUsuarios = New System.Windows.Forms.Panel()
         Me.ComboBoxPerfiles = New System.Windows.Forms.ComboBox()
         Me.BRegistrarCliente = New System.Windows.Forms.Button()
-        Me.BCancelar = New System.Windows.Forms.Button()
         Me.TBContraseñaUsuario = New System.Windows.Forms.TextBox()
         Me.TBNombreUsuario = New System.Windows.Forms.TextBox()
         Me.LContraseñaUsuario = New System.Windows.Forms.Label()
         Me.LPerfilUsuario = New System.Windows.Forms.Label()
         Me.LNombreUsuario = New System.Windows.Forms.Label()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabControlRegUsuarios.SuspendLayout()
         Me.TabPageListaUsuarios.SuspendLayout()
         CType(Me.dgvListaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class añadirUsuario
         Me.TabControlRegUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlRegUsuarios.Name = "TabControlRegUsuarios"
         Me.TabControlRegUsuarios.SelectedIndex = 0
-        Me.TabControlRegUsuarios.Size = New System.Drawing.Size(474, 498)
+        Me.TabControlRegUsuarios.Size = New System.Drawing.Size(474, 479)
         Me.TabControlRegUsuarios.TabIndex = 7
         '
         'TabPageListaUsuarios
@@ -65,7 +65,7 @@ Partial Class añadirUsuario
         Me.TabPageListaUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaUsuarios.Name = "TabPageListaUsuarios"
         Me.TabPageListaUsuarios.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaUsuarios.Size = New System.Drawing.Size(466, 466)
+        Me.TabPageListaUsuarios.Size = New System.Drawing.Size(466, 447)
         Me.TabPageListaUsuarios.TabIndex = 0
         Me.TabPageListaUsuarios.Text = "Lista de Usuarios"
         Me.TabPageListaUsuarios.UseVisualStyleBackColor = True
@@ -111,7 +111,7 @@ Partial Class añadirUsuario
         Me.dgvListaUsuarios.RowHeadersWidth = 51
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvListaUsuarios.Size = New System.Drawing.Size(460, 462)
+        Me.dgvListaUsuarios.Size = New System.Drawing.Size(460, 443)
         Me.dgvListaUsuarios.TabIndex = 2
         '
         'LRegistroUsuario
@@ -133,7 +133,6 @@ Partial Class añadirUsuario
         Me.PanelRegUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PanelRegUsuarios.Controls.Add(Me.ComboBoxPerfiles)
         Me.PanelRegUsuarios.Controls.Add(Me.BRegistrarCliente)
-        Me.PanelRegUsuarios.Controls.Add(Me.BCancelar)
         Me.PanelRegUsuarios.Controls.Add(Me.TBContraseñaUsuario)
         Me.PanelRegUsuarios.Controls.Add(Me.TBNombreUsuario)
         Me.PanelRegUsuarios.Controls.Add(Me.LContraseñaUsuario)
@@ -164,29 +163,13 @@ Partial Class añadirUsuario
         Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(147, 329)
+        Me.BRegistrarCliente.Location = New System.Drawing.Point(205, 276)
         Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarCliente.Name = "BRegistrarCliente"
         Me.BRegistrarCliente.Size = New System.Drawing.Size(115, 39)
         Me.BRegistrarCliente.TabIndex = 13
         Me.BRegistrarCliente.Text = "Registrar"
         Me.BRegistrarCliente.UseVisualStyleBackColor = False
-        '
-        'BCancelar
-        '
-        Me.BCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelar.FlatAppearance.BorderSize = 2
-        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(280, 331)
-        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(115, 39)
-        Me.BCancelar.TabIndex = 12
-        Me.BCancelar.Text = "Cancelar"
-        Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelar.UseVisualStyleBackColor = False
         '
         'TBContraseñaUsuario
         '
@@ -242,12 +225,29 @@ Partial Class añadirUsuario
         Me.LNombreUsuario.TabIndex = 0
         Me.LNombreUsuario.Text = "Nombre:"
         '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(1020, 567)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(103, 40)
+        Me.BVolver.TabIndex = 16
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.UseVisualStyleBackColor = False
+        '
         'añadirUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1149, 633)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.TabControlRegUsuarios)
         Me.Controls.Add(Me.LRegistroUsuario)
         Me.Controls.Add(Me.PanelRegUsuarios)
@@ -271,11 +271,11 @@ Partial Class añadirUsuario
     Friend WithEvents LRegistroUsuario As Label
     Friend WithEvents PanelRegUsuarios As Panel
     Friend WithEvents BRegistrarCliente As Button
-    Friend WithEvents BCancelar As Button
     Friend WithEvents TBContraseñaUsuario As TextBox
     Friend WithEvents TBNombreUsuario As TextBox
     Friend WithEvents LContraseñaUsuario As Label
     Friend WithEvents LPerfilUsuario As Label
     Friend WithEvents LNombreUsuario As Label
     Friend WithEvents ComboBoxPerfiles As ComboBox
+    Friend WithEvents BVolver As Button
 End Class

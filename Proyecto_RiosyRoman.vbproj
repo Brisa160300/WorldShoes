@@ -594,6 +594,7 @@
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
       <LastGenOutput>ModelProyecto.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\logoWorldShoes-removebg-preview.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

@@ -543,6 +543,26 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property logoWorldShoes_removebg_preview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logoWorldShoes-removebg-preview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property logoWorldShoes_removebg_preview1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logoWorldShoes-removebg-preview1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property maximizarBlanco() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("maximizarBlanco", resourceCulture)

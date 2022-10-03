@@ -4,7 +4,7 @@
     Private px, py As Integer
     Private mover As Boolean
 
-    Private Sub G_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub A_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
         hideSubMenu()
     End Sub
@@ -103,10 +103,10 @@
             formHijo.HorizontalScroll.Value = 0
             formHijo.HorizontalScroll.Minimum = 0
             formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
+            PanelFormAdmnistrador.AutoScroll = True
             PanelFormAdmnistrador.Controls.Add(formHijo)
             PanelFormAdmnistrador.Tag = formHijo
             PanelFormAdmnistrador.BringToFront()
-            PanelFormAdmnistrador.AutoScroll = True
             formHijo.Show()
             hideSubMenu()
         End If

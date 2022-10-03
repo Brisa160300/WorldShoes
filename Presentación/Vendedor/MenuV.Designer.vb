@@ -285,6 +285,8 @@ Partial Class MenuV
         '
         Me.PanelFormVendedor.AutoScroll = True
         Me.PanelFormVendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelFormVendedor.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
+        Me.PanelFormVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PanelFormVendedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelFormVendedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelFormVendedor.Location = New System.Drawing.Point(250, 94)

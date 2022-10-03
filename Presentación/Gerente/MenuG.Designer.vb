@@ -200,6 +200,8 @@ Partial Class MenuG
         Me.PanelFormGerente.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelFormGerente.AutoScroll = True
         Me.PanelFormGerente.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelFormGerente.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
+        Me.PanelFormGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PanelFormGerente.Location = New System.Drawing.Point(250, 94)
         Me.PanelFormGerente.Name = "PanelFormGerente"
         Me.PanelFormGerente.Size = New System.Drawing.Size(1150, 756)

@@ -22,9 +22,9 @@ Partial Class GestionarUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBoxGestionUsuarios = New System.Windows.Forms.GroupBox()
         Me.BEliminarUsuario = New System.Windows.Forms.Button()
         Me.BModificarUsuario = New System.Windows.Forms.Button()
@@ -33,6 +33,7 @@ Partial Class GestionarUsuarios
         Me.TabListaClientes = New System.Windows.Forms.TabControl()
         Me.TabPageUsuarios = New System.Windows.Forms.TabPage()
         Me.dgvListaUsuarios = New System.Windows.Forms.DataGridView()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.GroupBoxGestionUsuarios.SuspendLayout()
         Me.TabListaClientes.SuspendLayout()
         Me.TabPageUsuarios.SuspendLayout()
@@ -48,10 +49,10 @@ Partial Class GestionarUsuarios
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.TBGestionUsuario)
         Me.GroupBoxGestionUsuarios.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxGestionUsuarios.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxGestionUsuarios.Location = New System.Drawing.Point(40, 68)
-        Me.GroupBoxGestionUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxGestionUsuarios.Location = New System.Drawing.Point(40, 47)
+        Me.GroupBoxGestionUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxGestionUsuarios.Name = "GroupBoxGestionUsuarios"
-        Me.GroupBoxGestionUsuarios.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxGestionUsuarios.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBoxGestionUsuarios.Size = New System.Drawing.Size(1071, 100)
         Me.GroupBoxGestionUsuarios.TabIndex = 25
         Me.GroupBoxGestionUsuarios.TabStop = False
@@ -66,7 +67,7 @@ Partial Class GestionarUsuarios
         Me.BEliminarUsuario.ForeColor = System.Drawing.Color.White
         Me.BEliminarUsuario.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
         Me.BEliminarUsuario.Location = New System.Drawing.Point(980, 31)
-        Me.BEliminarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BEliminarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.BEliminarUsuario.Name = "BEliminarUsuario"
         Me.BEliminarUsuario.Size = New System.Drawing.Size(60, 50)
         Me.BEliminarUsuario.TabIndex = 12
@@ -83,10 +84,11 @@ Partial Class GestionarUsuarios
         Me.BModificarUsuario.ForeColor = System.Drawing.Color.White
         Me.BModificarUsuario.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
         Me.BModificarUsuario.Location = New System.Drawing.Point(912, 31)
-        Me.BModificarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BModificarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.BModificarUsuario.Name = "BModificarUsuario"
         Me.BModificarUsuario.Size = New System.Drawing.Size(60, 50)
         Me.BModificarUsuario.TabIndex = 13
+        Me.BModificarUsuario.Text = "z"
         Me.BModificarUsuario.UseVisualStyleBackColor = False
         '
         'BBuscarUsuario
@@ -99,7 +101,7 @@ Partial Class GestionarUsuarios
         Me.BBuscarUsuario.ForeColor = System.Drawing.Color.White
         Me.BBuscarUsuario.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
         Me.BBuscarUsuario.Location = New System.Drawing.Point(208, 31)
-        Me.BBuscarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BBuscarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarUsuario.Name = "BBuscarUsuario"
         Me.BBuscarUsuario.Size = New System.Drawing.Size(60, 50)
         Me.BBuscarUsuario.TabIndex = 14
@@ -109,7 +111,7 @@ Partial Class GestionarUsuarios
         '
         Me.TBGestionUsuario.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBGestionUsuario.Location = New System.Drawing.Point(27, 43)
-        Me.TBGestionUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBGestionUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.TBGestionUsuario.Name = "TBGestionUsuario"
         Me.TBGestionUsuario.Size = New System.Drawing.Size(173, 30)
         Me.TBGestionUsuario.TabIndex = 6
@@ -118,7 +120,7 @@ Partial Class GestionarUsuarios
         '
         Me.TabListaClientes.Controls.Add(Me.TabPageUsuarios)
         Me.TabListaClientes.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabListaClientes.Location = New System.Drawing.Point(40, 201)
+        Me.TabListaClientes.Location = New System.Drawing.Point(40, 177)
         Me.TabListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabListaClientes.Name = "TabListaClientes"
         Me.TabListaClientes.SelectedIndex = 0
@@ -145,35 +147,51 @@ Partial Class GestionarUsuarios
         Me.dgvListaUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListaUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListaUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListaUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListaUsuarios.ColumnHeadersHeight = 20
         Me.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListaUsuarios.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvListaUsuarios.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListaUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaUsuarios.EnableHeadersVisualStyles = False
         Me.dgvListaUsuarios.Location = New System.Drawing.Point(3, 2)
-        Me.dgvListaUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvListaUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListaUsuarios.Name = "dgvListaUsuarios"
         Me.dgvListaUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvListaUsuarios.RowHeadersWidth = 51
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListaUsuarios.Size = New System.Drawing.Size(1057, 346)
         Me.dgvListaUsuarios.TabIndex = 2
+        '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(1008, 580)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(103, 40)
+        Me.BVolver.TabIndex = 15
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'GestionarUsuarios
         '
@@ -181,6 +199,7 @@ Partial Class GestionarUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1149, 633)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxGestionUsuarios)
         Me.Controls.Add(Me.TabListaClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -204,4 +223,5 @@ Partial Class GestionarUsuarios
     Friend WithEvents TabListaClientes As TabControl
     Friend WithEvents TabPageUsuarios As TabPage
     Friend WithEvents dgvListaUsuarios As DataGridView
+    Friend WithEvents BVolver As Button
 End Class

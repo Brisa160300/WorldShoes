@@ -11,4 +11,8 @@
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
     End Sub
+
+    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
+        Me.Close()
+    End Sub
 End Class
