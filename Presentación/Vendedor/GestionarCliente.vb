@@ -1,4 +1,5 @@
 ﻿Public Class GestionarCliente
+    Private objNcliente = New NCliente
     Private Sub BModificarCliente_Click(sender As Object, e As EventArgs) Handles BModificarCliente.Click
         Dim frm As New ModificarCliente
         frm.TBNombreCliente.Text = dgvRegistroClientes.CurrentRow.Cells(0).Value.ToString
@@ -10,10 +11,10 @@
         frm.ShowInTaskbar = False
         frm.ShowDialog()
     End Sub
-
     Private Sub GestionarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        objNcliente.cargarGrid(dgvRegistroClientes)
     End Sub
+
 
     Private Sub TBBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBBuscar.TextChanged
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then

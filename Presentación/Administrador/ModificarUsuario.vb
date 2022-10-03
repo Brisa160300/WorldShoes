@@ -7,7 +7,7 @@
         Dim Ask As MsgBoxResult
         Dim contraseña As String = TBContraseñaUsuario.Text
         Dim nombre As String = TBNombreUsuario.Text
-        Dim perfil As String = TBPerfilUsuario.Text
+        Dim perfil As String = ComboBoxPerfil.Text
 
 
         If String.IsNullOrWhiteSpace(contraseña) Or
@@ -20,7 +20,7 @@
         End If
     End Function
 
-    Private Sub TBNombreUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreUsuario.KeyPress, TBPerfilUsuario.KeyPress
+    Private Sub TBNombreUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreUsuario.KeyPress
 
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -33,5 +33,9 @@
         If EspacioEnBlanco() = False Then
             MsgBox("Seguro que desea modificar este usuario", vbQuestion + vbYesNo, "Confirmar Modificación")
         End If
+    End Sub
+
+    Private Sub BCancelarModifCliente_Click(sender As Object, e As EventArgs) Handles BCancelarModifCliente.Click
+        Me.Close()
     End Sub
 End Class
