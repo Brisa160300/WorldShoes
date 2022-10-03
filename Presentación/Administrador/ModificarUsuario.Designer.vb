@@ -26,11 +26,11 @@ Partial Class ModificarUsuario
         Me.BCancelarModifCliente = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
         Me.LDni = New System.Windows.Forms.Label()
-        Me.TBApellidoCliente = New System.Windows.Forms.TextBox()
+        Me.TBContraseñaUsuario = New System.Windows.Forms.TextBox()
         Me.LNombreCliente = New System.Windows.Forms.Label()
         Me.LApellidoCliente = New System.Windows.Forms.Label()
-        Me.TBNombreCliente = New System.Windows.Forms.TextBox()
-        Me.TBDniCliente = New System.Windows.Forms.TextBox()
+        Me.TBNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.TBPerfilUsuario = New System.Windows.Forms.TextBox()
         Me.BModificarCliente = New System.Windows.Forms.Button()
         Me.LModUsuario = New System.Windows.Forms.Label()
         Me.PanelModUsuarios.SuspendLayout()
@@ -44,10 +44,10 @@ Partial Class ModificarUsuario
         Me.PanelModUsuarios.Controls.Add(Me.BCancelarModifCliente)
         Me.PanelModUsuarios.Controls.Add(Me.GroupBoxDatosCliente)
         Me.PanelModUsuarios.Controls.Add(Me.BModificarCliente)
-        Me.PanelModUsuarios.Location = New System.Drawing.Point(72, 109)
-        Me.PanelModUsuarios.Margin = New System.Windows.Forms.Padding(5)
+        Me.PanelModUsuarios.Location = New System.Drawing.Point(54, 89)
+        Me.PanelModUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelModUsuarios.Name = "PanelModUsuarios"
-        Me.PanelModUsuarios.Size = New System.Drawing.Size(606, 481)
+        Me.PanelModUsuarios.Size = New System.Drawing.Size(454, 391)
         Me.PanelModUsuarios.TabIndex = 1
         '
         'BCancelarModifCliente
@@ -57,10 +57,10 @@ Partial Class ModificarUsuario
         Me.BCancelarModifCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelarModifCliente.Font = New System.Drawing.Font("Britannic Bold", 15.0!)
         Me.BCancelarModifCliente.ForeColor = System.Drawing.Color.White
-        Me.BCancelarModifCliente.Location = New System.Drawing.Point(398, 392)
-        Me.BCancelarModifCliente.Margin = New System.Windows.Forms.Padding(5)
+        Me.BCancelarModifCliente.Location = New System.Drawing.Point(291, 318)
+        Me.BCancelarModifCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BCancelarModifCliente.Name = "BCancelarModifCliente"
-        Me.BCancelarModifCliente.Size = New System.Drawing.Size(130, 50)
+        Me.BCancelarModifCliente.Size = New System.Drawing.Size(105, 41)
         Me.BCancelarModifCliente.TabIndex = 12
         Me.BCancelarModifCliente.Text = "Cancelar"
         Me.BCancelarModifCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -69,18 +69,16 @@ Partial Class ModificarUsuario
         'GroupBoxDatosCliente
         '
         Me.GroupBoxDatosCliente.Controls.Add(Me.LDni)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBApellidoCliente)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBContraseñaUsuario)
         Me.GroupBoxDatosCliente.Controls.Add(Me.LNombreCliente)
         Me.GroupBoxDatosCliente.Controls.Add(Me.LApellidoCliente)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBNombreCliente)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBDniCliente)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBNombreUsuario)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBPerfilUsuario)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(86, 48)
-        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(64, 39)
         Me.GroupBoxDatosCliente.Name = "GroupBoxDatosCliente"
-        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(442, 315)
+        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(332, 256)
         Me.GroupBoxDatosCliente.TabIndex = 19
         Me.GroupBoxDatosCliente.TabStop = False
         Me.GroupBoxDatosCliente.Text = "Modificar Datos"
@@ -90,30 +88,30 @@ Partial Class ModificarUsuario
         Me.LDni.AutoSize = True
         Me.LDni.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LDni.ForeColor = System.Drawing.Color.White
-        Me.LDni.Location = New System.Drawing.Point(127, 215)
-        Me.LDni.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LDni.Location = New System.Drawing.Point(95, 175)
+        Me.LDni.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LDni.Name = "LDni"
-        Me.LDni.Size = New System.Drawing.Size(58, 22)
+        Me.LDni.Size = New System.Drawing.Size(46, 17)
         Me.LDni.TabIndex = 19
         Me.LDni.Text = "Perfil"
         '
-        'TBApellidoCliente
+        'TBContraseñaUsuario
         '
-        Me.TBApellidoCliente.Location = New System.Drawing.Point(131, 66)
-        Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBApellidoCliente.Name = "TBApellidoCliente"
-        Me.TBApellidoCliente.Size = New System.Drawing.Size(213, 30)
-        Me.TBApellidoCliente.TabIndex = 8
+        Me.TBContraseñaUsuario.Location = New System.Drawing.Point(98, 54)
+        Me.TBContraseñaUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBContraseñaUsuario.Name = "TBContraseñaUsuario"
+        Me.TBContraseñaUsuario.Size = New System.Drawing.Size(161, 25)
+        Me.TBContraseñaUsuario.TabIndex = 8
         '
         'LNombreCliente
         '
         Me.LNombreCliente.AutoSize = True
         Me.LNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreCliente.ForeColor = System.Drawing.Color.White
-        Me.LNombreCliente.Location = New System.Drawing.Point(127, 128)
-        Me.LNombreCliente.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LNombreCliente.Location = New System.Drawing.Point(95, 104)
+        Me.LNombreCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LNombreCliente.Name = "LNombreCliente"
-        Me.LNombreCliente.Size = New System.Drawing.Size(85, 22)
+        Me.LNombreCliente.Size = New System.Drawing.Size(69, 17)
         Me.LNombreCliente.TabIndex = 0
         Me.LNombreCliente.Text = "Nombre:"
         '
@@ -122,28 +120,28 @@ Partial Class ModificarUsuario
         Me.LApellidoCliente.AutoSize = True
         Me.LApellidoCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LApellidoCliente.ForeColor = System.Drawing.Color.White
-        Me.LApellidoCliente.Location = New System.Drawing.Point(127, 41)
-        Me.LApellidoCliente.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LApellidoCliente.Location = New System.Drawing.Point(95, 33)
+        Me.LApellidoCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LApellidoCliente.Name = "LApellidoCliente"
-        Me.LApellidoCliente.Size = New System.Drawing.Size(118, 22)
+        Me.LApellidoCliente.Size = New System.Drawing.Size(94, 17)
         Me.LApellidoCliente.TabIndex = 4
         Me.LApellidoCliente.Text = "Contraseña:"
         '
-        'TBNombreCliente
+        'TBNombreUsuario
         '
-        Me.TBNombreCliente.Location = New System.Drawing.Point(131, 155)
-        Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBNombreCliente.Name = "TBNombreCliente"
-        Me.TBNombreCliente.Size = New System.Drawing.Size(213, 30)
-        Me.TBNombreCliente.TabIndex = 6
+        Me.TBNombreUsuario.Location = New System.Drawing.Point(98, 126)
+        Me.TBNombreUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreUsuario.Name = "TBNombreUsuario"
+        Me.TBNombreUsuario.Size = New System.Drawing.Size(161, 25)
+        Me.TBNombreUsuario.TabIndex = 6
         '
-        'TBDniCliente
+        'TBPerfilUsuario
         '
-        Me.TBDniCliente.Location = New System.Drawing.Point(131, 242)
-        Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBDniCliente.Name = "TBDniCliente"
-        Me.TBDniCliente.Size = New System.Drawing.Size(213, 30)
-        Me.TBDniCliente.TabIndex = 7
+        Me.TBPerfilUsuario.Location = New System.Drawing.Point(98, 197)
+        Me.TBPerfilUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBPerfilUsuario.Name = "TBPerfilUsuario"
+        Me.TBPerfilUsuario.Size = New System.Drawing.Size(161, 25)
+        Me.TBPerfilUsuario.TabIndex = 7
         '
         'BModificarCliente
         '
@@ -153,10 +151,10 @@ Partial Class ModificarUsuario
         Me.BModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BModificarCliente.Font = New System.Drawing.Font("Britannic Bold", 15.0!)
         Me.BModificarCliente.ForeColor = System.Drawing.Color.White
-        Me.BModificarCliente.Location = New System.Drawing.Point(250, 392)
-        Me.BModificarCliente.Margin = New System.Windows.Forms.Padding(5)
+        Me.BModificarCliente.Location = New System.Drawing.Point(176, 318)
+        Me.BModificarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BModificarCliente.Name = "BModificarCliente"
-        Me.BModificarCliente.Size = New System.Drawing.Size(136, 50)
+        Me.BModificarCliente.Size = New System.Drawing.Size(107, 41)
         Me.BModificarCliente.TabIndex = 13
         Me.BModificarCliente.Text = "Modificar"
         Me.BModificarCliente.UseVisualStyleBackColor = False
@@ -167,24 +165,22 @@ Partial Class ModificarUsuario
         Me.LModUsuario.BackColor = System.Drawing.Color.Transparent
         Me.LModUsuario.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LModUsuario.ForeColor = System.Drawing.Color.Transparent
-        Me.LModUsuario.Location = New System.Drawing.Point(66, 40)
-        Me.LModUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LModUsuario.Location = New System.Drawing.Point(50, 32)
         Me.LModUsuario.Name = "LModUsuario"
-        Me.LModUsuario.Size = New System.Drawing.Size(241, 33)
+        Me.LModUsuario.Size = New System.Drawing.Size(196, 27)
         Me.LModUsuario.TabIndex = 2
         Me.LModUsuario.Text = "Modifcar Usuario"
         '
-        'modificarCliente
+        'ModificarUsuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 631)
+        Me.ClientSize = New System.Drawing.Size(600, 513)
         Me.Controls.Add(Me.LModUsuario)
         Me.Controls.Add(Me.PanelModUsuarios)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "modificarCliente"
+        Me.Name = "ModificarUsuario"
         Me.Text = "modificarClientevb"
         Me.PanelModUsuarios.ResumeLayout(False)
         Me.GroupBoxDatosCliente.ResumeLayout(False)
@@ -197,9 +193,9 @@ Partial Class ModificarUsuario
     Friend WithEvents PanelModUsuarios As Panel
     Friend WithEvents BModificarCliente As Button
     Friend WithEvents BCancelarModifCliente As Button
-    Friend WithEvents TBApellidoCliente As TextBox
-    Friend WithEvents TBDniCliente As TextBox
-    Friend WithEvents TBNombreCliente As TextBox
+    Friend WithEvents TBContraseñaUsuario As TextBox
+    Friend WithEvents TBPerfilUsuario As TextBox
+    Friend WithEvents TBNombreUsuario As TextBox
     Friend WithEvents LApellidoCliente As Label
     Friend WithEvents LNombreCliente As Label
     Friend WithEvents GroupBoxDatosCliente As GroupBox

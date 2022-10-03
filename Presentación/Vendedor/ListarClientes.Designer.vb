@@ -24,15 +24,17 @@ Partial Class ListarClientes
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvListarClientes = New System.Windows.Forms.DataGridView()
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.ComboBoxBuscarDni = New System.Windows.Forms.ComboBox()
         Me.GroupBoxClientes = New System.Windows.Forms.GroupBox()
+        Me.BBuscar = New System.Windows.Forms.Button()
         Me.TabControlListaClientes = New System.Windows.Forms.TabControl()
         Me.TabPafeListaClientes = New System.Windows.Forms.TabPage()
         Me.BEliminarClientes = New System.Windows.Forms.Button()
         Me.BImprimirClientes = New System.Windows.Forms.Button()
-        Me.BBuscar = New System.Windows.Forms.Button()
         Me.BEditarCliente = New System.Windows.Forms.Button()
         CType(Me.dgvListarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxClientes.SuspendLayout()
@@ -45,7 +47,10 @@ Partial Class ListarClientes
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         Me.dgvListarClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvListarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvListarClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
@@ -56,11 +61,23 @@ Partial Class ListarClientes
         Me.dgvListarClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvListarClientes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListarClientes.EnableHeadersVisualStyles = False
         Me.dgvListarClientes.Location = New System.Drawing.Point(3, 3)
         Me.dgvListarClientes.Margin = New System.Windows.Forms.Padding(5)
         Me.dgvListarClientes.Name = "dgvListarClientes"
+        Me.dgvListarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListarClientes.RowHeadersWidth = 51
-        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 363)
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvListarClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 368)
         Me.dgvListarClientes.TabIndex = 5
         '
         'TBBuscar
@@ -69,7 +86,7 @@ Partial Class ListarClientes
         Me.TBBuscar.Location = New System.Drawing.Point(610, 59)
         Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(290, 29)
+        Me.TBBuscar.Size = New System.Drawing.Size(290, 24)
         Me.TBBuscar.TabIndex = 8
         '
         'ComboBoxBuscarDni
@@ -78,7 +95,7 @@ Partial Class ListarClientes
         Me.ComboBoxBuscarDni.FormattingEnabled = True
         Me.ComboBoxBuscarDni.Location = New System.Drawing.Point(444, 59)
         Me.ComboBoxBuscarDni.Name = "ComboBoxBuscarDni"
-        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 30)
+        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 25)
         Me.ComboBoxBuscarDni.TabIndex = 10
         Me.ComboBoxBuscarDni.Text = "DNI"
         '
@@ -96,6 +113,21 @@ Partial Class ListarClientes
         Me.GroupBoxClientes.TabStop = False
         Me.GroupBoxClientes.Text = "Clientes"
         '
+        'BBuscar
+        '
+        Me.BBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.BBuscar.ForeColor = System.Drawing.Color.White
+        Me.BBuscar.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
+        Me.BBuscar.Location = New System.Drawing.Point(909, 49)
+        Me.BBuscar.Margin = New System.Windows.Forms.Padding(5)
+        Me.BBuscar.Name = "BBuscar"
+        Me.BBuscar.Size = New System.Drawing.Size(50, 50)
+        Me.BBuscar.TabIndex = 2
+        Me.BBuscar.UseVisualStyleBackColor = False
+        '
         'TabControlListaClientes
         '
         Me.TabControlListaClientes.Controls.Add(Me.TabPafeListaClientes)
@@ -112,10 +144,10 @@ Partial Class ListarClientes
         Me.TabPafeListaClientes.Controls.Add(Me.dgvListarClientes)
         Me.TabPafeListaClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TabPafeListaClientes.ForeColor = System.Drawing.Color.White
-        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 31)
+        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 26)
         Me.TabPafeListaClientes.Name = "TabPafeListaClientes"
         Me.TabPafeListaClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 369)
+        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 374)
         Me.TabPafeListaClientes.TabIndex = 0
         Me.TabPafeListaClientes.Text = "Lista de Clientes"
         '
@@ -150,21 +182,6 @@ Partial Class ListarClientes
         Me.BImprimirClientes.UseVisualStyleBackColor = False
         Me.BImprimirClientes.Visible = False
         '
-        'BBuscar
-        '
-        Me.BBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.BBuscar.ForeColor = System.Drawing.Color.White
-        Me.BBuscar.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscar.Location = New System.Drawing.Point(909, 49)
-        Me.BBuscar.Margin = New System.Windows.Forms.Padding(5)
-        Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(50, 50)
-        Me.BBuscar.TabIndex = 2
-        Me.BBuscar.UseVisualStyleBackColor = False
-        '
         'BEditarCliente
         '
         Me.BEditarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -183,7 +200,7 @@ Partial Class ListarClientes
         '
         'ListarClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 656)

@@ -30,4 +30,6 @@
     Private Sub Añadir_Categoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNcategoria.cargarGrid(dgvRegistroCategoria)
     End Sub
+
+
 End Class

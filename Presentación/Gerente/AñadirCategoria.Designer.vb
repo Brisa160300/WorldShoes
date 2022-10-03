@@ -22,7 +22,8 @@ Partial Class Añadir_Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
         Me.LNombreCategoria = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
@@ -41,10 +42,9 @@ Partial Class Añadir_Categoria
         'TBNombreCategoria
         '
         Me.TBNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBNombreCategoria.Location = New System.Drawing.Point(27, 71)
-        Me.TBNombreCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreCategoria.Location = New System.Drawing.Point(20, 58)
         Me.TBNombreCategoria.Name = "TBNombreCategoria"
-        Me.TBNombreCategoria.Size = New System.Drawing.Size(371, 30)
+        Me.TBNombreCategoria.Size = New System.Drawing.Size(279, 25)
         Me.TBNombreCategoria.TabIndex = 6
         '
         'LNombreCategoria
@@ -52,10 +52,9 @@ Partial Class Añadir_Categoria
         Me.LNombreCategoria.AutoSize = True
         Me.LNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreCategoria.ForeColor = System.Drawing.Color.White
-        Me.LNombreCategoria.Location = New System.Drawing.Point(112, 28)
-        Me.LNombreCategoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNombreCategoria.Location = New System.Drawing.Point(84, 23)
         Me.LNombreCategoria.Name = "LNombreCategoria"
-        Me.LNombreCategoria.Size = New System.Drawing.Size(199, 22)
+        Me.LNombreCategoria.Size = New System.Drawing.Size(159, 17)
         Me.LNombreCategoria.TabIndex = 0
         Me.LNombreCategoria.Text = "Nombre de Categoria"
         '
@@ -65,10 +64,9 @@ Partial Class Añadir_Categoria
         Me.LCategoria.BackColor = System.Drawing.Color.Transparent
         Me.LCategoria.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LCategoria.ForeColor = System.Drawing.Color.Transparent
-        Me.LCategoria.Location = New System.Drawing.Point(29, 49)
-        Me.LCategoria.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LCategoria.Location = New System.Drawing.Point(22, 40)
         Me.LCategoria.Name = "LCategoria"
-        Me.LCategoria.Size = New System.Drawing.Size(231, 33)
+        Me.LCategoria.Size = New System.Drawing.Size(186, 27)
         Me.LCategoria.TabIndex = 2
         Me.LCategoria.Text = "Nueva Categoria"
         '
@@ -79,10 +77,9 @@ Partial Class Añadir_Categoria
         Me.BCancelarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancelarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BCancelarCategoria.Location = New System.Drawing.Point(300, 155)
-        Me.BCancelarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BCancelarCategoria.Location = New System.Drawing.Point(225, 126)
         Me.BCancelarCategoria.Name = "BCancelarCategoria"
-        Me.BCancelarCategoria.Size = New System.Drawing.Size(99, 32)
+        Me.BCancelarCategoria.Size = New System.Drawing.Size(74, 26)
         Me.BCancelarCategoria.TabIndex = 12
         Me.BCancelarCategoria.Text = "Cancelar"
         Me.BCancelarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -96,10 +93,9 @@ Partial Class Añadir_Categoria
         Me.BRegistrarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BRegistrarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCategoria.Location = New System.Drawing.Point(179, 155)
-        Me.BRegistrarCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BRegistrarCategoria.Location = New System.Drawing.Point(134, 126)
         Me.BRegistrarCategoria.Name = "BRegistrarCategoria"
-        Me.BRegistrarCategoria.Size = New System.Drawing.Size(97, 32)
+        Me.BRegistrarCategoria.Size = New System.Drawing.Size(73, 26)
         Me.BRegistrarCategoria.TabIndex = 13
         Me.BRegistrarCategoria.Text = "Registrar"
         Me.BRegistrarCategoria.UseVisualStyleBackColor = False
@@ -112,10 +108,9 @@ Partial Class Añadir_Categoria
         Me.PanelRegClientes.Controls.Add(Me.BCancelarCategoria)
         Me.PanelRegClientes.Controls.Add(Me.TBNombreCategoria)
         Me.PanelRegClientes.Controls.Add(Me.LNombreCategoria)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(35, 128)
-        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(26, 104)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(425, 222)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(319, 180)
         Me.PanelRegClientes.TabIndex = 1
         '
         'TabPageListaCategoria
@@ -123,61 +118,76 @@ Partial Class Añadir_Categoria
         Me.TabPageListaCategoria.Controls.Add(Me.dgvRegistroCategoria)
         Me.TabPageListaCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaCategoria.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 28)
-        Me.TabPageListaCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaCategoria.Location = New System.Drawing.Point(4, 25)
+        Me.TabPageListaCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPageListaCategoria.Name = "TabPageListaCategoria"
-        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaCategoria.Size = New System.Drawing.Size(611, 450)
+        Me.TabPageListaCategoria.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPageListaCategoria.Size = New System.Drawing.Size(456, 363)
         Me.TabPageListaCategoria.TabIndex = 0
         Me.TabPageListaCategoria.Text = "Lista de Categoria"
         Me.TabPageListaCategoria.UseVisualStyleBackColor = True
         '
         'dgvRegistroCategoria
         '
-        Me.dgvRegistroCategoria.AllowUserToAddRows = False
         Me.dgvRegistroCategoria.AllowUserToDeleteRows = False
+        Me.dgvRegistroCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvRegistroCategoria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvRegistroCategoria.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRegistroCategoria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvRegistroCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegistroCategoria.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRegistroCategoria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvRegistroCategoria.ColumnHeadersHeight = 20
+        Me.dgvRegistroCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvRegistroCategoria.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvRegistroCategoria.Location = New System.Drawing.Point(3, 2)
+        Me.dgvRegistroCategoria.EnableHeadersVisualStyles = False
+        Me.dgvRegistroCategoria.Location = New System.Drawing.Point(2, 2)
+        Me.dgvRegistroCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRegistroCategoria.Name = "dgvRegistroCategoria"
         Me.dgvRegistroCategoria.ReadOnly = True
+        Me.dgvRegistroCategoria.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRegistroCategoria.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvRegistroCategoria.RowHeadersWidth = 51
+        Me.dgvRegistroCategoria.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvRegistroCategoria.RowTemplate.Height = 24
-        Me.dgvRegistroCategoria.Size = New System.Drawing.Size(605, 446)
+        Me.dgvRegistroCategoria.Size = New System.Drawing.Size(452, 359)
         Me.dgvRegistroCategoria.TabIndex = 0
         '
         'TabControlRegCategoria
         '
         Me.TabControlRegCategoria.Controls.Add(Me.TabPageListaCategoria)
         Me.TabControlRegCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlRegCategoria.Location = New System.Drawing.Point(493, 128)
-        Me.TabControlRegCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControlRegCategoria.Location = New System.Drawing.Point(370, 104)
+        Me.TabControlRegCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControlRegCategoria.Name = "TabControlRegCategoria"
         Me.TabControlRegCategoria.SelectedIndex = 0
-        Me.TabControlRegCategoria.Size = New System.Drawing.Size(619, 482)
+        Me.TabControlRegCategoria.Size = New System.Drawing.Size(464, 392)
         Me.TabControlRegCategoria.TabIndex = 5
         '
         'Añadir_Categoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.ClientSize = New System.Drawing.Size(862, 533)
         Me.Controls.Add(Me.TabControlRegCategoria)
         Me.Controls.Add(Me.LCategoria)
         Me.Controls.Add(Me.PanelRegClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Añadir_Categoria"
         Me.Text = "Añadir_Categoria"
         Me.PanelRegClientes.ResumeLayout(False)

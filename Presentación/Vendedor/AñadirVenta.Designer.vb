@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AñadirVenta
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,22 @@ Partial Class AñadirVenta
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LTituloVentas = New System.Windows.Forms.Label()
         Me.LNumeroFactura = New System.Windows.Forms.Label()
         Me.LTotalVenta = New System.Windows.Forms.Label()
-        Me.TBNombreCliente = New System.Windows.Forms.TextBox()
+        Me.TBNroFactura = New System.Windows.Forms.TextBox()
         Me.TBApellidoCliente = New System.Windows.Forms.TextBox()
         Me.GroupBoxProductos = New System.Windows.Forms.GroupBox()
         Me.BBuscarProducto = New System.Windows.Forms.Button()
         Me.LStock = New System.Windows.Forms.Label()
-        Me.TBCorreoCliente = New System.Windows.Forms.TextBox()
+        Me.TBStock = New System.Windows.Forms.TextBox()
         Me.TBPrecio = New System.Windows.Forms.TextBox()
-        Me.TBDniCliente = New System.Windows.Forms.TextBox()
-        Me.TBTelCliente = New System.Windows.Forms.TextBox()
+        Me.TBCantidad = New System.Windows.Forms.TextBox()
+        Me.TBProductoVenta = New System.Windows.Forms.TextBox()
         Me.LCantidad = New System.Windows.Forms.Label()
         Me.LPrecio = New System.Windows.Forms.Label()
         Me.LProductoDescripcion = New System.Windows.Forms.Label()
@@ -58,10 +60,9 @@ Partial Class AñadirVenta
         Me.LTituloVentas.BackColor = System.Drawing.Color.Transparent
         Me.LTituloVentas.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LTituloVentas.ForeColor = System.Drawing.Color.Transparent
-        Me.LTituloVentas.Location = New System.Drawing.Point(49, 39)
-        Me.LTituloVentas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LTituloVentas.Location = New System.Drawing.Point(37, 32)
         Me.LTituloVentas.Name = "LTituloVentas"
-        Me.LTituloVentas.Size = New System.Drawing.Size(177, 33)
+        Me.LTituloVentas.Size = New System.Drawing.Size(143, 27)
         Me.LTituloVentas.TabIndex = 3
         Me.LTituloVentas.Text = "Nueva Venta"
         '
@@ -70,10 +71,9 @@ Partial Class AñadirVenta
         Me.LNumeroFactura.AutoSize = True
         Me.LNumeroFactura.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LNumeroFactura.ForeColor = System.Drawing.Color.White
-        Me.LNumeroFactura.Location = New System.Drawing.Point(55, 96)
-        Me.LNumeroFactura.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNumeroFactura.Location = New System.Drawing.Point(41, 78)
         Me.LNumeroFactura.Name = "LNumeroFactura"
-        Me.LNumeroFactura.Size = New System.Drawing.Size(93, 19)
+        Me.LNumeroFactura.Size = New System.Drawing.Size(77, 16)
         Me.LNumeroFactura.TabIndex = 0
         Me.LNumeroFactura.Text = "N° Factura:"
         '
@@ -82,31 +82,28 @@ Partial Class AñadirVenta
         Me.LTotalVenta.AutoSize = True
         Me.LTotalVenta.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LTotalVenta.ForeColor = System.Drawing.Color.White
-        Me.LTotalVenta.Location = New System.Drawing.Point(821, 594)
-        Me.LTotalVenta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LTotalVenta.Location = New System.Drawing.Point(616, 483)
         Me.LTotalVenta.Name = "LTotalVenta"
-        Me.LTotalVenta.Size = New System.Drawing.Size(59, 22)
+        Me.LTotalVenta.Size = New System.Drawing.Size(47, 17)
         Me.LTotalVenta.TabIndex = 4
         Me.LTotalVenta.Text = "Total:"
         '
-        'TBNombreCliente
+        'TBNroFactura
         '
-        Me.TBNombreCliente.CausesValidation = False
-        Me.TBNombreCliente.Enabled = False
-        Me.TBNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TBNombreCliente.Location = New System.Drawing.Point(173, 96)
-        Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBNombreCliente.Name = "TBNombreCliente"
-        Me.TBNombreCliente.Size = New System.Drawing.Size(161, 26)
-        Me.TBNombreCliente.TabIndex = 6
+        Me.TBNroFactura.CausesValidation = False
+        Me.TBNroFactura.Enabled = False
+        Me.TBNroFactura.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBNroFactura.Location = New System.Drawing.Point(130, 78)
+        Me.TBNroFactura.Name = "TBNroFactura"
+        Me.TBNroFactura.Size = New System.Drawing.Size(122, 22)
+        Me.TBNroFactura.TabIndex = 6
         '
         'TBApellidoCliente
         '
         Me.TBApellidoCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBApellidoCliente.Location = New System.Drawing.Point(888, 591)
-        Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBApellidoCliente.Location = New System.Drawing.Point(666, 480)
         Me.TBApellidoCliente.Name = "TBApellidoCliente"
-        Me.TBApellidoCliente.Size = New System.Drawing.Size(99, 30)
+        Me.TBApellidoCliente.Size = New System.Drawing.Size(75, 25)
         Me.TBApellidoCliente.TabIndex = 8
         Me.TBApellidoCliente.Text = "$"
         '
@@ -114,19 +111,20 @@ Partial Class AñadirVenta
         '
         Me.GroupBoxProductos.Controls.Add(Me.BBuscarProducto)
         Me.GroupBoxProductos.Controls.Add(Me.LStock)
-        Me.GroupBoxProductos.Controls.Add(Me.TBCorreoCliente)
+        Me.GroupBoxProductos.Controls.Add(Me.TBStock)
         Me.GroupBoxProductos.Controls.Add(Me.TBPrecio)
-        Me.GroupBoxProductos.Controls.Add(Me.TBDniCliente)
-        Me.GroupBoxProductos.Controls.Add(Me.TBTelCliente)
+        Me.GroupBoxProductos.Controls.Add(Me.TBCantidad)
+        Me.GroupBoxProductos.Controls.Add(Me.TBProductoVenta)
         Me.GroupBoxProductos.Controls.Add(Me.LCantidad)
         Me.GroupBoxProductos.Controls.Add(Me.LPrecio)
         Me.GroupBoxProductos.Controls.Add(Me.LProductoDescripcion)
         Me.GroupBoxProductos.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.GroupBoxProductos.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxProductos.Location = New System.Drawing.Point(55, 262)
+        Me.GroupBoxProductos.Location = New System.Drawing.Point(41, 213)
         Me.GroupBoxProductos.Margin = New System.Windows.Forms.Padding(0)
         Me.GroupBoxProductos.Name = "GroupBoxProductos"
-        Me.GroupBoxProductos.Size = New System.Drawing.Size(1038, 133)
+        Me.GroupBoxProductos.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBoxProductos.Size = New System.Drawing.Size(778, 108)
         Me.GroupBoxProductos.TabIndex = 18
         Me.GroupBoxProductos.TabStop = False
         Me.GroupBoxProductos.Text = "Articulos"
@@ -140,10 +138,9 @@ Partial Class AñadirVenta
         Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
         Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarProducto.Location = New System.Drawing.Point(200, 59)
-        Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarProducto.Location = New System.Drawing.Point(150, 48)
         Me.BBuscarProducto.Name = "BBuscarProducto"
-        Me.BBuscarProducto.Size = New System.Drawing.Size(52, 44)
+        Me.BBuscarProducto.Size = New System.Drawing.Size(39, 36)
         Me.BBuscarProducto.TabIndex = 14
         Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
@@ -152,57 +149,51 @@ Partial Class AñadirVenta
         Me.LStock.AutoSize = True
         Me.LStock.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LStock.ForeColor = System.Drawing.Color.White
-        Me.LStock.Location = New System.Drawing.Point(451, 34)
-        Me.LStock.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LStock.Location = New System.Drawing.Point(338, 28)
         Me.LStock.Name = "LStock"
-        Me.LStock.Size = New System.Drawing.Size(49, 19)
+        Me.LStock.Size = New System.Drawing.Size(43, 16)
         Me.LStock.TabIndex = 14
         Me.LStock.Text = "Stock"
         '
-        'TBCorreoCliente
+        'TBStock
         '
-        Me.TBCorreoCliente.Enabled = False
-        Me.TBCorreoCliente.Location = New System.Drawing.Point(455, 69)
-        Me.TBCorreoCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBCorreoCliente.Name = "TBCorreoCliente"
-        Me.TBCorreoCliente.Size = New System.Drawing.Size(161, 26)
-        Me.TBCorreoCliente.TabIndex = 15
+        Me.TBStock.Enabled = False
+        Me.TBStock.Location = New System.Drawing.Point(341, 56)
+        Me.TBStock.Name = "TBStock"
+        Me.TBStock.Size = New System.Drawing.Size(122, 22)
+        Me.TBStock.TabIndex = 15
         '
         'TBPrecio
         '
         Me.TBPrecio.Enabled = False
-        Me.TBPrecio.Location = New System.Drawing.Point(317, 71)
-        Me.TBPrecio.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBPrecio.Location = New System.Drawing.Point(238, 58)
         Me.TBPrecio.Name = "TBPrecio"
-        Me.TBPrecio.Size = New System.Drawing.Size(116, 26)
+        Me.TBPrecio.Size = New System.Drawing.Size(88, 22)
         Me.TBPrecio.TabIndex = 17
         Me.TBPrecio.Text = "$"
         '
-        'TBDniCliente
+        'TBCantidad
         '
-        Me.TBDniCliente.Location = New System.Drawing.Point(639, 69)
-        Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBDniCliente.Name = "TBDniCliente"
-        Me.TBDniCliente.Size = New System.Drawing.Size(110, 26)
-        Me.TBDniCliente.TabIndex = 7
+        Me.TBCantidad.Location = New System.Drawing.Point(479, 56)
+        Me.TBCantidad.Name = "TBCantidad"
+        Me.TBCantidad.Size = New System.Drawing.Size(84, 22)
+        Me.TBCantidad.TabIndex = 7
         '
-        'TBTelCliente
+        'TBProductoVenta
         '
-        Me.TBTelCliente.Location = New System.Drawing.Point(21, 71)
-        Me.TBTelCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBTelCliente.Name = "TBTelCliente"
-        Me.TBTelCliente.Size = New System.Drawing.Size(161, 26)
-        Me.TBTelCliente.TabIndex = 10
+        Me.TBProductoVenta.Location = New System.Drawing.Point(16, 58)
+        Me.TBProductoVenta.Name = "TBProductoVenta"
+        Me.TBProductoVenta.Size = New System.Drawing.Size(122, 22)
+        Me.TBProductoVenta.TabIndex = 10
         '
         'LCantidad
         '
         Me.LCantidad.AutoSize = True
         Me.LCantidad.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LCantidad.ForeColor = System.Drawing.Color.White
-        Me.LCantidad.Location = New System.Drawing.Point(635, 34)
-        Me.LCantidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LCantidad.Location = New System.Drawing.Point(476, 28)
         Me.LCantidad.Name = "LCantidad"
-        Me.LCantidad.Size = New System.Drawing.Size(75, 19)
+        Me.LCantidad.Size = New System.Drawing.Size(63, 16)
         Me.LCantidad.TabIndex = 1
         Me.LCantidad.Text = "Cantidad"
         '
@@ -211,10 +202,9 @@ Partial Class AñadirVenta
         Me.LPrecio.AutoSize = True
         Me.LPrecio.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LPrecio.ForeColor = System.Drawing.Color.White
-        Me.LPrecio.Location = New System.Drawing.Point(313, 34)
-        Me.LPrecio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LPrecio.Location = New System.Drawing.Point(235, 28)
         Me.LPrecio.Name = "LPrecio"
-        Me.LPrecio.Size = New System.Drawing.Size(56, 19)
+        Me.LPrecio.Size = New System.Drawing.Size(48, 16)
         Me.LPrecio.TabIndex = 16
         Me.LPrecio.Text = "Precio"
         '
@@ -223,10 +213,9 @@ Partial Class AñadirVenta
         Me.LProductoDescripcion.AutoSize = True
         Me.LProductoDescripcion.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LProductoDescripcion.ForeColor = System.Drawing.Color.White
-        Me.LProductoDescripcion.Location = New System.Drawing.Point(17, 34)
-        Me.LProductoDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LProductoDescripcion.Location = New System.Drawing.Point(13, 28)
         Me.LProductoDescripcion.Name = "LProductoDescripcion"
-        Me.LProductoDescripcion.Size = New System.Drawing.Size(76, 19)
+        Me.LProductoDescripcion.Size = New System.Drawing.Size(66, 16)
         Me.LProductoDescripcion.TabIndex = 3
         Me.LProductoDescripcion.Text = "Producto"
         '
@@ -239,9 +228,11 @@ Partial Class AñadirVenta
         Me.GroupBox1.Controls.Add(Me.TBDniCliVenta)
         Me.GroupBox1.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(55, 144)
+        Me.GroupBox1.Location = New System.Drawing.Point(41, 117)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1038, 102)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(778, 83)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
@@ -255,20 +246,18 @@ Partial Class AñadirVenta
         Me.BBuscarCliente.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarCliente.ForeColor = System.Drawing.Color.White
         Me.BBuscarCliente.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarCliente.Location = New System.Drawing.Point(200, 39)
-        Me.BBuscarCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarCliente.Location = New System.Drawing.Point(150, 32)
         Me.BBuscarCliente.Name = "BBuscarCliente"
-        Me.BBuscarCliente.Size = New System.Drawing.Size(52, 44)
+        Me.BBuscarCliente.Size = New System.Drawing.Size(39, 36)
         Me.BBuscarCliente.TabIndex = 20
         Me.BBuscarCliente.UseVisualStyleBackColor = False
         '
         'TBNombreCliVenta
         '
         Me.TBNombreCliVenta.Enabled = False
-        Me.TBNombreCliVenta.Location = New System.Drawing.Point(317, 49)
-        Me.TBNombreCliVenta.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreCliVenta.Location = New System.Drawing.Point(238, 40)
         Me.TBNombreCliVenta.Name = "TBNombreCliVenta"
-        Me.TBNombreCliVenta.Size = New System.Drawing.Size(161, 26)
+        Me.TBNombreCliVenta.Size = New System.Drawing.Size(122, 22)
         Me.TBNombreCliVenta.TabIndex = 18
         '
         'LNombreCli
@@ -276,10 +265,9 @@ Partial Class AñadirVenta
         Me.LNombreCli.AutoSize = True
         Me.LNombreCli.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LNombreCli.ForeColor = System.Drawing.Color.White
-        Me.LNombreCli.Location = New System.Drawing.Point(313, 22)
-        Me.LNombreCli.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNombreCli.Location = New System.Drawing.Point(235, 18)
         Me.LNombreCli.Name = "LNombreCli"
-        Me.LNombreCli.Size = New System.Drawing.Size(66, 19)
+        Me.LNombreCli.Size = New System.Drawing.Size(56, 16)
         Me.LNombreCli.TabIndex = 19
         Me.LNombreCli.Text = "Nombre"
         '
@@ -288,19 +276,17 @@ Partial Class AñadirVenta
         Me.LNombreCliente.AutoSize = True
         Me.LNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
         Me.LNombreCliente.ForeColor = System.Drawing.Color.White
-        Me.LNombreCliente.Location = New System.Drawing.Point(17, 26)
-        Me.LNombreCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNombreCliente.Location = New System.Drawing.Point(13, 21)
         Me.LNombreCliente.Name = "LNombreCliente"
-        Me.LNombreCliente.Size = New System.Drawing.Size(35, 19)
+        Me.LNombreCliente.Size = New System.Drawing.Size(29, 16)
         Me.LNombreCliente.TabIndex = 18
         Me.LNombreCliente.Text = "DNI"
         '
         'TBDniCliVenta
         '
-        Me.TBDniCliVenta.Location = New System.Drawing.Point(21, 49)
-        Me.TBDniCliVenta.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBDniCliVenta.Location = New System.Drawing.Point(16, 40)
         Me.TBDniCliVenta.Name = "TBDniCliVenta"
-        Me.TBDniCliVenta.Size = New System.Drawing.Size(161, 26)
+        Me.TBDniCliVenta.Size = New System.Drawing.Size(122, 22)
         Me.TBDniCliVenta.TabIndex = 11
         '
         'DataGridListaVentas
@@ -308,13 +294,36 @@ Partial Class AñadirVenta
         Me.DataGridListaVentas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridListaVentas.Location = New System.Drawing.Point(55, 417)
+        Me.DataGridListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridListaVentas.ColumnHeadersHeight = 20
+        Me.DataGridListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridListaVentas.EnableHeadersVisualStyles = False
+        Me.DataGridListaVentas.Location = New System.Drawing.Point(41, 339)
+        Me.DataGridListaVentas.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridListaVentas.Name = "DataGridListaVentas"
+        Me.DataGridListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridListaVentas.RowHeadersWidth = 51
         Me.DataGridListaVentas.RowTemplate.Height = 24
-        Me.DataGridListaVentas.Size = New System.Drawing.Size(932, 157)
+        Me.DataGridListaVentas.Size = New System.Drawing.Size(699, 128)
         Me.DataGridListaVentas.TabIndex = 20
         '
         'BModificarProducto
@@ -326,10 +335,9 @@ Partial Class AñadirVenta
         Me.BModificarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BModificarProducto.ForeColor = System.Drawing.Color.White
         Me.BModificarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
-        Me.BModificarProducto.Location = New System.Drawing.Point(1013, 498)
-        Me.BModificarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BModificarProducto.Location = New System.Drawing.Point(760, 405)
         Me.BModificarProducto.Name = "BModificarProducto"
-        Me.BModificarProducto.Size = New System.Drawing.Size(55, 55)
+        Me.BModificarProducto.Size = New System.Drawing.Size(41, 45)
         Me.BModificarProducto.TabIndex = 21
         Me.BModificarProducto.UseVisualStyleBackColor = False
         '
@@ -341,10 +349,9 @@ Partial Class AñadirVenta
         Me.BEliminarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BEliminarProducto.ForeColor = System.Drawing.Color.White
         Me.BEliminarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
-        Me.BEliminarProducto.Location = New System.Drawing.Point(1013, 430)
-        Me.BEliminarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BEliminarProducto.Location = New System.Drawing.Point(760, 349)
         Me.BEliminarProducto.Name = "BEliminarProducto"
-        Me.BEliminarProducto.Size = New System.Drawing.Size(55, 55)
+        Me.BEliminarProducto.Size = New System.Drawing.Size(41, 45)
         Me.BEliminarProducto.TabIndex = 12
         Me.BEliminarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarProducto.UseVisualStyleBackColor = False
@@ -358,19 +365,18 @@ Partial Class AñadirVenta
         Me.BRegistraProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BRegistraProducto.ForeColor = System.Drawing.Color.White
         Me.BRegistraProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
-        Me.BRegistraProducto.Location = New System.Drawing.Point(1013, 498)
-        Me.BRegistraProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BRegistraProducto.Location = New System.Drawing.Point(760, 405)
         Me.BRegistraProducto.Name = "BRegistraProducto"
-        Me.BRegistraProducto.Size = New System.Drawing.Size(55, 55)
+        Me.BRegistraProducto.Size = New System.Drawing.Size(41, 45)
         Me.BRegistraProducto.TabIndex = 13
         Me.BRegistraProducto.UseVisualStyleBackColor = False
         '
         'AñadirVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.ClientSize = New System.Drawing.Size(862, 533)
         Me.Controls.Add(Me.BModificarProducto)
         Me.Controls.Add(Me.LTotalVenta)
         Me.Controls.Add(Me.TBApellidoCliente)
@@ -381,10 +387,11 @@ Partial Class AñadirVenta
         Me.Controls.Add(Me.GroupBoxProductos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LNumeroFactura)
-        Me.Controls.Add(Me.TBNombreCliente)
+        Me.Controls.Add(Me.TBNroFactura)
         Me.Enabled = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AñadirVenta"
         Me.Text = "RegistrarVenta"
         Me.GroupBoxProductos.ResumeLayout(False)
@@ -399,17 +406,17 @@ Partial Class AñadirVenta
     Friend WithEvents LTituloVentas As Label
     Friend WithEvents LNumeroFactura As Label
     Friend WithEvents LTotalVenta As Label
-    Friend WithEvents TBNombreCliente As TextBox
+    Friend WithEvents TBNroFactura As TextBox
     Friend WithEvents TBApellidoCliente As TextBox
     Friend WithEvents BEliminarProducto As Button
     Friend WithEvents BRegistraProducto As Button
     Friend WithEvents GroupBoxProductos As GroupBox
     Friend WithEvents BBuscarProducto As Button
     Friend WithEvents LStock As Label
-    Friend WithEvents TBCorreoCliente As TextBox
+    Friend WithEvents TBStock As TextBox
     Friend WithEvents TBPrecio As TextBox
-    Friend WithEvents TBDniCliente As TextBox
-    Friend WithEvents TBTelCliente As TextBox
+    Friend WithEvents TBCantidad As TextBox
+    Friend WithEvents TBProductoVenta As TextBox
     Friend WithEvents LCantidad As Label
     Friend WithEvents LPrecio As Label
     Friend WithEvents LProductoDescripcion As Label

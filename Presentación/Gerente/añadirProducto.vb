@@ -45,4 +45,20 @@
         End If
     End Function
 
+    Private Sub TBCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBCodigoProducto.KeyPress, TBStock.KeyPress, TBPrecio.KeyPress
+
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MsgBox("Solo se aceptan caracteres númericos", vbCritical, "Error")
+        End If
+    End Sub
+
+    Private Sub TBNombreProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreProducto.KeyPress
+
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MsgBox("Solo se aceptan letras", vbCritical, "Error")
+        End If
+    End Sub
+
 End Class

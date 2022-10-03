@@ -39,10 +39,10 @@ Partial Class ModificarCategoria
         Me.PanelModCategoria.Controls.Add(Me.BCancelarModifCategoria)
         Me.PanelModCategoria.Controls.Add(Me.GroupBoxDatosCliente)
         Me.PanelModCategoria.Controls.Add(Me.BModificarCategoria)
-        Me.PanelModCategoria.Location = New System.Drawing.Point(79, 69)
-        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(5)
+        Me.PanelModCategoria.Location = New System.Drawing.Point(59, 56)
+        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelModCategoria.Name = "PanelModCategoria"
-        Me.PanelModCategoria.Size = New System.Drawing.Size(610, 383)
+        Me.PanelModCategoria.Size = New System.Drawing.Size(458, 311)
         Me.PanelModCategoria.TabIndex = 3
         '
         'BCancelarModifCategoria
@@ -52,10 +52,10 @@ Partial Class ModificarCategoria
         Me.BCancelarModifCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelarModifCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BCancelarModifCategoria.ForeColor = System.Drawing.Color.White
-        Me.BCancelarModifCategoria.Location = New System.Drawing.Point(456, 320)
-        Me.BCancelarModifCategoria.Margin = New System.Windows.Forms.Padding(5)
+        Me.BCancelarModifCategoria.Location = New System.Drawing.Point(342, 260)
+        Me.BCancelarModifCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BCancelarModifCategoria.Name = "BCancelarModifCategoria"
-        Me.BCancelarModifCategoria.Size = New System.Drawing.Size(131, 39)
+        Me.BCancelarModifCategoria.Size = New System.Drawing.Size(98, 32)
         Me.BCancelarModifCategoria.TabIndex = 12
         Me.BCancelarModifCategoria.Text = "Cancelar"
         Me.BCancelarModifCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -67,21 +67,18 @@ Partial Class ModificarCategoria
         Me.GroupBoxDatosCliente.Controls.Add(Me.LNombreCategoria)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(51, 22)
-        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(38, 18)
         Me.GroupBoxDatosCliente.Name = "GroupBoxDatosCliente"
-        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(473, 246)
+        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(355, 200)
         Me.GroupBoxDatosCliente.TabIndex = 19
         Me.GroupBoxDatosCliente.TabStop = False
         Me.GroupBoxDatosCliente.Text = "Modificar Categoría"
         '
         'TBNombreCategoria
         '
-        Me.TBNombreCategoria.Location = New System.Drawing.Point(139, 121)
-        Me.TBNombreCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreCategoria.Location = New System.Drawing.Point(104, 98)
         Me.TBNombreCategoria.Name = "TBNombreCategoria"
-        Me.TBNombreCategoria.Size = New System.Drawing.Size(221, 30)
+        Me.TBNombreCategoria.Size = New System.Drawing.Size(167, 25)
         Me.TBNombreCategoria.TabIndex = 16
         '
         'LNombreCategoria
@@ -89,10 +86,10 @@ Partial Class ModificarCategoria
         Me.LNombreCategoria.AutoSize = True
         Me.LNombreCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LNombreCategoria.ForeColor = System.Drawing.Color.White
-        Me.LNombreCategoria.Location = New System.Drawing.Point(135, 79)
-        Me.LNombreCategoria.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.LNombreCategoria.Location = New System.Drawing.Point(101, 64)
+        Me.LNombreCategoria.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LNombreCategoria.Name = "LNombreCategoria"
-        Me.LNombreCategoria.Size = New System.Drawing.Size(109, 22)
+        Me.LNombreCategoria.Size = New System.Drawing.Size(86, 17)
         Me.LNombreCategoria.TabIndex = 15
         Me.LNombreCategoria.Text = "Categoria: "
         '
@@ -104,23 +101,22 @@ Partial Class ModificarCategoria
         Me.BModificarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BModificarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BModificarCategoria.ForeColor = System.Drawing.Color.White
-        Me.BModificarCategoria.Location = New System.Drawing.Point(317, 320)
-        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(5)
+        Me.BModificarCategoria.Location = New System.Drawing.Point(238, 260)
+        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BModificarCategoria.Name = "BModificarCategoria"
-        Me.BModificarCategoria.Size = New System.Drawing.Size(129, 39)
+        Me.BModificarCategoria.Size = New System.Drawing.Size(97, 32)
         Me.BModificarCategoria.TabIndex = 13
         Me.BModificarCategoria.Text = "Modificar"
         Me.BModificarCategoria.UseVisualStyleBackColor = False
         '
         'ModificarCategoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(775, 500)
+        Me.ClientSize = New System.Drawing.Size(581, 406)
         Me.Controls.Add(Me.PanelModCategoria)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ModificarCategoria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ModificarCategoria"

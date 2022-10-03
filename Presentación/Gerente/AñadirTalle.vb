@@ -22,7 +22,13 @@
         End If
         TBNombreTalle.Clear()
     End Sub
+    Private Sub TBNombreTalle_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreTalle.KeyPress
 
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+            e.Handled = True
+            MsgBox("Solo se aceptan letras", vbCritical, "Error")
+        End If
+    End Sub
     Private Sub BCancelarTalle_Click(sender As Object, e As EventArgs) Handles BCancelarTalle.Click
         Me.Close()
     End Sub
