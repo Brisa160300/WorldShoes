@@ -534,7 +534,7 @@ Partial Class MenuG
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1400, 750)
         Me.Controls.Add(Me.PanelFormGerente)
         Me.Controls.Add(Me.PanelMenuLateral)

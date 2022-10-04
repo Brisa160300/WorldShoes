@@ -22,4 +22,17 @@
     Private Sub GestionarCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNCategoria.cargarGrid(dgvListarCategorias)
     End Sub
+
+    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BEliminarCategoria_Click(sender As Object, e As EventArgs) Handles BEliminarCategoria.Click
+        If (dgvListarCategorias.SelectedRows.Count > 0) Or (dgvListarCategorias.SelectedCells.Count > 0) Then
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
 End Class

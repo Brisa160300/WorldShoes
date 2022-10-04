@@ -91,4 +91,7 @@
         objNcliente.cargarGrid(DataGridViewRegistroClientes)
     End Sub
 
+    Private Sub BCancelar_Click_1(sender As Object, e As EventArgs) Handles BVolver.Click
+        Me.Close()
+    End Sub
 End Class

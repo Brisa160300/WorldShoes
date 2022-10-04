@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class GestionarTalle
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,21 +20,24 @@ Partial Class GestionarTalle
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabGestionTalles = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
-        Me.DataGridViewRegistroTalle = New System.Windows.Forms.DataGridView()
+        Me.dgvRegTalles = New System.Windows.Forms.DataGridView()
         Me.GroupBoxGestionarTalles = New System.Windows.Forms.GroupBox()
         Me.BBuscarTalle = New System.Windows.Forms.Button()
         Me.BModificarTalle = New System.Windows.Forms.Button()
         Me.TBBuscarTalle = New System.Windows.Forms.TextBox()
         Me.BEliminarTalle = New System.Windows.Forms.Button()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabGestionTalles.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
-        CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvRegTalles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxGestionarTalles.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,44 +49,68 @@ Partial Class GestionarTalle
         Me.TabGestionTalles.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabGestionTalles.Name = "TabGestionTalles"
         Me.TabGestionTalles.SelectedIndex = 0
-        Me.TabGestionTalles.Size = New System.Drawing.Size(1042, 385)
+        Me.TabGestionTalles.Size = New System.Drawing.Size(1042, 345)
         Me.TabGestionTalles.TabIndex = 19
         '
         'TabPageListaTalle
         '
-        Me.TabPageListaTalle.Controls.Add(Me.DataGridViewRegistroTalle)
+        Me.TabPageListaTalle.Controls.Add(Me.dgvRegTalles)
         Me.TabPageListaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaTalle.ForeColor = System.Drawing.Color.White
         Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 28)
         Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaTalle.Name = "TabPageListaTalle"
         Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaTalle.Size = New System.Drawing.Size(1034, 353)
+        Me.TabPageListaTalle.Size = New System.Drawing.Size(1034, 313)
         Me.TabPageListaTalle.TabIndex = 0
         Me.TabPageListaTalle.Text = "Lista de Talles"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
-        'DataGridViewRegistroTalle
+        'dgvRegTalles
         '
-        Me.DataGridViewRegistroTalle.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewRegistroTalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegTalles.AllowUserToAddRows = False
+        Me.dgvRegTalles.AllowUserToDeleteRows = False
+        Me.dgvRegTalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvRegTalles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvRegTalles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewRegistroTalle.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewRegistroTalle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewRegistroTalle.Location = New System.Drawing.Point(3, 2)
-        Me.DataGridViewRegistroTalle.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewRegistroTalle.Name = "DataGridViewRegistroTalle"
-        Me.DataGridViewRegistroTalle.RowHeadersWidth = 51
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridViewRegistroTalle.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroTalle.Size = New System.Drawing.Size(1028, 349)
-        Me.DataGridViewRegistroTalle.TabIndex = 2
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRegTalles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvRegTalles.ColumnHeadersHeight = 29
+        Me.dgvRegTalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRegTalles.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvRegTalles.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvRegTalles.EnableHeadersVisualStyles = False
+        Me.dgvRegTalles.Location = New System.Drawing.Point(3, 2)
+        Me.dgvRegTalles.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvRegTalles.Name = "dgvRegTalles"
+        Me.dgvRegTalles.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRegTalles.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvRegTalles.RowHeadersWidth = 51
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        Me.dgvRegTalles.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvRegTalles.Size = New System.Drawing.Size(1028, 309)
+        Me.dgvRegTalles.TabIndex = 2
         '
         'GroupBoxGestionarTalles
         '
@@ -159,12 +186,29 @@ Partial Class GestionarTalle
         Me.BEliminarTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarTalle.UseVisualStyleBackColor = False
         '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(952, 584)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 50)
+        Me.BVolver.TabIndex = 23
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolver.UseVisualStyleBackColor = False
+        '
         'GestionarTalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxGestionarTalles)
         Me.Controls.Add(Me.TabGestionTalles)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -173,7 +217,7 @@ Partial Class GestionarTalle
         Me.Text = "GestionarTalle"
         Me.TabGestionTalles.ResumeLayout(False)
         Me.TabPageListaTalle.ResumeLayout(False)
-        CType(Me.DataGridViewRegistroTalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRegTalles, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxGestionarTalles.ResumeLayout(False)
         Me.GroupBoxGestionarTalles.PerformLayout()
         Me.ResumeLayout(False)
@@ -181,10 +225,11 @@ Partial Class GestionarTalle
     End Sub
     Friend WithEvents TabGestionTalles As TabControl
     Friend WithEvents TabPageListaTalle As TabPage
-    Friend WithEvents DataGridViewRegistroTalle As DataGridView
+    Friend WithEvents dgvRegTalles As DataGridView
     Friend WithEvents GroupBoxGestionarTalles As GroupBox
     Friend WithEvents BBuscarTalle As Button
     Friend WithEvents BModificarTalle As Button
     Friend WithEvents TBBuscarTalle As TextBox
     Friend WithEvents BEliminarTalle As Button
+    Friend WithEvents BVolver As Button
 End Class

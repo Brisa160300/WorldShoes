@@ -20,6 +20,7 @@
         grid.Columns(1).HeaderText = "Descripción"
         grid.Columns(2).HeaderText = "Estado"
         grid.Columns(3).Visible = False
+        grid.ClearSelection()
     End Sub
 
 End Class

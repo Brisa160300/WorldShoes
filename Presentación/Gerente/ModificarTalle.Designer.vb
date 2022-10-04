@@ -42,7 +42,7 @@ Partial Class ModificarTalle
         Me.PanelModTalle.Location = New System.Drawing.Point(79, 69)
         Me.PanelModTalle.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelModTalle.Name = "PanelModTalle"
-        Me.PanelModTalle.Size = New System.Drawing.Size(612, 360)
+        Me.PanelModTalle.Size = New System.Drawing.Size(612, 372)
         Me.PanelModTalle.TabIndex = 4
         '
         'BCancelarModifCliente
@@ -50,12 +50,12 @@ Partial Class ModificarTalle
         Me.BCancelarModifCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BCancelarModifCliente.FlatAppearance.BorderSize = 2
         Me.BCancelarModifCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelarModifCliente.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BCancelarModifCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BCancelarModifCliente.ForeColor = System.Drawing.Color.White
         Me.BCancelarModifCliente.Location = New System.Drawing.Point(454, 296)
         Me.BCancelarModifCliente.Margin = New System.Windows.Forms.Padding(5)
         Me.BCancelarModifCliente.Name = "BCancelarModifCliente"
-        Me.BCancelarModifCliente.Size = New System.Drawing.Size(131, 39)
+        Me.BCancelarModifCliente.Size = New System.Drawing.Size(130, 52)
         Me.BCancelarModifCliente.TabIndex = 12
         Me.BCancelarModifCliente.Text = "Cancelar"
         Me.BCancelarModifCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -102,12 +102,12 @@ Partial Class ModificarTalle
         Me.BModificarTalle.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.BModificarTalle.FlatAppearance.BorderSize = 2
         Me.BModificarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BModificarTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BModificarTalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BModificarTalle.ForeColor = System.Drawing.Color.White
         Me.BModificarTalle.Location = New System.Drawing.Point(315, 296)
         Me.BModificarTalle.Margin = New System.Windows.Forms.Padding(5)
         Me.BModificarTalle.Name = "BModificarTalle"
-        Me.BModificarTalle.Size = New System.Drawing.Size(131, 39)
+        Me.BModificarTalle.Size = New System.Drawing.Size(130, 52)
         Me.BModificarTalle.TabIndex = 13
         Me.BModificarTalle.Text = "Modificar"
         Me.BModificarTalle.UseVisualStyleBackColor = False

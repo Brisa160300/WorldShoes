@@ -28,9 +28,9 @@ Partial Class ModificarUsuario
         Me.ComboBoxPerfil = New System.Windows.Forms.ComboBox()
         Me.LDni = New System.Windows.Forms.Label()
         Me.TBContraseñaUsuario = New System.Windows.Forms.TextBox()
+        Me.TBNombreUsuario = New System.Windows.Forms.TextBox()
         Me.LNombreCliente = New System.Windows.Forms.Label()
         Me.LApellidoCliente = New System.Windows.Forms.Label()
-        Me.TBNombreUsuario = New System.Windows.Forms.TextBox()
         Me.BModificarCliente = New System.Windows.Forms.Button()
         Me.LModUsuario = New System.Windows.Forms.Label()
         Me.PanelModUsuarios.SuspendLayout()
@@ -114,6 +114,14 @@ Partial Class ModificarUsuario
         Me.TBContraseñaUsuario.Size = New System.Drawing.Size(213, 30)
         Me.TBContraseñaUsuario.TabIndex = 8
         '
+        'TBNombreUsuario
+        '
+        Me.TBNombreUsuario.Location = New System.Drawing.Point(131, 84)
+        Me.TBNombreUsuario.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBNombreUsuario.Name = "TBNombreUsuario"
+        Me.TBNombreUsuario.Size = New System.Drawing.Size(213, 30)
+        Me.TBNombreUsuario.TabIndex = 6
+        '
         'LNombreCliente
         '
         Me.LNombreCliente.AutoSize = True
@@ -137,14 +145,6 @@ Partial Class ModificarUsuario
         Me.LApellidoCliente.Size = New System.Drawing.Size(118, 22)
         Me.LApellidoCliente.TabIndex = 4
         Me.LApellidoCliente.Text = "Contraseña:"
-        '
-        'TBNombreUsuario
-        '
-        Me.TBNombreUsuario.Location = New System.Drawing.Point(131, 84)
-        Me.TBNombreUsuario.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBNombreUsuario.Name = "TBNombreUsuario"
-        Me.TBNombreUsuario.Size = New System.Drawing.Size(213, 30)
-        Me.TBNombreUsuario.TabIndex = 6
         '
         'BModificarCliente
         '

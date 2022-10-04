@@ -40,7 +40,7 @@ Public Class MenuVendedor
     End Sub
 
     Private Sub NuevaVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaVentaToolStripMenuItem.Click
-        MostrarSubMenuVendedor(New AñadirVenta)
+        MostrarSubMenuVendedor(New AñadirVentas)
     End Sub
 
     Private Sub ListarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarVentasToolStripMenuItem.Click

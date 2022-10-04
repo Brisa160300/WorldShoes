@@ -124,7 +124,7 @@ Partial Class GestionarUsuarios
         Me.TabListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabListaClientes.Name = "TabListaClientes"
         Me.TabListaClientes.SelectedIndex = 0
-        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 382)
+        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 357)
         Me.TabListaClientes.TabIndex = 24
         '
         'TabPageUsuarios
@@ -136,13 +136,15 @@ Partial Class GestionarUsuarios
         Me.TabPageUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageUsuarios.Name = "TabPageUsuarios"
         Me.TabPageUsuarios.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageUsuarios.Size = New System.Drawing.Size(1063, 350)
+        Me.TabPageUsuarios.Size = New System.Drawing.Size(1063, 325)
         Me.TabPageUsuarios.TabIndex = 0
         Me.TabPageUsuarios.Text = "Lista de Usuarios"
         Me.TabPageUsuarios.UseVisualStyleBackColor = True
         '
         'dgvListaUsuarios
         '
+        Me.dgvListaUsuarios.AllowUserToAddRows = False
+        Me.dgvListaUsuarios.AllowUserToDeleteRows = False
         Me.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListaUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -170,11 +172,12 @@ Partial Class GestionarUsuarios
         Me.dgvListaUsuarios.Location = New System.Drawing.Point(3, 2)
         Me.dgvListaUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListaUsuarios.Name = "dgvListaUsuarios"
+        Me.dgvListaUsuarios.ReadOnly = True
         Me.dgvListaUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvListaUsuarios.RowHeadersWidth = 51
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
         Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvListaUsuarios.Size = New System.Drawing.Size(1057, 346)
+        Me.dgvListaUsuarios.Size = New System.Drawing.Size(1057, 321)
         Me.dgvListaUsuarios.TabIndex = 2
         '
         'BVolver
@@ -185,10 +188,10 @@ Partial Class GestionarUsuarios
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(1008, 580)
+        Me.BVolver.Location = New System.Drawing.Point(1008, 553)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(103, 40)
+        Me.BVolver.Size = New System.Drawing.Size(103, 52)
         Me.BVolver.TabIndex = 15
         Me.BVolver.Text = "Volver"
         Me.BVolver.UseVisualStyleBackColor = False

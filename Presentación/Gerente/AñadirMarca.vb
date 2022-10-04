@@ -1,6 +1,6 @@
 ﻿Public Class AñadirMarca
-    'Cambiar nombre del objeto objNcategoria
-    Dim objNcategoria = New NCategoria
+
+    Dim objNMarca = New NTalle
     Private Sub TBNombreMarca_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreMarca.KeyPress
 
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
@@ -15,9 +15,9 @@
         Else
             MsgBox("¿Desea añadir esta nueva marca?", vbQuestion + vbYesNo, "Confirmar Inserción")
             If vbYes Then
-                If (objNcategoria.agregar_categoria(TBNombreMarca.Text)) Then
+                If (objNMarca.agregar_Marca(TBNombreMarca.Text)) Then
                     MsgBox("La marca: " + TBNombreMarca.Text + " se registró correctamente", vbOKOnly + MsgBoxStyle.Information, "Registro exitoso")
-                    objNcategoria.cargarGrid(dgvRegistroMarca)
+                    objNMarca.cargarGrid(dgvRegistroMarca)
                     MsgBox("se ha añadido correctamente la nueva categoría")
                 Else
                     MsgBox("La marca: " + TBNombreMarca.Text + " ya existe", vbOKOnly + MsgBoxStyle.Critical, "Error de registro")
@@ -28,9 +28,11 @@
         TBNombreMarca.Clear()
     End Sub
 
-    'Cambiar nombre del objeto objNcategoria
     Private Sub Añadir_Marca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        objNcategoria.cargarGrid(dgvRegistroMarca)
+        objNMarca.cargarGrid(dgvRegistroMarca)
     End Sub
 
+    Private Sub BVolve_Click(sender As Object, e As EventArgs) Handles BVolve.Click
+        Me.Close()
+    End Sub
 End Class

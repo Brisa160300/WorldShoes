@@ -29,7 +29,7 @@
             MsgBox("Solo se aceptan letras", vbCritical, "Error")
         End If
     End Sub
-    Private Sub BCancelarTalle_Click(sender As Object, e As EventArgs) Handles BCancelarTalle.Click
+    Private Sub BCancelarTalle_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
 End Class

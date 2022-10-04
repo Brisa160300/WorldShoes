@@ -29,13 +29,13 @@ Partial Class MenuA
         Me.BAñadirUsuario = New System.Windows.Forms.Button()
         Me.BUsuarios = New System.Windows.Forms.Button()
         Me.PanelIconMenuGerente = New System.Windows.Forms.Panel()
+        Me.LIconMenuAdmin = New System.Windows.Forms.Label()
         Me.PanelFormAdmnistrador = New System.Windows.Forms.Panel()
         Me.PanelBarraMenuAdmin = New System.Windows.Forms.Panel()
         Me.BMaximizarMenuGerente = New System.Windows.Forms.Button()
         Me.BMinimizarMenuGerente = New System.Windows.Forms.Button()
         Me.BCerrarMenuGerente = New System.Windows.Forms.Button()
         Me.BRestaurarMenuGerente = New System.Windows.Forms.Button()
-        Me.LIconMenuAdmin = New System.Windows.Forms.Label()
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubMenuUsuarios.SuspendLayout()
         Me.PanelIconMenuGerente.SuspendLayout()
@@ -155,13 +155,29 @@ Partial Class MenuA
         Me.PanelIconMenuGerente.Size = New System.Drawing.Size(250, 170)
         Me.PanelIconMenuGerente.TabIndex = 0
         '
+        'LIconMenuAdmin
+        '
+        Me.LIconMenuAdmin.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LIconMenuAdmin.AutoSize = True
+        Me.LIconMenuAdmin.Font = New System.Drawing.Font("Cooper Black", 18.0!)
+        Me.LIconMenuAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LIconMenuAdmin.Location = New System.Drawing.Point(40, 69)
+        Me.LIconMenuAdmin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LIconMenuAdmin.Name = "LIconMenuAdmin"
+        Me.LIconMenuAdmin.Size = New System.Drawing.Size(198, 35)
+        Me.LIconMenuAdmin.TabIndex = 0
+        Me.LIconMenuAdmin.Text = "WorldShoes"
+        Me.LIconMenuAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'PanelFormAdmnistrador
         '
+        Me.PanelFormAdmnistrador.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelFormAdmnistrador.AutoScroll = True
         Me.PanelFormAdmnistrador.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.PanelFormAdmnistrador.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
         Me.PanelFormAdmnistrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PanelFormAdmnistrador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelFormAdmnistrador.Location = New System.Drawing.Point(250, 118)
         Me.PanelFormAdmnistrador.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelFormAdmnistrador.Name = "PanelFormAdmnistrador"
@@ -237,22 +253,6 @@ Partial Class MenuA
         Me.BRestaurarMenuGerente.Size = New System.Drawing.Size(41, 39)
         Me.BRestaurarMenuGerente.TabIndex = 7
         Me.BRestaurarMenuGerente.UseVisualStyleBackColor = True
-        '
-        'LIconMenuAdmin
-        '
-        Me.LIconMenuAdmin.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LIconMenuAdmin.AutoSize = True
-        Me.LIconMenuAdmin.Font = New System.Drawing.Font("Cooper Black", 18.0!)
-        Me.LIconMenuAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LIconMenuAdmin.Location = New System.Drawing.Point(40, 69)
-        Me.LIconMenuAdmin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LIconMenuAdmin.Name = "LIconMenuAdmin"
-        Me.LIconMenuAdmin.Size = New System.Drawing.Size(198, 35)
-        Me.LIconMenuAdmin.TabIndex = 0
-        Me.LIconMenuAdmin.Text = "WorldShoes"
-        Me.LIconMenuAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'MenuA
         '

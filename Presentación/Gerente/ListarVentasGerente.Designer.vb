@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ListarVentas
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class ListarVentasGerente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,17 @@ Partial Class ListarVentas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBoxBuscarProducto = New System.Windows.Forms.GroupBox()
+        Me.BImprimirVentas = New System.Windows.Forms.Button()
         Me.BBuscarVenta = New System.Windows.Forms.Button()
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.TabControlListaProductos = New System.Windows.Forms.TabControl()
         Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
         Me.DataGridViewListaVentas = New System.Windows.Forms.DataGridView()
-        Me.BVolver = New System.Windows.Forms.Button()
         Me.GroupBoxBuscarProducto.SuspendLayout()
         Me.TabControlListaProductos.SuspendLayout()
         Me.TabPageListaProducto.SuspendLayout()
@@ -40,18 +40,35 @@ Partial Class ListarVentas
         'GroupBoxBuscarProducto
         '
         Me.GroupBoxBuscarProducto.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBoxBuscarProducto.Controls.Add(Me.BImprimirVentas)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.BBuscarVenta)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.TBBuscar)
         Me.GroupBoxBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxBuscarProducto.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxBuscarProducto.Location = New System.Drawing.Point(37, 50)
+        Me.GroupBoxBuscarProducto.Location = New System.Drawing.Point(38, 51)
         Me.GroupBoxBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxBuscarProducto.Name = "GroupBoxBuscarProducto"
         Me.GroupBoxBuscarProducto.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBoxBuscarProducto.Size = New System.Drawing.Size(1068, 100)
-        Me.GroupBoxBuscarProducto.TabIndex = 19
+        Me.GroupBoxBuscarProducto.TabIndex = 21
         Me.GroupBoxBuscarProducto.TabStop = False
         Me.GroupBoxBuscarProducto.Text = "Ventas"
+        '
+        'BImprimirVentas
+        '
+        Me.BImprimirVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BImprimirVentas.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BImprimirVentas.FlatAppearance.BorderSize = 2
+        Me.BImprimirVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BImprimirVentas.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BImprimirVentas.ForeColor = System.Drawing.Color.White
+        Me.BImprimirVentas.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.printer_4_32
+        Me.BImprimirVentas.Location = New System.Drawing.Point(980, 31)
+        Me.BImprimirVentas.Margin = New System.Windows.Forms.Padding(4)
+        Me.BImprimirVentas.Name = "BImprimirVentas"
+        Me.BImprimirVentas.Size = New System.Drawing.Size(65, 52)
+        Me.BImprimirVentas.TabIndex = 15
+        Me.BImprimirVentas.UseVisualStyleBackColor = False
         '
         'BBuscarVenta
         '
@@ -62,10 +79,10 @@ Partial Class ListarVentas
         Me.BBuscarVenta.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarVenta.ForeColor = System.Drawing.Color.White
         Me.BBuscarVenta.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarVenta.Location = New System.Drawing.Point(204, 37)
+        Me.BBuscarVenta.Location = New System.Drawing.Point(204, 31)
         Me.BBuscarVenta.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarVenta.Name = "BBuscarVenta"
-        Me.BBuscarVenta.Size = New System.Drawing.Size(67, 43)
+        Me.BBuscarVenta.Size = New System.Drawing.Size(65, 52)
         Me.BBuscarVenta.TabIndex = 14
         Me.BBuscarVenta.UseVisualStyleBackColor = False
         '
@@ -83,12 +100,12 @@ Partial Class ListarVentas
         '
         Me.TabControlListaProductos.Controls.Add(Me.TabPageListaProducto)
         Me.TabControlListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlListaProductos.Location = New System.Drawing.Point(41, 183)
+        Me.TabControlListaProductos.Location = New System.Drawing.Point(42, 184)
         Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlListaProductos.Name = "TabControlListaProductos"
         Me.TabControlListaProductos.SelectedIndex = 0
-        Me.TabControlListaProductos.Size = New System.Drawing.Size(1068, 359)
-        Me.TabControlListaProductos.TabIndex = 18
+        Me.TabControlListaProductos.Size = New System.Drawing.Size(1068, 422)
+        Me.TabControlListaProductos.TabIndex = 20
         '
         'TabPageListaProducto
         '
@@ -99,13 +116,15 @@ Partial Class ListarVentas
         Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaProducto.Name = "TabPageListaProducto"
         Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaProducto.Size = New System.Drawing.Size(1060, 327)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(1060, 390)
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Ventas"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
         '
         'DataGridViewListaVentas
         '
+        Me.DataGridViewListaVentas.AllowUserToAddRows = False
+        Me.DataGridViewListaVentas.AllowUserToDeleteRows = False
         Me.DataGridViewListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridViewListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridViewListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -126,6 +145,7 @@ Partial Class ListarVentas
         Me.DataGridViewListaVentas.Location = New System.Drawing.Point(3, 2)
         Me.DataGridViewListaVentas.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewListaVentas.Name = "DataGridViewListaVentas"
+        Me.DataGridViewListaVentas.ReadOnly = True
         Me.DataGridViewListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -136,38 +156,20 @@ Partial Class ListarVentas
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewListaVentas.RowHeadersWidth = 51
-        Me.DataGridViewListaVentas.Size = New System.Drawing.Size(1054, 323)
+        Me.DataGridViewListaVentas.Size = New System.Drawing.Size(1054, 386)
         Me.DataGridViewListaVentas.TabIndex = 5
         '
-        'BVolver
-        '
-        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BVolver.FlatAppearance.BorderSize = 2
-        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(975, 574)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
-        Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(130, 52)
-        Me.BVolver.TabIndex = 26
-        Me.BVolver.Text = "Volver"
-        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BVolver.UseVisualStyleBackColor = False
-        '
-        'ListarVentas
+        'ListarVentasGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1149, 656)
-        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxBuscarProducto)
         Me.Controls.Add(Me.TabControlListaProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "ListarVentas"
-        Me.Text = "ListarVentas"
+        Me.Name = "ListarVentasGerente"
+        Me.Text = "ListarVentasGerente"
         Me.GroupBoxBuscarProducto.ResumeLayout(False)
         Me.GroupBoxBuscarProducto.PerformLayout()
         Me.TabControlListaProductos.ResumeLayout(False)
@@ -178,10 +180,10 @@ Partial Class ListarVentas
     End Sub
 
     Friend WithEvents GroupBoxBuscarProducto As GroupBox
+    Friend WithEvents BImprimirVentas As Button
     Friend WithEvents BBuscarVenta As Button
     Friend WithEvents TBBuscar As TextBox
     Friend WithEvents TabControlListaProductos As TabControl
     Friend WithEvents TabPageListaProducto As TabPage
     Friend WithEvents DataGridViewListaVentas As DataGridView
-    Friend WithEvents BVolver As Button
 End Class

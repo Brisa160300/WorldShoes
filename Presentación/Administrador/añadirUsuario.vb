@@ -1,6 +1,6 @@
 ﻿Public Class añadirUsuario
 
-    Public Function EspacioEnBlanco()
+    Public Function EspacioEnBlanco() As Boolean
         Dim Ask As MsgBoxResult
         Dim Ask1 As MsgBoxResult
         Dim nombre As String = TBNombreUsuario.Text
@@ -8,13 +8,12 @@
         If String.IsNullOrWhiteSpace(nombre) Or String.IsNullOrWhiteSpace(pass) Then
             Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
             Return True
+        ElseIf Not TBContraseñaUsuario.Text.Count = 8 Then
+            Ask1 = MsgBox("La contraseña debe ser de 8 caracteres", vbExclamation, "Contraseña invalida")
+            TBContraseñaUsuario.Focus()
+            Return True
         Else
-            If Not TBContraseñaUsuario.Text.Count = 7 Then
-                Ask1 = MsgBox("La contraseña debe ser de 8 caracteres", vbExclamation, "Contraseña invalida")
-                TBContraseñaUsuario.Focus()
-                Return True
-                Return False
-            End If
+            Return False
         End If
     End Function
 

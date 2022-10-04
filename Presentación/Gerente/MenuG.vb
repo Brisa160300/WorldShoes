@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub BListarVentasGerente_Click(sender As Object, e As EventArgs) Handles BListarVentasGerente.Click
-        AbrirFormulariosGerente(New ListarVentas)
+        AbrirFormulariosGerente(New ListarVentasGerente)
     End Sub
     Private Sub BListarVendedoresGerente_Click(sender As Object, e As EventArgs) Handles BListarVendedoresGerente.Click
         AbrirFormulariosGerente(New ListaVendedores)

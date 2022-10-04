@@ -110,6 +110,7 @@ Partial Class Login
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel1.Controls.Add(Me.LUsuario)
         Me.Panel1.Controls.Add(Me.PictureBoxContraseña)
         Me.Panel1.Controls.Add(Me.BLogin)
@@ -128,7 +129,7 @@ Partial Class Login
         '
         Me.LUsuario.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LUsuario.AutoSize = True
-        Me.LUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.LUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.LUsuario.Font = New System.Drawing.Font("Cooper Black", 15.0!)
         Me.LUsuario.ForeColor = System.Drawing.Color.White
         Me.LUsuario.Location = New System.Drawing.Point(501, 223)

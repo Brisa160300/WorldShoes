@@ -30,7 +30,7 @@ Partial Class AñadirMarca
         Me.LMarca = New System.Windows.Forms.Label()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
         Me.BRegistrarMarca = New System.Windows.Forms.Button()
-        Me.BCancelar = New System.Windows.Forms.Button()
+        Me.BVolve = New System.Windows.Forms.Button()
         Me.TBNombreMarca = New System.Windows.Forms.TextBox()
         Me.LNombreMarca = New System.Windows.Forms.Label()
         Me.TabControlRegCategoria.SuspendLayout()
@@ -66,6 +66,7 @@ Partial Class AñadirMarca
         '
         'dgvRegistroMarca
         '
+        Me.dgvRegistroMarca.AllowUserToAddRows = False
         Me.dgvRegistroMarca.AllowUserToDeleteRows = False
         Me.dgvRegistroMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRegistroMarca.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
@@ -98,6 +99,7 @@ Partial Class AñadirMarca
         Me.dgvRegistroMarca.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvRegistroMarca.RowHeadersWidth = 51
         Me.dgvRegistroMarca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgvRegistroMarca.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvRegistroMarca.RowTemplate.Height = 24
         Me.dgvRegistroMarca.Size = New System.Drawing.Size(605, 446)
         Me.dgvRegistroMarca.TabIndex = 0
@@ -120,11 +122,11 @@ Partial Class AñadirMarca
         Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PanelRegClientes.Controls.Add(Me.BRegistrarMarca)
-        Me.PanelRegClientes.Controls.Add(Me.BCancelar)
+        Me.PanelRegClientes.Controls.Add(Me.BVolve)
         Me.PanelRegClientes.Controls.Add(Me.TBNombreMarca)
         Me.PanelRegClientes.Controls.Add(Me.LNombreMarca)
         Me.PanelRegClientes.Location = New System.Drawing.Point(39, 126)
-        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelRegClientes.Name = "PanelRegClientes"
         Me.PanelRegClientes.Size = New System.Drawing.Size(425, 222)
         Me.PanelRegClientes.TabIndex = 6
@@ -135,37 +137,37 @@ Partial Class AñadirMarca
         Me.BRegistrarMarca.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.BRegistrarMarca.FlatAppearance.BorderSize = 2
         Me.BRegistrarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BRegistrarMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BRegistrarMarca.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarMarca.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarMarca.Location = New System.Drawing.Point(179, 155)
-        Me.BRegistrarMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BRegistrarMarca.Location = New System.Drawing.Point(268, 149)
+        Me.BRegistrarMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarMarca.Name = "BRegistrarMarca"
-        Me.BRegistrarMarca.Size = New System.Drawing.Size(97, 32)
+        Me.BRegistrarMarca.Size = New System.Drawing.Size(130, 52)
         Me.BRegistrarMarca.TabIndex = 13
-        Me.BRegistrarMarca.Text = "Registrar"
+        Me.BRegistrarMarca.Text = "Añadir"
         Me.BRegistrarMarca.UseVisualStyleBackColor = False
         '
-        'BCancelar
+        'BVolve
         '
-        Me.BCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelar.FlatAppearance.BorderSize = 2
-        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(300, 155)
-        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(99, 32)
-        Me.BCancelar.TabIndex = 12
-        Me.BCancelar.Text = "Cancelar"
-        Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelar.UseVisualStyleBackColor = False
+        Me.BVolve.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolve.FlatAppearance.BorderSize = 2
+        Me.BVolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolve.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolve.ForeColor = System.Drawing.Color.White
+        Me.BVolve.Location = New System.Drawing.Point(116, 149)
+        Me.BVolve.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolve.Name = "BVolve"
+        Me.BVolve.Size = New System.Drawing.Size(130, 52)
+        Me.BVolve.TabIndex = 12
+        Me.BVolve.Text = "Volver"
+        Me.BVolve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolve.UseVisualStyleBackColor = False
         '
         'TBNombreMarca
         '
         Me.TBNombreMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBNombreMarca.Location = New System.Drawing.Point(27, 71)
-        Me.TBNombreMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBNombreMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.TBNombreMarca.Name = "TBNombreMarca"
         Me.TBNombreMarca.Size = New System.Drawing.Size(371, 30)
         Me.TBNombreMarca.TabIndex = 6
@@ -211,7 +213,7 @@ Partial Class AñadirMarca
     Friend WithEvents LMarca As Label
     Friend WithEvents PanelRegClientes As Panel
     Friend WithEvents BRegistrarMarca As Button
-    Friend WithEvents BCancelar As Button
+    Friend WithEvents BVolve As Button
     Friend WithEvents TBNombreMarca As TextBox
     Friend WithEvents LNombreMarca As Label
 End Class

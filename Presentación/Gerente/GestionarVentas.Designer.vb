@@ -32,6 +32,7 @@ Partial Class GestionarVentas
         Me.BModVenta = New System.Windows.Forms.Button()
         Me.TBBuscarVenta = New System.Windows.Forms.TextBox()
         Me.BEliminarVenta = New System.Windows.Forms.Button()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabControlGestionVentas.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
         CType(Me.DataGridViewRegistroVentas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +47,7 @@ Partial Class GestionarVentas
         Me.TabControlGestionVentas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlGestionVentas.Name = "TabControlGestionVentas"
         Me.TabControlGestionVentas.SelectedIndex = 0
-        Me.TabControlGestionVentas.Size = New System.Drawing.Size(1056, 399)
+        Me.TabControlGestionVentas.Size = New System.Drawing.Size(1056, 356)
         Me.TabControlGestionVentas.TabIndex = 8
         '
         'TabPageListaTalle
@@ -58,13 +59,15 @@ Partial Class GestionarVentas
         Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaTalle.Name = "TabPageListaTalle"
         Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaTalle.Size = New System.Drawing.Size(1048, 367)
+        Me.TabPageListaTalle.Size = New System.Drawing.Size(1048, 324)
         Me.TabPageListaTalle.TabIndex = 0
         Me.TabPageListaTalle.Text = "Lista de Ventas"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
         'DataGridViewRegistroVentas
         '
+        Me.DataGridViewRegistroVentas.AllowUserToAddRows = False
+        Me.DataGridViewRegistroVentas.AllowUserToDeleteRows = False
         Me.DataGridViewRegistroVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.DataGridViewRegistroVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -79,10 +82,11 @@ Partial Class GestionarVentas
         Me.DataGridViewRegistroVentas.Location = New System.Drawing.Point(3, 2)
         Me.DataGridViewRegistroVentas.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroVentas.Name = "DataGridViewRegistroVentas"
+        Me.DataGridViewRegistroVentas.ReadOnly = True
         Me.DataGridViewRegistroVentas.RowHeadersWidth = 51
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         Me.DataGridViewRegistroVentas.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRegistroVentas.Size = New System.Drawing.Size(1042, 363)
+        Me.DataGridViewRegistroVentas.Size = New System.Drawing.Size(1042, 320)
         Me.DataGridViewRegistroVentas.TabIndex = 2
         '
         'GroupBoxBuscarVenta
@@ -159,12 +163,29 @@ Partial Class GestionarVentas
         Me.BEliminarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarVenta.UseVisualStyleBackColor = False
         '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(954, 574)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 50)
+        Me.BVolver.TabIndex = 24
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolver.UseVisualStyleBackColor = False
+        '
         'GestionarVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxBuscarVenta)
         Me.Controls.Add(Me.TabControlGestionVentas)
         Me.ForeColor = System.Drawing.Color.White
@@ -189,4 +210,5 @@ Partial Class GestionarVentas
     Friend WithEvents BModVenta As Button
     Friend WithEvents TBBuscarVenta As TextBox
     Friend WithEvents BEliminarVenta As Button
+    Friend WithEvents BVolver As Button
 End Class

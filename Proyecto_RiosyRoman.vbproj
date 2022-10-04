@@ -197,6 +197,12 @@
     <Compile Include="Presentación\Gerente\AñadirTalle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Gerente\ListarVentasGerente.Designer.vb">
+      <DependentUpon>ListarVentasGerente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ListarVentasGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Gerente\MenuG.Designer.vb">
       <DependentUpon>MenuG.vb</DependentUpon>
     </Compile>
@@ -275,6 +281,18 @@
     <Compile Include="Presentación\Vendedor\AñadirCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\BuscarCli.Designer.vb">
+      <DependentUpon>BuscarCli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\BuscarCli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\BuscarP.Designer.vb">
+      <DependentUpon>BuscarP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\BuscarP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\GestionarCliente.Designer.vb">
       <DependentUpon>GestionarCliente.vb</DependentUpon>
     </Compile>
@@ -293,16 +311,16 @@
     <Compile Include="Presentación\Vendedor\ListarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\AñadirVentas.Designer.vb">
+      <DependentUpon>AñadirVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\AñadirVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\ListarVentas.Designer.vb">
       <DependentUpon>ListarVentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Vendedor\ListarVentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\Vendedor\AñadirVenta.Designer.vb">
-      <DependentUpon>AñadirVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\Vendedor\AñadirVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Vendedor\MenuV.Designer.vb">
@@ -379,6 +397,9 @@
     <EmbeddedResource Include="Presentación\Gerente\AñadirTalle.resx">
       <DependentUpon>AñadirTalle.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\ListarVentasGerente.resx">
+      <DependentUpon>ListarVentasGerente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\MenuG.resx">
       <DependentUpon>MenuG.vb</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +439,12 @@
     <EmbeddedResource Include="Presentación\Vendedor\AñadirCliente.resx">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\BuscarCli.resx">
+      <DependentUpon>BuscarCli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\BuscarP.resx">
+      <DependentUpon>BuscarP.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\GestionarCliente.resx">
       <DependentUpon>GestionarCliente.vb</DependentUpon>
     </EmbeddedResource>
@@ -427,8 +454,8 @@
     <EmbeddedResource Include="Presentación\Vendedor\ListarProductos.resx">
       <DependentUpon>ListarProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Vendedor\AñadirVenta.resx">
-      <DependentUpon>AñadirVenta.vb</DependentUpon>
+    <EmbeddedResource Include="Presentación\Vendedor\AñadirVentas.resx">
+      <DependentUpon>AñadirVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\ListarVentas.resx">
       <DependentUpon>ListarVentas.vb</DependentUpon>

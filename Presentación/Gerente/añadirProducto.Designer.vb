@@ -33,9 +33,7 @@ Partial Class AñadirProducto
         Me.ComboBoxCategoria = New System.Windows.Forms.ComboBox()
         Me.BAñadirProducto = New System.Windows.Forms.Button()
         Me.ComboBoxMarca = New System.Windows.Forms.ComboBox()
-        Me.TBCodigoProducto = New System.Windows.Forms.TextBox()
         Me.ComboBoxTalle = New System.Windows.Forms.ComboBox()
-        Me.LCodigoProducto = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TBNombreProducto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,7 +42,7 @@ Partial Class AñadirProducto
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TBStock = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.BCancelProducto = New System.Windows.Forms.Button()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.LMarca = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridViewRegistroCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,6 +53,8 @@ Partial Class AñadirProducto
         '
         'DataGridViewRegistroCategorias
         '
+        Me.DataGridViewRegistroCategorias.AllowUserToAddRows = False
+        Me.DataGridViewRegistroCategorias.AllowUserToDeleteRows = False
         Me.DataGridViewRegistroCategorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.DataGridViewRegistroCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -76,8 +76,10 @@ Partial Class AñadirProducto
         Me.DataGridViewRegistroCategorias.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewRegistroCategorias.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewRegistroCategorias.EnableHeadersVisualStyles = False
-        Me.DataGridViewRegistroCategorias.Location = New System.Drawing.Point(2, 2)
+        Me.DataGridViewRegistroCategorias.Location = New System.Drawing.Point(3, 2)
+        Me.DataGridViewRegistroCategorias.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridViewRegistroCategorias.Name = "DataGridViewRegistroCategorias"
+        Me.DataGridViewRegistroCategorias.ReadOnly = True
         Me.DataGridViewRegistroCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -90,18 +92,18 @@ Partial Class AñadirProducto
         Me.DataGridViewRegistroCategorias.RowHeadersWidth = 51
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.DataGridViewRegistroCategorias.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(496, 390)
+        Me.DataGridViewRegistroCategorias.Size = New System.Drawing.Size(663, 485)
         Me.DataGridViewRegistroCategorias.TabIndex = 2
         '
         'TabControlListaProductos
         '
         Me.TabControlListaProductos.Controls.Add(Me.TabPageListaProducto)
         Me.TabControlListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlListaProductos.Location = New System.Drawing.Point(318, 62)
-        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControlListaProductos.Location = New System.Drawing.Point(424, 76)
+        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlListaProductos.Name = "TabControlListaProductos"
         Me.TabControlListaProductos.SelectedIndex = 0
-        Me.TabControlListaProductos.Size = New System.Drawing.Size(508, 423)
+        Me.TabControlListaProductos.Size = New System.Drawing.Size(677, 521)
         Me.TabControlListaProductos.TabIndex = 14
         '
         'TabPageListaProducto
@@ -109,11 +111,11 @@ Partial Class AñadirProducto
         Me.TabPageListaProducto.Controls.Add(Me.DataGridViewRegistroCategorias)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaProducto.Name = "TabPageListaProducto"
-        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPageListaProducto.Size = New System.Drawing.Size(500, 394)
+        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(669, 489)
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Producto"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
@@ -123,32 +125,32 @@ Partial Class AñadirProducto
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(37, 40)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(49, 49)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 27)
+        Me.Label1.Size = New System.Drawing.Size(249, 33)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Añadir Producto: "
         '
         'ComboBoxCategoria
         '
         Me.ComboBoxCategoria.FormattingEnabled = True
-        Me.ComboBoxCategoria.Location = New System.Drawing.Point(99, 98)
-        Me.ComboBoxCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBoxCategoria.Location = New System.Drawing.Point(137, 105)
+        Me.ComboBoxCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxCategoria.Name = "ComboBoxCategoria"
-        Me.ComboBoxCategoria.Size = New System.Drawing.Size(132, 21)
+        Me.ComboBoxCategoria.Size = New System.Drawing.Size(175, 24)
         Me.ComboBoxCategoria.TabIndex = 15
         '
         'BAñadirProducto
         '
         Me.BAñadirProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BAñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BAñadirProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.BAñadirProducto.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BAñadirProducto.ForeColor = System.Drawing.Color.White
-        Me.BAñadirProducto.Location = New System.Drawing.Point(34, 334)
-        Me.BAñadirProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BAñadirProducto.Location = New System.Drawing.Point(192, 397)
+        Me.BAñadirProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BAñadirProducto.Name = "BAñadirProducto"
-        Me.BAñadirProducto.Size = New System.Drawing.Size(90, 29)
+        Me.BAñadirProducto.Size = New System.Drawing.Size(120, 50)
         Me.BAñadirProducto.TabIndex = 2
         Me.BAñadirProducto.Text = "Añadir"
         Me.BAñadirProducto.UseVisualStyleBackColor = False
@@ -156,60 +158,39 @@ Partial Class AñadirProducto
         'ComboBoxMarca
         '
         Me.ComboBoxMarca.FormattingEnabled = True
-        Me.ComboBoxMarca.Location = New System.Drawing.Point(99, 259)
-        Me.ComboBoxMarca.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBoxMarca.Location = New System.Drawing.Point(137, 303)
+        Me.ComboBoxMarca.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxMarca.Name = "ComboBoxMarca"
-        Me.ComboBoxMarca.Size = New System.Drawing.Size(132, 21)
+        Me.ComboBoxMarca.Size = New System.Drawing.Size(175, 24)
         Me.ComboBoxMarca.TabIndex = 14
-        '
-        'TBCodigoProducto
-        '
-        Me.TBCodigoProducto.Location = New System.Drawing.Point(99, 19)
-        Me.TBCodigoProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TBCodigoProducto.Name = "TBCodigoProducto"
-        Me.TBCodigoProducto.Size = New System.Drawing.Size(132, 20)
-        Me.TBCodigoProducto.TabIndex = 12
         '
         'ComboBoxTalle
         '
         Me.ComboBoxTalle.FormattingEnabled = True
-        Me.ComboBoxTalle.Location = New System.Drawing.Point(99, 220)
-        Me.ComboBoxTalle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBoxTalle.Location = New System.Drawing.Point(137, 255)
+        Me.ComboBoxTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxTalle.Name = "ComboBoxTalle"
-        Me.ComboBoxTalle.Size = New System.Drawing.Size(132, 21)
+        Me.ComboBoxTalle.Size = New System.Drawing.Size(175, 24)
         Me.ComboBoxTalle.TabIndex = 11
-        '
-        'LCodigoProducto
-        '
-        Me.LCodigoProducto.AutoSize = True
-        Me.LCodigoProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(88, Byte), Integer))
-        Me.LCodigoProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.LCodigoProducto.ForeColor = System.Drawing.Color.White
-        Me.LCodigoProducto.Location = New System.Drawing.Point(16, 24)
-        Me.LCodigoProducto.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LCodigoProducto.Name = "LCodigoProducto"
-        Me.LCodigoProducto.Size = New System.Drawing.Size(63, 17)
-        Me.LCodigoProducto.TabIndex = 11
-        Me.LCodigoProducto.Text = "Código:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(16, 227)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(27, 257)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 17)
+        Me.Label6.Size = New System.Drawing.Size(63, 22)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Talle: "
         '
         'TBNombreProducto
         '
-        Me.TBNombreProducto.Location = New System.Drawing.Point(99, 59)
-        Me.TBNombreProducto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBNombreProducto.Location = New System.Drawing.Point(137, 57)
+        Me.TBNombreProducto.Margin = New System.Windows.Forms.Padding(5)
         Me.TBNombreProducto.Name = "TBNombreProducto"
-        Me.TBNombreProducto.Size = New System.Drawing.Size(132, 20)
+        Me.TBNombreProducto.Size = New System.Drawing.Size(175, 22)
         Me.TBNombreProducto.TabIndex = 5
         '
         'Label2
@@ -217,10 +198,10 @@ Partial Class AñadirProducto
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(16, 65)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(26, 55)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.Size = New System.Drawing.Size(85, 22)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nombre:"
         '
@@ -229,19 +210,19 @@ Partial Class AñadirProducto
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(16, 187)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(27, 207)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 17)
+        Me.Label5.Size = New System.Drawing.Size(80, 22)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Precio: "
         '
         'TBPrecio
         '
-        Me.TBPrecio.Location = New System.Drawing.Point(99, 181)
-        Me.TBPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBPrecio.Location = New System.Drawing.Point(137, 207)
+        Me.TBPrecio.Margin = New System.Windows.Forms.Padding(5)
         Me.TBPrecio.Name = "TBPrecio"
-        Me.TBPrecio.Size = New System.Drawing.Size(132, 20)
+        Me.TBPrecio.Size = New System.Drawing.Size(175, 22)
         Me.TBPrecio.TabIndex = 8
         '
         'Label4
@@ -249,19 +230,19 @@ Partial Class AñadirProducto
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(16, 145)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(26, 156)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 17)
+        Me.Label4.Size = New System.Drawing.Size(65, 22)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Stock:"
         '
         'TBStock
         '
-        Me.TBStock.Location = New System.Drawing.Point(99, 140)
-        Me.TBStock.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBStock.Location = New System.Drawing.Point(137, 156)
+        Me.TBStock.Margin = New System.Windows.Forms.Padding(5)
         Me.TBStock.Name = "TBStock"
-        Me.TBStock.Size = New System.Drawing.Size(132, 20)
+        Me.TBStock.Size = New System.Drawing.Size(175, 22)
         Me.TBStock.TabIndex = 7
         '
         'Panel2
@@ -269,12 +250,10 @@ Partial Class AñadirProducto
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.Panel2.Controls.Add(Me.ComboBoxCategoria)
         Me.Panel2.Controls.Add(Me.BAñadirProducto)
-        Me.Panel2.Controls.Add(Me.BCancelProducto)
+        Me.Panel2.Controls.Add(Me.BVolver)
         Me.Panel2.Controls.Add(Me.ComboBoxMarca)
         Me.Panel2.Controls.Add(Me.LMarca)
-        Me.Panel2.Controls.Add(Me.TBCodigoProducto)
         Me.Panel2.Controls.Add(Me.ComboBoxTalle)
-        Me.Panel2.Controls.Add(Me.LCodigoProducto)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.TBNombreProducto)
@@ -283,35 +262,35 @@ Partial Class AñadirProducto
         Me.Panel2.Controls.Add(Me.TBPrecio)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.TBStock)
-        Me.Panel2.Location = New System.Drawing.Point(41, 103)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Location = New System.Drawing.Point(55, 127)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(254, 382)
+        Me.Panel2.Size = New System.Drawing.Size(339, 470)
         Me.Panel2.TabIndex = 13
         '
-        'BCancelProducto
+        'BVolver
         '
-        Me.BCancelProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.BCancelProducto.ForeColor = System.Drawing.Color.White
-        Me.BCancelProducto.Location = New System.Drawing.Point(139, 334)
-        Me.BCancelProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.BCancelProducto.Name = "BCancelProducto"
-        Me.BCancelProducto.Size = New System.Drawing.Size(91, 29)
-        Me.BCancelProducto.TabIndex = 3
-        Me.BCancelProducto.Text = "Cancelar"
-        Me.BCancelProducto.UseVisualStyleBackColor = False
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(33, 397)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(122, 50)
+        Me.BVolver.TabIndex = 3
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'LMarca
         '
         Me.LMarca.AutoSize = True
         Me.LMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LMarca.ForeColor = System.Drawing.Color.White
-        Me.LMarca.Location = New System.Drawing.Point(18, 271)
-        Me.LMarca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LMarca.Location = New System.Drawing.Point(29, 305)
+        Me.LMarca.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LMarca.Name = "LMarca"
-        Me.LMarca.Size = New System.Drawing.Size(61, 17)
+        Me.LMarca.Size = New System.Drawing.Size(78, 22)
         Me.LMarca.TabIndex = 13
         Me.LMarca.Text = "Marca: "
         '
@@ -320,24 +299,24 @@ Partial Class AñadirProducto
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(16, 105)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(26, 105)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 17)
+        Me.Label3.Size = New System.Drawing.Size(109, 22)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Categoría: "
         '
         'AñadirProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(862, 533)
+        Me.ClientSize = New System.Drawing.Size(1149, 656)
         Me.Controls.Add(Me.TabControlListaProductos)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AñadirProducto"
         Me.Text = "AñadirP"
         CType(Me.DataGridViewRegistroCategorias, System.ComponentModel.ISupportInitialize).EndInit()
@@ -357,9 +336,7 @@ Partial Class AñadirProducto
     Friend WithEvents ComboBoxCategoria As ComboBox
     Friend WithEvents BAñadirProducto As Button
     Friend WithEvents ComboBoxMarca As ComboBox
-    Friend WithEvents TBCodigoProducto As TextBox
     Friend WithEvents ComboBoxTalle As ComboBox
-    Friend WithEvents LCodigoProducto As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TBNombreProducto As TextBox
     Friend WithEvents Label2 As Label
@@ -368,7 +345,7 @@ Partial Class AñadirProducto
     Friend WithEvents Label4 As Label
     Friend WithEvents TBStock As TextBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents BCancelProducto As Button
     Friend WithEvents LMarca As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents BVolver As Button
 End Class

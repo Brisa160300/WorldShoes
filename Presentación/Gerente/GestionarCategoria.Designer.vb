@@ -34,6 +34,7 @@ Partial Class GestionarCategoria
         Me.BEditarCategoria = New System.Windows.Forms.Button()
         Me.BBuscarCategoria = New System.Windows.Forms.Button()
         Me.TBGestionCategoria = New System.Windows.Forms.TextBox()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabListaCategorias.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
         CType(Me.dgvListarCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,11 +45,11 @@ Partial Class GestionarCategoria
         '
         Me.TabListaCategorias.Controls.Add(Me.TabPageListaTalle)
         Me.TabListaCategorias.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabListaCategorias.Location = New System.Drawing.Point(28, 183)
-        Me.TabListaCategorias.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabListaCategorias.Location = New System.Drawing.Point(37, 225)
+        Me.TabListaCategorias.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabListaCategorias.Name = "TabListaCategorias"
         Me.TabListaCategorias.SelectedIndex = 0
-        Me.TabListaCategorias.Size = New System.Drawing.Size(796, 316)
+        Me.TabListaCategorias.Size = New System.Drawing.Size(1061, 326)
         Me.TabListaCategorias.TabIndex = 18
         '
         'TabPageListaTalle
@@ -56,17 +57,19 @@ Partial Class GestionarCategoria
         Me.TabPageListaTalle.Controls.Add(Me.dgvListarCategorias)
         Me.TabPageListaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaTalle.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaTalle.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaTalle.Name = "TabPageListaTalle"
-        Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPageListaTalle.Size = New System.Drawing.Size(788, 287)
+        Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaTalle.Size = New System.Drawing.Size(1053, 294)
         Me.TabPageListaTalle.TabIndex = 0
         Me.TabPageListaTalle.Text = "Lista de Categorias"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
         '
         'dgvListarCategorias
         '
+        Me.dgvListarCategorias.AllowUserToAddRows = False
+        Me.dgvListarCategorias.AllowUserToDeleteRows = False
         Me.dgvListarCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListarCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarCategorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -91,8 +94,10 @@ Partial Class GestionarCategoria
         Me.dgvListarCategorias.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListarCategorias.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListarCategorias.EnableHeadersVisualStyles = False
-        Me.dgvListarCategorias.Location = New System.Drawing.Point(2, 2)
+        Me.dgvListarCategorias.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListarCategorias.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListarCategorias.Name = "dgvListarCategorias"
+        Me.dgvListarCategorias.ReadOnly = True
         Me.dgvListarCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -105,7 +110,7 @@ Partial Class GestionarCategoria
         Me.dgvListarCategorias.RowHeadersWidth = 51
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.dgvListarCategorias.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvListarCategorias.Size = New System.Drawing.Size(784, 283)
+        Me.dgvListarCategorias.Size = New System.Drawing.Size(1047, 290)
         Me.dgvListarCategorias.TabIndex = 2
         '
         'GroupBox1
@@ -116,9 +121,11 @@ Partial Class GestionarCategoria
         Me.GroupBox1.Controls.Add(Me.TBGestionCategoria)
         Me.GroupBox1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(28, 60)
+        Me.GroupBox1.Location = New System.Drawing.Point(37, 74)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(796, 95)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1061, 117)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Gestión de Categoría"
@@ -131,9 +138,10 @@ Partial Class GestionarCategoria
         Me.BEliminarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BEliminarCategoria.ForeColor = System.Drawing.Color.White
         Me.BEliminarCategoria.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
-        Me.BEliminarCategoria.Location = New System.Drawing.Point(730, 27)
+        Me.BEliminarCategoria.Location = New System.Drawing.Point(973, 33)
+        Me.BEliminarCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BEliminarCategoria.Name = "BEliminarCategoria"
-        Me.BEliminarCategoria.Size = New System.Drawing.Size(49, 41)
+        Me.BEliminarCategoria.Size = New System.Drawing.Size(65, 50)
         Me.BEliminarCategoria.TabIndex = 12
         Me.BEliminarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarCategoria.UseVisualStyleBackColor = False
@@ -147,9 +155,10 @@ Partial Class GestionarCategoria
         Me.BEditarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BEditarCategoria.ForeColor = System.Drawing.Color.White
         Me.BEditarCategoria.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
-        Me.BEditarCategoria.Location = New System.Drawing.Point(675, 27)
+        Me.BEditarCategoria.Location = New System.Drawing.Point(900, 33)
+        Me.BEditarCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BEditarCategoria.Name = "BEditarCategoria"
-        Me.BEditarCategoria.Size = New System.Drawing.Size(49, 41)
+        Me.BEditarCategoria.Size = New System.Drawing.Size(65, 50)
         Me.BEditarCategoria.TabIndex = 13
         Me.BEditarCategoria.UseVisualStyleBackColor = False
         '
@@ -162,30 +171,49 @@ Partial Class GestionarCategoria
         Me.BBuscarCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarCategoria.ForeColor = System.Drawing.Color.White
         Me.BBuscarCategoria.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarCategoria.Location = New System.Drawing.Point(156, 27)
+        Me.BBuscarCategoria.Location = New System.Drawing.Point(208, 33)
+        Me.BBuscarCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarCategoria.Name = "BBuscarCategoria"
-        Me.BBuscarCategoria.Size = New System.Drawing.Size(49, 41)
+        Me.BBuscarCategoria.Size = New System.Drawing.Size(65, 50)
         Me.BBuscarCategoria.TabIndex = 14
         Me.BBuscarCategoria.UseVisualStyleBackColor = False
         '
         'TBGestionCategoria
         '
         Me.TBGestionCategoria.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBGestionCategoria.Location = New System.Drawing.Point(20, 35)
+        Me.TBGestionCategoria.Location = New System.Drawing.Point(27, 43)
+        Me.TBGestionCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.TBGestionCategoria.Name = "TBGestionCategoria"
-        Me.TBGestionCategoria.Size = New System.Drawing.Size(131, 25)
+        Me.TBGestionCategoria.Size = New System.Drawing.Size(173, 30)
         Me.TBGestionCategoria.TabIndex = 6
+        '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(968, 580)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 52)
+        Me.BVolver.TabIndex = 20
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'GestionarCategoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(862, 533)
+        Me.ClientSize = New System.Drawing.Size(1149, 656)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.TabListaCategorias)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "GestionarCategoria"
         Me.Text = "GestionarCategoria"
         Me.TabListaCategorias.ResumeLayout(False)
@@ -204,4 +232,5 @@ Partial Class GestionarCategoria
     Friend WithEvents BEditarCategoria As Button
     Friend WithEvents BBuscarCategoria As Button
     Friend WithEvents TBGestionCategoria As TextBox
+    Friend WithEvents BVolver As Button
 End Class

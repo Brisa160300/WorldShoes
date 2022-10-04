@@ -41,14 +41,14 @@
         showSubMenu(PanelSubMenuProductos)
     End Sub
 
-    Private Sub BListarProductos_Click(sender As Object, e As EventArgs) Handles BListarProductos.Click
+    Private Sub BListProductos_Click(sender As Object, e As EventArgs)
         AbrirFormulariosVendedor(New ListarProductos)
     End Sub
     Private Sub BFacturación_Click(sender As Object, e As EventArgs) Handles BFacturación.Click
         showSubMenu(PanelSubMenuFacturación)
     End Sub
     Private Sub BNuevaVenta_Click(sender As Object, e As EventArgs) Handles BNuevaVenta.Click
-        AbrirFormulariosVendedor(New AñadirVenta)
+        AbrirFormulariosVendedor(New AñadirVentas)
     End Sub
 
     Private Sub BListarVentas_Click(sender As Object, e As EventArgs) Handles BListarVentas.Click
@@ -111,6 +111,32 @@
         BMaximizarMenu.Visible = True
         Me.WindowState = FormWindowState.Normal
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim formHijo As ListarProductos = New ListarProductos
+        If Not formActivo IsNot Nothing Then
+            PanelFormVendedor.Controls.Clear()
+            formHijo.TopLevel = False
+            formHijo.FormBorderStyle = FormBorderStyle.None
+            formHijo.Dock = DockStyle.Fill
+            formHijo.Visible = True
+            formHijo.AutoScroll = True
+            formHijo.VerticalScroll.Value = 0
+            formHijo.VerticalScroll.Minimum = 0
+            formHijo.VerticalScroll.Maximum = formHijo.Size.Height - 100
+            formHijo.HorizontalScroll.Value = 0
+            formHijo.HorizontalScroll.Minimum = 0
+            formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
+            PanelFormVendedor.Controls.Add(formHijo)
+            PanelFormVendedor.Tag = formHijo
+            PanelFormVendedor.BringToFront()
+            PanelFormVendedor.AutoScroll = True
+            formHijo.Show()
+            hideSubMenu()
+
+        End If
+    End Sub
+
 
     Private Sub BMinimizarMenu_Click(sender As Object, e As EventArgs) Handles BMinimizarMenu.Click
         Me.WindowState = FormWindowState.Minimized

@@ -31,5 +31,7 @@
         objNcategoria.cargarGrid(dgvRegistroCategoria)
     End Sub
 
-
+    Private Sub Volver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
+        Me.Close()
+    End Sub
 End Class

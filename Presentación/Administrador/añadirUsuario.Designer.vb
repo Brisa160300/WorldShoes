@@ -31,6 +31,7 @@ Partial Class añadirUsuario
         Me.dgvListaUsuarios = New System.Windows.Forms.DataGridView()
         Me.LRegistroUsuario = New System.Windows.Forms.Label()
         Me.PanelRegUsuarios = New System.Windows.Forms.Panel()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.ComboBoxPerfiles = New System.Windows.Forms.ComboBox()
         Me.BRegistrarCliente = New System.Windows.Forms.Button()
         Me.TBContraseñaUsuario = New System.Windows.Forms.TextBox()
@@ -38,7 +39,6 @@ Partial Class añadirUsuario
         Me.LContraseñaUsuario = New System.Windows.Forms.Label()
         Me.LPerfilUsuario = New System.Windows.Forms.Label()
         Me.LNombreUsuario = New System.Windows.Forms.Label()
-        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabControlRegUsuarios.SuspendLayout()
         Me.TabPageListaUsuarios.SuspendLayout()
         CType(Me.dgvListaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +72,8 @@ Partial Class añadirUsuario
         '
         'dgvListaUsuarios
         '
+        Me.dgvListaUsuarios.AllowUserToAddRows = False
+        Me.dgvListaUsuarios.AllowUserToDeleteRows = False
         Me.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListaUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -99,6 +101,7 @@ Partial Class añadirUsuario
         Me.dgvListaUsuarios.Location = New System.Drawing.Point(3, 2)
         Me.dgvListaUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListaUsuarios.Name = "dgvListaUsuarios"
+        Me.dgvListaUsuarios.ReadOnly = True
         Me.dgvListaUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -131,6 +134,7 @@ Partial Class añadirUsuario
         '
         Me.PanelRegUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelRegUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PanelRegUsuarios.Controls.Add(Me.BVolver)
         Me.PanelRegUsuarios.Controls.Add(Me.ComboBoxPerfiles)
         Me.PanelRegUsuarios.Controls.Add(Me.BRegistrarCliente)
         Me.PanelRegUsuarios.Controls.Add(Me.TBContraseñaUsuario)
@@ -143,6 +147,22 @@ Partial Class añadirUsuario
         Me.PanelRegUsuarios.Name = "PanelRegUsuarios"
         Me.PanelRegUsuarios.Size = New System.Drawing.Size(436, 441)
         Me.PanelRegUsuarios.TabIndex = 5
+        '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(88, 351)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 52)
+        Me.BVolver.TabIndex = 16
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'ComboBoxPerfiles
         '
@@ -163,10 +183,10 @@ Partial Class añadirUsuario
         Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(205, 276)
+        Me.BRegistrarCliente.Location = New System.Drawing.Point(237, 352)
         Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarCliente.Name = "BRegistrarCliente"
-        Me.BRegistrarCliente.Size = New System.Drawing.Size(115, 39)
+        Me.BRegistrarCliente.Size = New System.Drawing.Size(127, 51)
         Me.BRegistrarCliente.TabIndex = 13
         Me.BRegistrarCliente.Text = "Registrar"
         Me.BRegistrarCliente.UseVisualStyleBackColor = False
@@ -225,29 +245,12 @@ Partial Class añadirUsuario
         Me.LNombreUsuario.TabIndex = 0
         Me.LNombreUsuario.Text = "Nombre:"
         '
-        'BVolver
-        '
-        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BVolver.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BVolver.FlatAppearance.BorderSize = 2
-        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(1020, 567)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
-        Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(103, 40)
-        Me.BVolver.TabIndex = 16
-        Me.BVolver.Text = "Volver"
-        Me.BVolver.UseVisualStyleBackColor = False
-        '
         'añadirUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1149, 633)
-        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.TabControlRegUsuarios)
         Me.Controls.Add(Me.LRegistroUsuario)
         Me.Controls.Add(Me.PanelRegUsuarios)

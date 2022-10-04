@@ -34,6 +34,7 @@ Partial Class GestionarCliente
         Me.BModificarCliente = New System.Windows.Forms.Button()
         Me.BBuscarCliente = New System.Windows.Forms.Button()
         Me.TBBuscar = New System.Windows.Forms.TextBox()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TabListaClientes.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
         CType(Me.dgvRegistroClientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,7 +49,7 @@ Partial Class GestionarCliente
         Me.TabListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabListaClientes.Name = "TabListaClientes"
         Me.TabListaClientes.SelectedIndex = 0
-        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 438)
+        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 357)
         Me.TabListaClientes.TabIndex = 22
         '
         'TabPageListaTalle
@@ -60,7 +61,7 @@ Partial Class GestionarCliente
         Me.TabPageListaTalle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaTalle.Name = "TabPageListaTalle"
         Me.TabPageListaTalle.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaTalle.Size = New System.Drawing.Size(1063, 406)
+        Me.TabPageListaTalle.Size = New System.Drawing.Size(1063, 325)
         Me.TabPageListaTalle.TabIndex = 0
         Me.TabPageListaTalle.Text = "Lista de Clientes"
         Me.TabPageListaTalle.UseVisualStyleBackColor = True
@@ -93,7 +94,7 @@ Partial Class GestionarCliente
         Me.dgvRegistroClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistroClientes.EnableHeadersVisualStyles = False
         Me.dgvRegistroClientes.Location = New System.Drawing.Point(3, 2)
-        Me.dgvRegistroClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvRegistroClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRegistroClientes.Name = "dgvRegistroClientes"
         Me.dgvRegistroClientes.ReadOnly = True
         Me.dgvRegistroClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -108,7 +109,7 @@ Partial Class GestionarCliente
         Me.dgvRegistroClientes.RowHeadersWidth = 51
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.dgvRegistroClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvRegistroClientes.Size = New System.Drawing.Size(1057, 402)
+        Me.dgvRegistroClientes.Size = New System.Drawing.Size(1057, 321)
         Me.dgvRegistroClientes.TabIndex = 2
         '
         'GroupBoxGestionClientes
@@ -121,9 +122,9 @@ Partial Class GestionarCliente
         Me.GroupBoxGestionClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxGestionClientes.ForeColor = System.Drawing.Color.White
         Me.GroupBoxGestionClientes.Location = New System.Drawing.Point(29, 50)
-        Me.GroupBoxGestionClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxGestionClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxGestionClientes.Name = "GroupBoxGestionClientes"
-        Me.GroupBoxGestionClientes.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxGestionClientes.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBoxGestionClientes.Size = New System.Drawing.Size(1051, 117)
         Me.GroupBoxGestionClientes.TabIndex = 23
         Me.GroupBoxGestionClientes.TabStop = False
@@ -138,7 +139,7 @@ Partial Class GestionarCliente
         Me.BEliminarCliente.ForeColor = System.Drawing.Color.White
         Me.BEliminarCliente.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
         Me.BEliminarCliente.Location = New System.Drawing.Point(980, 31)
-        Me.BEliminarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BEliminarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BEliminarCliente.Name = "BEliminarCliente"
         Me.BEliminarCliente.Size = New System.Drawing.Size(60, 50)
         Me.BEliminarCliente.TabIndex = 12
@@ -155,7 +156,7 @@ Partial Class GestionarCliente
         Me.BModificarCliente.ForeColor = System.Drawing.Color.White
         Me.BModificarCliente.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
         Me.BModificarCliente.Location = New System.Drawing.Point(912, 31)
-        Me.BModificarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BModificarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BModificarCliente.Name = "BModificarCliente"
         Me.BModificarCliente.Size = New System.Drawing.Size(60, 50)
         Me.BModificarCliente.TabIndex = 13
@@ -171,7 +172,7 @@ Partial Class GestionarCliente
         Me.BBuscarCliente.ForeColor = System.Drawing.Color.White
         Me.BBuscarCliente.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
         Me.BBuscarCliente.Location = New System.Drawing.Point(208, 31)
-        Me.BBuscarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BBuscarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarCliente.Name = "BBuscarCliente"
         Me.BBuscarCliente.Size = New System.Drawing.Size(60, 50)
         Me.BBuscarCliente.TabIndex = 14
@@ -181,10 +182,26 @@ Partial Class GestionarCliente
         '
         Me.TBBuscar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBBuscar.Location = New System.Drawing.Point(27, 43)
-        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TBBuscar.Name = "TBBuscar"
         Me.TBBuscar.Size = New System.Drawing.Size(173, 30)
         Me.TBBuscar.TabIndex = 6
+        '
+        'BVolver
+        '
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(968, 572)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 52)
+        Me.BVolver.TabIndex = 24
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'GestionarCliente
         '
@@ -192,10 +209,11 @@ Partial Class GestionarCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1149, 656)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxGestionClientes)
         Me.Controls.Add(Me.TabListaClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "GestionarCliente"
         Me.Text = "GestionarCliente"
         Me.TabListaClientes.ResumeLayout(False)
@@ -215,4 +233,5 @@ Partial Class GestionarCliente
     Friend WithEvents BModificarCliente As Button
     Friend WithEvents BBuscarCliente As Button
     Friend WithEvents TBBuscar As TextBox
+    Friend WithEvents BVolver As Button
 End Class

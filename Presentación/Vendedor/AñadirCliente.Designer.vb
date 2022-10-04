@@ -32,7 +32,7 @@ Partial Class AñadirCliente
         Me.TBCorreoCliente = New System.Windows.Forms.TextBox()
         Me.LCorreoCliente = New System.Windows.Forms.Label()
         Me.BRegistrarCliente = New System.Windows.Forms.Button()
-        Me.BCancelar = New System.Windows.Forms.Button()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.TBTelCliente = New System.Windows.Forms.TextBox()
         Me.TBApellidoCliente = New System.Windows.Forms.TextBox()
         Me.TBDniCliente = New System.Windows.Forms.TextBox()
@@ -60,7 +60,7 @@ Partial Class AñadirCliente
         Me.PanelRegClientes.Controls.Add(Me.TBCorreoCliente)
         Me.PanelRegClientes.Controls.Add(Me.LCorreoCliente)
         Me.PanelRegClientes.Controls.Add(Me.BRegistrarCliente)
-        Me.PanelRegClientes.Controls.Add(Me.BCancelar)
+        Me.PanelRegClientes.Controls.Add(Me.BVolver)
         Me.PanelRegClientes.Controls.Add(Me.TBTelCliente)
         Me.PanelRegClientes.Controls.Add(Me.TBApellidoCliente)
         Me.PanelRegClientes.Controls.Add(Me.TBDniCliente)
@@ -125,29 +125,29 @@ Partial Class AñadirCliente
         Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(180, 432)
+        Me.BRegistrarCliente.Location = New System.Drawing.Point(272, 423)
         Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarCliente.Name = "BRegistrarCliente"
-        Me.BRegistrarCliente.Size = New System.Drawing.Size(112, 41)
+        Me.BRegistrarCliente.Size = New System.Drawing.Size(130, 52)
         Me.BRegistrarCliente.TabIndex = 13
-        Me.BRegistrarCliente.Text = "Registrar"
+        Me.BRegistrarCliente.Text = "Añadir"
         Me.BRegistrarCliente.UseVisualStyleBackColor = False
         '
-        'BCancelar
+        'BVolver
         '
-        Me.BCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelar.FlatAppearance.BorderSize = 2
-        Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(300, 432)
-        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(116, 41)
-        Me.BCancelar.TabIndex = 12
-        Me.BCancelar.Text = "Cancelar"
-        Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelar.UseVisualStyleBackColor = False
+        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVolver.FlatAppearance.BorderSize = 2
+        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVolver.ForeColor = System.Drawing.Color.White
+        Me.BVolver.Location = New System.Drawing.Point(134, 423)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(130, 52)
+        Me.BVolver.TabIndex = 12
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BVolver.UseVisualStyleBackColor = False
         '
         'TBTelCliente
         '
@@ -354,7 +354,7 @@ Partial Class AñadirCliente
     Friend WithEvents TBCorreoCliente As TextBox
     Friend WithEvents LCorreoCliente As Label
     Friend WithEvents BRegistrarCliente As Button
-    Friend WithEvents BCancelar As Button
+    Friend WithEvents BVolver As Button
     Friend WithEvents TabPageListaClientes As TabPage
     Friend WithEvents DataGridViewRegistroClientes As DataGridView
     Friend WithEvents TabControlRegClientes As TabControl

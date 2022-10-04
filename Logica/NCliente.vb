@@ -28,6 +28,7 @@
         grid.Columns(5).HeaderText = "Direccion"
         grid.Columns(6).HeaderText = "E-mail"
         grid.Columns(7).Visible = False
+        grid.ClearSelection()
 
     End Sub
 End Class

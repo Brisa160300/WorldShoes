@@ -12,17 +12,8 @@
         End If
     End Sub
 
-    Private Sub BCancelProducto_Click(sender As Object, e As EventArgs) Handles BCancelProducto.Click
-        Dim Ask As MsgBoxResult
-
-        If EspacioEnBlanco() = False Then
-            Ask = MsgBox("Seguro que desea cancelar el registro del producto?", vbQuestion + vbYesNo, "Confirmar Inserción")
-            If Ask = vbYes Then
-                MsgBox("Se ha cancelado la operación de registro.", vbInformation, "Cancelar")
-            End If
-        Else
-            Me.Close()
-        End If
+    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click, BVolver.Click
+        Me.Close()
     End Sub
 
     Public Function EspacioEnBlanco()
@@ -45,7 +36,7 @@
         End If
     End Function
 
-    Private Sub TBCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBCodigoProducto.KeyPress, TBStock.KeyPress, TBPrecio.KeyPress
+    Private Sub TBCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBPrecio.KeyPress
 
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
