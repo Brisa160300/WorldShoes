@@ -121,11 +121,6 @@
     <Compile Include="Marcas.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelProyecto.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="ModelProyecto.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -354,9 +349,6 @@
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="talle.vb">
@@ -611,10 +603,15 @@
     <None Include="Resources\printer-4-24.png" />
     <None Include="Resources\printer-4-32.png" />
     <None Include="Resources\user-32.png" />
+    <Content Include="ModelProyecto.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
+    </Content>
     <Content Include="ModelProyecto.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
+      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ModelProyecto.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
