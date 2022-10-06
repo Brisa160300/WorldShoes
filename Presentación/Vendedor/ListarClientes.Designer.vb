@@ -22,10 +22,10 @@ Partial Class ListarClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvListarClientes = New System.Windows.Forms.DataGridView()
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.ComboBoxBuscarDni = New System.Windows.Forms.ComboBox()
@@ -37,6 +37,13 @@ Partial Class ListarClientes
         Me.BEditarCliente = New System.Windows.Forms.Button()
         Me.BEliminarClientes = New System.Windows.Forms.Button()
         Me.BImprimirClientes = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvListarClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxClientes.SuspendLayout()
         Me.TabControlListaClientes.SuspendLayout()
@@ -47,22 +54,23 @@ Partial Class ListarClientes
         '
         Me.dgvListarClientes.AllowUserToAddRows = False
         Me.dgvListarClientes.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dgvListarClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dgvListarClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListarClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListarClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.dgvListarClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListarClientes.EnableHeadersVisualStyles = False
         Me.dgvListarClientes.Location = New System.Drawing.Point(3, 3)
@@ -70,20 +78,20 @@ Partial Class ListarClientes
         Me.dgvListarClientes.Name = "dgvListarClientes"
         Me.dgvListarClientes.ReadOnly = True
         Me.dgvListarClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListarClientes.RowHeadersWidth = 51
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        Me.dgvListarClientes.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvListarClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvListarClientes.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
         Me.dgvListarClientes.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 289)
+        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 294)
         Me.dgvListarClientes.TabIndex = 5
         '
         'TBBuscar
@@ -92,7 +100,7 @@ Partial Class ListarClientes
         Me.TBBuscar.Location = New System.Drawing.Point(610, 59)
         Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(290, 29)
+        Me.TBBuscar.Size = New System.Drawing.Size(290, 24)
         Me.TBBuscar.TabIndex = 8
         '
         'ComboBoxBuscarDni
@@ -101,7 +109,7 @@ Partial Class ListarClientes
         Me.ComboBoxBuscarDni.FormattingEnabled = True
         Me.ComboBoxBuscarDni.Location = New System.Drawing.Point(444, 59)
         Me.ComboBoxBuscarDni.Name = "ComboBoxBuscarDni"
-        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 30)
+        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 25)
         Me.ComboBoxBuscarDni.TabIndex = 10
         Me.ComboBoxBuscarDni.Text = "DNI"
         '
@@ -150,10 +158,10 @@ Partial Class ListarClientes
         Me.TabPafeListaClientes.Controls.Add(Me.dgvListarClientes)
         Me.TabPafeListaClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TabPafeListaClientes.ForeColor = System.Drawing.Color.White
-        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 31)
+        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 26)
         Me.TabPafeListaClientes.Name = "TabPafeListaClientes"
         Me.TabPafeListaClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 295)
+        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 300)
         Me.TabPafeListaClientes.TabIndex = 0
         Me.TabPafeListaClientes.Text = "Lista de Clientes"
         '
@@ -220,9 +228,51 @@ Partial Class ListarClientes
         Me.BImprimirClientes.UseVisualStyleBackColor = False
         Me.BImprimirClientes.Visible = False
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Apellido"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "DNI"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Telefono"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Direccion"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "E-mail"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
         'ListarClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 656)
@@ -257,4 +307,11 @@ Partial Class ListarClientes
     Friend WithEvents TabPafeListaClientes As TabPage
     Friend WithEvents BEditarCliente As Button
     Friend WithEvents BVolver As Button
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
 End Class

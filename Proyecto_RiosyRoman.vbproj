@@ -72,6 +72,24 @@
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -82,6 +100,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -121,6 +140,11 @@
     <Compile Include="Marcas.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelProyecto.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelProyecto.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,118 +174,136 @@
     <Compile Include="Perfiles.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Administrador\añadirUsuario.Designer.vb">
+    <Compile Include="Presentación\Gerente\ReporteHoy.Designer.vb">
+      <DependentUpon>ReporteHoy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\ReporteHoy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes.Designer.vb">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes30dias.Designer.vb">
+      <DependentUpon>Reportes30dias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes30dias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes7dias.Designer.vb">
+      <DependentUpon>Reportes7dias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes7dias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\añadirUsuario.Designer.vb">
       <DependentUpon>añadirUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Administrador\añadirUsuario.vb">
+    <Compile Include="Presentación\SuperAdministrador\añadirUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Administrador\GestionarUsuarios.Designer.vb">
+    <Compile Include="Presentación\SuperAdministrador\GestionarUsuarios.Designer.vb">
       <DependentUpon>GestionarUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Administrador\GestionarUsuarios.vb">
+    <Compile Include="Presentación\SuperAdministrador\GestionarUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Administrador\MenuA.Designer.vb">
+    <Compile Include="Presentación\SuperAdministrador\MenuA.Designer.vb">
       <DependentUpon>MenuA.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Administrador\MenuA.vb">
+    <Compile Include="Presentación\SuperAdministrador\MenuA.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirCategoria.Designer.vb">
+    <Compile Include="Presentación\Administrador\AñadirCategoria.Designer.vb">
       <DependentUpon>AñadirCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirCategoria.vb">
+    <Compile Include="Presentación\Administrador\AñadirCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirMarca.Designer.vb">
+    <Compile Include="Presentación\Administrador\AñadirMarca.Designer.vb">
       <DependentUpon>AñadirMarca.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirMarca.vb">
+    <Compile Include="Presentación\Administrador\AñadirMarca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirProducto.Designer.vb">
+    <Compile Include="Presentación\Administrador\AñadirProducto.Designer.vb">
       <DependentUpon>AñadirProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirProducto.vb">
+    <Compile Include="Presentación\Administrador\AñadirProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirTalle.Designer.vb">
+    <Compile Include="Presentación\Administrador\AñadirTalle.Designer.vb">
       <DependentUpon>AñadirTalle.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\AñadirTalle.vb">
+    <Compile Include="Presentación\Administrador\AñadirTalle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListarVentasGerente.Designer.vb">
+    <Compile Include="Presentación\Administrador\ListarVentasGerente.Designer.vb">
       <DependentUpon>ListarVentasGerente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListarVentasGerente.vb">
+    <Compile Include="Presentación\Administrador\ListarVentasGerente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\MenuG.Designer.vb">
+    <Compile Include="Presentación\Administrador\MenuG.Designer.vb">
       <DependentUpon>MenuG.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\MenuG.vb">
+    <Compile Include="Presentación\Administrador\MenuG.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarCategoria.Designer.vb">
+    <Compile Include="Presentación\Administrador\GestionarCategoria.Designer.vb">
       <DependentUpon>GestionarCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarCategoria.vb">
+    <Compile Include="Presentación\Administrador\GestionarCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarProductos.Designer.vb">
+    <Compile Include="Presentación\Administrador\GestionarProductos.Designer.vb">
       <DependentUpon>GestionarProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarProductos.vb">
+    <Compile Include="Presentación\Administrador\GestionarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarTalle.Designer.vb">
+    <Compile Include="Presentación\Administrador\GestionarTalle.Designer.vb">
       <DependentUpon>GestionarTalle.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarTalle.vb">
+    <Compile Include="Presentación\Administrador\GestionarTalle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarVentas.Designer.vb">
+    <Compile Include="Presentación\Administrador\GestionarVentas.Designer.vb">
       <DependentUpon>GestionarVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\GestionarVentas.vb">
+    <Compile Include="Presentación\Administrador\GestionarVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListarMarcas.Designer.vb">
+    <Compile Include="Presentación\Administrador\ListarMarcas.Designer.vb">
       <DependentUpon>ListarMarcas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListarMarcas.vb">
+    <Compile Include="Presentación\Administrador\ListarMarcas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListaVendedores.Designer.vb">
+    <Compile Include="Presentación\Administrador\ListaVendedores.Designer.vb">
       <DependentUpon>ListaVendedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ListaVendedores.vb">
+    <Compile Include="Presentación\Administrador\ListaVendedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\MenuGerente.Designer.vb">
-      <DependentUpon>MenuGerente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\Gerente\MenuGerente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\Gerente\ModificarCategoria.Designer.vb">
+    <Compile Include="Presentación\Administrador\ModificarCategoria.Designer.vb">
       <DependentUpon>ModificarCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ModificarCategoria.vb">
+    <Compile Include="Presentación\Administrador\ModificarCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ModificarProducto.Designer.vb">
+    <Compile Include="Presentación\Administrador\ModificarProducto.Designer.vb">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ModificarProducto.vb">
+    <Compile Include="Presentación\Administrador\ModificarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ModificarTalle.Designer.vb">
+    <Compile Include="Presentación\Administrador\ModificarTalle.Designer.vb">
       <DependentUpon>ModificarTalle.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Gerente\ModificarTalle.vb">
+    <Compile Include="Presentación\Administrador\ModificarTalle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Login.Designer.vb">
@@ -324,16 +366,10 @@
     <Compile Include="Presentación\Vendedor\MenuV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Vendedor\MenuVendedor.Designer.vb">
-      <DependentUpon>MenuVendedor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\Vendedor\MenuVendedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\Administrador\ModificarUsuario.Designer.vb">
+    <Compile Include="Presentación\SuperAdministrador\ModificarUsuario.Designer.vb">
       <DependentUpon>ModificarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentación\Administrador\ModificarUsuario.vb">
+    <Compile Include="Presentación\SuperAdministrador\ModificarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Vendedor\ModificarCliente.Designer.vb">
@@ -368,61 +404,70 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Administrador\añadirUsuario.resx">
+    <EmbeddedResource Include="Presentación\Gerente\ReporteHoy.resx">
+      <DependentUpon>ReporteHoy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\Reportes.resx">
+      <DependentUpon>Reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\Reportes30dias.resx">
+      <DependentUpon>Reportes30dias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\Reportes7dias.resx">
+      <DependentUpon>Reportes7dias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\añadirUsuario.resx">
       <DependentUpon>añadirUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Administrador\GestionarUsuarios.resx">
+    <EmbeddedResource Include="Presentación\SuperAdministrador\GestionarUsuarios.resx">
       <DependentUpon>GestionarUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Administrador\MenuA.resx">
+    <EmbeddedResource Include="Presentación\SuperAdministrador\MenuA.resx">
       <DependentUpon>MenuA.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\AñadirCategoria.resx">
+    <EmbeddedResource Include="Presentación\Administrador\AñadirCategoria.resx">
       <DependentUpon>AñadirCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\AñadirMarca.resx">
+    <EmbeddedResource Include="Presentación\Administrador\AñadirMarca.resx">
       <DependentUpon>AñadirMarca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\AñadirProducto.resx">
+    <EmbeddedResource Include="Presentación\Administrador\AñadirProducto.resx">
       <DependentUpon>AñadirProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\AñadirTalle.resx">
+    <EmbeddedResource Include="Presentación\Administrador\AñadirTalle.resx">
       <DependentUpon>AñadirTalle.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ListarVentasGerente.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ListarVentasGerente.resx">
       <DependentUpon>ListarVentasGerente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\MenuG.resx">
+    <EmbeddedResource Include="Presentación\Administrador\MenuG.resx">
       <DependentUpon>MenuG.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\GestionarCategoria.resx">
+    <EmbeddedResource Include="Presentación\Administrador\GestionarCategoria.resx">
       <DependentUpon>GestionarCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\GestionarProductos.resx">
+    <EmbeddedResource Include="Presentación\Administrador\GestionarProductos.resx">
       <DependentUpon>GestionarProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\GestionarTalle.resx">
+    <EmbeddedResource Include="Presentación\Administrador\GestionarTalle.resx">
       <DependentUpon>GestionarTalle.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\GestionarVentas.resx">
+    <EmbeddedResource Include="Presentación\Administrador\GestionarVentas.resx">
       <DependentUpon>GestionarVentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ListarMarcas.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ListarMarcas.resx">
       <DependentUpon>ListarMarcas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ListaVendedores.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ListaVendedores.resx">
       <DependentUpon>ListaVendedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\MenuGerente.resx">
-      <DependentUpon>MenuGerente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ModificarCategoria.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ModificarCategoria.resx">
       <DependentUpon>ModificarCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ModificarProducto.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ModificarProducto.resx">
       <DependentUpon>ModificarProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ModificarTalle.resx">
+    <EmbeddedResource Include="Presentación\Administrador\ModificarTalle.resx">
       <DependentUpon>ModificarTalle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Login.resx">
@@ -455,10 +500,7 @@
     <EmbeddedResource Include="Presentación\Vendedor\MenuV.resx">
       <DependentUpon>MenuV.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Vendedor\MenuVendedor.resx">
-      <DependentUpon>MenuVendedor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Administrador\ModificarUsuario.resx">
+    <EmbeddedResource Include="Presentación\SuperAdministrador\ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\ModificarCliente.resx">
@@ -558,6 +600,20 @@
     <None Include="Resources\icon-user.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\ventas.png" />
     <None Include="Resources\lock_user_icon_195427 %282%29.png" />
     <None Include="Resources\icono user.png" />
@@ -603,15 +659,10 @@
     <None Include="Resources\printer-4-24.png" />
     <None Include="Resources\printer-4-32.png" />
     <None Include="Resources\user-32.png" />
-    <Content Include="ModelProyecto.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
-    </Content>
     <Content Include="ModelProyecto.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
+      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
     </Content>
     <Content Include="ModelProyecto.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
