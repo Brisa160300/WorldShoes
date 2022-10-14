@@ -29,6 +29,7 @@ Partial Public Class WorldShoes_Roman_RiosEntities
     Public Overridable Property Marcas() As DbSet(Of Marcas)
     Public Overridable Property Perfiles() As DbSet(Of Perfiles)
     Public Overridable Property Productos() As DbSet(Of Productos)
+    Public Overridable Property sysdiagrams() As DbSet(Of sysdiagrams)
     Public Overridable Property talle() As DbSet(Of talle)
     Public Overridable Property talle_producto() As DbSet(Of talle_producto)
     Public Overridable Property Usuarios() As DbSet(Of Usuarios)

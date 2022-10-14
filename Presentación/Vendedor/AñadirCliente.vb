@@ -25,30 +25,31 @@
     Private Sub BRegistrarCliente_Click(sender As Object, e As EventArgs) Handles BRegistrarCliente.Click
         Dim nombre As String = TBNombreCliente.Text
         Dim apellido As String = TBApellidoCliente.Text
-        Dim dni As String = TBDniCliente.Text
-        Dim tel As String = TBTelCliente.Text
+        Dim dni As Integer = CInt(TBDniCliente.Text)
+        Dim tel As Integer = CInt(TBTelCliente.Text)
         Dim direccion As String = TBDireccion.Text
         Dim email As String = TBCorreoCliente.Text
 
         If EspacioEnBlanco() = False Then
             MsgBox("Seguro que desea insertar un nuevo Cliente?", vbQuestion + vbYesNo, "Confirmar Inserción")
             If vbYes Then
-                If (objNcliente.agregar_cliente(nombre, apellido, CInt(dni), CInt(tel), direccion, email)) Then
-                    MsgBox("El Cliente: " + TBApellidoCliente.Text + " " + TBNombreCliente.Text + " se registró correctamente", vbOKOnly + MsgBoxStyle.Information, "Registro exitoso")
+
+                If objNcliente.agregar_cliente(nombre, apellido, dni, tel, direccion, email) Then
+                    MsgBox("El Cliente: " + apellido + " " + nombre + " se registró correctamente", vbOKOnly + MsgBoxStyle.Information, "Registro exitoso")
                     objNcliente.cargarGrid(DataGridViewRegistroClientes)
-                    MsgBox("error")
+                    TBDniCliente.Clear()
+                    TBNombreCliente.Clear()
+                    TBApellidoCliente.Clear()
+                    TBTelCliente.Clear()
+                    TBDireccion.Clear()
+                    TBCorreoCliente.Clear()
                 Else
-                    MsgBox("El Cliente: " + TBApellidoCliente.Text + " " + TBNombreCliente.Text + " ya existe", vbOKOnly + MsgBoxStyle.Critical, "Error de registro")
+                    MsgBox("El cliente ya se encuentra registrado", vbOKOnly + MsgBoxStyle.Critical, "DNI duplicado")
+                    TBDniCliente.Clear()
                     TBDniCliente.Focus()
                 End If
             End If
         End If
-        TBDniCliente.Clear()
-        TBNombreCliente.Clear()
-        TBApellidoCliente.Clear()
-        TBTelCliente.Clear()
-        TBDireccion.Clear()
-        TBCorreoCliente.Clear()
 
     End Sub
 

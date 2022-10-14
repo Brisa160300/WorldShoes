@@ -31,10 +31,12 @@ Partial Class MenuG
         Me.PanelSubMenuProductosGerente = New System.Windows.Forms.Panel()
         Me.BGestionarProductosGerente = New System.Windows.Forms.Button()
         Me.BAñadirProductoGerente = New System.Windows.Forms.Button()
-        Me.PanelFormGerente = New System.Windows.Forms.Panel()
         Me.PanelIconMenuGerente = New System.Windows.Forms.Panel()
         Me.LIconMenu = New System.Windows.Forms.Label()
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
+        Me.PanelSubMenuClientes = New System.Windows.Forms.Panel()
+        Me.BListaClientes = New System.Windows.Forms.Button()
+        Me.BClientes = New System.Windows.Forms.Button()
         Me.PanelSubMenuMarcas = New System.Windows.Forms.Panel()
         Me.BGestionarMarcas = New System.Windows.Forms.Button()
         Me.BAñadirMarca = New System.Windows.Forms.Button()
@@ -52,12 +54,13 @@ Partial Class MenuG
         Me.BMinimizarMenuGerente = New System.Windows.Forms.Button()
         Me.BCerrarMenuGerente = New System.Windows.Forms.Button()
         Me.BRestaurarMenuGerente = New System.Windows.Forms.Button()
-        Me.EntityCommand1 = New System.Data.Entity.Core.EntityClient.EntityCommand()
+        Me.PanelFormGerente = New System.Windows.Forms.Panel()
         Me.PanelSubMenuCategorias.SuspendLayout()
         Me.PanelSubMenuVentasGerente.SuspendLayout()
         Me.PanelSubMenuProductosGerente.SuspendLayout()
         Me.PanelIconMenuGerente.SuspendLayout()
         Me.PanelMenuLateral.SuspendLayout()
+        Me.PanelSubMenuClientes.SuspendLayout()
         Me.PanelSubMenuMarcas.SuspendLayout()
         Me.PanelSubMenuTalles.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
@@ -195,18 +198,6 @@ Partial Class MenuG
         Me.BAñadirProductoGerente.Text = "Añadir Productos"
         Me.BAñadirProductoGerente.UseVisualStyleBackColor = False
         '
-        'PanelFormGerente
-        '
-        Me.PanelFormGerente.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PanelFormGerente.AutoScroll = True
-        Me.PanelFormGerente.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.PanelFormGerente.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
-        Me.PanelFormGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PanelFormGerente.Location = New System.Drawing.Point(250, 94)
-        Me.PanelFormGerente.Name = "PanelFormGerente"
-        Me.PanelFormGerente.Size = New System.Drawing.Size(1150, 756)
-        Me.PanelFormGerente.TabIndex = 17
-        '
         'PanelIconMenuGerente
         '
         Me.PanelIconMenuGerente.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
@@ -236,6 +227,8 @@ Partial Class MenuG
         '
         Me.PanelMenuLateral.AutoScroll = True
         Me.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuClientes)
+        Me.PanelMenuLateral.Controls.Add(Me.BClientes)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuMarcas)
         Me.PanelMenuLateral.Controls.Add(Me.BMarcas)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuTalles)
@@ -253,6 +246,51 @@ Partial Class MenuG
         Me.PanelMenuLateral.Name = "PanelMenuLateral"
         Me.PanelMenuLateral.Size = New System.Drawing.Size(250, 656)
         Me.PanelMenuLateral.TabIndex = 16
+        '
+        'PanelSubMenuClientes
+        '
+        Me.PanelSubMenuClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.PanelSubMenuClientes.Controls.Add(Me.BListaClientes)
+        Me.PanelSubMenuClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelSubMenuClientes.ForeColor = System.Drawing.Color.Gainsboro
+        Me.PanelSubMenuClientes.Location = New System.Drawing.Point(0, 1086)
+        Me.PanelSubMenuClientes.Name = "PanelSubMenuClientes"
+        Me.PanelSubMenuClientes.Size = New System.Drawing.Size(229, 50)
+        Me.PanelSubMenuClientes.TabIndex = 21
+        '
+        'BListaClientes
+        '
+        Me.BListaClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.BListaClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BListaClientes.FlatAppearance.BorderSize = 0
+        Me.BListaClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BListaClientes.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BListaClientes.ForeColor = System.Drawing.Color.Gainsboro
+        Me.BListaClientes.Location = New System.Drawing.Point(0, 0)
+        Me.BListaClientes.Name = "BListaClientes"
+        Me.BListaClientes.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.BListaClientes.Size = New System.Drawing.Size(229, 50)
+        Me.BListaClientes.TabIndex = 1
+        Me.BListaClientes.Text = "Listar Clientes"
+        Me.BListaClientes.UseVisualStyleBackColor = False
+        '
+        'BClientes
+        '
+        Me.BClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BClientes.FlatAppearance.BorderSize = 0
+        Me.BClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BClientes.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BClientes.ForeColor = System.Drawing.Color.White
+        Me.BClientes.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_cliente_50
+        Me.BClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BClientes.Location = New System.Drawing.Point(0, 1011)
+        Me.BClientes.Name = "BClientes"
+        Me.BClientes.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.BClientes.Size = New System.Drawing.Size(229, 75)
+        Me.BClientes.TabIndex = 20
+        Me.BClientes.Text = "Clientes"
+        Me.BClientes.UseVisualStyleBackColor = False
         '
         'PanelSubMenuMarcas
         '
@@ -390,7 +428,7 @@ Partial Class MenuG
         Me.BSalir.ForeColor = System.Drawing.Color.White
         Me.BSalir.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_50
         Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(0, 1011)
+        Me.BSalir.Location = New System.Drawing.Point(0, 1136)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BSalir.Size = New System.Drawing.Size(229, 75)
@@ -522,13 +560,17 @@ Partial Class MenuG
         Me.BRestaurarMenuGerente.TabIndex = 7
         Me.BRestaurarMenuGerente.UseVisualStyleBackColor = True
         '
-        'EntityCommand1
+        'PanelFormGerente
         '
-        Me.EntityCommand1.CommandTimeout = 0
-        Me.EntityCommand1.CommandTree = Nothing
-        Me.EntityCommand1.Connection = Nothing
-        Me.EntityCommand1.EnablePlanCaching = True
-        Me.EntityCommand1.Transaction = Nothing
+        Me.PanelFormGerente.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PanelFormGerente.AutoScroll = True
+        Me.PanelFormGerente.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelFormGerente.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
+        Me.PanelFormGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PanelFormGerente.Location = New System.Drawing.Point(250, 94)
+        Me.PanelFormGerente.Name = "PanelFormGerente"
+        Me.PanelFormGerente.Size = New System.Drawing.Size(1150, 756)
+        Me.PanelFormGerente.TabIndex = 17
         '
         'MenuG
         '
@@ -552,6 +594,7 @@ Partial Class MenuG
         Me.PanelIconMenuGerente.ResumeLayout(False)
         Me.PanelIconMenuGerente.PerformLayout()
         Me.PanelMenuLateral.ResumeLayout(False)
+        Me.PanelSubMenuClientes.ResumeLayout(False)
         Me.PanelSubMenuMarcas.ResumeLayout(False)
         Me.PanelSubMenuTalles.ResumeLayout(False)
         Me.PanelBarraMenu.ResumeLayout(False)
@@ -589,5 +632,7 @@ Partial Class MenuG
     Friend WithEvents PanelSubMenuTalles As Panel
     Friend WithEvents BGestionarTalles As Button
     Friend WithEvents BAñadirTalle As Button
-    Friend WithEvents EntityCommand1 As Entity.Core.EntityClient.EntityCommand
+    Friend WithEvents PanelSubMenuClientes As Panel
+    Friend WithEvents BListaClientes As Button
+    Friend WithEvents BClientes As Button
 End Class

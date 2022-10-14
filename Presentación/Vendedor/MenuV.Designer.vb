@@ -23,26 +23,26 @@ Partial Class MenuV
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
+        Me.BSalir = New System.Windows.Forms.Button()
         Me.PanelSubMenuFacturación = New System.Windows.Forms.Panel()
         Me.BListarVentas = New System.Windows.Forms.Button()
         Me.BNuevaVenta = New System.Windows.Forms.Button()
+        Me.BFacturación = New System.Windows.Forms.Button()
         Me.PanelSubMenuProductos = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BProductos = New System.Windows.Forms.Button()
         Me.PanelSubMenuClientes = New System.Windows.Forms.Panel()
         Me.BListaClientes = New System.Windows.Forms.Button()
         Me.BAñadirClientes = New System.Windows.Forms.Button()
+        Me.BClientes = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.LIconMenu = New System.Windows.Forms.Label()
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
-        Me.PanelFormVendedor = New System.Windows.Forms.Panel()
-        Me.BSalir = New System.Windows.Forms.Button()
-        Me.BFacturación = New System.Windows.Forms.Button()
-        Me.BProductos = New System.Windows.Forms.Button()
-        Me.BClientes = New System.Windows.Forms.Button()
         Me.BMinimizarMenu = New System.Windows.Forms.Button()
         Me.BCerrarMenu = New System.Windows.Forms.Button()
         Me.BMaximizarMenu = New System.Windows.Forms.Button()
         Me.BRestaurarMenu = New System.Windows.Forms.Button()
+        Me.PanelFormVendedor = New System.Windows.Forms.Panel()
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubMenuFacturación.SuspendLayout()
         Me.PanelSubMenuProductos.SuspendLayout()
@@ -68,6 +68,24 @@ Partial Class MenuV
         Me.PanelMenuLateral.Name = "PanelMenuLateral"
         Me.PanelMenuLateral.Size = New System.Drawing.Size(250, 656)
         Me.PanelMenuLateral.TabIndex = 0
+        '
+        'BSalir
+        '
+        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BSalir.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BSalir.FlatAppearance.BorderSize = 0
+        Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BSalir.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BSalir.ForeColor = System.Drawing.Color.White
+        Me.BSalir.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_50
+        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BSalir.Location = New System.Drawing.Point(0, 611)
+        Me.BSalir.Name = "BSalir"
+        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.BSalir.Size = New System.Drawing.Size(229, 75)
+        Me.BSalir.TabIndex = 14
+        Me.BSalir.Text = "Cerrar Sesión"
+        Me.BSalir.UseVisualStyleBackColor = False
         '
         'PanelSubMenuFacturación
         '
@@ -113,6 +131,24 @@ Partial Class MenuV
         Me.BNuevaVenta.Text = "Nueva Venta"
         Me.BNuevaVenta.UseVisualStyleBackColor = False
         '
+        'BFacturación
+        '
+        Me.BFacturación.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BFacturación.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BFacturación.FlatAppearance.BorderSize = 0
+        Me.BFacturación.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BFacturación.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BFacturación.ForeColor = System.Drawing.Color.White
+        Me.BFacturación.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_facturación_50
+        Me.BFacturación.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BFacturación.Location = New System.Drawing.Point(0, 436)
+        Me.BFacturación.Name = "BFacturación"
+        Me.BFacturación.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.BFacturación.Size = New System.Drawing.Size(229, 75)
+        Me.BFacturación.TabIndex = 12
+        Me.BFacturación.Text = "Facturación"
+        Me.BFacturación.UseVisualStyleBackColor = False
+        '
         'PanelSubMenuProductos
         '
         Me.PanelSubMenuProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
@@ -139,6 +175,24 @@ Partial Class MenuV
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Listar Productos"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'BProductos
+        '
+        Me.BProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BProductos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BProductos.FlatAppearance.BorderSize = 0
+        Me.BProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BProductos.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BProductos.ForeColor = System.Drawing.Color.White
+        Me.BProductos.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_mujeres_vista_lateral_del_zapato_filled_50
+        Me.BProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BProductos.Location = New System.Drawing.Point(0, 311)
+        Me.BProductos.Name = "BProductos"
+        Me.BProductos.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.BProductos.Size = New System.Drawing.Size(229, 75)
+        Me.BProductos.TabIndex = 10
+        Me.BProductos.Text = "Productos"
+        Me.BProductos.UseVisualStyleBackColor = False
         '
         'PanelSubMenuClientes
         '
@@ -184,6 +238,24 @@ Partial Class MenuV
         Me.BAñadirClientes.Text = "Añadir Clientes"
         Me.BAñadirClientes.UseVisualStyleBackColor = False
         '
+        'BClientes
+        '
+        Me.BClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BClientes.FlatAppearance.BorderSize = 0
+        Me.BClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BClientes.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BClientes.ForeColor = System.Drawing.Color.White
+        Me.BClientes.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_cliente_50
+        Me.BClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BClientes.Location = New System.Drawing.Point(0, 136)
+        Me.BClientes.Name = "BClientes"
+        Me.BClientes.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.BClientes.Size = New System.Drawing.Size(229, 75)
+        Me.BClientes.TabIndex = 8
+        Me.BClientes.Text = "Clientes"
+        Me.BClientes.UseVisualStyleBackColor = False
+        '
         'PanelLogo
         '
         Me.PanelLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
@@ -222,91 +294,6 @@ Partial Class MenuV
         Me.PanelBarraMenu.Name = "PanelBarraMenu"
         Me.PanelBarraMenu.Size = New System.Drawing.Size(1400, 94)
         Me.PanelBarraMenu.TabIndex = 15
-        '
-        'PanelFormVendedor
-        '
-        Me.PanelFormVendedor.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PanelFormVendedor.AutoScroll = True
-        Me.PanelFormVendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.PanelFormVendedor.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
-        Me.PanelFormVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PanelFormVendedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelFormVendedor.Location = New System.Drawing.Point(250, 94)
-        Me.PanelFormVendedor.Name = "PanelFormVendedor"
-        Me.PanelFormVendedor.Size = New System.Drawing.Size(1150, 656)
-        Me.PanelFormVendedor.TabIndex = 3
-        '
-        'BSalir
-        '
-        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.BSalir.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BSalir.FlatAppearance.BorderSize = 0
-        Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BSalir.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BSalir.ForeColor = System.Drawing.Color.White
-        Me.BSalir.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_50
-        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(0, 611)
-        Me.BSalir.Name = "BSalir"
-        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BSalir.Size = New System.Drawing.Size(229, 75)
-        Me.BSalir.TabIndex = 14
-        Me.BSalir.Text = "Cerrar Sesión"
-        Me.BSalir.UseVisualStyleBackColor = False
-        '
-        'BFacturación
-        '
-        Me.BFacturación.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.BFacturación.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BFacturación.FlatAppearance.BorderSize = 0
-        Me.BFacturación.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BFacturación.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BFacturación.ForeColor = System.Drawing.Color.White
-        Me.BFacturación.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_facturación_50
-        Me.BFacturación.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BFacturación.Location = New System.Drawing.Point(0, 436)
-        Me.BFacturación.Name = "BFacturación"
-        Me.BFacturación.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BFacturación.Size = New System.Drawing.Size(229, 75)
-        Me.BFacturación.TabIndex = 12
-        Me.BFacturación.Text = "Facturación"
-        Me.BFacturación.UseVisualStyleBackColor = False
-        '
-        'BProductos
-        '
-        Me.BProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.BProductos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BProductos.FlatAppearance.BorderSize = 0
-        Me.BProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BProductos.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BProductos.ForeColor = System.Drawing.Color.White
-        Me.BProductos.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_mujeres_vista_lateral_del_zapato_filled_50
-        Me.BProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BProductos.Location = New System.Drawing.Point(0, 311)
-        Me.BProductos.Name = "BProductos"
-        Me.BProductos.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BProductos.Size = New System.Drawing.Size(229, 75)
-        Me.BProductos.TabIndex = 10
-        Me.BProductos.Text = "Productos"
-        Me.BProductos.UseVisualStyleBackColor = False
-        '
-        'BClientes
-        '
-        Me.BClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.BClientes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BClientes.FlatAppearance.BorderSize = 0
-        Me.BClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BClientes.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BClientes.ForeColor = System.Drawing.Color.White
-        Me.BClientes.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_buscar_cliente_50
-        Me.BClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BClientes.Location = New System.Drawing.Point(0, 136)
-        Me.BClientes.Name = "BClientes"
-        Me.BClientes.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BClientes.Size = New System.Drawing.Size(229, 75)
-        Me.BClientes.TabIndex = 8
-        Me.BClientes.Text = "Clientes"
-        Me.BClientes.UseVisualStyleBackColor = False
         '
         'BMinimizarMenu
         '
@@ -359,6 +346,19 @@ Partial Class MenuV
         Me.BRestaurarMenu.Size = New System.Drawing.Size(33, 31)
         Me.BRestaurarMenu.TabIndex = 7
         Me.BRestaurarMenu.UseVisualStyleBackColor = True
+        '
+        'PanelFormVendedor
+        '
+        Me.PanelFormVendedor.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PanelFormVendedor.AutoScroll = True
+        Me.PanelFormVendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelFormVendedor.BackgroundImage = Global.Proyecto_RiosyRoman.My.Resources.Resources.logoWorldShoes_removebg_preview
+        Me.PanelFormVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PanelFormVendedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelFormVendedor.Location = New System.Drawing.Point(250, 94)
+        Me.PanelFormVendedor.Name = "PanelFormVendedor"
+        Me.PanelFormVendedor.Size = New System.Drawing.Size(1150, 656)
+        Me.PanelFormVendedor.TabIndex = 3
         '
         'MenuV
         '

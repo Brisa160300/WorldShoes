@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dce3a3e8c1154b4c9697328bb1cc2642" Name="Diagram1">
+      <Diagram DiagramId="e9854c19131a40e68c782a3affce1269" Name="Diagram1">
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Categoria" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.clientes" Width="1.5" PointX="7.375" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.clientes" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Marcas" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Perfiles" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Productos" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Usuarios" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />

@@ -4,13 +4,14 @@
     Private px, py As Integer
     Private mover As Boolean
 
-    Private Sub A_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MenuA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
         hideSubMenu()
     End Sub
 
     Private Sub hideSubMenu()
         PanelSubMenuUsuarios.Visible = False
+        PanelSubMenuEmpleados.Visible = False
     End Sub
 
     Private Sub showSubMenu(subMenu As Panel)
@@ -79,8 +80,6 @@
         AbrirFormulariosAdministrador(New añadirUsuario)
     End Sub
 
-    Private formActivoAdministrador As Form = Nothing
-
     Private Sub BGestionarUsuarios_Click(sender As Object, e As EventArgs) Handles BGestionarUsuarios.Click
         AbrirFormulariosAdministrador(New GestionarUsuarios)
     End Sub
@@ -89,6 +88,20 @@
         showSubMenu(PanelSubMenuUsuarios)
     End Sub
 
+    Private Sub BGestionarEmpleados_Click(sender As Object, e As EventArgs) Handles BGestionarEmpleados.Click
+        AbrirFormulariosAdministrador(New GestionarEmpleados)
+    End Sub
+
+    Private Sub BNuevoEmpleado_Click(sender As Object, e As EventArgs) Handles BNuevoEmpleado.Click
+        AbrirFormulariosAdministrador(New Añadir_Empleado)
+    End Sub
+
+    Private Sub BEmpleados_Click(sender As Object, e As EventArgs) Handles BEmpleados.Click
+        showSubMenu(PanelSubMenuEmpleados)
+    End Sub
+
+
+    Private formActivoAdministrador As Form = Nothing
     Private Sub AbrirFormulariosAdministrador(formHijo As Form)
         If Not formActivoAdministrador IsNot Nothing Then
             PanelFormAdmnistrador.Controls.Clear()
@@ -111,4 +124,6 @@
             hideSubMenu()
         End If
     End Sub
+
+
 End Class

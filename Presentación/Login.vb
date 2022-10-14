@@ -24,6 +24,9 @@
             ElseIf (usuario = "ABI") And (contraseña = "123") Then
                 Me.Hide()
                 MenuA.Show()
+            ElseIf (usuario = "MARIA") And (contraseña = "123") Then
+                Me.Hide()
+                MenuGerente.Show()
             Else
                 MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
                 TBUsuario.Clear()

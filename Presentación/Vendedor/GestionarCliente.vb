@@ -1,7 +1,7 @@
 ﻿Public Class GestionarCliente
     Private objNcliente = New NCliente
     Private Sub BModificarCliente_Click(sender As Object, e As EventArgs) Handles BModificarCliente.Click
-        Dim frm As New ModificarCliente
+        Dim frm As New ModificarClienteGerente
         frm.TBNombreCliente.Text = dgvRegistroClientes.CurrentRow.Cells(0).Value.ToString
         frm.TBApellidoCliente.Text = dgvRegistroClientes.CurrentRow.Cells(1).Value.ToString
         frm.TBDniCliente.Text = dgvRegistroClientes.CurrentRow.Cells(2).Value

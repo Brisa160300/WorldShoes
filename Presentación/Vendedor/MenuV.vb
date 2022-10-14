@@ -137,9 +137,24 @@
         End If
     End Sub
 
-
     Private Sub BMinimizarMenu_Click(sender As Object, e As EventArgs) Handles BMinimizarMenu.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
+
+    Private Sub PanelBarraMenu_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseDown
+        px = e.X
+        py = e.Y
+        mover = True
+    End Sub
+
+    Private Sub PanelBarraMenu_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseUp
+        mover = False
+    End Sub
+    Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove
+        If mover Then
+            Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))
+
+        End If
+    End Sub
 End Class

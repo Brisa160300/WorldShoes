@@ -26,9 +26,19 @@ Partial Class AñadirProducto
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewRegistroCategorias = New System.Windows.Forms.DataGridView()
         Me.TabControlListaProductos = New System.Windows.Forms.TabControl()
         Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
+        Me.DataGridViewListaProductos = New System.Windows.Forms.DataGridView()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Talle = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBoxCategoria = New System.Windows.Forms.ComboBox()
         Me.BAñadirProducto = New System.Windows.Forms.Button()
@@ -48,6 +58,7 @@ Partial Class AñadirProducto
         CType(Me.DataGridViewRegistroCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlListaProductos.SuspendLayout()
         Me.TabPageListaProducto.SuspendLayout()
+        CType(Me.DataGridViewListaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -108,6 +119,7 @@ Partial Class AñadirProducto
         '
         'TabPageListaProducto
         '
+        Me.TabPageListaProducto.Controls.Add(Me.DataGridViewListaProductos)
         Me.TabPageListaProducto.Controls.Add(Me.DataGridViewRegistroCategorias)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
@@ -119,6 +131,93 @@ Partial Class AñadirProducto
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Producto"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
+        '
+        'DataGridViewListaProductos
+        '
+        Me.DataGridViewListaProductos.AllowUserToDeleteRows = False
+        Me.DataGridViewListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewListaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridViewListaProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.DataGridViewListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridViewListaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewListaProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridViewListaProductos.ColumnHeadersHeight = 20
+        Me.DataGridViewListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridViewListaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column3, Me.Categoria, Me.Stock, Me.Column1, Me.Column4, Me.Talle})
+        Me.DataGridViewListaProductos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridViewListaProductos.EnableHeadersVisualStyles = False
+        Me.DataGridViewListaProductos.Location = New System.Drawing.Point(3, 2)
+        Me.DataGridViewListaProductos.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridViewListaProductos.Name = "DataGridViewListaProductos"
+        Me.DataGridViewListaProductos.ReadOnly = True
+        Me.DataGridViewListaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewListaProductos.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridViewListaProductos.RowHeadersWidth = 51
+        Me.DataGridViewListaProductos.Size = New System.Drawing.Size(663, 485)
+        Me.DataGridViewListaProductos.TabIndex = 7
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ID"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Producto"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.MinimumWidth = 6
+        Me.Categoria.Name = "Categoria"
+        Me.Categoria.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.MinimumWidth = 6
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Marca"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Precio"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Talle
+        '
+        Me.Talle.HeaderText = "Talle"
+        Me.Talle.MinimumWidth = 6
+        Me.Talle.Name = "Talle"
+        Me.Talle.ReadOnly = True
         '
         'Label1
         '
@@ -322,6 +421,7 @@ Partial Class AñadirProducto
         CType(Me.DataGridViewRegistroCategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlListaProductos.ResumeLayout(False)
         Me.TabPageListaProducto.ResumeLayout(False)
+        CType(Me.DataGridViewListaProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -348,4 +448,12 @@ Partial Class AñadirProducto
     Friend WithEvents LMarca As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents BVolver As Button
+    Friend WithEvents DataGridViewListaProductos As DataGridView
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Categoria As DataGridViewTextBoxColumn
+    Friend WithEvents Stock As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Talle As DataGridViewTextBoxColumn
 End Class

@@ -1,5 +1,5 @@
 ﻿Public Class NCliente
-    Function agregar_cliente(nombre As String, apellido As String, dni As Integer, telefono As Integer, direccion As String, email As String) As Boolean
+    Function agregar_cliente(nombre As String, apellido As String, dni As Integer, telefono As Integer, direccion As String, email As String)
         Dim ocliente = New clientes
         With ocliente
             .Nombre = nombre
@@ -8,6 +8,7 @@
             .telefono = telefono
             .direccion = direccion
             .email = email
+            .id_estado_cliente = 1
         End With
         Dim objdcliente = New Dcliente
         If objdcliente.Dguardar_cliente(ocliente) Then

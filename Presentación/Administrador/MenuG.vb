@@ -14,6 +14,8 @@
         PanelSubMenuVentasGerente.Visible = False
         PanelSubMenuMarcas.Visible = False
         PanelSubMenuTalles.Visible = False
+        PanelSubMenuClientes.Visible = False
+
     End Sub
 
     Private Sub showSubMenu(subMenu As Panel)
@@ -158,6 +160,14 @@
 
     Private Sub PanelBarraMenu_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseUp
         mover = False
+    End Sub
+
+    Private Sub BListaClientes_Click(sender As Object, e As EventArgs) Handles BListaClientes.Click
+        AbrirFormulariosGerente(New ListarClienteGerente)
+    End Sub
+
+    Private Sub BClientes_Click(sender As Object, e As EventArgs) Handles BClientes.Click
+        showSubMenu(PanelSubMenuClientes)
     End Sub
 
     Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove

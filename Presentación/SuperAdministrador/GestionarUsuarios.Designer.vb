@@ -124,7 +124,7 @@ Partial Class GestionarUsuarios
         Me.TabListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabListaClientes.Name = "TabListaClientes"
         Me.TabListaClientes.SelectedIndex = 0
-        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 357)
+        Me.TabListaClientes.Size = New System.Drawing.Size(1071, 378)
         Me.TabListaClientes.TabIndex = 24
         '
         'TabPageUsuarios
@@ -136,7 +136,7 @@ Partial Class GestionarUsuarios
         Me.TabPageUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageUsuarios.Name = "TabPageUsuarios"
         Me.TabPageUsuarios.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageUsuarios.Size = New System.Drawing.Size(1063, 325)
+        Me.TabPageUsuarios.Size = New System.Drawing.Size(1063, 346)
         Me.TabPageUsuarios.TabIndex = 0
         Me.TabPageUsuarios.Text = "Lista de Usuarios"
         Me.TabPageUsuarios.UseVisualStyleBackColor = True
@@ -177,7 +177,7 @@ Partial Class GestionarUsuarios
         Me.dgvListaUsuarios.RowHeadersWidth = 51
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
         Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvListaUsuarios.Size = New System.Drawing.Size(1057, 321)
+        Me.dgvListaUsuarios.Size = New System.Drawing.Size(1057, 342)
         Me.dgvListaUsuarios.TabIndex = 2
         '
         'BVolver
@@ -188,7 +188,7 @@ Partial Class GestionarUsuarios
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(1008, 553)
+        Me.BVolver.Location = New System.Drawing.Point(1008, 579)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
         Me.BVolver.Size = New System.Drawing.Size(103, 52)
@@ -201,7 +201,7 @@ Partial Class GestionarUsuarios
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1149, 633)
+        Me.ClientSize = New System.Drawing.Size(1149, 656)
         Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxGestionUsuarios)
         Me.Controls.Add(Me.TabListaClientes)

@@ -36,7 +36,7 @@
         End If
     End Function
 
-    Private Sub TBCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBPrecio.KeyPress
+    Private Sub TBPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBPrecio.KeyPress
 
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True

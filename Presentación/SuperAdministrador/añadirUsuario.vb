@@ -26,7 +26,7 @@
         End If
     End Sub
 
-    Private Sub TBContraseñaUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBContraseñaUsuario.KeyPress
+    Private Sub TBContraseñaUsuario_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             If TBContraseñaUsuario.Text.Count > 7 Then
                 e.Handled = True
@@ -40,7 +40,7 @@
         Me.Close()
     End Sub
 
-    Private Sub TBNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles TBNombreUsuario.TextChanged
+    Private Sub TBNombreUsuario_TextChanged(sender As Object, e As EventArgs)
     End Sub
 
     Private Sub BRegistrarCliente_Click(sender As Object, e As EventArgs) Handles BRegistrarCliente.Click
@@ -53,4 +53,11 @@
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
+
+    Private Sub BBuscarProducto_Click(sender As Object, e As EventArgs) Handles BBuscarProducto.Click
+        Dim frm As BuscarEmpleados = New BuscarEmpleados
+        frm.ShowInTaskbar = False
+        frm.ShowDialog()
+    End Sub
+
 End Class

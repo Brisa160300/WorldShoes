@@ -24,17 +24,24 @@ Partial Class GestionarProductos
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabListaCategorias = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
         Me.dgvListaProductos = New System.Windows.Forms.DataGridView()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Talle = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBoxGestionProductos = New System.Windows.Forms.GroupBox()
         Me.BEliminarProducto = New System.Windows.Forms.Button()
         Me.BModificarProducto = New System.Windows.Forms.Button()
         Me.BBuscarProducto = New System.Windows.Forms.Button()
         Me.TBGestionProductos = New System.Windows.Forms.TextBox()
         Me.BVolver = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabListaCategorias.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
         CType(Me.dgvListaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,30 +75,23 @@ Partial Class GestionarProductos
         '
         'dgvListaProductos
         '
-        Me.dgvListaProductos.AllowUserToAddRows = False
         Me.dgvListaProductos.AllowUserToDeleteRows = False
         Me.dgvListaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListaProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListaProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvListaProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListaProductos.ColumnHeadersHeight = 20
         Me.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListaProductos.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvListaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.Column3, Me.Categoria, Me.Stock, Me.Column1, Me.Column4, Me.Talle})
         Me.dgvListaProductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaProductos.EnableHeadersVisualStyles = False
         Me.dgvListaProductos.Location = New System.Drawing.Point(3, 2)
@@ -99,23 +99,72 @@ Partial Class GestionarProductos
         Me.dgvListaProductos.Name = "dgvListaProductos"
         Me.dgvListaProductos.ReadOnly = True
         Me.dgvListaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListaProductos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListaProductos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListaProductos.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvListaProductos.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvListaProductos.Size = New System.Drawing.Size(1041, 317)
-        Me.dgvListaProductos.TabIndex = 2
+        Me.dgvListaProductos.TabIndex = 8
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ID"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Producto"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.MinimumWidth = 6
+        Me.Categoria.Name = "Categoria"
+        Me.Categoria.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.MinimumWidth = 6
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Marca"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Precio"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Talle
+        '
+        Me.Talle.HeaderText = "Talle"
+        Me.Talle.MinimumWidth = 6
+        Me.Talle.Name = "Talle"
+        Me.Talle.ReadOnly = True
         '
         'GroupBoxGestionProductos
         '
         Me.GroupBoxGestionProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.GroupBoxGestionProductos.Controls.Add(Me.ComboBox2)
+        Me.GroupBoxGestionProductos.Controls.Add(Me.ComboBox1)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BEliminarProducto)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BModificarProducto)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BBuscarProducto)
@@ -204,6 +253,25 @@ Partial Class GestionarProductos
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BVolver.UseVisualStyleBackColor = False
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(506, 43)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(160, 30)
+        Me.ComboBox2.TabIndex = 31
+        Me.ComboBox2.Text = "Marcas"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(324, 43)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(5, 3, 3, 3)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 30)
+        Me.ComboBox1.TabIndex = 30
+        Me.ComboBox1.Text = "Categorias"
+        '
         'GestionarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -228,11 +296,20 @@ Partial Class GestionarProductos
 
     Friend WithEvents TabListaCategorias As TabControl
     Friend WithEvents TabPageListaTalle As TabPage
-    Friend WithEvents dgvListaProductos As DataGridView
     Friend WithEvents GroupBoxGestionProductos As GroupBox
     Friend WithEvents BEliminarProducto As Button
     Friend WithEvents BModificarProducto As Button
     Friend WithEvents BBuscarProducto As Button
     Friend WithEvents TBGestionProductos As TextBox
     Friend WithEvents BVolver As Button
+    Friend WithEvents dgvListaProductos As DataGridView
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Categoria As DataGridViewTextBoxColumn
+    Friend WithEvents Stock As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Talle As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

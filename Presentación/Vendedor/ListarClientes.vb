@@ -2,7 +2,7 @@
     Dim objNcliente = New NCliente
     Private Sub BEditarCliente_Click(sender As Object, e As EventArgs) Handles BEditarCliente.Click
         If (dgvListarClientes.SelectedRows.Count > 0) Or (dgvListarClientes.SelectedCells.Count > 0) Then
-            Dim frm As New ModificarCliente
+            Dim frm As New ModificarClienteGerente
             frm.fila = dgvListarClientes.CurrentRow.Cells(0).Value.ToString
             frm.TBNombreCliente.Text = dgvListarClientes.CurrentRow.Cells(1).Value.ToString
             frm.TBApellidoCliente.Text = dgvListarClientes.CurrentRow.Cells(2).Value.ToString
@@ -33,11 +33,12 @@
         Me.Close()
     End Sub
 
-    Private Sub BEliminarClientes_Click(sender As Object, e As EventArgs) Handles BEliminarClientes.Click
+    Private Sub BEliminarClientes_Click(sender As Object, e As EventArgs) 
         If (dgvListarClientes.SelectedRows.Count > 0) Or (dgvListarClientes.SelectedCells.Count > 0) Then
             Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
     End Sub
+
 End Class
