@@ -40,7 +40,7 @@ Partial Class ModificarCategoria
         Me.PanelModCategoria.Controls.Add(Me.GroupBoxDatosCliente)
         Me.PanelModCategoria.Controls.Add(Me.BModificarCategoria)
         Me.PanelModCategoria.Location = New System.Drawing.Point(79, 69)
-        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.PanelModCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelModCategoria.Name = "PanelModCategoria"
         Me.PanelModCategoria.Size = New System.Drawing.Size(611, 383)
         Me.PanelModCategoria.TabIndex = 3
@@ -53,7 +53,7 @@ Partial Class ModificarCategoria
         Me.BCancelarModifCategoria.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BCancelarModifCategoria.ForeColor = System.Drawing.Color.White
         Me.BCancelarModifCategoria.Location = New System.Drawing.Point(456, 307)
-        Me.BCancelarModifCategoria.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.BCancelarModifCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.BCancelarModifCategoria.Name = "BCancelarModifCategoria"
         Me.BCancelarModifCategoria.Size = New System.Drawing.Size(130, 52)
         Me.BCancelarModifCategoria.TabIndex = 12
@@ -68,9 +68,9 @@ Partial Class ModificarCategoria
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
         Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(51, 22)
-        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxDatosCliente.Name = "GroupBoxDatosCliente"
-        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(473, 246)
         Me.GroupBoxDatosCliente.TabIndex = 19
         Me.GroupBoxDatosCliente.TabStop = False
@@ -79,7 +79,7 @@ Partial Class ModificarCategoria
         'TBNombreCategoria
         '
         Me.TBNombreCategoria.Location = New System.Drawing.Point(139, 121)
-        Me.TBNombreCategoria.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBNombreCategoria.Margin = New System.Windows.Forms.Padding(4)
         Me.TBNombreCategoria.Name = "TBNombreCategoria"
         Me.TBNombreCategoria.Size = New System.Drawing.Size(221, 30)
         Me.TBNombreCategoria.TabIndex = 16
@@ -105,7 +105,7 @@ Partial Class ModificarCategoria
         Me.BModificarCategoria.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BModificarCategoria.ForeColor = System.Drawing.Color.White
         Me.BModificarCategoria.Location = New System.Drawing.Point(316, 307)
-        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.BModificarCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.BModificarCategoria.Name = "BModificarCategoria"
         Me.BModificarCategoria.Size = New System.Drawing.Size(130, 52)
         Me.BModificarCategoria.TabIndex = 13
@@ -120,7 +120,7 @@ Partial Class ModificarCategoria
         Me.ClientSize = New System.Drawing.Size(775, 500)
         Me.Controls.Add(Me.PanelModCategoria)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ModificarCategoria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ModificarCategoria"

@@ -15,8 +15,10 @@ Partial Public Class Usuarios
     Public Property Nombre As String
     Public Property Contraseña As String
     Public Property id_Perfil As Integer
-    Public Property estado As Integer
+    Public Property id_empleado As Integer
+    Public Property estado_usuario As Integer
 
+    Public Overridable Property empleados As empleados
     Public Overridable Property Perfiles As Perfiles
 
 End Class

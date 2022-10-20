@@ -131,8 +131,13 @@
     </Compile>
     <Compile Include="Datos\DCategoria.vb" />
     <Compile Include="Datos\Dcliente.vb" />
+    <Compile Include="Datos\DEmpleado.vb" />
     <Compile Include="Datos\DMarca.vb" />
     <Compile Include="Datos\DTalle.vb" />
+    <Compile Include="empleados.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\NEmpleado.vb" />
     <Compile Include="Logica\NMarca.vb" />
     <Compile Include="Logica\NTalle.vb" />
     <Compile Include="Logica\NCategoria.vb" />
@@ -173,6 +178,18 @@
     </Compile>
     <Compile Include="Perfiles.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\ModificarMarca.Designer.vb">
+      <DependentUpon>ModificarMarca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\ModificarMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\ModificarEmpleado.Designer.vb">
+      <DependentUpon>ModificarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\ModificarEmpleado.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\Gerente\MenuGerente.Designer.vb">
       <DependentUpon>MenuGerente.vb</DependentUpon>
@@ -465,9 +482,6 @@
     <Compile Include="sp_helpdiagrams_Result.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
     <Compile Include="talle.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
@@ -484,6 +498,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\ModificarMarca.resx">
+      <DependentUpon>ModificarMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\ModificarEmpleado.resx">
+      <DependentUpon>ModificarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\MenuGerente.resx">
       <DependentUpon>MenuGerente.vb</DependentUpon>
@@ -720,16 +740,6 @@
     <None Include="Resources\icon-user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelProyecto.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
-    </Content>
-    <Content Include="ModelProyecto.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.vb</LastGenOutput>
-    </Content>
     <None Include="Resources\ventas.png" />
     <None Include="Resources\lock_user_icon_195427 %282%29.png" />
     <None Include="Resources\icono user.png" />
@@ -781,6 +791,16 @@
     <None Include="Resources\Captura de pantalla %28356%29.png" />
     <None Include="Resources\Captura de pantalla %28357%29.png" />
     <None Include="Resources\Captura de pantalla %28364%29.png" />
+    <Content Include="ModelProyecto.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="ModelProyecto.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto.vb</LastGenOutput>
+    </Content>
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

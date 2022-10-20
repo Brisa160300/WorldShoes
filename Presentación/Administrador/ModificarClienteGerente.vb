@@ -1,4 +1,4 @@
-﻿Public Class ModificarCliente
+﻿Public Class ModificarClienteGerente
     Private objDcliente = New Dcliente
     Public fila As Integer
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click

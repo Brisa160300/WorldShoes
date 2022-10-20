@@ -27,27 +27,23 @@ Partial Class Añadir_Empleado
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BRegistrarCliente = New System.Windows.Forms.Button()
+        Me.TBDniEmpleado = New System.Windows.Forms.TextBox()
+        Me.LDniEmpleado = New System.Windows.Forms.Label()
+        Me.BRegistrarEmpleado = New System.Windows.Forms.Button()
         Me.BVolver = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TBCorreoEmpleado = New System.Windows.Forms.TextBox()
+        Me.LCorreoEmpleado = New System.Windows.Forms.Label()
+        Me.TBDireccionEmpleado = New System.Windows.Forms.TextBox()
+        Me.LDireccionEmpleado = New System.Windows.Forms.Label()
+        Me.LTelEmpleado = New System.Windows.Forms.Label()
+        Me.TBTelEmpleado = New System.Windows.Forms.TextBox()
+        Me.TBApellidoEmpleado = New System.Windows.Forms.TextBox()
+        Me.LApellidoEmpleado = New System.Windows.Forms.Label()
+        Me.TBNombreEmpleado = New System.Windows.Forms.TextBox()
+        Me.LNombreEmpleado = New System.Windows.Forms.Label()
         Me.TabControlListaEmpleados = New System.Windows.Forms.TabControl()
         Me.TabPageListaEmpleados = New System.Windows.Forms.TabPage()
         Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnTel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnDireccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnEmail = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.TabControlListaEmpleados.SuspendLayout()
@@ -58,38 +54,61 @@ Partial Class Añadir_Empleado
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.BRegistrarCliente)
+        Me.Panel1.Controls.Add(Me.TBDniEmpleado)
+        Me.Panel1.Controls.Add(Me.LDniEmpleado)
+        Me.Panel1.Controls.Add(Me.BRegistrarEmpleado)
         Me.Panel1.Controls.Add(Me.BVolver)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.TBCorreoEmpleado)
+        Me.Panel1.Controls.Add(Me.LCorreoEmpleado)
+        Me.Panel1.Controls.Add(Me.TBDireccionEmpleado)
+        Me.Panel1.Controls.Add(Me.LDireccionEmpleado)
+        Me.Panel1.Controls.Add(Me.LTelEmpleado)
+        Me.Panel1.Controls.Add(Me.TBTelEmpleado)
+        Me.Panel1.Controls.Add(Me.TBApellidoEmpleado)
+        Me.Panel1.Controls.Add(Me.LApellidoEmpleado)
+        Me.Panel1.Controls.Add(Me.TBNombreEmpleado)
+        Me.Panel1.Controls.Add(Me.LNombreEmpleado)
         Me.Panel1.Location = New System.Drawing.Point(58, 118)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(450, 463)
+        Me.Panel1.Size = New System.Drawing.Size(450, 481)
         Me.Panel1.TabIndex = 11
         '
-        'BRegistrarCliente
+        'TBDniEmpleado
         '
-        Me.BRegistrarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BRegistrarCliente.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.FlatAppearance.BorderSize = 2
-        Me.BRegistrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BRegistrarCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BRegistrarCliente.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarCliente.Location = New System.Drawing.Point(281, 371)
-        Me.BRegistrarCliente.Margin = New System.Windows.Forms.Padding(4)
-        Me.BRegistrarCliente.Name = "BRegistrarCliente"
-        Me.BRegistrarCliente.Size = New System.Drawing.Size(130, 52)
-        Me.BRegistrarCliente.TabIndex = 43
-        Me.BRegistrarCliente.Text = "Añadir"
-        Me.BRegistrarCliente.UseVisualStyleBackColor = False
+        Me.TBDniEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBDniEmpleado.Location = New System.Drawing.Point(189, 175)
+        Me.TBDniEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBDniEmpleado.Name = "TBDniEmpleado"
+        Me.TBDniEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBDniEmpleado.TabIndex = 45
+        '
+        'LDniEmpleado
+        '
+        Me.LDniEmpleado.AutoSize = True
+        Me.LDniEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LDniEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LDniEmpleado.Location = New System.Drawing.Point(48, 178)
+        Me.LDniEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LDniEmpleado.Name = "LDniEmpleado"
+        Me.LDniEmpleado.Size = New System.Drawing.Size(52, 25)
+        Me.LDniEmpleado.TabIndex = 44
+        Me.LDniEmpleado.Text = "DNI:"
+        '
+        'BRegistrarEmpleado
+        '
+        Me.BRegistrarEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BRegistrarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BRegistrarEmpleado.FlatAppearance.BorderSize = 2
+        Me.BRegistrarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BRegistrarEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BRegistrarEmpleado.ForeColor = System.Drawing.Color.White
+        Me.BRegistrarEmpleado.Location = New System.Drawing.Point(281, 397)
+        Me.BRegistrarEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.BRegistrarEmpleado.Name = "BRegistrarEmpleado"
+        Me.BRegistrarEmpleado.Size = New System.Drawing.Size(130, 52)
+        Me.BRegistrarEmpleado.TabIndex = 43
+        Me.BRegistrarEmpleado.Text = "Añadir"
+        Me.BRegistrarEmpleado.UseVisualStyleBackColor = False
         '
         'BVolver
         '
@@ -98,7 +117,7 @@ Partial Class Añadir_Empleado
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(143, 371)
+        Me.BVolver.Location = New System.Drawing.Point(143, 397)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
         Me.BVolver.Size = New System.Drawing.Size(130, 52)
@@ -107,110 +126,110 @@ Partial Class Añadir_Empleado
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BVolver.UseVisualStyleBackColor = False
         '
-        'TextBox5
+        'TBCorreoEmpleado
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(189, 288)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(150, 32)
-        Me.TextBox5.TabIndex = 41
+        Me.TBCorreoEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBCorreoEmpleado.Location = New System.Drawing.Point(189, 332)
+        Me.TBCorreoEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBCorreoEmpleado.Name = "TBCorreoEmpleado"
+        Me.TBCorreoEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBCorreoEmpleado.TabIndex = 41
         '
-        'Label4
+        'LCorreoEmpleado
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(48, 294)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 25)
-        Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Email:"
+        Me.LCorreoEmpleado.AutoSize = True
+        Me.LCorreoEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LCorreoEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LCorreoEmpleado.Location = New System.Drawing.Point(48, 335)
+        Me.LCorreoEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LCorreoEmpleado.Name = "LCorreoEmpleado"
+        Me.LCorreoEmpleado.Size = New System.Drawing.Size(72, 25)
+        Me.LCorreoEmpleado.TabIndex = 40
+        Me.LCorreoEmpleado.Text = "Email:"
         '
-        'TextBox6
+        'TBDireccionEmpleado
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(189, 236)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(150, 32)
-        Me.TextBox6.TabIndex = 39
+        Me.TBDireccionEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBDireccionEmpleado.Location = New System.Drawing.Point(189, 276)
+        Me.TBDireccionEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBDireccionEmpleado.Name = "TBDireccionEmpleado"
+        Me.TBDireccionEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBDireccionEmpleado.TabIndex = 39
         '
-        'Label5
+        'LDireccionEmpleado
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(48, 236)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(110, 25)
-        Me.Label5.TabIndex = 38
-        Me.Label5.Text = "Direccion:"
+        Me.LDireccionEmpleado.AutoSize = True
+        Me.LDireccionEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LDireccionEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LDireccionEmpleado.Location = New System.Drawing.Point(48, 279)
+        Me.LDireccionEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LDireccionEmpleado.Name = "LDireccionEmpleado"
+        Me.LDireccionEmpleado.Size = New System.Drawing.Size(110, 25)
+        Me.LDireccionEmpleado.TabIndex = 38
+        Me.LDireccionEmpleado.Text = "Direccion:"
         '
-        'Label6
+        'LTelEmpleado
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(48, 173)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(100, 25)
-        Me.Label6.TabIndex = 37
-        Me.Label6.Text = "Telefono:"
+        Me.LTelEmpleado.AutoSize = True
+        Me.LTelEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LTelEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LTelEmpleado.Location = New System.Drawing.Point(48, 229)
+        Me.LTelEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LTelEmpleado.Name = "LTelEmpleado"
+        Me.LTelEmpleado.Size = New System.Drawing.Size(100, 25)
+        Me.LTelEmpleado.TabIndex = 37
+        Me.LTelEmpleado.Text = "Telefono:"
         '
-        'TextBox7
+        'TBTelEmpleado
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.TextBox7.Location = New System.Drawing.Point(189, 173)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(150, 32)
-        Me.TextBox7.TabIndex = 36
+        Me.TBTelEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBTelEmpleado.Location = New System.Drawing.Point(189, 226)
+        Me.TBTelEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBTelEmpleado.Name = "TBTelEmpleado"
+        Me.TBTelEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBTelEmpleado.TabIndex = 36
         '
-        'TextBox4
+        'TBApellidoEmpleado
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(189, 119)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(150, 32)
-        Me.TextBox4.TabIndex = 35
+        Me.TBApellidoEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBApellidoEmpleado.Location = New System.Drawing.Point(189, 119)
+        Me.TBApellidoEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBApellidoEmpleado.Name = "TBApellidoEmpleado"
+        Me.TBApellidoEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBApellidoEmpleado.TabIndex = 35
         '
-        'Label3
+        'LApellidoEmpleado
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(48, 122)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 25)
-        Me.Label3.TabIndex = 34
-        Me.Label3.Text = "Apellido:"
+        Me.LApellidoEmpleado.AutoSize = True
+        Me.LApellidoEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LApellidoEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LApellidoEmpleado.Location = New System.Drawing.Point(48, 122)
+        Me.LApellidoEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LApellidoEmpleado.Name = "LApellidoEmpleado"
+        Me.LApellidoEmpleado.Size = New System.Drawing.Size(95, 25)
+        Me.LApellidoEmpleado.TabIndex = 34
+        Me.LApellidoEmpleado.Text = "Apellido:"
         '
-        'TextBox3
+        'TBNombreEmpleado
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(189, 61)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(150, 32)
-        Me.TextBox3.TabIndex = 33
+        Me.TBNombreEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.TBNombreEmpleado.Location = New System.Drawing.Point(189, 61)
+        Me.TBNombreEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreEmpleado.Name = "TBNombreEmpleado"
+        Me.TBNombreEmpleado.Size = New System.Drawing.Size(150, 32)
+        Me.TBNombreEmpleado.TabIndex = 33
         '
-        'Label2
+        'LNombreEmpleado
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(48, 61)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 25)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Nombre:"
+        Me.LNombreEmpleado.AutoSize = True
+        Me.LNombreEmpleado.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.LNombreEmpleado.ForeColor = System.Drawing.Color.White
+        Me.LNombreEmpleado.Location = New System.Drawing.Point(48, 61)
+        Me.LNombreEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LNombreEmpleado.Name = "LNombreEmpleado"
+        Me.LNombreEmpleado.Size = New System.Drawing.Size(93, 25)
+        Me.LNombreEmpleado.TabIndex = 32
+        Me.LNombreEmpleado.Text = "Nombre:"
         '
         'TabControlListaEmpleados
         '
@@ -239,6 +258,7 @@ Partial Class Añadir_Empleado
         '
         'dgvEmpleados
         '
+        Me.dgvEmpleados.AllowUserToAddRows = False
         Me.dgvEmpleados.AllowUserToDeleteRows = False
         Me.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -252,7 +272,6 @@ Partial Class Añadir_Empleado
         Me.dgvEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvEmpleados.ColumnHeadersHeight = 20
         Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ColumnNombre, Me.ColumnApellido, Me.ColumnTel, Me.ColumnDireccion, Me.ColumnEmail})
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -281,54 +300,6 @@ Partial Class Añadir_Empleado
         Me.dgvEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvEmpleados.Size = New System.Drawing.Size(541, 461)
         Me.dgvEmpleados.TabIndex = 2
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 81
-        '
-        'ColumnNombre
-        '
-        Me.ColumnNombre.HeaderText = "Nombre"
-        Me.ColumnNombre.MinimumWidth = 6
-        Me.ColumnNombre.Name = "ColumnNombre"
-        Me.ColumnNombre.ReadOnly = True
-        Me.ColumnNombre.Width = 82
-        '
-        'ColumnApellido
-        '
-        Me.ColumnApellido.HeaderText = "Apellido"
-        Me.ColumnApellido.MinimumWidth = 6
-        Me.ColumnApellido.Name = "ColumnApellido"
-        Me.ColumnApellido.ReadOnly = True
-        Me.ColumnApellido.Width = 81
-        '
-        'ColumnTel
-        '
-        Me.ColumnTel.HeaderText = "Telefono"
-        Me.ColumnTel.MinimumWidth = 6
-        Me.ColumnTel.Name = "ColumnTel"
-        Me.ColumnTel.ReadOnly = True
-        Me.ColumnTel.Width = 81
-        '
-        'ColumnDireccion
-        '
-        Me.ColumnDireccion.HeaderText = "Direccion"
-        Me.ColumnDireccion.MinimumWidth = 6
-        Me.ColumnDireccion.Name = "ColumnDireccion"
-        Me.ColumnDireccion.ReadOnly = True
-        Me.ColumnDireccion.Width = 82
-        '
-        'ColumnEmail
-        '
-        Me.ColumnEmail.HeaderText = "E-mail"
-        Me.ColumnEmail.MinimumWidth = 6
-        Me.ColumnEmail.Name = "ColumnEmail"
-        Me.ColumnEmail.ReadOnly = True
-        Me.ColumnEmail.Width = 81
         '
         'Label1
         '
@@ -367,26 +338,22 @@ Partial Class Añadir_Empleado
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents BRegistrarCliente As Button
+    Friend WithEvents TBCorreoEmpleado As TextBox
+    Friend WithEvents LCorreoEmpleado As Label
+    Friend WithEvents TBDireccionEmpleado As TextBox
+    Friend WithEvents LDireccionEmpleado As Label
+    Friend WithEvents LTelEmpleado As Label
+    Friend WithEvents TBTelEmpleado As TextBox
+    Friend WithEvents TBApellidoEmpleado As TextBox
+    Friend WithEvents LApellidoEmpleado As Label
+    Friend WithEvents TBNombreEmpleado As TextBox
+    Friend WithEvents LNombreEmpleado As Label
+    Friend WithEvents BRegistrarEmpleado As Button
     Friend WithEvents BVolver As Button
     Friend WithEvents TabControlListaEmpleados As TabControl
     Friend WithEvents TabPageListaEmpleados As TabPage
     Friend WithEvents dgvEmpleados As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnNombre As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnApellido As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnTel As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnDireccion As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnEmail As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
+    Friend WithEvents TBDniEmpleado As TextBox
+    Friend WithEvents LDniEmpleado As Label
 End Class

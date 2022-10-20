@@ -1,25 +1,26 @@
-﻿Public Class ModificarClienteGerente
-    Private objDcliente = New Dcliente
+﻿Public Class ModificarEmpleado
+
+    Private objDempleado = New DEmpleado
     Public fila As Integer
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
         Me.Close()
     End Sub
 
-    Private Sub BModCliente_Click(sender As Object, e As EventArgs) Handles BModCliente.Click
+    Private Sub BModEmpleado_Click(sender As Object, e As EventArgs) Handles BModEmpleados.Click
         Dim ask As MsgBoxResult
         If EspacioEnBlanco() = False Then
-            ask = MsgBox("Seguro que desea modificar a este cliente", vbQuestion + vbYesNo, "Confirmar Modificación")
+            ask = MsgBox("Seguro que desea modificar a este empleado", vbQuestion + vbYesNo, "Confirmar Modificación")
             If ask = vbYes Then
-                If objDcliente.modcliente(fila, TBNombreCliente.Text, TBApellidoCliente.Text, CInt(TBDniCliente.Text), CULng(TBTelCliente.Text), TBDireccion.Text, TBCorreoCliente.Text) Then
+                If objDempleado.modempleado(fila, TBNombreEmpleado.Text, TBApellidoEmpleado.Text, CInt(TBDniEmpleado.Text), CLng(TBTelEmpleado.Text), TBDireccionEmpleado.Text, TBCorreoEmpleado.Text) Then
                     MsgBox("Se han modificado los datos con exito", vbInformation, "Confirmar Modificacion")
                     Me.Close()
                 End If
             Else
-                TBDniCliente.Focus()
+                TBDniEmpleado.Focus()
             End If
         End If
     End Sub
-    Private Sub TBNombreCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreCliente.KeyPress, TBApellidoCliente.KeyPress
+    Private Sub TBNombreEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreEmpleado.KeyPress, TBApellidoEmpleado.KeyPress
 
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -27,7 +28,7 @@
         End If
     End Sub
 
-    Private Sub TBDniCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBTelCliente.KeyPress, TBDniCliente.KeyPress
+    Private Sub TBDniEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBTelEmpleado.KeyPress, TBDniEmpleado.KeyPress
 
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -37,12 +38,12 @@
 
     Public Function EspacioEnBlanco()
         Dim Ask As MsgBoxResult
-        Dim nombre As String = TBNombreCliente.Text
-        Dim apellido As String = TBApellidoCliente.Text
-        Dim dni As String = TBDniCliente.Text
-        Dim tel As String = TBTelCliente.Text
-        Dim correo As String = TBCorreoCliente.Text
-        Dim domicilio As String = TBDireccion.Text
+        Dim nombre As String = TBNombreEmpleado.Text
+        Dim apellido As String = TBApellidoEmpleado.Text
+        Dim dni As String = TBDniEmpleado.Text
+        Dim tel As String = TBTelEmpleado.Text
+        Dim correo As String = TBCorreoEmpleado.Text
+        Dim domicilio As String = TBDireccionEmpleado.Text
         If String.IsNullOrWhiteSpace(apellido) Or
            String.IsNullOrWhiteSpace(nombre) Or
            String.IsNullOrWhiteSpace(dni) Or

@@ -26,7 +26,7 @@
         Dim nombre As String = TBNombreCliente.Text
         Dim apellido As String = TBApellidoCliente.Text
         Dim dni As Integer = CInt(TBDniCliente.Text)
-        Dim tel As Integer = CInt(TBTelCliente.Text)
+        Dim tel As ULong = CULng(TBTelCliente.Text)
         Dim direccion As String = TBDireccion.Text
         Dim email As String = TBCorreoCliente.Text
 
@@ -95,4 +95,5 @@
     Private Sub BCancelar_Click_1(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
+
 End Class

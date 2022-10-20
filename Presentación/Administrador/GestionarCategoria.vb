@@ -3,9 +3,11 @@
     Private Sub BEditarCategoria_Click(sender As Object, e As EventArgs) Handles BEditarCategoria.Click
         If (dgvListarCategorias.SelectedRows.Count > 0) Or (dgvListarCategorias.SelectedCells.Count > 0) Then
             Dim frmEdit As New ModificarCategoria
+            frmEdit.fila = dgvListarCategorias.CurrentRow.Cells(0).Value.ToString
             frmEdit.TBNombreCategoria.Text = dgvListarCategorias.CurrentRow.Cells(1).Value.ToString
             frmEdit.ShowInTaskbar = False
             frmEdit.ShowDialog()
+            objNCategoria.cargarGrid(dgvListarCategorias)
 
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)

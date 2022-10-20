@@ -12,8 +12,9 @@ Imports System.Collections.Generic
 
 Partial Public Class talle_producto
     Public Property id_talle_producto As Integer
-    Public Property cod_producto As Nullable(Of Integer)
-    Public Property id_talle As Nullable(Of Integer)
+    Public Property cod_producto As Integer
+    Public Property id_talle As Integer
+    Public Property estado_talle_producto As Integer
 
     Public Overridable Property Productos As Productos
     Public Overridable Property talle As talle

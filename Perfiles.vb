@@ -13,6 +13,7 @@ Imports System.Collections.Generic
 Partial Public Class Perfiles
     Public Property id_Perfil As Integer
     Public Property Descripcion As String
+    Public Property estado_perfil As Integer
 
     Public Overridable Property Usuarios As ICollection(Of Usuarios) = New HashSet(Of Usuarios)
 

@@ -11,10 +11,12 @@
 
     Private Sub BEditarMarca_Click(sender As Object, e As EventArgs) Handles BEditarMarca.Click
         If (dgvListaMarca.SelectedRows.Count > 0) Or (dgvListaMarca.SelectedCells.Count > 0) Then
-            Dim frmEdit As New ModificarCategoria
-            frmEdit.TBNombreCategoria.Text = dgvListaMarca.CurrentRow.Cells(1).Value.ToString
+            Dim frmEdit As New ModificarMarca
+            frmEdit.fila = dgvListaMarca.CurrentRow.Cells(0).Value.ToString
+            frmEdit.TBModMarca.Text = dgvListaMarca.CurrentRow.Cells(1).Value.ToString
             frmEdit.ShowInTaskbar = False
             frmEdit.ShowDialog()
+            objNMarca.cargarGrid(dgvListaMarca)
 
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)

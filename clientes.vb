@@ -15,9 +15,9 @@ Partial Public Class clientes
     Public Property Nombre As String
     Public Property Apellido As String
     Public Property Dni As Integer
-    Public Property telefono As Integer
+    Public Property telefono As Long
     Public Property direccion As String
     Public Property email As String
-    Public Property id_estado_cliente As Nullable(Of Integer)
+    Public Property id_estado_cliente As Integer
 
 End Class

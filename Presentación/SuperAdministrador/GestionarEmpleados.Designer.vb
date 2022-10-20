@@ -30,15 +30,9 @@ Partial Class GestionarEmpleados
         Me.TabControlListaEmpleados = New System.Windows.Forms.TabControl()
         Me.TabPageListaEmpleados = New System.Windows.Forms.TabPage()
         Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnTel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnDireccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnEmail = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBoxGestionUsuarios = New System.Windows.Forms.GroupBox()
         Me.BEliminarUsuario = New System.Windows.Forms.Button()
-        Me.BModificarUsuario = New System.Windows.Forms.Button()
+        Me.BModificarEmpleado = New System.Windows.Forms.Button()
         Me.BBuscarUsuario = New System.Windows.Forms.Button()
         Me.TBGestionUsuario = New System.Windows.Forms.TextBox()
         Me.TabControlListaEmpleados.SuspendLayout()
@@ -90,6 +84,7 @@ Partial Class GestionarEmpleados
         '
         'dgvEmpleados
         '
+        Me.dgvEmpleados.AllowUserToAddRows = False
         Me.dgvEmpleados.AllowUserToDeleteRows = False
         Me.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -104,7 +99,6 @@ Partial Class GestionarEmpleados
         Me.dgvEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvEmpleados.ColumnHeadersHeight = 20
         Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ColumnNombre, Me.ColumnApellido, Me.ColumnTel, Me.ColumnDireccion, Me.ColumnEmail})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -134,53 +128,11 @@ Partial Class GestionarEmpleados
         Me.dgvEmpleados.Size = New System.Drawing.Size(1057, 307)
         Me.dgvEmpleados.TabIndex = 2
         '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        '
-        'ColumnNombre
-        '
-        Me.ColumnNombre.HeaderText = "Nombre"
-        Me.ColumnNombre.MinimumWidth = 6
-        Me.ColumnNombre.Name = "ColumnNombre"
-        Me.ColumnNombre.ReadOnly = True
-        '
-        'ColumnApellido
-        '
-        Me.ColumnApellido.HeaderText = "Apellido"
-        Me.ColumnApellido.MinimumWidth = 6
-        Me.ColumnApellido.Name = "ColumnApellido"
-        Me.ColumnApellido.ReadOnly = True
-        '
-        'ColumnTel
-        '
-        Me.ColumnTel.HeaderText = "Telefono"
-        Me.ColumnTel.MinimumWidth = 6
-        Me.ColumnTel.Name = "ColumnTel"
-        Me.ColumnTel.ReadOnly = True
-        '
-        'ColumnDireccion
-        '
-        Me.ColumnDireccion.HeaderText = "Direccion"
-        Me.ColumnDireccion.MinimumWidth = 6
-        Me.ColumnDireccion.Name = "ColumnDireccion"
-        Me.ColumnDireccion.ReadOnly = True
-        '
-        'ColumnEmail
-        '
-        Me.ColumnEmail.HeaderText = "E-mail"
-        Me.ColumnEmail.MinimumWidth = 6
-        Me.ColumnEmail.Name = "ColumnEmail"
-        Me.ColumnEmail.ReadOnly = True
-        '
         'GroupBoxGestionUsuarios
         '
         Me.GroupBoxGestionUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.BEliminarUsuario)
-        Me.GroupBoxGestionUsuarios.Controls.Add(Me.BModificarUsuario)
+        Me.GroupBoxGestionUsuarios.Controls.Add(Me.BModificarEmpleado)
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.BBuscarUsuario)
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.TBGestionUsuario)
         Me.GroupBoxGestionUsuarios.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
@@ -210,22 +162,22 @@ Partial Class GestionarEmpleados
         Me.BEliminarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarUsuario.UseVisualStyleBackColor = False
         '
-        'BModificarUsuario
+        'BModificarEmpleado
         '
-        Me.BModificarUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BModificarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BModificarUsuario.FlatAppearance.BorderSize = 2
-        Me.BModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BModificarUsuario.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BModificarUsuario.ForeColor = System.Drawing.Color.White
-        Me.BModificarUsuario.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
-        Me.BModificarUsuario.Location = New System.Drawing.Point(912, 31)
-        Me.BModificarUsuario.Margin = New System.Windows.Forms.Padding(4)
-        Me.BModificarUsuario.Name = "BModificarUsuario"
-        Me.BModificarUsuario.Size = New System.Drawing.Size(60, 50)
-        Me.BModificarUsuario.TabIndex = 13
-        Me.BModificarUsuario.Text = "z"
-        Me.BModificarUsuario.UseVisualStyleBackColor = False
+        Me.BModificarEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BModificarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BModificarEmpleado.FlatAppearance.BorderSize = 2
+        Me.BModificarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BModificarEmpleado.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BModificarEmpleado.ForeColor = System.Drawing.Color.White
+        Me.BModificarEmpleado.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
+        Me.BModificarEmpleado.Location = New System.Drawing.Point(912, 31)
+        Me.BModificarEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.BModificarEmpleado.Name = "BModificarEmpleado"
+        Me.BModificarEmpleado.Size = New System.Drawing.Size(60, 50)
+        Me.BModificarEmpleado.TabIndex = 13
+        Me.BModificarEmpleado.Text = "z"
+        Me.BModificarEmpleado.UseVisualStyleBackColor = False
         '
         'BBuscarUsuario
         '
@@ -277,15 +229,9 @@ Partial Class GestionarEmpleados
     Friend WithEvents TabControlListaEmpleados As TabControl
     Friend WithEvents TabPageListaEmpleados As TabPage
     Friend WithEvents dgvEmpleados As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnNombre As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnApellido As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnTel As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnDireccion As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnEmail As DataGridViewTextBoxColumn
     Friend WithEvents GroupBoxGestionUsuarios As GroupBox
     Friend WithEvents BEliminarUsuario As Button
-    Friend WithEvents BModificarUsuario As Button
+    Friend WithEvents BModificarEmpleado As Button
     Friend WithEvents BBuscarUsuario As Button
     Friend WithEvents TBGestionUsuario As TextBox
 End Class
