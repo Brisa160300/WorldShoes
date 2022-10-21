@@ -29,4 +29,34 @@
         End Try
 
     End Function
+
+    Function EliminarCateg(idcateg As Integer) As Boolean
+        Try
+            Dim CategMod = (From c In ctx.Categoria Where c.id_categoria = idcateg
+                            Select c).First
+            CategMod.id_estado_categoria = 0
+            ctx.SaveChanges()
+            MsgBox("Se ha eliminado con exito", vbInformation, "Confirmar Eliminación")
+            Return True
+        Catch ex As Exception
+            MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
+            Return False
+        End Try
+
+    End Function
+
+    Function AltaCateg(idcateg As Integer) As Boolean
+        Try
+            Dim CategMod = (From c In ctx.Categoria Where c.id_categoria = idcateg
+                            Select c).First
+            CategMod.id_estado_categoria = 1
+            MsgBox("Se ha dado de alta con exito", vbInformation, "Confirmar Alta")
+            ctx.SaveChanges()
+            Return True
+        Catch ex As Exception
+            MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
+            Return False
+        End Try
+
+    End Function
 End Class

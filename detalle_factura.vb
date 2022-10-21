@@ -10,11 +10,14 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class sp_helpdiagrams_Result
-    Public Property Database As String
-    Public Property Name As String
-    Public Property ID As Integer
-    Public Property Owner As String
-    Public Property OwnerID As Integer
+Partial Public Class detalle_factura
+    Public Property id_detalle_factura As Integer
+    Public Property id_factura As Integer
+    Public Property id_producto As Integer
+    Public Property id_talle_producto As Integer
+    Public Property cantidad_detalle As Integer
+    Public Property importe_detalle As Decimal
+
+    Public Overridable Property factura As factura
 
 End Class

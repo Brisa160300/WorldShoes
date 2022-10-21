@@ -22,10 +22,10 @@ Partial Class GestionarCategoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabListaCategorias = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
         Me.dgvListarCategorias = New System.Windows.Forms.DataGridView()
@@ -34,6 +34,7 @@ Partial Class GestionarCategoria
         Me.BEditarCategoria = New System.Windows.Forms.Button()
         Me.BBuscarCategoria = New System.Windows.Forms.Button()
         Me.TBGestionCategoria = New System.Windows.Forms.TextBox()
+        Me.BAltaCategoria = New System.Windows.Forms.Button()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.TabListaCategorias.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
@@ -74,42 +75,42 @@ Partial Class GestionarCategoria
         Me.dgvListarCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarCategorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListarCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarCategorias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarCategorias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvListarCategorias.ColumnHeadersHeight = 20
         Me.dgvListarCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListarCategorias.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvListarCategorias.DefaultCellStyle = DataGridViewCellStyle10
         Me.dgvListarCategorias.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListarCategorias.EnableHeadersVisualStyles = False
         Me.dgvListarCategorias.Location = New System.Drawing.Point(3, 2)
         Me.dgvListarCategorias.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListarCategorias.Name = "dgvListarCategorias"
         Me.dgvListarCategorias.ReadOnly = True
-        Me.dgvListarCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarCategorias.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvListarCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarCategorias.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvListarCategorias.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvListarCategorias.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        Me.dgvListarCategorias.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvListarCategorias.Size = New System.Drawing.Size(1047, 290)
         Me.dgvListarCategorias.TabIndex = 2
         '
@@ -119,6 +120,7 @@ Partial Class GestionarCategoria
         Me.GroupBox1.Controls.Add(Me.BEditarCategoria)
         Me.GroupBox1.Controls.Add(Me.BBuscarCategoria)
         Me.GroupBox1.Controls.Add(Me.TBGestionCategoria)
+        Me.GroupBox1.Controls.Add(Me.BAltaCategoria)
         Me.GroupBox1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(37, 74)
@@ -187,6 +189,22 @@ Partial Class GestionarCategoria
         Me.TBGestionCategoria.Size = New System.Drawing.Size(173, 30)
         Me.TBGestionCategoria.TabIndex = 6
         '
+        'BAltaCategoria
+        '
+        Me.BAltaCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BAltaCategoria.FlatAppearance.BorderSize = 2
+        Me.BAltaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BAltaCategoria.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAltaCategoria.ForeColor = System.Drawing.Color.White
+        Me.BAltaCategoria.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
+        Me.BAltaCategoria.Location = New System.Drawing.Point(973, 33)
+        Me.BAltaCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.BAltaCategoria.Name = "BAltaCategoria"
+        Me.BAltaCategoria.Size = New System.Drawing.Size(65, 50)
+        Me.BAltaCategoria.TabIndex = 15
+        Me.BAltaCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BAltaCategoria.UseVisualStyleBackColor = False
+        '
         'BVolver
         '
         Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -233,4 +251,5 @@ Partial Class GestionarCategoria
     Friend WithEvents BBuscarCategoria As Button
     Friend WithEvents TBGestionCategoria As TextBox
     Friend WithEvents BVolver As Button
+    Friend WithEvents BAltaCategoria As Button
 End Class

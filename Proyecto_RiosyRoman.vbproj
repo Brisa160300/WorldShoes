@@ -133,17 +133,31 @@
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Datos\DEmpleado.vb" />
     <Compile Include="Datos\DMarca.vb" />
+    <Compile Include="Datos\DPerfil.vb" />
     <Compile Include="Datos\DProducto.vb" />
     <Compile Include="Datos\DTalle.vb" />
+    <Compile Include="Datos\DTalleProducto.vb" />
+    <Compile Include="Datos\DUsuario.vb" />
+    <Compile Include="detalle_factura.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
     <Compile Include="empleados.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="factura.vb">
+      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\EProducto.vb" />
+    <Compile Include="Logica\EUsuario.vb" />
     <Compile Include="Logica\NEmpleado.vb" />
     <Compile Include="Logica\NMarca.vb" />
+    <Compile Include="Logica\NPerfil.vb" />
     <Compile Include="Logica\NProducto.vb" />
     <Compile Include="Logica\NTalle.vb" />
     <Compile Include="Logica\NCategoria.vb" />
     <Compile Include="Logica\NCliente.vb" />
+    <Compile Include="Logica\NTalleProducto.vb" />
+    <Compile Include="Logica\NUsuario.vb" />
     <Compile Include="Marcas.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
@@ -185,6 +199,24 @@
       <DependentUpon>ModificarMarca.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Administrador\ModificarMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\AñadirPerfil.Designer.vb">
+      <DependentUpon>AñadirPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\AñadirPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\AñadirUsuarios.Designer.vb">
+      <DependentUpon>AñadirUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\AñadirUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\GestionarPerfiles.Designer.vb">
+      <DependentUpon>GestionarPerfiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\GestionarPerfiles.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\SuperAdministrador\ModificarEmpleado.Designer.vb">
@@ -403,6 +435,12 @@
     <Compile Include="Presentación\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\SuperAdministrador\ModificarPerfiles.Designer.vb">
+      <DependentUpon>ModificarPerfiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\ModificarPerfiles.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\AñadirCliente.Designer.vb">
       <DependentUpon>AñadirCliente.vb</DependentUpon>
     </Compile>
@@ -478,12 +516,6 @@
     <Compile Include="Productos.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
     <Compile Include="talle.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
@@ -503,6 +535,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Administrador\ModificarMarca.resx">
       <DependentUpon>ModificarMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\AñadirPerfil.resx">
+      <DependentUpon>AñadirPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\AñadirUsuarios.resx">
+      <DependentUpon>AñadirUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\GestionarPerfiles.resx">
+      <DependentUpon>GestionarPerfiles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\SuperAdministrador\ModificarEmpleado.resx">
       <DependentUpon>ModificarEmpleado.vb</DependentUpon>
@@ -611,6 +652,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\ModificarPerfiles.resx">
+      <DependentUpon>ModificarPerfiles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\AñadirCliente.resx">
       <DependentUpon>AñadirCliente.vb</DependentUpon>

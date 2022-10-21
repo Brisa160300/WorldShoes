@@ -17,7 +17,7 @@ Partial Public Class empleados
     Public Property dni As Integer
     Public Property telefono As Long
     Public Property direccion As String
-    Public Property email As String
+    Public Property correo As String
     Public Property estado_empleado As Integer
 
     Public Overridable Property Usuarios As ICollection(Of Usuarios) = New HashSet(Of Usuarios)
