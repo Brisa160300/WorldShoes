@@ -22,10 +22,10 @@ Partial Class GestionarEmpleados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.TabControlListaEmpleados = New System.Windows.Forms.TabControl()
         Me.TabPageListaEmpleados = New System.Windows.Forms.TabPage()
@@ -35,6 +35,7 @@ Partial Class GestionarEmpleados
         Me.BModificarEmpleado = New System.Windows.Forms.Button()
         Me.BBuscarUsuario = New System.Windows.Forms.Button()
         Me.TBGestionUsuario = New System.Windows.Forms.TextBox()
+        Me.BAltaEmpleado = New System.Windows.Forms.Button()
         Me.TabControlListaEmpleados.SuspendLayout()
         Me.TabPageListaEmpleados.SuspendLayout()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,24 +90,24 @@ Partial Class GestionarEmpleados
         Me.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvEmpleados.ColumnHeadersHeight = 20
         Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvEmpleados.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvEmpleados.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmpleados.EnableHeadersVisualStyles = False
         Me.dgvEmpleados.Location = New System.Drawing.Point(3, 2)
@@ -114,17 +115,17 @@ Partial Class GestionarEmpleados
         Me.dgvEmpleados.Name = "dgvEmpleados"
         Me.dgvEmpleados.ReadOnly = True
         Me.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvEmpleados.RowHeadersWidth = 51
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.dgvEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        Me.dgvEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvEmpleados.Size = New System.Drawing.Size(1057, 307)
         Me.dgvEmpleados.TabIndex = 2
         '
@@ -135,6 +136,7 @@ Partial Class GestionarEmpleados
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.BModificarEmpleado)
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.BBuscarUsuario)
         Me.GroupBoxGestionUsuarios.Controls.Add(Me.TBGestionUsuario)
+        Me.GroupBoxGestionUsuarios.Controls.Add(Me.BAltaEmpleado)
         Me.GroupBoxGestionUsuarios.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxGestionUsuarios.ForeColor = System.Drawing.Color.White
         Me.GroupBoxGestionUsuarios.Location = New System.Drawing.Point(43, 51)
@@ -204,6 +206,22 @@ Partial Class GestionarEmpleados
         Me.TBGestionUsuario.Size = New System.Drawing.Size(173, 30)
         Me.TBGestionUsuario.TabIndex = 6
         '
+        'BAltaEmpleado
+        '
+        Me.BAltaEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BAltaEmpleado.FlatAppearance.BorderSize = 2
+        Me.BAltaEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BAltaEmpleado.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAltaEmpleado.ForeColor = System.Drawing.Color.White
+        Me.BAltaEmpleado.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
+        Me.BAltaEmpleado.Location = New System.Drawing.Point(980, 31)
+        Me.BAltaEmpleado.Margin = New System.Windows.Forms.Padding(4)
+        Me.BAltaEmpleado.Name = "BAltaEmpleado"
+        Me.BAltaEmpleado.Size = New System.Drawing.Size(60, 50)
+        Me.BAltaEmpleado.TabIndex = 15
+        Me.BAltaEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BAltaEmpleado.UseVisualStyleBackColor = False
+        '
         'GestionarEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -234,4 +252,5 @@ Partial Class GestionarEmpleados
     Friend WithEvents BModificarEmpleado As Button
     Friend WithEvents BBuscarUsuario As Button
     Friend WithEvents TBGestionUsuario As TextBox
+    Friend WithEvents BAltaEmpleado As Button
 End Class

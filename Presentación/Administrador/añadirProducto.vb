@@ -1,5 +1,7 @@
 ﻿Public Class AñadirProducto
 
+    Private objDProducto = New DProducto
+    Private objNProducto = New NProducto
     'botón "añadir" del formulario añadir producto.
     Private Sub BAñadirProducto_Click(sender As Object, e As EventArgs) Handles BAñadirProducto.Click
         Dim Ask As MsgBoxResult
@@ -19,7 +21,7 @@
     Public Function EspacioEnBlanco()
         Dim Ask As MsgBoxResult
         Dim nombre As String = TBNombreProducto.Text
-        Dim categoria As String = ComboBoxCategoria.Text
+        Dim categoria As String = CBCategoria.Text
         Dim stock As String = TBStock.Text
         Dim precio As String = TBPrecio.Text
         'Dim imagen As String = TBImagen.Text
@@ -52,4 +54,9 @@
         End If
     End Sub
 
+    Private Sub AñadirProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        objNProducto.cargarComboxCateg(CBCategoria)
+        objNProducto.cargarComboxMarca(CBMarca)
+        objNProducto.cargarComboxTalle(CBTalle)
+    End Sub
 End Class

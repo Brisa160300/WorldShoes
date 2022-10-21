@@ -18,4 +18,31 @@
         End If
 
     End Function
+
+    Public Sub cargarComboxCateg(combo As ComboBox)
+        Dim categ As DCategoria = New DCategoria
+        combo.DataSource = categ.getCategoriasAll()
+        combo.DisplayMember = "descripcion_categoria"
+        combo.ValueMember = "id_categoria"
+        combo.SelectedValue = -1
+
+    End Sub
+
+    Public Sub cargarComboxTalle(combo As ComboBox)
+        Dim tal As DTalle = New DTalle
+        combo.DataSource = tal.getTallesAll()
+        combo.DisplayMember = "descripcion"
+        combo.ValueMember = "id_talle"
+        combo.SelectedValue = -1
+
+    End Sub
+
+    Public Sub cargarComboxMarca(combo As ComboBox)
+        Dim marc As DMarca = New DMarca
+        combo.DataSource = marc.getMarcasAll()
+        combo.DisplayMember = "Descripcion"
+        combo.ValueMember = "id_Marca"
+        combo.SelectedValue = -1
+
+    End Sub
 End Class

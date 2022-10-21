@@ -1,5 +1,6 @@
 ﻿Public Class GestionarEmpleados
-    Dim objNEmpleado As NEmpleado = New NEmpleado
+    Private objNEmpleado As NEmpleado = New NEmpleado
+    Private objDEmpleado As DEmpleado = New DEmpleado
     Private Sub GestionarEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNEmpleado.cargarGrid(dgvEmpleados)
     End Sub
@@ -24,5 +25,29 @@
 
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
+    End Sub
+
+    Private Sub BAltaEmpleado_Click(sender As Object, e As EventArgs) Handles BAltaEmpleado.Click
+        If (dgvEmpleados.SelectedRows.Count > 0) Or (dgvEmpleados.SelectedCells.Count > 0) Then
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDEmpleado.AltaEmpleado(CInt(dgvEmpleados.CurrentRow.Cells(0).Value.ToString))
+                objNEmpleado.cargarGrid(dgvEmpleados)
+            End If
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
+
+    Private Sub BEliminarUsuario_Click(sender As Object, e As EventArgs) Handles BEliminarUsuario.Click
+        If (dgvEmpleados.SelectedRows.Count > 0) Or (dgvEmpleados.SelectedCells.Count > 0) Then
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDEmpleado.EliminarEmpleado(CInt(dgvEmpleados.CurrentRow.Cells(0).Value.ToString))
+                objNEmpleado.cargarGrid(dgvEmpleados)
+            End If
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
     End Sub
 End Class

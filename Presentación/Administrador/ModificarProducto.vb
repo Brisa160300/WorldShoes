@@ -52,4 +52,5 @@
     Private Sub BCancelarModifCliente_Click_1(sender As Object, e As EventArgs) Handles BCancelarModifCliente.Click
         Me.Close()
     End Sub
+
 End Class

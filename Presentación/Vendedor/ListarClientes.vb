@@ -10,6 +10,7 @@
             frm.TBTelCliente.Text = dgvListarClientes.CurrentRow.Cells(4).Value
             frm.TBDireccion.Text = dgvListarClientes.CurrentRow.Cells(5).Value
             frm.TBCorreoCliente.Text = dgvListarClientes.CurrentRow.Cells(6).Value
+            frm.ShowInTaskbar = False
             frm.ShowDialog()
             objNcliente.cargarGrid(dgvListarClientes)
         Else

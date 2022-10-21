@@ -1,5 +1,6 @@
 ﻿Public Class ListarMarcas
     Private objNMarca = New NMarca
+    Private objDMarca = New DMarca
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
@@ -26,6 +27,22 @@
     Private Sub BEliminarMarca_Click(sender As Object, e As EventArgs) Handles BEliminarMarca.Click
         If (dgvListaMarca.SelectedRows.Count > 0) Or (dgvListaMarca.SelectedCells.Count > 0) Then
             Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDMarca.EliminarMarca(CInt(dgvListaMarca.CurrentRow.Cells(0).Value.ToString))
+                objNMarca.cargarGrid(dgvListaMarca)
+            End If
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
+
+    Private Sub BAltaMarca_Click(sender As Object, e As EventArgs) Handles BAltaMarca.Click
+        If (dgvListaMarca.SelectedRows.Count > 0) Or (dgvListaMarca.SelectedCells.Count > 0) Then
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDMarca.AltaMarca(CInt(dgvListaMarca.CurrentRow.Cells(0).Value.ToString))
+                objNMarca.cargarGrid(dgvListaMarca)
+            End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If

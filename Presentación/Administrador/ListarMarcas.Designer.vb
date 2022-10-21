@@ -33,6 +33,7 @@ Partial Class ListarMarcas
         Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
         Me.dgvListaMarca = New System.Windows.Forms.DataGridView()
         Me.BVolver = New System.Windows.Forms.Button()
+        Me.BAltaMarca = New System.Windows.Forms.Button()
         Me.GroupBoxBuscarMarcas.SuspendLayout()
         Me.TabControlListaProductos.SuspendLayout()
         Me.TabPageListaProducto.SuspendLayout()
@@ -46,6 +47,7 @@ Partial Class ListarMarcas
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.BEditarMarca)
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.BBuscarMarca)
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.TBBuscarMarca)
+        Me.GroupBoxBuscarMarcas.Controls.Add(Me.BAltaMarca)
         Me.GroupBoxBuscarMarcas.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxBuscarMarcas.ForeColor = System.Drawing.Color.White
         Me.GroupBoxBuscarMarcas.Location = New System.Drawing.Point(39, 50)
@@ -196,6 +198,22 @@ Partial Class ListarMarcas
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BVolver.UseVisualStyleBackColor = False
         '
+        'BAltaMarca
+        '
+        Me.BAltaMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BAltaMarca.FlatAppearance.BorderSize = 2
+        Me.BAltaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BAltaMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAltaMarca.ForeColor = System.Drawing.Color.White
+        Me.BAltaMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
+        Me.BAltaMarca.Location = New System.Drawing.Point(988, 30)
+        Me.BAltaMarca.Margin = New System.Windows.Forms.Padding(4)
+        Me.BAltaMarca.Name = "BAltaMarca"
+        Me.BAltaMarca.Size = New System.Drawing.Size(65, 50)
+        Me.BAltaMarca.TabIndex = 17
+        Me.BAltaMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BAltaMarca.UseVisualStyleBackColor = False
+        '
         'ListarMarcas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -227,4 +245,5 @@ Partial Class ListarMarcas
     Friend WithEvents BVolver As Button
     Friend WithEvents BEliminarMarca As Button
     Friend WithEvents BEditarMarca As Button
+    Friend WithEvents BAltaMarca As Button
 End Class

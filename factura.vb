@@ -10,16 +10,16 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class Usuarios
-    Public Property id_Usuario As Integer
-    Public Property Nombre As String
-    Public Property Contraseña As String
-    Public Property id_Perfil As Integer
-    Public Property id_empleado As Integer
-    Public Property estado_usuario As Integer
+Partial Public Class factura
+    Public Property id_factura As Integer
+    Public Property id_usuario As Integer
+    Public Property fecha_factura As Date
+    Public Property cantidad_factura As Short
+    Public Property importe_factura As Decimal
+    Public Property id_cliente As Integer
 
-    Public Overridable Property empleados As empleados
-    Public Overridable Property Perfiles As Perfiles
-    Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
+    Public Overridable Property Usuarios As Usuarios
+    Public Overridable Property clientes As clientes
+    Public Overridable Property detalle_factura As ICollection(Of detalle_factura) = New HashSet(Of detalle_factura)
 
 End Class

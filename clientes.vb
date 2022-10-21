@@ -20,4 +20,6 @@ Partial Public Class clientes
     Public Property email As String
     Public Property id_estado_cliente As Integer
 
+    Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
+
 End Class

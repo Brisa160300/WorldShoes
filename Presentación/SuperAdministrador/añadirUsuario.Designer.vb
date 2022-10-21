@@ -49,7 +49,6 @@ Partial Class añadirUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.BBuscarProducto = New System.Windows.Forms.Button()
         Me.TBGestionProductos = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -61,6 +60,7 @@ Partial Class añadirUsuario
         Me.TBConfirmarPass = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.BBuscarProducto = New System.Windows.Forms.Button()
         Me.TabPageListaUsuarios.SuspendLayout()
         CType(Me.dgvListaUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlRegUsuarios.SuspendLayout()
@@ -370,22 +370,6 @@ Partial Class añadirUsuario
         Me.TextBox2.Size = New System.Drawing.Size(150, 27)
         Me.TextBox2.TabIndex = 17
         '
-        'BBuscarProducto
-        '
-        Me.BBuscarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BBuscarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.BBuscarProducto.FlatAppearance.BorderSize = 2
-        Me.BBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
-        Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarProducto.Location = New System.Drawing.Point(199, 74)
-        Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
-        Me.BBuscarProducto.Name = "BBuscarProducto"
-        Me.BBuscarProducto.Size = New System.Drawing.Size(65, 50)
-        Me.BBuscarProducto.TabIndex = 16
-        Me.BBuscarProducto.UseVisualStyleBackColor = False
-        '
         'TBGestionProductos
         '
         Me.TBGestionProductos.Enabled = False
@@ -513,6 +497,22 @@ Partial Class añadirUsuario
         Me.Label10.Size = New System.Drawing.Size(110, 21)
         Me.Label10.TabIndex = 4
         Me.Label10.Text = "Contraseña:"
+        '
+        'BBuscarProducto
+        '
+        Me.BBuscarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BBuscarProducto.FlatAppearance.BorderSize = 2
+        Me.BBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
+        Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
+        Me.BBuscarProducto.Location = New System.Drawing.Point(199, 74)
+        Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarProducto.Name = "BBuscarProducto"
+        Me.BBuscarProducto.Size = New System.Drawing.Size(65, 50)
+        Me.BBuscarProducto.TabIndex = 16
+        Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
         'añadirUsuario
         '

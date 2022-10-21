@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WorldShoes_Roman_RiosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WorldShoes_Roman_RiosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="id_categoria" />
@@ -26,6 +26,17 @@
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="id_estado_cliente" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="detalle_factura">
+          <Key>
+            <PropertyRef Name="id_detalle_factura" />
+          </Key>
+          <Property Name="id_detalle_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_factura" Type="int" Nullable="false" />
+          <Property Name="id_producto" Type="int" Nullable="false" />
+          <Property Name="id_talle_producto" Type="int" Nullable="false" />
+          <Property Name="cantidad_detalle" Type="int" Nullable="false" />
+          <Property Name="importe_detalle" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
         <EntityType Name="empleados">
           <Key>
             <PropertyRef Name="Id_empleado" />
@@ -38,6 +49,17 @@
           <Property Name="direccion" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="estado_empleado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="factura">
+          <Key>
+            <PropertyRef Name="id_factura" />
+          </Key>
+          <Property Name="id_factura" Type="int" Nullable="false" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="id_cliente" Type="int" Nullable="false" />
+          <Property Name="fecha_factura" Type="date" Nullable="false" />
+          <Property Name="cantidad_factura" Type="smallint" Nullable="false" />
+          <Property Name="importe_factura" Type="decimal" Precision="8" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Marcas">
           <Key>
@@ -95,6 +117,18 @@
           <Property Name="id_empleado" Type="int" Nullable="false" />
           <Property Name="estado_usuario" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_detalle_factura_factura">
+          <End Role="factura" Type="Self.factura" Multiplicity="1" />
+          <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="factura">
+              <PropertyRef Name="id_factura" />
+            </Principal>
+            <Dependent Role="detalle_factura">
+              <PropertyRef Name="id_factura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_empleado_usuario">
           <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -104,6 +138,30 @@
             </Principal>
             <Dependent Role="Usuarios">
               <PropertyRef Name="id_empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_cliente">
+          <End Role="clientes" Type="Self.clientes" Multiplicity="1" />
+          <End Role="factura" Type="Self.factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clientes">
+              <PropertyRef Name="Id_Cliente" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_usuario">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="factura" Type="Self.factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="id_Usuario" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_usuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -201,16 +259,30 @@
         <EntityContainer Name="WorldShoes_Roman_RiosModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="empleados" EntityType="Self.empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="factura" EntityType="Self.factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Perfiles" EntityType="Self.Perfiles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="talle" EntityType="Self.talle" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="talle_producto" EntityType="Self.talle_producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_detalle_factura_factura" Association="Self.FK_detalle_factura_factura">
+            <End Role="factura" EntitySet="factura" />
+            <End Role="detalle_factura" EntitySet="detalle_factura" />
+          </AssociationSet>
           <AssociationSet Name="FK_empleado_usuario" Association="Self.FK_empleado_usuario">
             <End Role="empleados" EntitySet="empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
+            <End Role="clientes" EntitySet="clientes" />
+            <End Role="factura" EntitySet="factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_usuario" Association="Self.FK_factura_usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="factura" EntitySet="factura" />
           </AssociationSet>
           <AssociationSet Name="FK_perfil_usuario" Association="Self.FK_perfil_usuario">
             <End Role="Perfiles" EntitySet="Perfiles" />
@@ -233,8 +305,7 @@
             <End Role="talle_producto" EntitySet="talle_producto" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WorldShoes_Roman_RiosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -259,6 +330,7 @@
           <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_estado_cliente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="factura" Relationship="WorldShoes_Roman_RiosModel.FK_factura_cliente" FromRole="clientes" ToRole="factura" />
         </EntityType>
         <EntityType Name="empleados">
           <Key>
@@ -339,6 +411,7 @@
           <Property Name="estado_usuario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="empleados" Relationship="Self.FK_empleado_usuario" FromRole="Usuarios" ToRole="empleados" />
           <NavigationProperty Name="Perfiles" Relationship="Self.FK_perfil_usuario" FromRole="Usuarios" ToRole="Perfiles" />
+          <NavigationProperty Name="factura" Relationship="WorldShoes_Roman_RiosModel.FK_id_usuario" FromRole="Usuarios" ToRole="factura" />
         </EntityType>
         <Association Name="FK_producto_categoria">
           <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
@@ -476,6 +549,20 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="detalle_factura" EntityType="WorldShoes_Roman_RiosModel.detalle_factura" />
+          <EntitySet Name="factura" EntityType="WorldShoes_Roman_RiosModel.factura" />
+          <AssociationSet Name="FK_id_usuario" Association="WorldShoes_Roman_RiosModel.FK_id_usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="factura" EntitySet="factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_cliente" Association="WorldShoes_Roman_RiosModel.FK_factura_cliente">
+            <End Role="clientes" EntitySet="clientes" />
+            <End Role="factura" EntitySet="factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detalle_factura_factura" Association="WorldShoes_Roman_RiosModel.FK_detalle_factura_factura">
+            <End Role="factura" EntitySet="factura" />
+            <End Role="detalle_factura" EntitySet="detalle_factura" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -488,6 +575,68 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="detalle_factura">
+          <Key>
+            <PropertyRef Name="id_detalle_factura" />
+          </Key>
+          <Property Name="id_detalle_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_producto" Type="Int32" Nullable="false" />
+          <Property Name="id_talle_producto" Type="Int32" Nullable="false" />
+          <Property Name="cantidad_detalle" Type="Int32" Nullable="false" />
+          <Property Name="importe_detalle" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="factura" Relationship="WorldShoes_Roman_RiosModel.FK_detalle_factura_factura" FromRole="detalle_factura" ToRole="factura" />
+        </EntityType>
+        <EntityType Name="factura">
+          <Key>
+            <PropertyRef Name="id_factura" />
+          </Key>
+          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
+          <Property Name="fecha_factura" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cantidad_factura" Type="Int16" Nullable="false" />
+          <Property Name="importe_factura" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <NavigationProperty Name="Usuarios" Relationship="WorldShoes_Roman_RiosModel.FK_id_usuario" FromRole="factura" ToRole="Usuarios" />
+          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="clientes" Relationship="WorldShoes_Roman_RiosModel.FK_factura_cliente" FromRole="factura" ToRole="clientes" />
+          <NavigationProperty Name="detalle_factura" Relationship="WorldShoes_Roman_RiosModel.FK_detalle_factura_factura" FromRole="factura" ToRole="detalle_factura" />
+        </EntityType>
+        <Association Name="FK_id_usuario">
+          <End Type="WorldShoes_Roman_RiosModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.factura" Role="factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="id_Usuario" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_cliente">
+          <End Type="WorldShoes_Roman_RiosModel.clientes" Role="clientes" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.factura" Role="factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clientes">
+              <PropertyRef Name="Id_Cliente" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detalle_factura_factura">
+          <End Type="WorldShoes_Roman_RiosModel.factura" Role="factura" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="factura">
+              <PropertyRef Name="id_factura" />
+            </Principal>
+            <Dependent Role="detalle_factura">
+              <PropertyRef Name="id_factura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -617,6 +766,30 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="WorldShoes_Roman_RiosModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="WorldShoes_Roman_RiosModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="detalle_factura">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.detalle_factura">
+              <MappingFragment StoreEntitySet="detalle_factura">
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+                <ScalarProperty Name="importe_detalle" ColumnName="importe_detalle" />
+                <ScalarProperty Name="cantidad_detalle" ColumnName="cantidad_detalle" />
+                <ScalarProperty Name="id_talle_producto" ColumnName="id_talle_producto" />
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+                <ScalarProperty Name="id_detalle_factura" ColumnName="id_detalle_factura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="factura">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.factura">
+              <MappingFragment StoreEntitySet="factura">
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="importe_factura" ColumnName="importe_factura" />
+                <ScalarProperty Name="cantidad_factura" ColumnName="cantidad_factura" />
+                <ScalarProperty Name="fecha_factura" ColumnName="fecha_factura" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -29,12 +29,6 @@ Partial Class BuscarEmpleados
         Me.TabControlListaEmpleados = New System.Windows.Forms.TabControl()
         Me.TabPageListaEmpleados = New System.Windows.Forms.TabPage()
         Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnApellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnTel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnDireccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnEmail = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.BRegistrarCliente = New System.Windows.Forms.Button()
         Me.TabControlListaEmpleados.SuspendLayout()
@@ -83,7 +77,6 @@ Partial Class BuscarEmpleados
         Me.dgvEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvEmpleados.ColumnHeadersHeight = 20
         Me.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.ColumnNombre, Me.ColumnApellido, Me.ColumnTel, Me.ColumnDireccion, Me.ColumnEmail})
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -112,48 +105,6 @@ Partial Class BuscarEmpleados
         Me.dgvEmpleados.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvEmpleados.Size = New System.Drawing.Size(865, 359)
         Me.dgvEmpleados.TabIndex = 2
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        '
-        'ColumnNombre
-        '
-        Me.ColumnNombre.HeaderText = "Nombre"
-        Me.ColumnNombre.MinimumWidth = 6
-        Me.ColumnNombre.Name = "ColumnNombre"
-        Me.ColumnNombre.ReadOnly = True
-        '
-        'ColumnApellido
-        '
-        Me.ColumnApellido.HeaderText = "Apellido"
-        Me.ColumnApellido.MinimumWidth = 6
-        Me.ColumnApellido.Name = "ColumnApellido"
-        Me.ColumnApellido.ReadOnly = True
-        '
-        'ColumnTel
-        '
-        Me.ColumnTel.HeaderText = "Telefono"
-        Me.ColumnTel.MinimumWidth = 6
-        Me.ColumnTel.Name = "ColumnTel"
-        Me.ColumnTel.ReadOnly = True
-        '
-        'ColumnDireccion
-        '
-        Me.ColumnDireccion.HeaderText = "Direccion"
-        Me.ColumnDireccion.MinimumWidth = 6
-        Me.ColumnDireccion.Name = "ColumnDireccion"
-        Me.ColumnDireccion.ReadOnly = True
-        '
-        'ColumnEmail
-        '
-        Me.ColumnEmail.HeaderText = "E-mail"
-        Me.ColumnEmail.MinimumWidth = 6
-        Me.ColumnEmail.Name = "ColumnEmail"
-        Me.ColumnEmail.ReadOnly = True
         '
         'BVolver
         '
@@ -210,12 +161,6 @@ Partial Class BuscarEmpleados
     Friend WithEvents TabControlListaEmpleados As TabControl
     Friend WithEvents TabPageListaEmpleados As TabPage
     Friend WithEvents dgvEmpleados As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnNombre As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnApellido As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnTel As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnDireccion As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnEmail As DataGridViewTextBoxColumn
     Friend WithEvents BVolver As Button
     Friend WithEvents BRegistrarCliente As Button
 End Class

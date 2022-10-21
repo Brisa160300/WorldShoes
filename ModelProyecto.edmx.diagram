@@ -6,20 +6,25 @@
     <edmx:Diagrams>
       <Diagram DiagramId="fba0cd7a63404704a9fd5d5054047036" Name="Diagram1">
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Categoria" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.clientes" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.empleados" Width="1.5" PointX="5.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.clientes" Width="1.5" PointX="9.625" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.empleados" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Marcas" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Perfiles" Width="1.5" PointX="8.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Productos" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Usuarios" Width="1.5" PointX="8.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Perfiles" Width="1.5" PointX="7" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Productos" Width="1.5" PointX="3.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle" Width="1.5" PointX="4" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="5.875" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Usuarios" Width="1.5" PointX="6.875" PointY="7.625" IsExpanded="true" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_categoria" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_empleado_usuario" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_marca" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_perfil_usuario" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talle_producto_producto" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talle_producto_talle" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.detalle_factura" Width="1.5" PointX="10.875" PointY="3.875" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.factura" Width="1.5" PointX="9.5" PointY="6.875" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_id_usuario" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_factura_cliente" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_detalle_factura_factura" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
