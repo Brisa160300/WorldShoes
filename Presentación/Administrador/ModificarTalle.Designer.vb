@@ -23,7 +23,7 @@ Partial Class ModificarTalle
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelModTalle = New System.Windows.Forms.Panel()
-        Me.BCancelarModifCliente = New System.Windows.Forms.Button()
+        Me.BCancelarModifTalle = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
         Me.TBModTalle = New System.Windows.Forms.TextBox()
         Me.LModTalle = New System.Windows.Forms.Label()
@@ -36,30 +36,30 @@ Partial Class ModificarTalle
         '
         Me.PanelModTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelModTalle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PanelModTalle.Controls.Add(Me.BCancelarModifCliente)
+        Me.PanelModTalle.Controls.Add(Me.BCancelarModifTalle)
         Me.PanelModTalle.Controls.Add(Me.GroupBoxDatosCliente)
         Me.PanelModTalle.Controls.Add(Me.BModificarTalle)
-        Me.PanelModTalle.Location = New System.Drawing.Point(79, 69)
-        Me.PanelModTalle.Margin = New System.Windows.Forms.Padding(5)
+        Me.PanelModTalle.Location = New System.Drawing.Point(59, 56)
+        Me.PanelModTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelModTalle.Name = "PanelModTalle"
-        Me.PanelModTalle.Size = New System.Drawing.Size(612, 372)
+        Me.PanelModTalle.Size = New System.Drawing.Size(459, 302)
         Me.PanelModTalle.TabIndex = 4
         '
-        'BCancelarModifCliente
+        'BCancelarModifTalle
         '
-        Me.BCancelarModifCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BCancelarModifCliente.FlatAppearance.BorderSize = 2
-        Me.BCancelarModifCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCancelarModifCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BCancelarModifCliente.ForeColor = System.Drawing.Color.White
-        Me.BCancelarModifCliente.Location = New System.Drawing.Point(454, 296)
-        Me.BCancelarModifCliente.Margin = New System.Windows.Forms.Padding(5)
-        Me.BCancelarModifCliente.Name = "BCancelarModifCliente"
-        Me.BCancelarModifCliente.Size = New System.Drawing.Size(130, 52)
-        Me.BCancelarModifCliente.TabIndex = 12
-        Me.BCancelarModifCliente.Text = "Cancelar"
-        Me.BCancelarModifCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BCancelarModifCliente.UseVisualStyleBackColor = False
+        Me.BCancelarModifTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BCancelarModifTalle.FlatAppearance.BorderSize = 2
+        Me.BCancelarModifTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BCancelarModifTalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BCancelarModifTalle.ForeColor = System.Drawing.Color.White
+        Me.BCancelarModifTalle.Location = New System.Drawing.Point(340, 240)
+        Me.BCancelarModifTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BCancelarModifTalle.Name = "BCancelarModifTalle"
+        Me.BCancelarModifTalle.Size = New System.Drawing.Size(98, 42)
+        Me.BCancelarModifTalle.TabIndex = 12
+        Me.BCancelarModifTalle.Text = "Cancelar"
+        Me.BCancelarModifTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BCancelarModifTalle.UseVisualStyleBackColor = False
         '
         'GroupBoxDatosCliente
         '
@@ -67,21 +67,18 @@ Partial Class ModificarTalle
         Me.GroupBoxDatosCliente.Controls.Add(Me.LModTalle)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(51, 22)
-        Me.GroupBoxDatosCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(38, 18)
         Me.GroupBoxDatosCliente.Name = "GroupBoxDatosCliente"
-        Me.GroupBoxDatosCliente.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(473, 246)
+        Me.GroupBoxDatosCliente.Size = New System.Drawing.Size(355, 200)
         Me.GroupBoxDatosCliente.TabIndex = 19
         Me.GroupBoxDatosCliente.TabStop = False
         Me.GroupBoxDatosCliente.Text = "Modificar Talle"
         '
         'TBModTalle
         '
-        Me.TBModTalle.Location = New System.Drawing.Point(127, 121)
-        Me.TBModTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBModTalle.Location = New System.Drawing.Point(95, 98)
         Me.TBModTalle.Name = "TBModTalle"
-        Me.TBModTalle.Size = New System.Drawing.Size(221, 30)
+        Me.TBModTalle.Size = New System.Drawing.Size(167, 25)
         Me.TBModTalle.TabIndex = 16
         '
         'LModTalle
@@ -89,10 +86,10 @@ Partial Class ModificarTalle
         Me.LModTalle.AutoSize = True
         Me.LModTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LModTalle.ForeColor = System.Drawing.Color.White
-        Me.LModTalle.Location = New System.Drawing.Point(123, 85)
-        Me.LModTalle.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.LModTalle.Location = New System.Drawing.Point(92, 69)
+        Me.LModTalle.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LModTalle.Name = "LModTalle"
-        Me.LModTalle.Size = New System.Drawing.Size(63, 22)
+        Me.LModTalle.Size = New System.Drawing.Size(50, 17)
         Me.LModTalle.TabIndex = 15
         Me.LModTalle.Text = "Talle: "
         '
@@ -104,23 +101,22 @@ Partial Class ModificarTalle
         Me.BModificarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BModificarTalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BModificarTalle.ForeColor = System.Drawing.Color.White
-        Me.BModificarTalle.Location = New System.Drawing.Point(315, 296)
-        Me.BModificarTalle.Margin = New System.Windows.Forms.Padding(5)
+        Me.BModificarTalle.Location = New System.Drawing.Point(236, 240)
+        Me.BModificarTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.BModificarTalle.Name = "BModificarTalle"
-        Me.BModificarTalle.Size = New System.Drawing.Size(130, 52)
+        Me.BModificarTalle.Size = New System.Drawing.Size(98, 42)
         Me.BModificarTalle.TabIndex = 13
         Me.BModificarTalle.Text = "Modificar"
         Me.BModificarTalle.UseVisualStyleBackColor = False
         '
         'ModificarTalle
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(775, 500)
+        Me.ClientSize = New System.Drawing.Size(581, 406)
         Me.Controls.Add(Me.PanelModTalle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ModificarTalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ModificarTalle"
@@ -132,7 +128,7 @@ Partial Class ModificarTalle
     End Sub
 
     Friend WithEvents PanelModTalle As Panel
-    Friend WithEvents BCancelarModifCliente As Button
+    Friend WithEvents BCancelarModifTalle As Button
     Friend WithEvents GroupBoxDatosCliente As GroupBox
     Friend WithEvents LModTalle As Label
     Friend WithEvents BModificarTalle As Button

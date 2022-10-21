@@ -133,12 +133,14 @@
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Datos\DEmpleado.vb" />
     <Compile Include="Datos\DMarca.vb" />
+    <Compile Include="Datos\DProducto.vb" />
     <Compile Include="Datos\DTalle.vb" />
     <Compile Include="empleados.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
     <Compile Include="Logica\NEmpleado.vb" />
     <Compile Include="Logica\NMarca.vb" />
+    <Compile Include="Logica\NProducto.vb" />
     <Compile Include="Logica\NTalle.vb" />
     <Compile Include="Logica\NCategoria.vb" />
     <Compile Include="Logica\NCliente.vb" />
