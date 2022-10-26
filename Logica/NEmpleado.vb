@@ -7,7 +7,7 @@
             .Dni = dni
             .telefono = telefono
             .direccion = direccion
-            .email = email
+            .correo = email
             .estado_empleado = 1
         End With
         Dim objdEmpleado = New DEmpleado

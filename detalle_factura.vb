@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 
 Partial Public Class detalle_factura
     Public Property id_detalle_factura As Integer
+    Public Property id_factura As Integer
     Public Property id_producto As Integer
     Public Property id_talle_producto As Integer
     Public Property cantidad_detalle As Integer

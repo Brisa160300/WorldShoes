@@ -19,6 +19,7 @@ Partial Public Class Usuarios
     Public Property estado_usuario As Integer
 
     Public Overridable Property empleados As empleados
+    Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
     Public Overridable Property Perfiles As Perfiles
     Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
 

@@ -15,7 +15,10 @@
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="5.875" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Usuarios" Width="1.5" PointX="6.875" PointY="7.625" IsExpanded="true" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_factura_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_detalle_factura_factura" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_empleado_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_factura_usuario" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_marca" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_perfil_usuario" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talle_producto_producto" ManuallyRouted="false" />

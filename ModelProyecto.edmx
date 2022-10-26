@@ -225,37 +225,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="WorldShoes_Roman_RiosModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
@@ -275,6 +244,14 @@
           <AssociationSet Name="FK_empleado_usuario" Association="Self.FK_empleado_usuario">
             <End Role="empleados" EntitySet="empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
+            <End Role="clientes" EntitySet="clientes" />
+            <End Role="factura" EntitySet="factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_usuario" Association="Self.FK_factura_usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="factura" EntitySet="factura" />
           </AssociationSet>
           <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
             <End Role="clientes" EntitySet="clientes" />
@@ -342,9 +319,23 @@
           <Property Name="dni" Type="Int32" Nullable="false" />
           <Property Name="telefono" Type="Int64" Nullable="false" />
           <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado_empleado" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK_empleado_usuario" FromRole="empleados" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="factura">
+          <Key>
+            <PropertyRef Name="id_factura" />
+          </Key>
+          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
+          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <Property Name="fecha_factura" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cantidad_factura" Type="Int16" Nullable="false" />
+          <Property Name="importe_factura" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <NavigationProperty Name="clientes" Relationship="Self.FK_factura_cliente" FromRole="factura" ToRole="clientes" />
+          <NavigationProperty Name="detalle_factura" Relationship="Self.FK_detalle_factura_factura" FromRole="factura" ToRole="detalle_factura" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_factura_usuario" FromRole="factura" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Marcas">
           <Key>
@@ -410,6 +401,7 @@
           <Property Name="id_empleado" Type="Int32" Nullable="false" />
           <Property Name="estado_usuario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="empleados" Relationship="Self.FK_empleado_usuario" FromRole="Usuarios" ToRole="empleados" />
+          <NavigationProperty Name="factura" Relationship="Self.FK_factura_usuario" FromRole="Usuarios" ToRole="factura" />
           <NavigationProperty Name="Perfiles" Relationship="Self.FK_perfil_usuario" FromRole="Usuarios" ToRole="Perfiles" />
           <NavigationProperty Name="factura" Relationship="WorldShoes_Roman_RiosModel.FK_id_usuario" FromRole="Usuarios" ToRole="factura" />
         </EntityType>
@@ -425,6 +417,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_factura_cliente">
+          <End Role="clientes" Type="Self.clientes" Multiplicity="1" />
+          <End Role="factura" Type="Self.factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clientes">
+              <PropertyRef Name="Id_Cliente" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_detalle_factura_factura">
+          <End Role="factura" Type="Self.factura" Multiplicity="1" />
+          <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="factura">
+              <PropertyRef Name="id_factura" />
+            </Principal>
+            <Dependent Role="detalle_factura">
+              <PropertyRef Name="id_factura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_empleado_usuario">
           <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -434,6 +450,18 @@
             </Principal>
             <Dependent Role="Usuarios">
               <PropertyRef Name="id_empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_usuario">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="factura" Type="Self.factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="id_Usuario" />
+            </Principal>
+            <Dependent Role="factura">
+              <PropertyRef Name="id_usuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -488,7 +516,9 @@
         <EntityContainer Name="WorldShoes_Roman_RiosEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" />
           <EntitySet Name="clientes" EntityType="Self.clientes" />
+          <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" />
           <EntitySet Name="empleados" EntityType="Self.empleados" />
+          <EntitySet Name="factura" EntityType="Self.factura" />
           <EntitySet Name="Marcas" EntityType="Self.Marcas" />
           <EntitySet Name="Perfiles" EntityType="Self.Perfiles" />
           <EntitySet Name="Productos" EntityType="Self.Productos" />
@@ -499,9 +529,21 @@
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
+          <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
+            <End Role="clientes" EntitySet="clientes" />
+            <End Role="factura" EntitySet="factura" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detalle_factura_factura" Association="Self.FK_detalle_factura_factura">
+            <End Role="factura" EntitySet="factura" />
+            <End Role="detalle_factura" EntitySet="detalle_factura" />
+          </AssociationSet>
           <AssociationSet Name="FK_empleado_usuario" Association="Self.FK_empleado_usuario">
             <End Role="empleados" EntitySet="empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_usuario" Association="Self.FK_factura_usuario">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="factura" EntitySet="factura" />
           </AssociationSet>
           <AssociationSet Name="FK_producto_marca" Association="Self.FK_producto_marca">
             <End Role="Marcas" EntitySet="Marcas" />
@@ -666,6 +708,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="detalle_factura">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.detalle_factura">
+              <MappingFragment StoreEntitySet="detalle_factura">
+                <ScalarProperty Name="id_detalle_factura" ColumnName="id_detalle_factura" />
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+                <ScalarProperty Name="id_talle_producto" ColumnName="id_talle_producto" />
+                <ScalarProperty Name="cantidad_detalle" ColumnName="cantidad_detalle" />
+                <ScalarProperty Name="importe_detalle" ColumnName="importe_detalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="empleados">
             <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.empleados">
               <MappingFragment StoreEntitySet="empleados">
@@ -675,8 +729,20 @@
                 <ScalarProperty Name="dni" ColumnName="dni" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
-                <ScalarProperty Name="email" ColumnName="correo" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
                 <ScalarProperty Name="estado_empleado" ColumnName="estado_empleado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="factura">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.factura">
+              <MappingFragment StoreEntitySet="factura">
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="fecha_factura" ColumnName="fecha_factura" />
+                <ScalarProperty Name="cantidad_factura" ColumnName="cantidad_factura" />
+                <ScalarProperty Name="importe_factura" ColumnName="importe_factura" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,5 +1,4 @@
 ﻿Public Class GestionarVentas
-
     Private Sub TBBuscarVenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBBuscarVenta.KeyPress
 
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then

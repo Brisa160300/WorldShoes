@@ -513,12 +513,6 @@
     <Compile Include="Productos.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.vb">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
-    </Compile>
     <Compile Include="talle.vb">
       <DependentUpon>ModelProyecto.tt</DependentUpon>
     </Compile>

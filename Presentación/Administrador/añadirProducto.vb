@@ -7,9 +7,22 @@
         Dim Ask As MsgBoxResult
 
         If EspacioEnBlanco() = False Then
+            Dim nombre As String = TBNombreProducto.Text
+            Dim categoria As String = CBCategoria.SelectedValue
+            Dim stock As String = CInt(TBStock.Text)
+            Dim precio As Integer = TBPrecio.Text
+            Dim talle As Integer = CBTalle.SelectedValue
+            Dim marca As String = CBMarca.SelectedValue
+            MsgBox("hola")
             Ask = MsgBox("Seguro que desea añadir este producto?", vbQuestion + vbYesNo, "Confirmar Inserción")
             If Ask = vbYes Then
-                MsgBox("El producto" + TBNombreProducto.Text + "se insertó correctamente", vbInformation, "Guardar")
+                If objNProducto.agregar_Producto(nombre, categoria, stock, precio, talle, marca) Then
+                    objNProducto.cargarGrid(DataGridViewListaProductos)
+                    MsgBox("El producto" + TBNombreProducto.Text + "se insertó correctamente", vbInformation, "Guardar")
+                Else
+                    MsgBox("No se pudo realizar el registro", vbCritical, "Error")
+                End If
+
             End If
         End If
     End Sub
@@ -24,13 +37,12 @@
         Dim categoria As String = CBCategoria.Text
         Dim stock As String = TBStock.Text
         Dim precio As String = TBPrecio.Text
-        'Dim imagen As String = TBImagen.Text
+        'ver los campos combobox como validar
 
         If String.IsNullOrWhiteSpace(nombre) Or
            String.IsNullOrWhiteSpace(categoria) Or
            String.IsNullOrWhiteSpace(stock) Or
            String.IsNullOrWhiteSpace(precio) Then
-            'String.IsNullOrWhiteSpace(imagen) Then
             Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
             Return Ask
         Else
