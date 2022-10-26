@@ -1,8 +1,8 @@
 ﻿Public Class NProducto
-    Function agregar_producto(nombre As String, categoria As String, stock As Integer, precio As Integer, talle As String, marca As String)
+    Function agregar_producto(codigo As Integer, nombre As String, categoria As Integer, stock As Integer, precio As Integer, marca As Integer)
         Dim oproducto = New Productos
-
         With oproducto
+            .cod_producto = codigo
             .nombre = nombre
             .id_categoria = categoria
             .stock = stock
@@ -12,12 +12,20 @@
         End With
         Dim objdproducto = New DProducto
         If objdproducto.Dguardar_producto(oproducto) Then
+
             Return True
         Else
             Return False
         End If
 
     End Function
+
+    Public Sub cargarGrid(grid As DataGridView)
+        Dim prod As DProducto = New DProducto
+        grid.DataSource = prod.getProductossAll()
+        grid.ClearSelection()
+
+    End Sub
 
     Public Sub cargarComboxCateg(combo As ComboBox)
         Dim categ As DCategoria = New DCategoria

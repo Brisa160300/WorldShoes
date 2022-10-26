@@ -5,6 +5,7 @@
     Private _precio As Integer
     Private _descripcion_marca As String
     Private _estado As String
+    Private _descripcion_talle As String
 
     Public Property Nombre As String
         Get
@@ -59,4 +60,14 @@
             _estado = value
         End Set
     End Property
+
+    Public Property Descripcion_talle As String
+        Get
+            Return _descripcion_talle
+        End Get
+        Set(value As String)
+            _descripcion_talle = value
+        End Set
+    End Property
 End Class
+

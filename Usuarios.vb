@@ -21,6 +21,5 @@ Partial Public Class Usuarios
     Public Overridable Property empleados As empleados
     Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
     Public Overridable Property Perfiles As Perfiles
-    Public Overridable Property factura As ICollection(Of factura) = New HashSet(Of factura)
 
 End Class

@@ -98,7 +98,7 @@ Partial Class añadirUsuarios
         Me.Label1.Location = New System.Drawing.Point(17, 236)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 21)
+        Me.Label1.Size = New System.Drawing.Size(140, 20)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "ID de Empleado:"
         '
@@ -110,7 +110,7 @@ Partial Class añadirUsuarios
         Me.Label11.Location = New System.Drawing.Point(17, 144)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(201, 21)
+        Me.Label11.Size = New System.Drawing.Size(195, 20)
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Confirmar Contraseña:"
         '
@@ -141,7 +141,7 @@ Partial Class añadirUsuarios
         Me.Label8.Location = New System.Drawing.Point(17, 45)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(175, 21)
+        Me.Label8.Size = New System.Drawing.Size(169, 20)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Nombre de Usuario:"
         '
@@ -171,7 +171,7 @@ Partial Class añadirUsuarios
         Me.Label9.Location = New System.Drawing.Point(17, 191)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 21)
+        Me.Label9.Size = New System.Drawing.Size(58, 20)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Perfil:"
         '
@@ -183,7 +183,7 @@ Partial Class añadirUsuarios
         Me.Label10.Location = New System.Drawing.Point(17, 91)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(110, 21)
+        Me.Label10.Size = New System.Drawing.Size(107, 20)
         Me.Label10.TabIndex = 4
         Me.Label10.Text = "Contraseña:"
         '
@@ -299,7 +299,7 @@ Partial Class añadirUsuarios
         Me.LRegistroUsuario.Location = New System.Drawing.Point(443, 26)
         Me.LRegistroUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LRegistroUsuario.Name = "LRegistroUsuario"
-        Me.LRegistroUsuario.Size = New System.Drawing.Size(241, 32)
+        Me.LRegistroUsuario.Size = New System.Drawing.Size(240, 32)
         Me.LRegistroUsuario.TabIndex = 24
         Me.LRegistroUsuario.Text = "Registrar Usuario"
         '

@@ -17,7 +17,6 @@ Partial Public Class detalle_factura
     Public Property id_talle_producto As Integer
     Public Property cantidad_detalle As Integer
     Public Property importe_detalle As Decimal
-    Public Property id_factura As Integer
 
     Public Overridable Property factura As factura
 

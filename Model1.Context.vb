@@ -33,7 +33,5 @@ Partial Public Class WorldShoes_Roman_RiosEntities
     Public Overridable Property talle() As DbSet(Of talle)
     Public Overridable Property talle_producto() As DbSet(Of talle_producto)
     Public Overridable Property Usuarios() As DbSet(Of Usuarios)
-    Public Overridable Property detalle_factura() As DbSet(Of detalle_factura)
-    Public Overridable Property factura() As DbSet(Of factura)
 
 End Class

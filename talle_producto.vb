@@ -15,6 +15,7 @@ Partial Public Class talle_producto
     Public Property cod_producto As Integer
     Public Property id_talle As Integer
     Public Property estado_talle_producto As Integer
+    Public Property cantidad_talle As Integer
 
     Public Overridable Property Productos As Productos
     Public Overridable Property talle As talle

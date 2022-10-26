@@ -12,21 +12,21 @@
     End Function
 
     Function getProductossAll() As List(Of EProducto)
-        Dim lista = (From p In ctx.Productos Select p).ToList
+        Dim listaTalle = (From t In ctx.talle_producto Select t).ToList
         Dim listaProductos = New List(Of EProducto)
-        For Each valor In lista
+        For Each valor In listaTalle
             Dim item As EProducto = New EProducto
-            item.Nombre = valor.nombre
-            item.Descripcion_categoria = valor.Categoria.descripcion_categoria
-            item.Stock = valor.stock
-            item.Precio = valor.precio
-            item.Descripcion_marca = valor.Marcas.Descripcion
-            If valor.id_estado_producto = 1 Then
+            item.Nombre = valor.Productos.nombre
+            item.Descripcion_categoria = valor.Productos.Categoria.descripcion_categoria
+            item.Stock = valor.Productos.stock
+            item.Precio = valor.Productos.precio
+            item.Descripcion_marca = valor.Productos.Marcas.Descripcion
+            item.Descripcion_talle = valor.talle.descripcion
+            If valor.Productos.id_estado_producto = 1 Then
                 item.Estado = "Activo"
             Else
                 item.Estado = "Inactivo"
             End If
-            'item.Descripcion_perfil = valor.Perfiles.Descripcion
 
             listaProductos.Add(item)
         Next
@@ -52,37 +52,6 @@
         End Try
 
     End Function
-
-    Function EliminarProducto(codProd As Integer) As Boolean
-        Try
-            Dim cliDelete = (From p In ctx.Productos Where p.cod_producto = codProd
-                             Select p).First
-            cliDelete.id_estado_producto = 0
-            ctx.SaveChanges()
-            MsgBox("Se ha eliminado con exito", vbInformation, "Confirmar Eliminación")
-            Return True
-        Catch ex As Exception
-            MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
-            Return False
-        End Try
-
-    End Function
-
-    Function AltaProducto(codProd As Integer) As Boolean
-        Try
-            Dim cliAlta = (From p In ctx.Productos Where p.cod_producto = codProd
-                           Select p).First
-            cliAlta.id_estado_producto = 1
-            MsgBox("Se ha dado de alta con exito", vbInformation, "Confirmar Alta")
-            ctx.SaveChanges()
-            Return True
-        Catch ex As Exception
-            MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
-            Return False
-        End Try
-
-    End Function
-
     Function EliminarProducto(codProd As Integer) As Boolean
         Try
             Dim cliDelete = (From p In ctx.Productos Where p.cod_producto = codProd
