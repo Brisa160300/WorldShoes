@@ -1,9 +1,10 @@
 ﻿Public Class NTalle_Producto
-    Function agregar_talle_producto(codigo As Integer, id_talle As Integer) As Boolean
+    Function agregar_talle_producto(codigo As Integer, id_talle As Integer, cantidad As Integer) As Boolean
         Dim otalleProd = New talle_producto
         With otalleProd
             .cod_producto = codigo
             .id_talle = id_talle
+            .cantidad_talle = cantidad
             .estado_talle_producto = 1
         End With
         Dim objdtalleProd = New DTalle_Producto

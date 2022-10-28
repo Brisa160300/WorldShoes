@@ -22,45 +22,93 @@ Partial Class AñadirTallesProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
+        Me.CBTalleProducto = New System.Windows.Forms.ComboBox()
+        Me.TBCantidadProducto = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LCantidad = New System.Windows.Forms.Label()
         Me.BRegistrarTalle = New System.Windows.Forms.Button()
         Me.BVolver = New System.Windows.Forms.Button()
-        Me.TBNombreTalle = New System.Windows.Forms.TextBox()
+        Me.TBCodProducto = New System.Windows.Forms.TextBox()
         Me.LProducto = New System.Windows.Forms.Label()
         Me.LTalle = New System.Windows.Forms.Label()
         Me.TabPageListaProductos = New System.Windows.Forms.TabPage()
         Me.dgvListarProductos = New System.Windows.Forms.DataGridView()
         Me.TabControlProductos = New System.Windows.Forms.TabControl()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TabControlRegUsuarios = New System.Windows.Forms.TabControl()
+        Me.TabPageListaUsuarios = New System.Windows.Forms.TabPage()
+        Me.dgvDetalleProductos = New System.Windows.Forms.DataGridView()
         Me.PanelRegClientes.SuspendLayout()
         Me.TabPageListaProductos.SuspendLayout()
         CType(Me.dgvListarProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlProductos.SuspendLayout()
+        Me.TabControlRegUsuarios.SuspendLayout()
+        Me.TabPageListaUsuarios.SuspendLayout()
+        CType(Me.dgvDetalleProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelRegClientes
         '
         Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PanelRegClientes.Controls.Add(Me.TextBox2)
+        Me.PanelRegClientes.Controls.Add(Me.CBTalleProducto)
+        Me.PanelRegClientes.Controls.Add(Me.TBCantidadProducto)
         Me.PanelRegClientes.Controls.Add(Me.Label2)
-        Me.PanelRegClientes.Controls.Add(Me.TextBox1)
-        Me.PanelRegClientes.Controls.Add(Me.Label1)
+        Me.PanelRegClientes.Controls.Add(Me.LCantidad)
         Me.PanelRegClientes.Controls.Add(Me.BRegistrarTalle)
         Me.PanelRegClientes.Controls.Add(Me.BVolver)
-        Me.PanelRegClientes.Controls.Add(Me.TBNombreTalle)
+        Me.PanelRegClientes.Controls.Add(Me.TBCodProducto)
         Me.PanelRegClientes.Controls.Add(Me.LProducto)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(46, 153)
-        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(34, 77)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(425, 325)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(319, 243)
         Me.PanelRegClientes.TabIndex = 8
+        '
+        'CBTalleProducto
+        '
+        Me.CBTalleProducto.FormattingEnabled = True
+        Me.CBTalleProducto.Location = New System.Drawing.Point(117, 74)
+        Me.CBTalleProducto.Name = "CBTalleProducto"
+        Me.CBTalleProducto.Size = New System.Drawing.Size(134, 21)
+        Me.CBTalleProducto.TabIndex = 18
+        '
+        'TBCantidadProducto
+        '
+        Me.TBCantidadProducto.Enabled = False
+        Me.TBCantidadProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBCantidadProducto.Location = New System.Drawing.Point(117, 123)
+        Me.TBCantidadProducto.Name = "TBCantidadProducto"
+        Me.TBCantidadProducto.Size = New System.Drawing.Size(134, 25)
+        Me.TBCantidadProducto.TabIndex = 17
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(32, 74)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 17)
+        Me.Label2.TabIndex = 16
+        Me.Label2.Text = "Talle:"
+        '
+        'LCantidad
+        '
+        Me.LCantidad.AutoSize = True
+        Me.LCantidad.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.LCantidad.ForeColor = System.Drawing.Color.White
+        Me.LCantidad.Location = New System.Drawing.Point(32, 126)
+        Me.LCantidad.Name = "LCantidad"
+        Me.LCantidad.Size = New System.Drawing.Size(75, 17)
+        Me.LCantidad.TabIndex = 14
+        Me.LCantidad.Text = "Cantidad:"
         '
         'BRegistrarTalle
         '
@@ -70,10 +118,9 @@ Partial Class AñadirTallesProducto
         Me.BRegistrarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarTalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarTalle.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarTalle.Location = New System.Drawing.Point(121, 247)
-        Me.BRegistrarTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BRegistrarTalle.Location = New System.Drawing.Point(84, 177)
         Me.BRegistrarTalle.Name = "BRegistrarTalle"
-        Me.BRegistrarTalle.Size = New System.Drawing.Size(130, 52)
+        Me.BRegistrarTalle.Size = New System.Drawing.Size(98, 42)
         Me.BRegistrarTalle.TabIndex = 13
         Me.BRegistrarTalle.Text = "Añadir"
         Me.BRegistrarTalle.UseVisualStyleBackColor = False
@@ -85,36 +132,33 @@ Partial Class AñadirTallesProducto
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(268, 247)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Location = New System.Drawing.Point(207, 177)
         Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(130, 52)
+        Me.BVolver.Size = New System.Drawing.Size(98, 42)
         Me.BVolver.TabIndex = 12
         Me.BVolver.Text = "Volver"
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BVolver.UseVisualStyleBackColor = False
         '
-        'TBNombreTalle
+        'TBCodProducto
         '
-        Me.TBNombreTalle.Enabled = False
-        Me.TBNombreTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBNombreTalle.Location = New System.Drawing.Point(168, 29)
-        Me.TBNombreTalle.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBNombreTalle.Name = "TBNombreTalle"
-        Me.TBNombreTalle.Size = New System.Drawing.Size(153, 30)
-        Me.TBNombreTalle.TabIndex = 6
+        Me.TBCodProducto.Enabled = False
+        Me.TBCodProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBCodProducto.Location = New System.Drawing.Point(117, 17)
+        Me.TBCodProducto.Name = "TBCodProducto"
+        Me.TBCodProducto.Size = New System.Drawing.Size(134, 25)
+        Me.TBCodProducto.TabIndex = 6
         '
         'LProducto
         '
         Me.LProducto.AutoSize = True
         Me.LProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LProducto.ForeColor = System.Drawing.Color.White
-        Me.LProducto.Location = New System.Drawing.Point(43, 32)
-        Me.LProducto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LProducto.Location = New System.Drawing.Point(32, 20)
         Me.LProducto.Name = "LProducto"
-        Me.LProducto.Size = New System.Drawing.Size(91, 22)
+        Me.LProducto.Size = New System.Drawing.Size(79, 17)
         Me.LProducto.TabIndex = 0
-        Me.LProducto.Text = "Producto"
+        Me.LProducto.Text = "Producto:"
         '
         'LTalle
         '
@@ -122,23 +166,22 @@ Partial Class AñadirTallesProducto
         Me.LTalle.BackColor = System.Drawing.Color.Transparent
         Me.LTalle.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LTalle.ForeColor = System.Drawing.Color.Transparent
-        Me.LTalle.Location = New System.Drawing.Point(40, 46)
-        Me.LTalle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LTalle.Location = New System.Drawing.Point(29, 21)
         Me.LTalle.Name = "LTalle"
-        Me.LTalle.Size = New System.Drawing.Size(517, 33)
+        Me.LTalle.Size = New System.Drawing.Size(400, 27)
         Me.LTalle.TabIndex = 7
-        Me.LTalle.Text = "Agregar Talles a Productos Existentes"
+        Me.LTalle.Text = "Añadir Talles a Productos Existentes"
         '
         'TabPageListaProductos
         '
         Me.TabPageListaProductos.Controls.Add(Me.dgvListarProductos)
         Me.TabPageListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProductos.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaProductos.Location = New System.Drawing.Point(4, 28)
-        Me.TabPageListaProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaProductos.Location = New System.Drawing.Point(4, 25)
+        Me.TabPageListaProductos.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPageListaProductos.Name = "TabPageListaProductos"
-        Me.TabPageListaProductos.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaProductos.Size = New System.Drawing.Size(576, 479)
+        Me.TabPageListaProductos.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaProductos.Size = New System.Drawing.Size(460, 218)
         Me.TabPageListaProductos.TabIndex = 0
         Me.TabPageListaProductos.Text = "Lista de Productos"
         Me.TabPageListaProductos.UseVisualStyleBackColor = True
@@ -151,6 +194,79 @@ Partial Class AñadirTallesProducto
         Me.dgvListarProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListarProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvListarProductos.ColumnHeadersHeight = 20
+        Me.dgvListarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvListarProductos.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvListarProductos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListarProductos.EnableHeadersVisualStyles = False
+        Me.dgvListarProductos.Location = New System.Drawing.Point(2, 2)
+        Me.dgvListarProductos.Name = "dgvListarProductos"
+        Me.dgvListarProductos.ReadOnly = True
+        Me.dgvListarProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvListarProductos.RowHeadersWidth = 51
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        Me.dgvListarProductos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvListarProductos.Size = New System.Drawing.Size(456, 214)
+        Me.dgvListarProductos.TabIndex = 2
+        '
+        'TabControlProductos
+        '
+        Me.TabControlProductos.Controls.Add(Me.TabPageListaProductos)
+        Me.TabControlProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControlProductos.Location = New System.Drawing.Point(383, 77)
+        Me.TabControlProductos.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControlProductos.Name = "TabControlProductos"
+        Me.TabControlProductos.SelectedIndex = 0
+        Me.TabControlProductos.Size = New System.Drawing.Size(468, 247)
+        Me.TabControlProductos.TabIndex = 9
+        '
+        'TabControlRegUsuarios
+        '
+        Me.TabControlRegUsuarios.Controls.Add(Me.TabPageListaUsuarios)
+        Me.TabControlRegUsuarios.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControlRegUsuarios.Location = New System.Drawing.Point(34, 335)
+        Me.TabControlRegUsuarios.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControlRegUsuarios.Name = "TabControlRegUsuarios"
+        Me.TabControlRegUsuarios.SelectedIndex = 0
+        Me.TabControlRegUsuarios.Size = New System.Drawing.Size(665, 187)
+        Me.TabControlRegUsuarios.TabIndex = 26
+        '
+        'TabPageListaUsuarios
+        '
+        Me.TabPageListaUsuarios.Controls.Add(Me.dgvDetalleProductos)
+        Me.TabPageListaUsuarios.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPageListaUsuarios.ForeColor = System.Drawing.Color.White
+        Me.TabPageListaUsuarios.Location = New System.Drawing.Point(4, 25)
+        Me.TabPageListaUsuarios.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaUsuarios.Name = "TabPageListaUsuarios"
+        Me.TabPageListaUsuarios.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaUsuarios.Size = New System.Drawing.Size(657, 158)
+        Me.TabPageListaUsuarios.TabIndex = 0
+        Me.TabPageListaUsuarios.Text = "Detalle Productos"
+        Me.TabPageListaUsuarios.UseVisualStyleBackColor = True
+        '
+        'dgvDetalleProductos
+        '
+        Me.dgvDetalleProductos.AllowUserToAddRows = False
+        Me.dgvDetalleProductos.AllowUserToDeleteRows = False
+        Me.dgvDetalleProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvDetalleProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvDetalleProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -158,9 +274,9 @@ Partial Class AñadirTallesProducto
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvListarProductos.ColumnHeadersHeight = 20
-        Me.dgvListarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvDetalleProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvDetalleProductos.ColumnHeadersHeight = 20
+        Me.dgvDetalleProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -168,85 +284,39 @@ Partial Class AñadirTallesProducto
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Blue
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListarProductos.DefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvListarProductos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvListarProductos.EnableHeadersVisualStyles = False
-        Me.dgvListarProductos.Location = New System.Drawing.Point(3, 2)
-        Me.dgvListarProductos.Margin = New System.Windows.Forms.Padding(4)
-        Me.dgvListarProductos.Name = "dgvListarProductos"
-        Me.dgvListarProductos.ReadOnly = True
-        Me.dgvListarProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvListarProductos.RowHeadersWidth = 51
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
-        Me.dgvListarProductos.RowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvListarProductos.Size = New System.Drawing.Size(570, 475)
-        Me.dgvListarProductos.TabIndex = 2
-        '
-        'TabControlProductos
-        '
-        Me.TabControlProductos.Controls.Add(Me.TabPageListaProductos)
-        Me.TabControlProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlProductos.Location = New System.Drawing.Point(524, 92)
-        Me.TabControlProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabControlProductos.Name = "TabControlProductos"
-        Me.TabControlProductos.SelectedIndex = 0
-        Me.TabControlProductos.Size = New System.Drawing.Size(584, 511)
-        Me.TabControlProductos.TabIndex = 9
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(168, 82)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 30)
-        Me.TextBox1.TabIndex = 15
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(43, 85)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 22)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Producto"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(168, 145)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 30)
-        Me.TextBox2.TabIndex = 17
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(43, 148)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 22)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Producto"
+        Me.dgvDetalleProductos.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvDetalleProductos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvDetalleProductos.EnableHeadersVisualStyles = False
+        Me.dgvDetalleProductos.Location = New System.Drawing.Point(2, 2)
+        Me.dgvDetalleProductos.Name = "dgvDetalleProductos"
+        Me.dgvDetalleProductos.ReadOnly = True
+        Me.dgvDetalleProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvDetalleProductos.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvDetalleProductos.RowHeadersWidth = 51
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        Me.dgvDetalleProductos.RowsDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvDetalleProductos.Size = New System.Drawing.Size(653, 154)
+        Me.dgvDetalleProductos.TabIndex = 2
         '
         'AñadirTallesProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1149, 656)
+        Me.ClientSize = New System.Drawing.Size(862, 533)
+        Me.Controls.Add(Me.TabControlRegUsuarios)
         Me.Controls.Add(Me.TabControlProductos)
         Me.Controls.Add(Me.PanelRegClientes)
         Me.Controls.Add(Me.LTalle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AñadirTallesProducto"
         Me.Text = "AñadirTallesProducto"
         Me.PanelRegClientes.ResumeLayout(False)
@@ -254,6 +324,9 @@ Partial Class AñadirTallesProducto
         Me.TabPageListaProductos.ResumeLayout(False)
         CType(Me.dgvListarProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlProductos.ResumeLayout(False)
+        Me.TabControlRegUsuarios.ResumeLayout(False)
+        Me.TabPageListaUsuarios.ResumeLayout(False)
+        CType(Me.dgvDetalleProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,14 +334,17 @@ Partial Class AñadirTallesProducto
     Friend WithEvents PanelRegClientes As Panel
     Friend WithEvents BRegistrarTalle As Button
     Friend WithEvents BVolver As Button
-    Friend WithEvents TBNombreTalle As TextBox
+    Friend WithEvents TBCodProducto As TextBox
     Friend WithEvents LProducto As Label
     Friend WithEvents LTalle As Label
     Friend WithEvents TabPageListaProductos As TabPage
     Friend WithEvents dgvListarProductos As DataGridView
     Friend WithEvents TabControlProductos As TabControl
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LCantidad As Label
+    Friend WithEvents TBCantidadProducto As TextBox
+    Friend WithEvents CBTalleProducto As ComboBox
+    Friend WithEvents TabControlRegUsuarios As TabControl
+    Friend WithEvents TabPageListaUsuarios As TabPage
+    Friend WithEvents dgvDetalleProductos As DataGridView
 End Class
