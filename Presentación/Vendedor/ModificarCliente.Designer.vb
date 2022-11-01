@@ -22,6 +22,7 @@ Partial Class ModificarClienteGerente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LRegistroCliente = New System.Windows.Forms.Label()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
         Me.TBDireccion = New System.Windows.Forms.TextBox()
@@ -38,7 +39,19 @@ Partial Class ModificarClienteGerente
         Me.LTelCliente = New System.Windows.Forms.Label()
         Me.LDNI = New System.Windows.Forms.Label()
         Me.LNombreCliente = New System.Windows.Forms.Label()
+        Me.ErrorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDireccion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderTelefono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDNI = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderApellido = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderNombre = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelRegClientes.SuspendLayout()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LRegistroCliente
@@ -73,16 +86,16 @@ Partial Class ModificarClienteGerente
         Me.PanelRegClientes.Controls.Add(Me.LDNI)
         Me.PanelRegClientes.Controls.Add(Me.LNombreCliente)
         Me.PanelRegClientes.Location = New System.Drawing.Point(131, 90)
-        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(436, 470)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(436, 453)
         Me.PanelRegClientes.TabIndex = 2
         '
         'TBDireccion
         '
         Me.TBDireccion.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBDireccion.Location = New System.Drawing.Point(181, 239)
-        Me.TBDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.TBDireccion.Name = "TBDireccion"
         Me.TBDireccion.Size = New System.Drawing.Size(161, 32)
         Me.TBDireccion.TabIndex = 17
@@ -103,7 +116,7 @@ Partial Class ModificarClienteGerente
         '
         Me.TBCorreoCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBCorreoCliente.Location = New System.Drawing.Point(181, 286)
-        Me.TBCorreoCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBCorreoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBCorreoCliente.Name = "TBCorreoCliente"
         Me.TBCorreoCliente.Size = New System.Drawing.Size(161, 32)
         Me.TBCorreoCliente.TabIndex = 15
@@ -129,7 +142,7 @@ Partial Class ModificarClienteGerente
         Me.BModCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BModCliente.ForeColor = System.Drawing.Color.White
         Me.BModCliente.Location = New System.Drawing.Point(169, 372)
-        Me.BModCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BModCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.BModCliente.Name = "BModCliente"
         Me.BModCliente.Size = New System.Drawing.Size(124, 41)
         Me.BModCliente.TabIndex = 13
@@ -144,7 +157,7 @@ Partial Class ModificarClienteGerente
         Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BCancelar.ForeColor = System.Drawing.Color.White
         Me.BCancelar.Location = New System.Drawing.Point(301, 372)
-        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(116, 41)
         Me.BCancelar.TabIndex = 12
@@ -156,7 +169,7 @@ Partial Class ModificarClienteGerente
         '
         Me.TBTelCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBTelCliente.Location = New System.Drawing.Point(181, 190)
-        Me.TBTelCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBTelCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBTelCliente.Name = "TBTelCliente"
         Me.TBTelCliente.Size = New System.Drawing.Size(161, 32)
         Me.TBTelCliente.TabIndex = 10
@@ -165,7 +178,7 @@ Partial Class ModificarClienteGerente
         '
         Me.TBApellidoCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBApellidoCliente.Location = New System.Drawing.Point(181, 97)
-        Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBApellidoCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBApellidoCliente.Name = "TBApellidoCliente"
         Me.TBApellidoCliente.Size = New System.Drawing.Size(161, 32)
         Me.TBApellidoCliente.TabIndex = 8
@@ -174,7 +187,7 @@ Partial Class ModificarClienteGerente
         '
         Me.TBDniCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBDniCliente.Location = New System.Drawing.Point(181, 144)
-        Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBDniCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBDniCliente.Name = "TBDniCliente"
         Me.TBDniCliente.Size = New System.Drawing.Size(161, 32)
         Me.TBDniCliente.TabIndex = 7
@@ -183,7 +196,7 @@ Partial Class ModificarClienteGerente
         '
         Me.TBNombreCliente.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.TBNombreCliente.Location = New System.Drawing.Point(181, 49)
-        Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBNombreCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TBNombreCliente.Name = "TBNombreCliente"
         Me.TBNombreCliente.Size = New System.Drawing.Size(161, 32)
         Me.TBNombreCliente.TabIndex = 6
@@ -236,6 +249,30 @@ Partial Class ModificarClienteGerente
         Me.LNombreCliente.TabIndex = 0
         Me.LNombreCliente.Text = "Nombre:"
         '
+        'ErrorProviderEmail
+        '
+        Me.ErrorProviderEmail.ContainerControl = Me
+        '
+        'ErrorProviderDireccion
+        '
+        Me.ErrorProviderDireccion.ContainerControl = Me
+        '
+        'ErrorProviderTelefono
+        '
+        Me.ErrorProviderTelefono.ContainerControl = Me
+        '
+        'ErrorProviderDNI
+        '
+        Me.ErrorProviderDNI.ContainerControl = Me
+        '
+        'ErrorProviderApellido
+        '
+        Me.ErrorProviderApellido.ContainerControl = Me
+        '
+        'ErrorProviderNombre
+        '
+        Me.ErrorProviderNombre.ContainerControl = Me
+        '
         'ModificarClienteGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -251,6 +288,12 @@ Partial Class ModificarClienteGerente
         Me.Text = "ModificarCliente"
         Me.PanelRegClientes.ResumeLayout(False)
         Me.PanelRegClientes.PerformLayout()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,4 +315,10 @@ Partial Class ModificarClienteGerente
     Friend WithEvents LTelCliente As Label
     Friend WithEvents LDNI As Label
     Friend WithEvents LNombreCliente As Label
+    Friend WithEvents ErrorProviderEmail As ErrorProvider
+    Friend WithEvents ErrorProviderDireccion As ErrorProvider
+    Friend WithEvents ErrorProviderTelefono As ErrorProvider
+    Friend WithEvents ErrorProviderDNI As ErrorProvider
+    Friend WithEvents ErrorProviderApellido As ErrorProvider
+    Friend WithEvents ErrorProviderNombre As ErrorProvider
 End Class

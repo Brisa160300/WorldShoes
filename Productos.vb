@@ -14,7 +14,6 @@ Partial Public Class Productos
     Public Property cod_producto As Integer
     Public Property nombre As String
     Public Property id_categoria As Integer
-    Public Property stock As Integer
     Public Property precio As Decimal
     Public Property id_marca As Integer
     Public Property id_estado_producto As Integer

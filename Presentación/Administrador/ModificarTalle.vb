@@ -14,6 +14,7 @@
 
     Private Sub BModificarTalle_Click(sender As Object, e As EventArgs) Handles BModificarTalle.Click
         Dim ask As MsgBoxResult
+        ErrorProviderTalle.Clear()
         If EspacioEnBlanco() = False Then
             ask = MsgBox("Seguro que desea realizar esta modificación", vbQuestion + vbYesNo, "Confirmar Modificación")
             If ask = vbYes Then
@@ -28,16 +29,16 @@
         End If
     End Sub
 
-    Public Function EspacioEnBlanco()
-        Dim Ask As MsgBoxResult
-        Dim descripcion As String = TBModTalle.Text
-
-        If String.IsNullOrWhiteSpace(descripcion) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
-            Return Ask
-        Else
-            Return False
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim tal As String = TBModTalle.Text.Trim
+        If tal = "" Then
+            ErrorProviderTalle.SetError(TBModTalle, "Ingrese un Talle")
+            ask = True
+        ElseIf tal.Length < 2 Then
+            ErrorProviderTalle.SetError(TBModTalle, "El talle ingresado no es valido")
         End If
+        Return ask
     End Function
 
 

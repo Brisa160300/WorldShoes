@@ -22,14 +22,17 @@ Partial Class ModificarTalle
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelModTalle = New System.Windows.Forms.Panel()
         Me.BCancelarModifTalle = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
         Me.TBModTalle = New System.Windows.Forms.TextBox()
         Me.LModTalle = New System.Windows.Forms.Label()
         Me.BModificarTalle = New System.Windows.Forms.Button()
+        Me.ErrorProviderTalle = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModTalle.SuspendLayout()
         Me.GroupBoxDatosCliente.SuspendLayout()
+        CType(Me.ErrorProviderTalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModTalle
@@ -112,6 +115,10 @@ Partial Class ModificarTalle
         Me.BModificarTalle.Text = "Modificar"
         Me.BModificarTalle.UseVisualStyleBackColor = False
         '
+        'ErrorProviderTalle
+        '
+        Me.ErrorProviderTalle.ContainerControl = Me
+        '
         'ModificarTalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -127,6 +134,7 @@ Partial Class ModificarTalle
         Me.PanelModTalle.ResumeLayout(False)
         Me.GroupBoxDatosCliente.ResumeLayout(False)
         Me.GroupBoxDatosCliente.PerformLayout()
+        CType(Me.ErrorProviderTalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -137,4 +145,5 @@ Partial Class ModificarTalle
     Friend WithEvents LModTalle As Label
     Friend WithEvents BModificarTalle As Button
     Friend WithEvents TBModTalle As TextBox
+    Friend WithEvents ErrorProviderTalle As ErrorProvider
 End Class

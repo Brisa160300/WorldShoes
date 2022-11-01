@@ -22,14 +22,17 @@ Partial Class ModificarMarca
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelModMarca = New System.Windows.Forms.Panel()
         Me.BCancelarModifCliente = New System.Windows.Forms.Button()
         Me.GroupBoxDatosMarca = New System.Windows.Forms.GroupBox()
         Me.TBModMarca = New System.Windows.Forms.TextBox()
         Me.LModMarca = New System.Windows.Forms.Label()
         Me.BModificarMarca = New System.Windows.Forms.Button()
+        Me.ErrorProviderMarca = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModMarca.SuspendLayout()
         Me.GroupBoxDatosMarca.SuspendLayout()
+        CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModMarca
@@ -112,6 +115,10 @@ Partial Class ModificarMarca
         Me.BModificarMarca.Text = "Modificar"
         Me.BModificarMarca.UseVisualStyleBackColor = False
         '
+        'ErrorProviderMarca
+        '
+        Me.ErrorProviderMarca.ContainerControl = Me
+        '
         'ModificarMarca
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -126,6 +133,7 @@ Partial Class ModificarMarca
         Me.PanelModMarca.ResumeLayout(False)
         Me.GroupBoxDatosMarca.ResumeLayout(False)
         Me.GroupBoxDatosMarca.PerformLayout()
+        CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -136,4 +144,5 @@ Partial Class ModificarMarca
     Friend WithEvents TBModMarca As TextBox
     Friend WithEvents LModMarca As Label
     Friend WithEvents BModificarMarca As Button
+    Friend WithEvents ErrorProviderMarca As ErrorProvider
 End Class

@@ -16,6 +16,7 @@
         Return listartalle
     End Function
 
+
     Function modTalle(idtalle As Integer, descripcion As String) As Boolean
         Try
             Dim TalleMod = (From c In ctx.talle Where c.id_talle = idtalle

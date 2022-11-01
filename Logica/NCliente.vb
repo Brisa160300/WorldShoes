@@ -29,7 +29,16 @@
         grid.Columns(5).HeaderText = "Direccion"
         grid.Columns(6).HeaderText = "E-mail"
         grid.Columns(7).Visible = False
+        grid.Columns(8).Visible = False
         grid.ClearSelection()
 
+    End Sub
+    Public Sub cargarComboxDNI(combo As ComboBox)
+        Dim user As Dcliente = New Dcliente
+        combo.DataSource = user.getClientesAll()
+        combo.DisplayMember = "Dni"
+        combo.ValueMember = "Dni"
+        combo.DropDownStyle = 2
+        combo.SelectedValue = -1
     End Sub
 End Class

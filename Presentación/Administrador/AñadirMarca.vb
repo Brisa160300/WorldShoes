@@ -9,8 +9,21 @@
         End If
     End Sub
 
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim nomMarc As String = TBNombreMarca.Text.Trim
+        If nomMarc = "" Then
+            ErrorProviderNomMarca.SetError(TBNombreMarca, "Ingrese una marca")
+            ask = True
+        ElseIf nomMarc.Length < 3 Then
+            ErrorProviderNomMarca.SetError(TBNombreMarca, "La marca ingresada debe tener un minimo de 3 caracteres")
+        End If
+        Return ask
+    End Function
+
     Private Sub BRegistrarMarca_Click(sender As Object, e As EventArgs) Handles BRegistrarMarca.Click
-        If String.IsNullOrWhiteSpace(TBNombreMarca.Text) Then
+        ErrorProviderNomMarca.Clear()
+        If EspacioEnBlanco() Then
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
         Else
             MsgBox("¿Desea añadir esta nueva marca?", vbQuestion + vbYesNo, "Confirmar Inserción")

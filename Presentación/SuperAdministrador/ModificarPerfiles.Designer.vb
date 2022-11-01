@@ -22,14 +22,17 @@ Partial Class ModificarPerfiles
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelModMarca = New System.Windows.Forms.Panel()
         Me.BCancelarModifCliente = New System.Windows.Forms.Button()
         Me.GroupBoxDatosPerfil = New System.Windows.Forms.GroupBox()
         Me.TBModPerfil = New System.Windows.Forms.TextBox()
         Me.LModPerfil = New System.Windows.Forms.Label()
         Me.BModificarPerfil = New System.Windows.Forms.Button()
+        Me.ErrorProviderNomPerf = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModMarca.SuspendLayout()
         Me.GroupBoxDatosPerfil.SuspendLayout()
+        CType(Me.ErrorProviderNomPerf, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModMarca
@@ -80,6 +83,7 @@ Partial Class ModificarPerfiles
         '
         Me.TBModPerfil.Location = New System.Drawing.Point(127, 121)
         Me.TBModPerfil.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBModPerfil.MaxLength = 50
         Me.TBModPerfil.Name = "TBModPerfil"
         Me.TBModPerfil.Size = New System.Drawing.Size(221, 30)
         Me.TBModPerfil.TabIndex = 16
@@ -112,6 +116,10 @@ Partial Class ModificarPerfiles
         Me.BModificarPerfil.Text = "Modificar"
         Me.BModificarPerfil.UseVisualStyleBackColor = False
         '
+        'ErrorProviderNomPerf
+        '
+        Me.ErrorProviderNomPerf.ContainerControl = Me
+        '
         'ModificarPerfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -126,6 +134,7 @@ Partial Class ModificarPerfiles
         Me.PanelModMarca.ResumeLayout(False)
         Me.GroupBoxDatosPerfil.ResumeLayout(False)
         Me.GroupBoxDatosPerfil.PerformLayout()
+        CType(Me.ErrorProviderNomPerf, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -136,4 +145,5 @@ Partial Class ModificarPerfiles
     Friend WithEvents TBModPerfil As TextBox
     Friend WithEvents LModPerfil As Label
     Friend WithEvents BModificarPerfil As Button
+    Friend WithEvents ErrorProviderNomPerf As ErrorProvider
 End Class

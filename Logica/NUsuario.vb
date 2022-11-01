@@ -36,7 +36,19 @@
         combo.DataSource = perf.getPerfilAll()
         combo.DisplayMember = "Descripcion"
         combo.ValueMember = "id_Perfil"
+        combo.DropDownStyle = 2
         combo.SelectedValue = -1
+        combo.FlatStyle = FlatStyle.Flat
+
+    End Sub
+    Public Sub cargarComboxDNI(combo As ComboBox)
+        Dim user As DUsuario = New DUsuario
+        combo.DataSource = user.getUsuariosAll()
+        combo.DisplayMember = "dni"
+        combo.ValueMember = "dni"
+        combo.DropDownStyle = 2
+        combo.SelectedValue = -1
+        combo.FlatStyle = FlatStyle.Flat
 
     End Sub
 End Class

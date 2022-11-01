@@ -4,8 +4,20 @@
         objNtalle.cargarGrid(dgvRegistroTalles)
     End Sub
 
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim tal As String = TBNombreTalle.Text.Trim
+        If tal = "" Then
+            ErrorProviderTalle.SetError(TBNombreTalle, "Ingrese un Talle")
+            ask = True
+        ElseIf tal.Length < 2 Then
+            ErrorProviderTalle.SetError(TBNombreTalle, "El talle ingresado no es valido")
+        End If
+        Return ask
+    End Function
     Private Sub BRegistrarTalle_Click(sender As Object, e As EventArgs) Handles BRegistrarTalle.Click
-        If String.IsNullOrWhiteSpace(TBNombreTalle.Text) Then
+        ErrorProviderTalle.Clear()
+        If EspacioEnBlanco() Then
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
         Else
             MsgBox("¿Desea añadir esta nuevo talle", vbQuestion + vbYesNo, "Confirmar Inserción")

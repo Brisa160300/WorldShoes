@@ -22,6 +22,7 @@ Partial Class AñadirMarca
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControlRegCategoria = New System.Windows.Forms.TabControl()
@@ -33,10 +34,12 @@ Partial Class AñadirMarca
         Me.BVolve = New System.Windows.Forms.Button()
         Me.TBNombreMarca = New System.Windows.Forms.TextBox()
         Me.LNombreMarca = New System.Windows.Forms.Label()
+        Me.ErrorProviderNomMarca = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TabControlRegCategoria.SuspendLayout()
         Me.TabPageListaCategoria.SuspendLayout()
         CType(Me.dgvRegistroMarca, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelRegClientes.SuspendLayout()
+        CType(Me.ErrorProviderNomMarca, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControlRegCategoria
@@ -184,6 +187,10 @@ Partial Class AñadirMarca
         Me.LNombreMarca.TabIndex = 0
         Me.LNombreMarca.Text = "Nombre de la Marca"
         '
+        'ErrorProviderNomMarca
+        '
+        Me.ErrorProviderNomMarca.ContainerControl = Me
+        '
         'AñadirMarca
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -202,6 +209,7 @@ Partial Class AñadirMarca
         CType(Me.dgvRegistroMarca, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelRegClientes.ResumeLayout(False)
         Me.PanelRegClientes.PerformLayout()
+        CType(Me.ErrorProviderNomMarca, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,4 +224,5 @@ Partial Class AñadirMarca
     Friend WithEvents BVolve As Button
     Friend WithEvents TBNombreMarca As TextBox
     Friend WithEvents LNombreMarca As Label
+    Friend WithEvents ErrorProviderNomMarca As ErrorProvider
 End Class

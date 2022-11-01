@@ -22,6 +22,7 @@ Partial Class Añadir_Empleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -45,10 +46,22 @@ Partial Class Añadir_Empleado
         Me.TabPageListaEmpleados = New System.Windows.Forms.TabPage()
         Me.dgvEmpleados = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ErrorProviderNombre = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderApellido = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDNI = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderTelefono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDireccion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.TabControlListaEmpleados.SuspendLayout()
         Me.TabPageListaEmpleados.SuspendLayout()
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -313,6 +326,30 @@ Partial Class Añadir_Empleado
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Registrar Empleado:"
         '
+        'ErrorProviderNombre
+        '
+        Me.ErrorProviderNombre.ContainerControl = Me
+        '
+        'ErrorProviderApellido
+        '
+        Me.ErrorProviderApellido.ContainerControl = Me
+        '
+        'ErrorProviderDNI
+        '
+        Me.ErrorProviderDNI.ContainerControl = Me
+        '
+        'ErrorProviderTelefono
+        '
+        Me.ErrorProviderTelefono.ContainerControl = Me
+        '
+        'ErrorProviderDireccion
+        '
+        Me.ErrorProviderDireccion.ContainerControl = Me
+        '
+        'ErrorProviderEmail
+        '
+        Me.ErrorProviderEmail.ContainerControl = Me
+        '
         'Añadir_Empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
@@ -332,6 +369,12 @@ Partial Class Añadir_Empleado
         Me.TabControlListaEmpleados.ResumeLayout(False)
         Me.TabPageListaEmpleados.ResumeLayout(False)
         CType(Me.dgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -356,4 +399,10 @@ Partial Class Añadir_Empleado
     Friend WithEvents Label1 As Label
     Friend WithEvents TBDniEmpleado As TextBox
     Friend WithEvents LDniEmpleado As Label
+    Friend WithEvents ErrorProviderNombre As ErrorProvider
+    Friend WithEvents ErrorProviderApellido As ErrorProvider
+    Friend WithEvents ErrorProviderDNI As ErrorProvider
+    Friend WithEvents ErrorProviderTelefono As ErrorProvider
+    Friend WithEvents ErrorProviderDireccion As ErrorProvider
+    Friend WithEvents ErrorProviderEmail As ErrorProvider
 End Class

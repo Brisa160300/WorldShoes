@@ -1,14 +1,11 @@
-﻿Public Class EProducto
+﻿Public Class EDetalleProducto
     Private _codigo As Integer
     Private _nombre As String
     Private _descripcion_categoria As String
-    Private _stock As Integer
     Private _precio As Integer
     Private _descripcion_marca As String
     Private _estado As String
-    Private _descripcion_talle As String
     Private _id_marca As Integer
-    Private _id_talle As Integer
     Private _id_categ As Integer
 
     Public Property Codigo As Integer
@@ -19,6 +16,7 @@
             _codigo = value
         End Set
     End Property
+
     Public Property Nombre As String
         Get
             Return _nombre
@@ -34,15 +32,6 @@
         End Get
         Set(value As String)
             _descripcion_categoria = value
-        End Set
-    End Property
-
-    Public Property Stock As Integer
-        Get
-            Return _stock
-        End Get
-        Set(value As Integer)
-            _stock = value
         End Set
     End Property
 
@@ -73,30 +62,12 @@
         End Set
     End Property
 
-    Public Property Descripcion_talle As String
-        Get
-            Return _descripcion_talle
-        End Get
-        Set(value As String)
-            _descripcion_talle = value
-        End Set
-    End Property
-
     Public Property Id_marca As Integer
         Get
             Return _id_marca
         End Get
         Set(value As Integer)
             _id_marca = value
-        End Set
-    End Property
-
-    Public Property Id_talle As Integer
-        Get
-            Return _id_talle
-        End Get
-        Set(value As Integer)
-            _id_talle = value
         End Set
     End Property
 
@@ -109,4 +80,3 @@
         End Set
     End Property
 End Class
-

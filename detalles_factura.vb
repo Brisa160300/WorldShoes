@@ -10,14 +10,14 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class talle_producto
-    Public Property id_talle_prod As Integer
+Partial Public Class detalles_factura
+    Public Property id_detalle_factura As Integer
+    Public Property id_factura As Integer
     Public Property cod_producto As Integer
     Public Property id_talle As Integer
-    Public Property estado_talle_producto As Integer
-    Public Property cantidad_talle As Integer
+    Public Property cantidad_detalle As Integer
+    Public Property importe_detalle As Decimal
 
-    Public Overridable Property talle As talle
-    Public Overridable Property Productos As Productos
+    Public Overridable Property factura As factura
 
 End Class

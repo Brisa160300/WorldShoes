@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WorldShoes_Roman_RiosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WorldShoes_Roman_RiosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="id_categoria" />
@@ -32,8 +32,20 @@
           </Key>
           <Property Name="id_detalle_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_factura" Type="int" Nullable="false" />
-          <Property Name="id_producto" Type="int" Nullable="false" />
-          <Property Name="id_talle_producto" Type="int" Nullable="false" />
+          <Property Name="cod_producto" Type="int" Nullable="false" />
+          <Property Name="id_talle" Type="int" Nullable="false" />
+          <Property Name="precio_detalle" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="cantidad_detalle" Type="int" Nullable="false" />
+          <Property Name="importe_detalle" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="detalles_factura">
+          <Key>
+            <PropertyRef Name="id_detalle_factura" />
+          </Key>
+          <Property Name="id_detalle_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_factura" Type="int" Nullable="false" />
+          <Property Name="cod_producto" Type="int" Nullable="false" />
+          <Property Name="id_talle" Type="int" Nullable="false" />
           <Property Name="cantidad_detalle" Type="int" Nullable="false" />
           <Property Name="importe_detalle" Type="decimal" Precision="8" Scale="2" Nullable="false" />
         </EntityType>
@@ -57,7 +69,7 @@
           <Property Name="id_factura" Type="int" Nullable="false" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="id_cliente" Type="int" Nullable="false" />
-          <Property Name="fecha_factura" Type="date" Nullable="false" />
+          <Property Name="fecha_factura" Type="date" />
           <Property Name="cantidad_factura" Type="smallint" Nullable="false" />
           <Property Name="importe_factura" Type="decimal" Precision="8" Scale="2" Nullable="false" />
         </EntityType>
@@ -84,7 +96,6 @@
           <Property Name="cod_producto" Type="int" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="id_categoria" Type="int" Nullable="false" />
-          <Property Name="stock" Type="int" Nullable="false" />
           <Property Name="precio" Type="decimal" Precision="8" Scale="0" Nullable="false" />
           <Property Name="id_marca" Type="int" Nullable="false" />
           <Property Name="id_estado_producto" Type="int" Nullable="false" />
@@ -99,9 +110,9 @@
         </EntityType>
         <EntityType Name="talle_producto">
           <Key>
-            <PropertyRef Name="id_talle_producto" />
+            <PropertyRef Name="id_talle_prod" />
           </Key>
-          <Property Name="id_talle_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_talle_prod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="cod_producto" Type="int" Nullable="false" />
           <Property Name="id_talle" Type="int" Nullable="false" />
           <Property Name="estado_talle_producto" Type="int" Nullable="false" />
@@ -118,27 +129,15 @@
           <Property Name="id_empleado" Type="int" Nullable="false" />
           <Property Name="estado_usuario" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_detalle_factura_factura">
+        <Association Name="FK_detallefactura_factura">
           <End Role="factura" Type="Self.factura" Multiplicity="1" />
-          <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+          <End Role="detalles_factura" Type="Self.detalles_factura" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="factura">
               <PropertyRef Name="id_factura" />
             </Principal>
-            <Dependent Role="detalle_factura">
+            <Dependent Role="detalles_factura">
               <PropertyRef Name="id_factura" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_empleado_usuario">
-          <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="empleados">
-              <PropertyRef Name="Id_empleado" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="id_empleado" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -166,18 +165,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_perfil_usuario">
-          <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="1" />
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Perfiles">
-              <PropertyRef Name="id_Perfil" />
-            </Principal>
-            <Dependent Role="Usuarios">
-              <PropertyRef Name="id_Perfil" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_producto_categoria">
           <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
           <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
@@ -202,7 +189,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_talle_producto_producto">
+        <Association Name="FK_talleProducto_producto">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="talle_producto" Type="Self.talle_producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -214,7 +201,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_talle_producto_talle">
+        <Association Name="FK_talleProducto_talle">
           <End Role="talle" Type="Self.talle" Multiplicity="1" />
           <End Role="talle_producto" Type="Self.talle_producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -226,10 +213,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Usuario_empleado">
+          <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empleados">
+              <PropertyRef Name="Id_empleado" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_empleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_perfil">
+          <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfiles">
+              <PropertyRef Name="id_Perfil" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_Perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="WorldShoes_Roman_RiosModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detalles_factura" EntityType="Self.detalles_factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="empleados" EntityType="Self.empleados" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="factura" EntityType="Self.factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
@@ -238,13 +250,9 @@
           <EntitySet Name="talle" EntityType="Self.talle" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="talle_producto" EntityType="Self.talle_producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_detalle_factura_factura" Association="Self.FK_detalle_factura_factura">
+          <AssociationSet Name="FK_detallefactura_factura" Association="Self.FK_detallefactura_factura">
             <End Role="factura" EntitySet="factura" />
-            <End Role="detalle_factura" EntitySet="detalle_factura" />
-          </AssociationSet>
-          <AssociationSet Name="FK_empleado_usuario" Association="Self.FK_empleado_usuario">
-            <End Role="empleados" EntitySet="empleados" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="detalles_factura" EntitySet="detalles_factura" />
           </AssociationSet>
           <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
             <End Role="clientes" EntitySet="clientes" />
@@ -254,10 +262,6 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="factura" EntitySet="factura" />
           </AssociationSet>
-          <AssociationSet Name="FK_perfil_usuario" Association="Self.FK_perfil_usuario">
-            <End Role="Perfiles" EntitySet="Perfiles" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
           <AssociationSet Name="FK_producto_categoria" Association="Self.FK_producto_categoria">
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Productos" EntitySet="Productos" />
@@ -266,17 +270,24 @@
             <End Role="Marcas" EntitySet="Marcas" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK_talle_producto_producto" Association="Self.FK_talle_producto_producto">
+          <AssociationSet Name="FK_talleProducto_producto" Association="Self.FK_talleProducto_producto">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="talle_producto" EntitySet="talle_producto" />
           </AssociationSet>
-          <AssociationSet Name="FK_talle_producto_talle" Association="Self.FK_talle_producto_talle">
+          <AssociationSet Name="FK_talleProducto_talle" Association="Self.FK_talleProducto_talle">
             <End Role="talle" EntitySet="talle" />
             <End Role="talle_producto" EntitySet="talle_producto" />
           </AssociationSet>
+          <AssociationSet Name="FK_Usuario_empleado" Association="Self.FK_Usuario_empleado">
+            <End Role="empleados" EntitySet="empleados" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_perfil" Association="Self.FK_Usuario_perfil">
+            <End Role="Perfiles" EntitySet="Perfiles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WorldShoes_Roman_RiosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -287,7 +298,7 @@
           <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion_categoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_estado_categoria" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK_producto_categoria" FromRole="Categoria" ToRole="Productos" />
+          <NavigationProperty Name="Productos" Relationship="WorldShoes_Roman_RiosModel.FK_producto_categoria" FromRole="Categoria" ToRole="Productos" />
         </EntityType>
         <EntityType Name="clientes">
           <Key>
@@ -309,11 +320,23 @@
           </Key>
           <Property Name="id_detalle_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_factura" Type="Int32" Nullable="false" />
-          <Property Name="id_producto" Type="Int32" Nullable="false" />
-          <Property Name="id_talle_producto" Type="Int32" Nullable="false" />
+          <Property Name="cod_producto" Type="Int32" Nullable="false" />
+          <Property Name="id_talle" Type="Int32" Nullable="false" />
+          <Property Name="precio_detalle" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
           <Property Name="cantidad_detalle" Type="Int32" Nullable="false" />
           <Property Name="importe_detalle" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-          <NavigationProperty Name="factura" Relationship="Self.FK_detalle_factura_factura" FromRole="detalle_factura" ToRole="factura" />
+        </EntityType>
+        <EntityType Name="detalles_factura">
+          <Key>
+            <PropertyRef Name="id_detalle_factura" />
+          </Key>
+          <Property Name="id_detalle_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <Property Name="cod_producto" Type="Int32" Nullable="false" />
+          <Property Name="id_talle" Type="Int32" Nullable="false" />
+          <Property Name="cantidad_detalle" Type="Int32" Nullable="false" />
+          <Property Name="importe_detalle" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <NavigationProperty Name="factura" Relationship="Self.FK_detallefactura_factura" FromRole="detalles_factura" ToRole="factura" />
         </EntityType>
         <EntityType Name="empleados">
           <Key>
@@ -327,7 +350,7 @@
           <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado_empleado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_empleado_usuario" FromRole="empleados" ToRole="Usuarios" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuario_empleado" FromRole="empleados" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="factura">
           <Key>
@@ -336,11 +359,11 @@
           <Property Name="id_factura" Type="Int32" Nullable="false" />
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="id_cliente" Type="Int32" Nullable="false" />
-          <Property Name="fecha_factura" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_factura" Type="DateTime" Precision="0" />
           <Property Name="cantidad_factura" Type="Int16" Nullable="false" />
           <Property Name="importe_factura" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
           <NavigationProperty Name="clientes" Relationship="Self.FK_factura_cliente" FromRole="factura" ToRole="clientes" />
-          <NavigationProperty Name="detalle_factura" Relationship="Self.FK_detalle_factura_factura" FromRole="factura" ToRole="detalle_factura" />
+          <NavigationProperty Name="detalles_factura" Relationship="Self.FK_detallefactura_factura" FromRole="factura" ToRole="detalles_factura" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK_factura_usuario" FromRole="factura" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Marcas">
@@ -350,7 +373,7 @@
           <Property Name="id_Marca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK_producto_marca" FromRole="Marcas" ToRole="Productos" />
+          <NavigationProperty Name="Productos" Relationship="WorldShoes_Roman_RiosModel.FK_producto_marca" FromRole="Marcas" ToRole="Productos" />
         </EntityType>
         <EntityType Name="Perfiles">
           <Key>
@@ -359,22 +382,7 @@
           <Property Name="id_Perfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="estado_perfil" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_perfil_usuario" FromRole="Perfiles" ToRole="Usuarios" />
-        </EntityType>
-        <EntityType Name="Productos">
-          <Key>
-            <PropertyRef Name="cod_producto" />
-          </Key>
-          <Property Name="cod_producto" Type="Int32" Nullable="false" />
-          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_categoria" Type="Int32" Nullable="false" />
-          <Property Name="stock" Type="Int32" Nullable="false" />
-          <Property Name="precio" Type="Decimal" Precision="8" Scale="0" Nullable="false" />
-          <Property Name="id_marca" Type="Int32" Nullable="false" />
-          <Property Name="id_estado_producto" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Categoria" Relationship="Self.FK_producto_categoria" FromRole="Productos" ToRole="Categoria" />
-          <NavigationProperty Name="Marcas" Relationship="Self.FK_producto_marca" FromRole="Productos" ToRole="Marcas" />
-          <NavigationProperty Name="talle_producto" Relationship="Self.FK_talle_producto_producto" FromRole="Productos" ToRole="talle_producto" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuario_perfil" FromRole="Perfiles" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="talle">
           <Key>
@@ -383,19 +391,19 @@
           <Property Name="id_talle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="Int32" Nullable="false" />
           <Property Name="estado_talle" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="talle_producto" Relationship="Self.FK_talle_producto_talle" FromRole="talle" ToRole="talle_producto" />
+          <NavigationProperty Name="talle_producto" Relationship="Self.FK_talleProducto_talle" FromRole="talle" ToRole="talle_producto" />
         </EntityType>
         <EntityType Name="talle_producto">
           <Key>
-            <PropertyRef Name="id_talle_producto" />
+            <PropertyRef Name="id_talle_prod" />
           </Key>
-          <Property Name="id_talle_producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_talle_prod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="cod_producto" Type="Int32" Nullable="false" />
           <Property Name="id_talle" Type="Int32" Nullable="false" />
           <Property Name="estado_talle_producto" Type="Int32" Nullable="false" />
           <Property Name="cantidad_talle" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK_talle_producto_producto" FromRole="talle_producto" ToRole="Productos" />
-          <NavigationProperty Name="talle" Relationship="Self.FK_talle_producto_talle" FromRole="talle_producto" ToRole="talle" />
+          <NavigationProperty Name="talle" Relationship="Self.FK_talleProducto_talle" FromRole="talle_producto" ToRole="talle" />
+          <NavigationProperty Name="Productos" Relationship="WorldShoes_Roman_RiosModel.FK_talleProducto_producto" FromRole="talle_producto" ToRole="Productos" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -407,22 +415,10 @@
           <Property Name="id_Perfil" Type="Int32" Nullable="false" />
           <Property Name="id_empleado" Type="Int32" Nullable="false" />
           <Property Name="estado_usuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="empleados" Relationship="Self.FK_empleado_usuario" FromRole="Usuarios" ToRole="empleados" />
+          <NavigationProperty Name="empleados" Relationship="Self.FK_Usuario_empleado" FromRole="Usuarios" ToRole="empleados" />
           <NavigationProperty Name="factura" Relationship="Self.FK_factura_usuario" FromRole="Usuarios" ToRole="factura" />
-          <NavigationProperty Name="Perfiles" Relationship="Self.FK_perfil_usuario" FromRole="Usuarios" ToRole="Perfiles" />
+          <NavigationProperty Name="Perfiles" Relationship="Self.FK_Usuario_perfil" FromRole="Usuarios" ToRole="Perfiles" />
         </EntityType>
-        <Association Name="FK_producto_categoria">
-          <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
-          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Categoria">
-              <PropertyRef Name="id_categoria" />
-            </Principal>
-            <Dependent Role="Productos">
-              <PropertyRef Name="id_categoria" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_factura_cliente">
           <End Role="clientes" Type="Self.clientes" Multiplicity="1" />
           <End Role="factura" Type="Self.factura" Multiplicity="*" />
@@ -435,19 +431,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_detalle_factura_factura">
+        <Association Name="FK_detallefactura_factura">
           <End Role="factura" Type="Self.factura" Multiplicity="1" />
-          <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
+          <End Role="detalles_factura" Type="Self.detalles_factura" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="factura">
               <PropertyRef Name="id_factura" />
             </Principal>
-            <Dependent Role="detalle_factura">
+            <Dependent Role="detalles_factura">
               <PropertyRef Name="id_factura" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_empleado_usuario">
+        <Association Name="FK_Usuario_empleado">
           <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -471,19 +467,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_producto_marca">
-          <End Role="Marcas" Type="Self.Marcas" Multiplicity="1" />
-          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Marcas">
-              <PropertyRef Name="id_Marca" />
-            </Principal>
-            <Dependent Role="Productos">
-              <PropertyRef Name="id_marca" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_perfil_usuario">
+        <Association Name="FK_Usuario_perfil">
           <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
           <ReferentialConstraint>
@@ -495,19 +479,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_talle_producto_producto">
-          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
-          <End Role="talle_producto" Type="Self.talle_producto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Productos">
-              <PropertyRef Name="cod_producto" />
-            </Principal>
-            <Dependent Role="talle_producto">
-              <PropertyRef Name="cod_producto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_talle_producto_talle">
+        <Association Name="FK_talleProducto_talle">
           <End Role="talle" Type="Self.talle" Multiplicity="1" />
           <End Role="talle_producto" Type="Self.talle_producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -523,27 +495,23 @@
           <EntitySet Name="Categoria" EntityType="Self.Categoria" />
           <EntitySet Name="clientes" EntityType="Self.clientes" />
           <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" />
+          <EntitySet Name="detalles_factura" EntityType="Self.detalles_factura" />
           <EntitySet Name="empleados" EntityType="Self.empleados" />
           <EntitySet Name="factura" EntityType="Self.factura" />
           <EntitySet Name="Marcas" EntityType="Self.Marcas" />
           <EntitySet Name="Perfiles" EntityType="Self.Perfiles" />
-          <EntitySet Name="Productos" EntityType="Self.Productos" />
           <EntitySet Name="talle" EntityType="Self.talle" />
           <EntitySet Name="talle_producto" EntityType="Self.talle_producto" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-          <AssociationSet Name="FK_producto_categoria" Association="Self.FK_producto_categoria">
-            <End Role="Categoria" EntitySet="Categoria" />
-            <End Role="Productos" EntitySet="Productos" />
-          </AssociationSet>
           <AssociationSet Name="FK_factura_cliente" Association="Self.FK_factura_cliente">
             <End Role="clientes" EntitySet="clientes" />
             <End Role="factura" EntitySet="factura" />
           </AssociationSet>
-          <AssociationSet Name="FK_detalle_factura_factura" Association="Self.FK_detalle_factura_factura">
+          <AssociationSet Name="FK_detallefactura_factura" Association="Self.FK_detallefactura_factura">
             <End Role="factura" EntitySet="factura" />
-            <End Role="detalle_factura" EntitySet="detalle_factura" />
+            <End Role="detalles_factura" EntitySet="detalles_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK_empleado_usuario" Association="Self.FK_empleado_usuario">
+          <AssociationSet Name="FK_Usuario_empleado" Association="Self.FK_Usuario_empleado">
             <End Role="empleados" EntitySet="empleados" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
@@ -551,23 +519,78 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="factura" EntitySet="factura" />
           </AssociationSet>
-          <AssociationSet Name="FK_producto_marca" Association="Self.FK_producto_marca">
-            <End Role="Marcas" EntitySet="Marcas" />
-            <End Role="Productos" EntitySet="Productos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_perfil_usuario" Association="Self.FK_perfil_usuario">
+          <AssociationSet Name="FK_Usuario_perfil" Association="Self.FK_Usuario_perfil">
             <End Role="Perfiles" EntitySet="Perfiles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="FK_talle_producto_producto" Association="Self.FK_talle_producto_producto">
-            <End Role="Productos" EntitySet="Productos" />
-            <End Role="talle_producto" EntitySet="talle_producto" />
-          </AssociationSet>
-          <AssociationSet Name="FK_talle_producto_talle" Association="Self.FK_talle_producto_talle">
+          <AssociationSet Name="FK_talleProducto_talle" Association="Self.FK_talleProducto_talle">
             <End Role="talle" EntitySet="talle" />
             <End Role="talle_producto" EntitySet="talle_producto" />
           </AssociationSet>
+          <EntitySet Name="Productos" EntityType="WorldShoes_Roman_RiosModel.Productos" />
+          <AssociationSet Name="FK_producto_categoria" Association="WorldShoes_Roman_RiosModel.FK_producto_categoria">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_producto_marca" Association="WorldShoes_Roman_RiosModel.FK_producto_marca">
+            <End Role="Marcas" EntitySet="Marcas" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_talleProducto_producto" Association="WorldShoes_Roman_RiosModel.FK_talleProducto_producto">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="talle_producto" EntitySet="talle_producto" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="cod_producto" />
+          </Key>
+          <Property Name="cod_producto" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="id_categoria" Type="Int32" Nullable="false" />
+          <Property Name="precio" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="id_marca" Type="Int32" Nullable="false" />
+          <Property Name="id_estado_producto" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categoria" Relationship="WorldShoes_Roman_RiosModel.FK_producto_categoria" FromRole="Productos" ToRole="Categoria" />
+          <NavigationProperty Name="Marcas" Relationship="WorldShoes_Roman_RiosModel.FK_producto_marca" FromRole="Productos" ToRole="Marcas" />
+          <NavigationProperty Name="talle_producto" Relationship="WorldShoes_Roman_RiosModel.FK_talleProducto_producto" FromRole="Productos" ToRole="talle_producto" />
+        </EntityType>
+        <Association Name="FK_producto_categoria">
+          <End Type="WorldShoes_Roman_RiosModel.Categoria" Role="Categoria" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.Productos" Role="Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="id_categoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_producto_marca">
+          <End Type="WorldShoes_Roman_RiosModel.Marcas" Role="Marcas" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.Productos" Role="Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marcas">
+              <PropertyRef Name="id_Marca" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="id_marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_talleProducto_producto">
+          <End Type="WorldShoes_Roman_RiosModel.Productos" Role="Productos" Multiplicity="1" />
+          <End Type="WorldShoes_Roman_RiosModel.talle_producto" Role="talle_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="cod_producto" />
+            </Principal>
+            <Dependent Role="talle_producto">
+              <PropertyRef Name="cod_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -602,8 +625,21 @@
               <MappingFragment StoreEntitySet="detalle_factura">
                 <ScalarProperty Name="id_detalle_factura" ColumnName="id_detalle_factura" />
                 <ScalarProperty Name="id_factura" ColumnName="id_factura" />
-                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
-                <ScalarProperty Name="id_talle_producto" ColumnName="id_talle_producto" />
+                <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
+                <ScalarProperty Name="id_talle" ColumnName="id_talle" />
+                <ScalarProperty Name="precio_detalle" ColumnName="precio_detalle" />
+                <ScalarProperty Name="cantidad_detalle" ColumnName="cantidad_detalle" />
+                <ScalarProperty Name="importe_detalle" ColumnName="importe_detalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detalles_factura">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.detalles_factura">
+              <MappingFragment StoreEntitySet="detalles_factura">
+                <ScalarProperty Name="id_detalle_factura" ColumnName="id_detalle_factura" />
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+                <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
+                <ScalarProperty Name="id_talle" ColumnName="id_talle" />
                 <ScalarProperty Name="cantidad_detalle" ColumnName="cantidad_detalle" />
                 <ScalarProperty Name="importe_detalle" ColumnName="importe_detalle" />
               </MappingFragment>
@@ -653,19 +689,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Productos">
-            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.Productos">
-              <MappingFragment StoreEntitySet="Productos">
-                <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
-                <ScalarProperty Name="stock" ColumnName="stock" />
-                <ScalarProperty Name="precio" ColumnName="precio" />
-                <ScalarProperty Name="id_marca" ColumnName="id_marca" />
-                <ScalarProperty Name="id_estado_producto" ColumnName="id_estado_producto" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="talle">
             <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.talle">
               <MappingFragment StoreEntitySet="talle">
@@ -678,7 +701,7 @@
           <EntitySetMapping Name="talle_producto">
             <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.talle_producto">
               <MappingFragment StoreEntitySet="talle_producto">
-                <ScalarProperty Name="id_talle_producto" ColumnName="id_talle_producto" />
+                <ScalarProperty Name="id_talle_prod" ColumnName="id_talle_prod" />
                 <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
                 <ScalarProperty Name="id_talle" ColumnName="id_talle" />
                 <ScalarProperty Name="estado_talle_producto" ColumnName="estado_talle_producto" />
@@ -695,6 +718,18 @@
                 <ScalarProperty Name="id_Perfil" ColumnName="id_Perfil" />
                 <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
                 <ScalarProperty Name="estado_usuario" ColumnName="estado_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="WorldShoes_Roman_RiosModel.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="id_estado_producto" ColumnName="id_estado_producto" />
+                <ScalarProperty Name="id_marca" ColumnName="id_marca" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cod_producto" ColumnName="cod_producto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -164,7 +164,7 @@ Partial Class ListarClientes
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(909, 559)
+        Me.BVolver.Location = New System.Drawing.Point(909, 570)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
         Me.BVolver.Size = New System.Drawing.Size(130, 52)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ModificarProducto
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Mod_Producto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,31 @@ Partial Class ModificarProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelModClientes = New System.Windows.Forms.Panel()
         Me.BCancelarModifCliente = New System.Windows.Forms.Button()
         Me.BModificarProducto = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
-        Me.TBStockProducto = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.CBTalleProducto = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TBPrecioProducto = New System.Windows.Forms.TextBox()
-        Me.TBNombreProducto = New System.Windows.Forms.TextBox()
+        Me.TBPrecio = New System.Windows.Forms.TextBox()
+        Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.LMarca = New System.Windows.Forms.Label()
-        Me.CBMarcaProducto = New System.Windows.Forms.ComboBox()
+        Me.CBMarca = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CBCategoriaProducto = New System.Windows.Forms.ComboBox()
+        Me.CBCategoria = New System.Windows.Forms.ComboBox()
+        Me.ErrorProviderPrecio = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderNombre = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderMarca = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderCategoria = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModClientes.SuspendLayout()
         Me.GroupBoxDatosCliente.SuspendLayout()
+        CType(Me.ErrorProviderPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModClientes
@@ -49,11 +54,11 @@ Partial Class ModificarProducto
         Me.PanelModClientes.Controls.Add(Me.BCancelarModifCliente)
         Me.PanelModClientes.Controls.Add(Me.BModificarProducto)
         Me.PanelModClientes.Controls.Add(Me.GroupBoxDatosCliente)
-        Me.PanelModClientes.Location = New System.Drawing.Point(55, 38)
+        Me.PanelModClientes.Location = New System.Drawing.Point(51, 37)
         Me.PanelModClientes.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelModClientes.Name = "PanelModClientes"
         Me.PanelModClientes.Size = New System.Drawing.Size(678, 450)
-        Me.PanelModClientes.TabIndex = 2
+        Me.PanelModClientes.TabIndex = 3
         '
         'BCancelarModifCliente
         '
@@ -89,18 +94,14 @@ Partial Class ModificarProducto
         '
         'GroupBoxDatosCliente
         '
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBStockProducto)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.Label4)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.CBTalleProducto)
         Me.GroupBoxDatosCliente.Controls.Add(Me.Label5)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.Label6)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBPrecioProducto)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.TBNombreProducto)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBPrecio)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.TBNombre)
         Me.GroupBoxDatosCliente.Controls.Add(Me.LMarca)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.CBMarcaProducto)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.CBMarca)
         Me.GroupBoxDatosCliente.Controls.Add(Me.Label3)
         Me.GroupBoxDatosCliente.Controls.Add(Me.Label2)
-        Me.GroupBoxDatosCliente.Controls.Add(Me.CBCategoriaProducto)
+        Me.GroupBoxDatosCliente.Controls.Add(Me.CBCategoria)
         Me.GroupBoxDatosCliente.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxDatosCliente.ForeColor = System.Drawing.Color.White
         Me.GroupBoxDatosCliente.Location = New System.Drawing.Point(45, 28)
@@ -112,104 +113,61 @@ Partial Class ModificarProducto
         Me.GroupBoxDatosCliente.TabStop = False
         Me.GroupBoxDatosCliente.Text = "Modificar Producto"
         '
-        'TBStockProducto
-        '
-        Me.TBStockProducto.Location = New System.Drawing.Point(330, 221)
-        Me.TBStockProducto.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBStockProducto.Name = "TBStockProducto"
-        Me.TBStockProducto.Size = New System.Drawing.Size(213, 30)
-        Me.TBStockProducto.TabIndex = 10
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(326, 195)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 22)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Stock:"
-        '
-        'CBTalleProducto
-        '
-        Me.CBTalleProducto.FormattingEnabled = True
-        Me.CBTalleProducto.Items.AddRange(New Object() {"DNI", "OTRO"})
-        Me.CBTalleProducto.Location = New System.Drawing.Point(330, 91)
-        Me.CBTalleProducto.Margin = New System.Windows.Forms.Padding(4)
-        Me.CBTalleProducto.Name = "CBTalleProducto"
-        Me.CBTalleProducto.Size = New System.Drawing.Size(213, 30)
-        Me.CBTalleProducto.TabIndex = 19
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(326, 130)
+        Me.Label5.Location = New System.Drawing.Point(320, 161)
         Me.Label5.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 22)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Precio: "
         '
-        'Label6
+        'TBPrecio
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(326, 63)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 22)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Talle: "
+        Me.TBPrecio.Location = New System.Drawing.Point(324, 189)
+        Me.TBPrecio.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBPrecio.Name = "TBPrecio"
+        Me.TBPrecio.Size = New System.Drawing.Size(213, 30)
+        Me.TBPrecio.TabIndex = 15
         '
-        'TBPrecioProducto
+        'TBNombre
         '
-        Me.TBPrecioProducto.Location = New System.Drawing.Point(330, 155)
-        Me.TBPrecioProducto.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBPrecioProducto.Name = "TBPrecioProducto"
-        Me.TBPrecioProducto.Size = New System.Drawing.Size(213, 30)
-        Me.TBPrecioProducto.TabIndex = 15
-        '
-        'TBNombreProducto
-        '
-        Me.TBNombreProducto.Location = New System.Drawing.Point(72, 219)
-        Me.TBNombreProducto.Margin = New System.Windows.Forms.Padding(5)
-        Me.TBNombreProducto.Name = "TBNombreProducto"
-        Me.TBNombreProducto.Size = New System.Drawing.Size(213, 30)
-        Me.TBNombreProducto.TabIndex = 8
+        Me.TBNombre.Location = New System.Drawing.Point(63, 118)
+        Me.TBNombre.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBNombre.Name = "TBNombre"
+        Me.TBNombre.Size = New System.Drawing.Size(213, 30)
+        Me.TBNombre.TabIndex = 8
         '
         'LMarca
         '
         Me.LMarca.AutoSize = True
         Me.LMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LMarca.ForeColor = System.Drawing.Color.White
-        Me.LMarca.Location = New System.Drawing.Point(68, 131)
+        Me.LMarca.Location = New System.Drawing.Point(317, 92)
         Me.LMarca.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.LMarca.Name = "LMarca"
         Me.LMarca.Size = New System.Drawing.Size(78, 22)
         Me.LMarca.TabIndex = 20
         Me.LMarca.Text = "Marca: "
         '
-        'CBMarcaProducto
+        'CBMarca
         '
-        Me.CBMarcaProducto.FormattingEnabled = True
-        Me.CBMarcaProducto.Items.AddRange(New Object() {"DNI", "OTRO"})
-        Me.CBMarcaProducto.Location = New System.Drawing.Point(69, 155)
-        Me.CBMarcaProducto.Margin = New System.Windows.Forms.Padding(4)
-        Me.CBMarcaProducto.Name = "CBMarcaProducto"
-        Me.CBMarcaProducto.Size = New System.Drawing.Size(213, 30)
-        Me.CBMarcaProducto.TabIndex = 21
+        Me.CBMarca.FormattingEnabled = True
+        Me.CBMarca.Location = New System.Drawing.Point(321, 118)
+        Me.CBMarca.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBMarca.Name = "CBMarca"
+        Me.CBMarca.Size = New System.Drawing.Size(213, 30)
+        Me.CBMarca.TabIndex = 21
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(65, 63)
+        Me.Label3.Location = New System.Drawing.Point(60, 161)
         Me.Label3.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 22)
@@ -221,24 +179,39 @@ Partial Class ModificarProducto
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(69, 191)
+        Me.Label2.Location = New System.Drawing.Point(60, 90)
         Me.Label2.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 22)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Nombre:"
         '
-        'CBCategoriaProducto
+        'CBCategoria
         '
-        Me.CBCategoriaProducto.FormattingEnabled = True
-        Me.CBCategoriaProducto.Items.AddRange(New Object() {"DNI", "OTRO"})
-        Me.CBCategoriaProducto.Location = New System.Drawing.Point(69, 91)
-        Me.CBCategoriaProducto.Margin = New System.Windows.Forms.Padding(4)
-        Me.CBCategoriaProducto.Name = "CBCategoriaProducto"
-        Me.CBCategoriaProducto.Size = New System.Drawing.Size(213, 30)
-        Me.CBCategoriaProducto.TabIndex = 18
+        Me.CBCategoria.FormattingEnabled = True
+        Me.CBCategoria.Location = New System.Drawing.Point(64, 189)
+        Me.CBCategoria.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBCategoria.Name = "CBCategoria"
+        Me.CBCategoria.Size = New System.Drawing.Size(213, 30)
+        Me.CBCategoria.TabIndex = 18
         '
-        'ModificarProducto
+        'ErrorProviderPrecio
+        '
+        Me.ErrorProviderPrecio.ContainerControl = Me
+        '
+        'ErrorProviderNombre
+        '
+        Me.ErrorProviderNombre.ContainerControl = Me
+        '
+        'ErrorProviderMarca
+        '
+        Me.ErrorProviderMarca.ContainerControl = Me
+        '
+        'ErrorProviderCategoria
+        '
+        Me.ErrorProviderCategoria.ContainerControl = Me
+        '
+        'Mod_Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -246,32 +219,34 @@ Partial Class ModificarProducto
         Me.ClientSize = New System.Drawing.Size(781, 525)
         Me.Controls.Add(Me.PanelModClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "ModificarProducto"
+        Me.Name = "Mod_Producto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ModificarProducto"
+        Me.Text = "Mod_Producto"
         Me.PanelModClientes.ResumeLayout(False)
         Me.GroupBoxDatosCliente.ResumeLayout(False)
         Me.GroupBoxDatosCliente.PerformLayout()
+        CType(Me.ErrorProviderPrecio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderCategoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents PanelModClientes As Panel
-    Friend WithEvents TBStockProducto As TextBox
-    Friend WithEvents TBPrecioProducto As TextBox
-    Friend WithEvents GroupBoxDatosCliente As GroupBox
-    Friend WithEvents TBNombreProducto As TextBox
-    Friend WithEvents CBCategoriaProducto As ComboBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents CBTalleProducto As ComboBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents LMarca As Label
-    Friend WithEvents CBMarcaProducto As ComboBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents BCancelarModifCliente As Button
     Friend WithEvents BModificarProducto As Button
+    Friend WithEvents GroupBoxDatosCliente As GroupBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TBPrecio As TextBox
+    Friend WithEvents TBNombre As TextBox
+    Friend WithEvents LMarca As Label
+    Friend WithEvents CBMarca As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CBCategoria As ComboBox
+    Friend WithEvents ErrorProviderPrecio As ErrorProvider
+    Friend WithEvents ErrorProviderNombre As ErrorProvider
+    Friend WithEvents ErrorProviderMarca As ErrorProvider
+    Friend WithEvents ErrorProviderCategoria As ErrorProvider
 End Class

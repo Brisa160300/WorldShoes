@@ -22,6 +22,7 @@ Partial Class ModificarEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LRegistroEmpleado = New System.Windows.Forms.Label()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
         Me.TBDireccionEmpleado = New System.Windows.Forms.TextBox()
@@ -38,7 +39,19 @@ Partial Class ModificarEmpleado
         Me.LTelEmpleado = New System.Windows.Forms.Label()
         Me.LDNIEmpleado = New System.Windows.Forms.Label()
         Me.LNombreEmpleado = New System.Windows.Forms.Label()
+        Me.ErrorProviderNombre = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderApellido = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDNI = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderTelefono = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderDireccion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderEmail = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelRegClientes.SuspendLayout()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LRegistroEmpleado
@@ -236,6 +249,30 @@ Partial Class ModificarEmpleado
         Me.LNombreEmpleado.TabIndex = 0
         Me.LNombreEmpleado.Text = "Nombre:"
         '
+        'ErrorProviderNombre
+        '
+        Me.ErrorProviderNombre.ContainerControl = Me
+        '
+        'ErrorProviderApellido
+        '
+        Me.ErrorProviderApellido.ContainerControl = Me
+        '
+        'ErrorProviderDNI
+        '
+        Me.ErrorProviderDNI.ContainerControl = Me
+        '
+        'ErrorProviderTelefono
+        '
+        Me.ErrorProviderTelefono.ContainerControl = Me
+        '
+        'ErrorProviderDireccion
+        '
+        Me.ErrorProviderDireccion.ContainerControl = Me
+        '
+        'ErrorProviderEmail
+        '
+        Me.ErrorProviderEmail.ContainerControl = Me
+        '
         'ModificarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -250,6 +287,12 @@ Partial Class ModificarEmpleado
         Me.Text = "ModificarEmpleado"
         Me.PanelRegClientes.ResumeLayout(False)
         Me.PanelRegClientes.PerformLayout()
+        CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderApellido, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDNI, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderTelefono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderDireccion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderEmail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -271,4 +314,10 @@ Partial Class ModificarEmpleado
     Friend WithEvents LTelEmpleado As Label
     Friend WithEvents LDNIEmpleado As Label
     Friend WithEvents LNombreEmpleado As Label
+    Friend WithEvents ErrorProviderNombre As ErrorProvider
+    Friend WithEvents ErrorProviderApellido As ErrorProvider
+    Friend WithEvents ErrorProviderDNI As ErrorProvider
+    Friend WithEvents ErrorProviderTelefono As ErrorProvider
+    Friend WithEvents ErrorProviderDireccion As ErrorProvider
+    Friend WithEvents ErrorProviderEmail As ErrorProvider
 End Class

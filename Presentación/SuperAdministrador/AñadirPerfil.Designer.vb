@@ -22,6 +22,7 @@ Partial Class AñadirPerfil
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControlRegPerfil = New System.Windows.Forms.TabControl()
@@ -33,10 +34,12 @@ Partial Class AñadirPerfil
         Me.BVolver = New System.Windows.Forms.Button()
         Me.TBNombrePerfil = New System.Windows.Forms.TextBox()
         Me.LNombrePerfil = New System.Windows.Forms.Label()
+        Me.ErrorProviderNomPerf = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TabControlRegPerfil.SuspendLayout()
         Me.TabPageListaPerfil.SuspendLayout()
         CType(Me.dgvRegistroPerfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelRegClientes.SuspendLayout()
+        CType(Me.ErrorProviderNomPerf, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControlRegPerfil
@@ -168,6 +171,7 @@ Partial Class AñadirPerfil
         Me.TBNombrePerfil.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBNombrePerfil.Location = New System.Drawing.Point(27, 71)
         Me.TBNombrePerfil.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombrePerfil.MaxLength = 50
         Me.TBNombrePerfil.Name = "TBNombrePerfil"
         Me.TBNombrePerfil.Size = New System.Drawing.Size(371, 30)
         Me.TBNombrePerfil.TabIndex = 6
@@ -183,6 +187,10 @@ Partial Class AñadirPerfil
         Me.LNombrePerfil.Size = New System.Drawing.Size(182, 22)
         Me.LNombrePerfil.TabIndex = 0
         Me.LNombrePerfil.Text = "Nombre de la Perfil"
+        '
+        'ErrorProviderNomPerf
+        '
+        Me.ErrorProviderNomPerf.ContainerControl = Me
         '
         'AñadirPerfil
         '
@@ -201,6 +209,7 @@ Partial Class AñadirPerfil
         CType(Me.dgvRegistroPerfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelRegClientes.ResumeLayout(False)
         Me.PanelRegClientes.PerformLayout()
+        CType(Me.ErrorProviderNomPerf, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -215,4 +224,5 @@ Partial Class AñadirPerfil
     Friend WithEvents BVolver As Button
     Friend WithEvents TBNombrePerfil As TextBox
     Friend WithEvents LNombrePerfil As Label
+    Friend WithEvents ErrorProviderNomPerf As ErrorProvider
 End Class

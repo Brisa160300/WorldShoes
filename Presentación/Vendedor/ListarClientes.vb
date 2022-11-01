@@ -21,6 +21,7 @@
 
     Private Sub ListarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNcliente.cargarGrid(dgvListarClientes)
+        objNcliente.cargarComboxDNI(ComboBoxBuscarDni)
     End Sub
 
     Private Sub TBBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBBuscar.TextChanged

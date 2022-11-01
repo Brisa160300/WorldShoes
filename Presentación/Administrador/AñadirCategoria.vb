@@ -8,8 +8,18 @@
         End If
     End Sub
 
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim categ As String = TBNombreCategoria.Text.Trim
+        If categ = "" Then
+            ErrorProviderNomCateg.SetError(TBNombreCategoria, "Ingrese una categoria")
+            ask = True
+        End If
+        Return ask
+    End Function
     Private Sub BRegistrarCategoria_Click(sender As Object, e As EventArgs) Handles BRegistrarCategoria.Click
-        If String.IsNullOrWhiteSpace(TBNombreCategoria.Text) Then
+        ErrorProviderNomCateg.Clear()
+        If EspacioEnBlanco() Then
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
         Else
             MsgBox("¿Desea añadir esta nueva categoría?", vbQuestion + vbYesNo, "Confirmar Inserción")

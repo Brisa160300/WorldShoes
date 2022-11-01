@@ -29,15 +29,15 @@
         End If
     End Sub
 
-    Public Function EspacioEnBlanco()
-        Dim Ask As MsgBoxResult
-        Dim descripcion As String = TBModMarca.Text
-
-        If String.IsNullOrWhiteSpace(descripcion) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
-            Return Ask
-        Else
-            Return False
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim marca As String = TBModMarca.Text.Trim
+        If marca = "" Then
+            ErrorProviderMarca.SetError(TBModMarca, "Ingrese una Marca")
+            ask = True
+        ElseIf marca.Length < 2 Then
+            ErrorProviderMarca.SetError(TBModMarca, "La Marca ingresada no es valida")
         End If
+        Return ask
     End Function
 End Class

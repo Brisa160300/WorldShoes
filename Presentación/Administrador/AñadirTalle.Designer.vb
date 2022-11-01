@@ -22,6 +22,7 @@ Partial Class AñadirTalle
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -34,10 +35,12 @@ Partial Class AñadirTalle
         Me.TabControlRegVentas = New System.Windows.Forms.TabControl()
         Me.TabPageListaTalles = New System.Windows.Forms.TabPage()
         Me.dgvRegistroTalles = New System.Windows.Forms.DataGridView()
+        Me.ErrorProviderTalle = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelRegClientes.SuspendLayout()
         Me.TabControlRegVentas.SuspendLayout()
         Me.TabPageListaTalles.SuspendLayout()
         CType(Me.dgvRegistroTalles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderTalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LTalle
@@ -104,6 +107,7 @@ Partial Class AñadirTalle
         Me.TBNombreTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBNombreTalle.Location = New System.Drawing.Point(27, 71)
         Me.TBNombreTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBNombreTalle.MaxLength = 2
         Me.TBNombreTalle.Name = "TBNombreTalle"
         Me.TBNombreTalle.Size = New System.Drawing.Size(371, 30)
         Me.TBNombreTalle.TabIndex = 6
@@ -184,6 +188,10 @@ Partial Class AñadirTalle
         Me.dgvRegistroTalles.Size = New System.Drawing.Size(570, 475)
         Me.dgvRegistroTalles.TabIndex = 2
         '
+        'ErrorProviderTalle
+        '
+        Me.ErrorProviderTalle.ContainerControl = Me
+        '
         'AñadirTalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -202,6 +210,7 @@ Partial Class AñadirTalle
         Me.TabControlRegVentas.ResumeLayout(False)
         Me.TabPageListaTalles.ResumeLayout(False)
         CType(Me.dgvRegistroTalles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderTalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,4 +225,5 @@ Partial Class AñadirTalle
     Friend WithEvents TabControlRegVentas As TabControl
     Friend WithEvents TabPageListaTalles As TabPage
     Friend WithEvents dgvRegistroTalles As DataGridView
+    Friend WithEvents ErrorProviderTalle As ErrorProvider
 End Class

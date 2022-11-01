@@ -1,4 +1,6 @@
-﻿Public Class ModificarClienteGerente
+﻿Imports System.Text.RegularExpressions
+
+Public Class ModificarClienteGerente
     Private objDcliente = New Dcliente
     Public fila As Integer
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
@@ -7,6 +9,12 @@
 
     Private Sub BModCliente_Click(sender As Object, e As EventArgs) Handles BModCliente.Click
         Dim ask As MsgBoxResult
+        ErrorProviderNombre.Clear()
+        ErrorProviderApellido.Clear()
+        ErrorProviderDNI.Clear()
+        ErrorProviderDireccion.Clear()
+        ErrorProviderEmail.Clear()
+        ErrorProviderTelefono.Clear()
         If EspacioEnBlanco() = False Then
             ask = MsgBox("Seguro que desea modificar a este cliente", vbQuestion + vbYesNo, "Confirmar Modificación")
             If ask = vbYes Then
@@ -35,22 +43,58 @@
         End If
     End Sub
 
-    Public Function EspacioEnBlanco()
-        Dim Ask As MsgBoxResult
-        Dim nombre As String = TBNombreCliente.Text
-        Dim apellido As String = TBApellidoCliente.Text
-        Dim dni As String = TBDniCliente.Text
-        Dim tel As String = TBTelCliente.Text
-        Dim correo As String = TBCorreoCliente.Text
-        Dim domicilio As String = TBDireccion.Text
-        If String.IsNullOrWhiteSpace(apellido) Or
-           String.IsNullOrWhiteSpace(nombre) Or
-           String.IsNullOrWhiteSpace(dni) Or
-           String.IsNullOrWhiteSpace(tel) Or
-           String.IsNullOrWhiteSpace(correo) Or
-           String.IsNullOrWhiteSpace(domicilio) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
-            Return Ask
+    Public Function EspacioEnBlanco() As Boolean
+        Dim Ask As Boolean = False
+        Dim nombre As String = TBNombreCliente.Text.Trim
+        Dim apellido As String = TBApellidoCliente.Text.Trim
+        Dim dni As String = TBDniCliente.Text.Trim
+        Dim tel As String = TBTelCliente.Text.Trim
+        Dim correo As String = TBCorreoCliente.Text.Trim
+        Dim direccion As String = TBDireccion.Text.Trim
+
+        If nombre = "" Then
+            ErrorProviderNombre.SetError(TBNombreCliente, "Ingrese un Nombre")
+            Ask = True
+        ElseIf nombre.Length < 3 Then
+            ErrorProviderNombre.SetError(TBNombreCliente, "El nombre debe tener un minimo de 3 caracteres")
+            Ask = True
+        End If
+        If apellido = "" Then
+            ErrorProviderApellido.SetError(TBApellidoCliente, "Ingrese un Apellido")
+            Ask = True
+        ElseIf apellido.Length < 3 Then
+            ErrorProviderApellido.SetError(TBApellidoCliente, "El apellido debe tener un minimo de 3 caracteres")
+            Ask = True
+        End If
+        If dni = "" Then
+            ErrorProviderDNI.SetError(TBDniCliente, "Ingrese un DNI")
+            Ask = True
+        ElseIf dni.Length <> 8 Then
+            ErrorProviderDNI.SetError(TBDniCliente, "La extensión del DNI ingresado no es valida")
+            Ask = True
+        End If
+        If tel = "" Then
+            ErrorProviderTelefono.SetError(TBTelCliente, "Ingrese un telefono de contacto")
+            Ask = True
+        End If
+        If direccion = "" Then
+            ErrorProviderDireccion.SetError(TBDireccion, "Ingrese una direccion")
+            Ask = True
+        End If
+        If correo = "" Then
+            ErrorProviderEmail.SetError(TBCorreoCliente, "Ingrese un correo electronico")
+            Ask = True
+        ElseIf isValidEmail(correo) = False Then
+            ErrorProviderEmail.SetError(TBCorreoCliente, "El correo ingresado no es valido")
+            Ask = True
+        End If
+        Return Ask
+    End Function
+
+    Function isValidEmail(ByVal email As String) As Boolean
+        Dim re As New Regex("([\w-+]+(?:\.[\w-+]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7})")
+        If re.IsMatch(email) Then
+            Return True
         Else
             Return False
         End If

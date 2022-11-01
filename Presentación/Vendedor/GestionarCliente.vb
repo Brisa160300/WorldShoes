@@ -2,15 +2,21 @@
     Private objNcliente = New NCliente
     Private objDcliente = New Dcliente
     Private Sub BModificarCliente_Click(sender As Object, e As EventArgs) Handles BModificarCliente.Click
-        Dim frm As New ModificarClienteGerente
-        frm.TBNombreCliente.Text = dgvRegistroClientes.CurrentRow.Cells(0).Value.ToString
-        frm.TBApellidoCliente.Text = dgvRegistroClientes.CurrentRow.Cells(1).Value.ToString
-        frm.TBDniCliente.Text = dgvRegistroClientes.CurrentRow.Cells(2).Value
-        frm.TBTelCliente.Text = dgvRegistroClientes.CurrentRow.Cells(3).Value
-        frm.TBDireccion.Text = dgvRegistroClientes.CurrentRow.Cells(4).Value
-        frm.TBCorreoCliente.Text = dgvRegistroClientes.CurrentRow.Cells(5).Value
-        frm.ShowInTaskbar = False
-        frm.ShowDialog()
+        If (dgvRegistroClientes.SelectedRows.Count > 0) Or (dgvRegistroClientes.SelectedCells.Count > 0) Then
+            Dim frm As New ModificarClienteGerente
+            frm.fila = dgvRegistroClientes.CurrentRow.Cells(0).Value.ToString
+            frm.TBNombreCliente.Text = dgvRegistroClientes.CurrentRow.Cells(1).Value.ToString
+            frm.TBApellidoCliente.Text = dgvRegistroClientes.CurrentRow.Cells(2).Value.ToString
+            frm.TBDniCliente.Text = dgvRegistroClientes.CurrentRow.Cells(3).Value
+            frm.TBTelCliente.Text = dgvRegistroClientes.CurrentRow.Cells(4).Value
+            frm.TBDireccion.Text = dgvRegistroClientes.CurrentRow.Cells(5).Value
+            frm.TBCorreoCliente.Text = dgvRegistroClientes.CurrentRow.Cells(5).Value
+            frm.ShowInTaskbar = False
+            frm.ShowDialog()
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+
     End Sub
     Private Sub GestionarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNcliente.cargarGrid(dgvRegistroClientes)

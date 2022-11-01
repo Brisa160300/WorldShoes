@@ -1,4 +1,5 @@
 ﻿Public Class GestionarUsuarios
+    Private objNUsuarios As NUsuario = New NUsuario
     Private Sub BModificarUsuario_Click(sender As Object, e As EventArgs) Handles BModificarUsuario.Click
         Dim frm As New ModificarUsuario
         frm.ShowInTaskbar = False
@@ -15,5 +16,9 @@
 
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
+    End Sub
+
+    Private Sub GestionarUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        objNUsuarios.cargarGrid(dgvListaUsuarios)
     End Sub
 End Class

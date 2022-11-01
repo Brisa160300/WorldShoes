@@ -22,6 +22,7 @@ Partial Class Añadir_Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -35,10 +36,12 @@ Partial Class Añadir_Categoria
         Me.TabPageListaCategoria = New System.Windows.Forms.TabPage()
         Me.dgvRegistroCategoria = New System.Windows.Forms.DataGridView()
         Me.TabControlRegCategoria = New System.Windows.Forms.TabControl()
+        Me.ErrorProviderNomCateg = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelRegClientes.SuspendLayout()
         Me.TabPageListaCategoria.SuspendLayout()
         CType(Me.dgvRegistroCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlRegCategoria.SuspendLayout()
+        CType(Me.ErrorProviderNomCateg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TBNombreCategoria
@@ -197,6 +200,10 @@ Partial Class Añadir_Categoria
         Me.TabControlRegCategoria.Size = New System.Drawing.Size(619, 482)
         Me.TabControlRegCategoria.TabIndex = 5
         '
+        'ErrorProviderNomCateg
+        '
+        Me.ErrorProviderNomCateg.ContainerControl = Me
+        '
         'Añadir_Categoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -216,6 +223,7 @@ Partial Class Añadir_Categoria
         Me.TabPageListaCategoria.ResumeLayout(False)
         CType(Me.dgvRegistroCategoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlRegCategoria.ResumeLayout(False)
+        CType(Me.ErrorProviderNomCateg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -229,4 +237,5 @@ Partial Class Añadir_Categoria
     Friend WithEvents TabPageListaCategoria As TabPage
     Friend WithEvents dgvRegistroCategoria As DataGridView
     Friend WithEvents TabControlRegCategoria As TabControl
+    Friend WithEvents ErrorProviderNomCateg As ErrorProvider
 End Class

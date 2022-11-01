@@ -4,8 +4,18 @@
         Me.Close()
     End Sub
 
+    Public Function EspacioEnBlanco() As Boolean
+        Dim ask As Boolean = False
+        Dim nomPerf As String = TBNombrePerfil.Text
+        If nomPerf = "" Then
+            ErrorProviderNomPerf.SetError(TBNombrePerfil, "Ingrese un perfil")
+            ask = True
+        End If
+        Return ask
+    End Function
     Private Sub BRegistrarPerfil_Click(sender As Object, e As EventArgs) Handles BRegistrarPerfil.Click
-        If String.IsNullOrWhiteSpace(TBNombrePerfil.Text) Then
+        If EspacioEnBlanco() = False Then
+            ErrorProviderNomPerf.Clear()
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
         Else
             MsgBox("¿Desea añadir esta nueva categoría?", vbQuestion + vbYesNo, "Confirmar Inserción")

@@ -14,12 +14,12 @@ Partial Public Class factura
     Public Property id_factura As Integer
     Public Property id_usuario As Integer
     Public Property id_cliente As Integer
-    Public Property fecha_factura As Date
+    Public Property fecha_factura As Nullable(Of Date)
     Public Property cantidad_factura As Short
     Public Property importe_factura As Decimal
 
     Public Overridable Property clientes As clientes
-    Public Overridable Property detalle_factura As ICollection(Of detalle_factura) = New HashSet(Of detalle_factura)
+    Public Overridable Property detalles_factura As ICollection(Of detalles_factura) = New HashSet(Of detalles_factura)
     Public Overridable Property Usuarios As Usuarios
 
 End Class

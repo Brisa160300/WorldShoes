@@ -16,6 +16,7 @@
 
     Private Sub BModificarCategoria_Click(sender As Object, e As EventArgs) Handles BModificarCategoria.Click
         Dim ask As MsgBoxResult
+        ErrorProviderNomCateg.Clear()
         If EspacioEnBlanco() = False Then
             ask = MsgBox("Seguro que desea realizar esta modificación", vbQuestion + vbYesNo, "Confirmar Modificación")
             If ask = vbYes Then
@@ -31,15 +32,18 @@
     End Sub
 
     Public Function EspacioEnBlanco()
-        Dim Ask As MsgBoxResult
-        Dim descripcion As String = TBNombreCategoria.Text
+        Dim Ask As Boolean = False
+        Dim descripcion As String = TBNombreCategoria.Text.Trim
 
-        If String.IsNullOrWhiteSpace(descripcion) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
+        If descripcion = "" Then
+            ErrorProviderNomCateg.SetError(TBNombreCategoria, "Ingrese un nombre de categoria")
+            Ask = True
+        ElseIf descripcion.Length < 3 Then
+            ErrorProviderNomCateg.SetError(TBNombreCategoria, "El nombre de categoria debe tener minimo 3 caracteres")
+            Ask = True
             Return Ask
-        Else
-            Return False
         End If
+        Return Ask
     End Function
 
 End Class

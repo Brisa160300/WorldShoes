@@ -13,11 +13,10 @@ Imports System.Collections.Generic
 Partial Public Class detalle_factura
     Public Property id_detalle_factura As Integer
     Public Property id_factura As Integer
-    Public Property id_producto As Integer
-    Public Property id_talle_producto As Integer
+    Public Property cod_producto As Integer
+    Public Property id_talle As Integer
+    Public Property precio_detalle As Decimal
     Public Property cantidad_detalle As Integer
     Public Property importe_detalle As Decimal
-
-    Public Overridable Property factura As factura
 
 End Class

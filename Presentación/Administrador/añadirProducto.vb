@@ -3,27 +3,88 @@
     Private objDProducto = New DProducto
     Private objNProducto = New NProducto
     Private objNtalleProd = New NTalle_Producto
+
+
+    Public Function EspacioEnBlanco()
+        Dim Ask As Boolean = False
+        Dim codigo As String = TBCodProducto.Text
+        Dim nombre As String = TBNombreProducto.Text.Trim
+        Dim categoria As String = CBCategoria.Text.Trim
+        Dim stock As String = TBStock.Text.Trim
+        Dim precio As String = TBPrecio.Text.Trim
+        Dim talle As String = CBTalle.Text.Trim
+        Dim marca As String = CBMarca.Text.Trim
+        If codigo = "" Then
+            ErrorProviderCodigo.SetError(TBCodProducto, "Ingrese el codigo del producto")
+            Ask = True
+        ElseIf CInt(codigo) = 0 Then
+            ErrorProviderCodigo.SetError(TBCodProducto, "El codigo ingresado no puede ser 0")
+            Ask = True
+        End If
+        If nombre = "" Then
+            ErrorProviderNombre.SetError(TBNombreProducto, "Ingrese el nombre del producto")
+            Ask = True
+        ElseIf nombre.Length < 3 Then
+            ErrorProviderNombre.SetError(TBNombreProducto, "El nombre ingresado debe tener minimo 5 caracteres")
+            Ask = True
+        End If
+        If categoria = "" Then
+            ErrorProviderCategoria.SetError(CBCategoria, "Seleccione una categoria")
+            Ask = True
+        End If
+        If stock = "" Then
+            ErrorProviderStock.SetError(TBStock, "Ingrese un stock")
+            Ask = True
+
+        ElseIf CInt(stock) <= 100 Then
+            ErrorProviderStock.SetError(TBStock, "El stock minimo es de 100 unidades")
+            Ask = True
+        ElseIf CInt(stock) > 1000 Then
+            ErrorProviderStock.SetError(TBStock, "El stock maximo es de 1000 unidades")
+        End If
+        If precio = "" Then
+            ErrorProviderPrecio.SetError(TBPrecio, "Ingrese un precio")
+        ElseIf CDec(precio) <= 500 Then
+            ErrorProviderPrecio.SetError(TBPrecio, "El precio minimo es de $500")
+            Ask = True
+        End If
+        If marca = "" Then
+            ErrorProviderMarca.SetError(CBMarca, "Seleccione una marca")
+            Ask = True
+        End If
+        If talle = "" Then
+            ErrorProviderTalle.SetError(CBTalle, "Seleccione un talle")
+            Ask = True
+        End If
+        Return Ask
+    End Function
     'botón "añadir" del formulario añadir producto.
     Private Sub BAñadirProducto_Click(sender As Object, e As EventArgs) Handles BAñadirProducto.Click
         Dim Ask As MsgBoxResult
-
+        ErrorProviderCodigo.Clear()
+        ErrorProviderNombre.Clear()
+        ErrorProviderCategoria.Clear()
+        ErrorProviderPrecio.Clear()
+        ErrorProviderStock.Clear()
+        ErrorProviderTalle.Clear()
+        ErrorProviderMarca.Clear()
         If EspacioEnBlanco() = False Then
             Dim codigo As Integer = CInt(TBCodProducto.Text)
             Dim nombre As String = TBNombreProducto.Text
             Dim categoria As Integer = CBCategoria.SelectedValue
             Dim stock As Integer = CInt(TBStock.Text)
-            Dim precio As Integer = TBPrecio.Text
+            Dim precio As Decimal = CDec(TBPrecio.Text)
             Dim talle As Integer = CBTalle.SelectedValue
             Dim marca As Integer = CBMarca.SelectedValue
             Ask = MsgBox("Seguro que desea añadir este producto?", vbQuestion + vbYesNo, "Confirmar Inserción")
             If Ask = vbYes Then
-                If objNProducto.agregar_Producto(codigo, nombre, categoria, stock, precio, marca) Then
-                    If objNtalleProd.agregar_talle_producto(codigo, talle) Then
+                If objNProducto.agregar_Producto(codigo, nombre, categoria, precio, marca) Then
+                    If objNtalleProd.agregar_talle_producto(codigo, talle, stock) Then
                         objNProducto.cargarGrid(dgvListaProductos)
                     End If
                     MsgBox("El producto" + TBNombreProducto.Text + "se insertó correctamente", vbInformation, "Guardar")
                 Else
-                    MsgBox("No se pudo realizar el registro", vbCritical, "Error")
+                    MsgBox("El producto ya se encuentra registrado", vbCritical, "Error")
                 End If
 
             End If
@@ -34,31 +95,12 @@
         Me.Close()
     End Sub
 
-    Public Function EspacioEnBlanco()
-        Dim Ask As MsgBoxResult
-        Dim nombre As String = TBNombreProducto.Text
-        Dim categoria As String = CBCategoria.Text
-        Dim stock As String = TBStock.Text
-        Dim precio As String = TBPrecio.Text
-        'ver los campos combobox como validar
-
-        If String.IsNullOrWhiteSpace(nombre) Or
-           String.IsNullOrWhiteSpace(categoria) Or
-           String.IsNullOrWhiteSpace(stock) Or
-           String.IsNullOrWhiteSpace(precio) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
-            Return Ask
-        Else
-            Return False
-        End If
-    End Function
-
     Private Sub TBPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBPrecio.KeyPress, TBCodProducto.KeyPress
-
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
             MsgBox("Solo se aceptan caracteres númericos", vbCritical, "Error")
         End If
+
     End Sub
 
     Private Sub TBNombreProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreProducto.KeyPress

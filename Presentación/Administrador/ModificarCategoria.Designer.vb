@@ -22,14 +22,17 @@ Partial Class ModificarCategoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelModCategoria = New System.Windows.Forms.Panel()
         Me.BCancelarModifCategoria = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCliente = New System.Windows.Forms.GroupBox()
         Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
         Me.LNombreCategoria = New System.Windows.Forms.Label()
         Me.BModificarCategoria = New System.Windows.Forms.Button()
+        Me.ErrorProviderNomCateg = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModCategoria.SuspendLayout()
         Me.GroupBoxDatosCliente.SuspendLayout()
+        CType(Me.ErrorProviderNomCateg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModCategoria
@@ -112,6 +115,10 @@ Partial Class ModificarCategoria
         Me.BModificarCategoria.Text = "Modificar"
         Me.BModificarCategoria.UseVisualStyleBackColor = False
         '
+        'ErrorProviderNomCateg
+        '
+        Me.ErrorProviderNomCateg.ContainerControl = Me
+        '
         'ModificarCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -127,6 +134,7 @@ Partial Class ModificarCategoria
         Me.PanelModCategoria.ResumeLayout(False)
         Me.GroupBoxDatosCliente.ResumeLayout(False)
         Me.GroupBoxDatosCliente.PerformLayout()
+        CType(Me.ErrorProviderNomCateg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -137,4 +145,5 @@ Partial Class ModificarCategoria
     Friend WithEvents LNombreCategoria As Label
     Friend WithEvents BModificarCategoria As Button
     Friend WithEvents TBNombreCategoria As TextBox
+    Friend WithEvents ErrorProviderNomCateg As ErrorProvider
 End Class

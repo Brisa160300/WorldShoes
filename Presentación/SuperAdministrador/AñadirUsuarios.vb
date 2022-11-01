@@ -5,22 +5,40 @@
     Private objDPerfil = New DPerfil
 
     Public Function EspacioEnBlanco() As Boolean
-        Dim Ask As MsgBoxResult
-        Dim Ask1 As MsgBoxResult
-        Dim nombre As String = TBNombreUsuario.Text
-        Dim pass As String = TBContraseñaUsuario.Text
-        Dim confpass As String = TBConfirmarPass.Text
-        Dim empleado As String = TBEmpleado.Text
-        If String.IsNullOrWhiteSpace(nombre) Or String.IsNullOrWhiteSpace(pass) Or String.IsNullOrWhiteSpace(confpass) Or String.IsNullOrWhiteSpace(empleado) Then
-            Ask = MsgBox("Debe Completar todos los campos", vbCritical, "Error")
-            Return True
-        ElseIf Not TBContraseñaUsuario.Text.Count = 8 Then
-            Ask1 = MsgBox("sLa contraseña debe ser de 8 caracteres", vbExclamation, "Contraseña invalida")
-            TBContraseñaUsuario.Focus()
-            Return True
-        Else
-            Return False
+        Dim Ask As Boolean = False
+        Dim nombre As String = TBNombreUsuario.Text.Trim
+        Dim pass As String = TBContraseñaUsuario.Text.Trim
+        Dim confpass As String = TBConfirmarPass.Text.Trim
+        Dim empleado As String = TBEmpleado.Text.Trim
+        Dim perfil As String = CBPerfil.SelectedValue
+        If nombre = "" Then
+            ErrorProviderNombre.SetError(TBNombreUsuario, "Ingrese un nombre de usuario")
+            Ask = True
+        ElseIf nombre.Length < 3 Then
+            ErrorProviderNombre.SetError(TBNombreUsuario, "El nombre ingresado debe tener un minimo de 3 caracteres")
+            Ask = True
         End If
+        If pass = "" Then
+            ErrorProviderPass.SetError(TBContraseñaUsuario, "Ingrese una contraseña")
+            Ask = True
+        ElseIf pass <> confpass Then
+            ErrorProviderPass.SetError(TBContraseñaUsuario, "Las contraseñas no coinciden")
+            ErrorProviderConfPass.SetError(TBConfirmarPass, "Las contraseñas no coinciden")
+            Ask = True
+        ElseIf pass.Length <> 8 Then
+            ErrorProviderPass.SetError(TBContraseñaUsuario, "La contraseña debe debe tener 8 digitos")
+            Ask = True
+        End If
+        If empleado = "" Then
+            ErrorProviderEmpleado.SetError(TBEmpleado, "Seleccione un empleado de la lista de empleados")
+            Ask = True
+        End If
+        If perfil = "" Then
+            ErrorProviderPerfil.SetError(CBPerfil, "Seleccione un perfil")
+            Ask = True
+        End If
+        Return Ask
+
     End Function
 
     Private Sub TBNombreUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreUsuario.KeyPress
@@ -34,37 +52,31 @@
 
     Private Sub TBContraseñaUsuario_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
-            If TBContraseñaUsuario.Text.Count > 7 Then
-                e.Handled = True
-                MsgBox("La contraseña solo puede tener 8 digitios")
-            End If
+            e.Handled = True
+            MsgBox("Solo se aceptan digitos numericos", vbCritical, "Error")
         End If
 
     End Sub
 
     Private Sub BRegistrarUsuario_Click(sender As Object, e As EventArgs) Handles BRegistrarUsuario.Click
         Dim ask As MsgBoxResult
+        ErrorProviderNombre.Clear()
+        ErrorProviderEmpleado.Clear()
+        ErrorProviderPass.Clear()
+        ErrorProviderConfPass.Clear()
+        ErrorProviderPerfil.Clear()
         If EspacioEnBlanco() = False Then
             Dim nombre As String = TBNombreUsuario.Text
             Dim contraseña As String = TBContraseñaUsuario.Text
-            Dim confcontraseña As String = TBConfirmarPass.Text
             Dim id_perfil As Integer = CBPerfil.SelectedValue
             Dim id_empleado As Integer = CInt(TBEmpleado.Text)
-            MsgBox(id_perfil)
-            If contraseña <> confcontraseña Then
-                MsgBox("Las contraseñas no coinciden")
-                TBConfirmarPass.Clear()
-                TBContraseñaUsuario.Clear()
-                TBContraseñaUsuario.Focus()
-            Else
-                ask = MsgBox("Esta seguro que desea registrar un nuevo usuario", vbYesNo + vbQuestion, "Confirmar nuevo usuario")
-                If ask = vbYes Then
-                    If objNUsuario.agregar_Usuario(nombre, contraseña, id_perfil, id_empleado) Then
-                        objNUsuario.cargarGrid(dgvListaUsuarios)
-                        MsgBox("Registrado con exito", vbInformation)
-                    Else
-                        MsgBox("No se pudo realizar el registro", vbCritical, "Error")
-                    End If
+            ask = MsgBox("Esta seguro que desea registrar un nuevo usuario", vbYesNo + vbQuestion, "Confirmar nuevo usuario")
+            If ask = vbYes Then
+                If objNUsuario.agregar_Usuario(nombre, contraseña, id_perfil, id_empleado) Then
+                    objNUsuario.cargarGrid(dgvListaUsuarios)
+                    MsgBox("Registrado con exito", vbInformation)
+                Else
+                    MsgBox("El cliente ya se encuentra registrado", vbCritical, "Error")
                 End If
             End If
         End If
