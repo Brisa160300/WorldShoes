@@ -5,6 +5,7 @@
     Private _pass As String
     Private _descripcion_perfil As String
     Private _estado As String
+    Private _id_usuario As Integer
 
     Public Property Nombre As String
         Get
@@ -57,6 +58,15 @@
         End Get
         Set(value As String)
             _estado = value
+        End Set
+    End Property
+
+    Public Property Id_usuario As Integer
+        Get
+            Return _id_usuario
+        End Get
+        Set(value As Integer)
+            _id_usuario = value
         End Set
     End Property
 End Class

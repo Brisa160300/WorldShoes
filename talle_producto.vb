@@ -17,7 +17,8 @@ Partial Public Class talle_producto
     Public Property estado_talle_producto As Integer
     Public Property cantidad_talle As Integer
 
-    Public Overridable Property talle As talle
+    Public Overridable Property detalles_factura As ICollection(Of detalles_factura) = New HashSet(Of detalles_factura)
     Public Overridable Property Productos As Productos
+    Public Overridable Property talle As talle
 
 End Class

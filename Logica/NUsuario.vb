@@ -26,6 +26,7 @@
         grid.Columns(3).HeaderText = "Contraseña"
         grid.Columns(4).HeaderText = "Perfil"
         grid.Columns(5).HeaderText = "Estado"
+        grid.Columns(6).HeaderText = "id" 'columna id usuario supuestamente
         grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader
         grid.ClearSelection()
 
@@ -41,6 +42,17 @@
         combo.FlatStyle = FlatStyle.Flat
 
     End Sub
+    'cambio aca------------------------------------------------------------'
+    Public Sub cargarComboxPerfiles2(combo As ComboBox, perfil As String)
+        Dim perf As DPerfil = New DPerfil
+        combo.DataSource = perf.getPerfilAll()
+        combo.DisplayMember = "Descripcion"
+        combo.ValueMember = "id_Perfil"
+        combo.DropDownStyle = 2
+        combo.SelectedValue = -1
+        combo.FlatStyle = FlatStyle.Flat
+        combo.SelectedIndex = combo.FindString(perfil)
+    End Sub
     Public Sub cargarComboxDNI(combo As ComboBox)
         Dim user As DUsuario = New DUsuario
         combo.DataSource = user.getUsuariosAll()
@@ -51,4 +63,5 @@
         combo.FlatStyle = FlatStyle.Flat
 
     End Sub
+
 End Class

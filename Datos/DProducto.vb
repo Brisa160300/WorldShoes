@@ -1,4 +1,6 @@
-﻿Public Class DProducto
+﻿Imports System.Data.Sql
+Imports System.Data.SqlClient
+Public Class DProducto
     Dim ctx As WorldShoes_Roman_RiosEntities = New WorldShoes_Roman_RiosEntities
 
     Function Dguardar_producto(oproducto As Productos) As Boolean
@@ -23,9 +25,9 @@
             item.Precio = valor.Productos.precio
             item.Descripcion_marca = valor.Productos.Marcas.Descripcion
             item.Descripcion_talle = valor.talle.descripcion
-            item.id_marca = valor.Productos.Marcas.id_Marca
-            item.id_talle = valor.talle.id_talle
-            item.id_categ = valor.Productos.Categoria.id_categoria
+            item.Id_marca = valor.Productos.Marcas.id_Marca
+            item.Id_talle = valor.talle.id_talle
+            item.Id_categ = valor.Productos.Categoria.id_categoria
             If valor.Productos.id_estado_producto = 1 Then
                 item.Estado = "Activo"
             Else
@@ -87,4 +89,25 @@
         End Try
 
     End Function
+
+    '----------cambios 02-11-22----------buscar productos by categoria o marca'
+
+    'Public Function buscarProductos(p_category As String, p_brand As String, ByVal grid As DataGridView)
+    '    Try
+    '        Using Mostrar As New WorldShoes_Roman_RiosEntities
+
+    '            Dim objMostrar = (From q In Mostrar.Productos Where q.id_categoria.ToString.Contains(p_category) And q.id_marca.ToString.Contains(p_brand)
+    '                              Select ProductoCod = q.cod_producto, Nombre = q.nombre, CategoriaId = q.id_categoria, Stock = "",
+    '                                       Precio = q.precio, Marca = q.id_marca, Estado = q.id_estado_producto, Talle = q.talle_producto).ToList
+    '            grid.DataSource = objMostrar
+
+    '            grid.Columns.Item(6).Visible = False
+    '            grid.Columns.Item(8).Visible = False
+    '        End Using
+    '        Return True
+    '    Catch ex As Exception
+    '        Return False
+    '    End Try
+    'End Function
 End Class
+

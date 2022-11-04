@@ -1,6 +1,9 @@
-﻿Public Class ModificarUsuario
+﻿
+Public Class ModificarUsuario
     Private objNUsuarios As NUsuario = New NUsuario
-
+    Private objDUsuarios As DUsuario = New DUsuario
+    Public fila As Integer
+    Public perfildesc As String
     Public Function EspacioEnBlanco() As Boolean
         Dim Ask As Boolean = False
         Dim nombre As String = TBNombreUsuario.Text.Trim
@@ -41,14 +44,25 @@
         End If
     End Sub
 
-    Private Sub BModificarCliente_Click(sender As Object, e As EventArgs) Handles BModificarCliente.Click
+    Private Sub BModificarUsuario_Click(sender As Object, e As EventArgs) Handles BModificarUsuario.Click
+        Dim ask As MsgBoxResult
+
         ErrorProviderNombre.Clear()
         ErrorProviderEmpleado.Clear()
         ErrorProviderPass.Clear()
         ErrorProviderConfPass.Clear()
         ErrorProviderPerfil.Clear()
         If EspacioEnBlanco() = False Then
-            MsgBox("Seguro que desea modificar este usuario", vbQuestion + vbYesNo, "Confirmar Modificación")
+            ask = MsgBox("Seguro que desea modificar este usuario", vbQuestion + vbYesNo, "Confirmar Modificación")
+            If ask = vbYes Then
+
+                If objDUsuarios.ModUsuario(fila, TBNombreUsuario.Text, TBContraseñaUsuario.Text, CInt(CBPerfil.SelectedValue)) Then
+                    MsgBox("Se han modificado los datos con exito", vbInformation, "Confirmar Modificacion")
+                    Me.Close()
+                End If
+            Else
+                TBNombreUsuario.Focus()
+            End If
         End If
     End Sub
 
@@ -57,6 +71,7 @@
     End Sub
 
     Private Sub ModificarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        objNUsuarios.cargarComboxPerfiles(CBPerfil)
+        objNUsuarios.cargarComboxPerfiles2(CBPerfil, perfildesc)
     End Sub
+
 End Class

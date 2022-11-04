@@ -23,8 +23,8 @@
                           Select c).First
             cliMod.Nombre = nombre
             cliMod.Apellido = apel
-            cliMod.telefono = tel
             cliMod.Dni = dni
+            cliMod.telefono = tel
             cliMod.direccion = domi
             cliMod.email = correo
             ctx.SaveChanges()
@@ -64,5 +64,23 @@
             Return False
         End Try
 
+    End Function
+    'nuevos cambios 02 11 2022'
+    Public Function buscarClientes(p_dni As String, ByVal grid As DataGridView)
+        Try
+            Using Mostrar As New WorldShoes_Roman_RiosEntities
+                Dim objMostrar = (From q In Mostrar.clientes Where q.Dni.ToString.Contains(p_dni)
+                                  Select ClienteId = q.Id_Cliente, Nombre = q.Nombre, Apellido = q.Apellido,
+                                           DNI = q.Dni, Telefono = q.telefono,
+                                           Domicilio = q.direccion, Correo = q.email).ToList
+
+                grid.DataSource = objMostrar
+                grid.Columns.Item(6).Visible = False
+                grid.Columns.Item(8).Visible = False
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 End Class

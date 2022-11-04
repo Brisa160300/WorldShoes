@@ -4,28 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9aa7e0355afa4c99bf41e86d6702813a" Name="Diagram1">
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Categoria" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+      <Diagram DiagramId="bd6b695161d9429abc7c9a192b16c6e8" Name="Diagram1">
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Categoria" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.clientes" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.detalle_factura" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.detalles_factura" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.empleados" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.factura" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Marcas" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Marcas" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Perfiles" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle" Width="1.5" PointX="8" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="10.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Productos" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.talle_producto" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_categoria" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_factura_cliente" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_detallefactura_factura" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_detallefactura_talle_producto" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_Usuario_empleado" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_factura_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_marca" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_Usuario_perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talleProducto_producto" ManuallyRouted="false" />
         <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talleProducto_talle" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="WorldShoes_Roman_RiosModel.Productos" Width="1.5" PointX="8" PointY="5.5" />
-        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_categoria" />
-        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_producto_marca" />
-        <AssociationConnector Association="WorldShoes_Roman_RiosModel.FK_talleProducto_producto" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

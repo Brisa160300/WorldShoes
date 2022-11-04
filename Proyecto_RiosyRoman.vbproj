@@ -141,9 +141,6 @@
     <Compile Include="detalles_factura.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="detalle_factura.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="empleados.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
