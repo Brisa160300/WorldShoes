@@ -28,6 +28,7 @@ Public Class DProducto
             item.Id_marca = valor.Productos.Marcas.id_Marca
             item.Id_talle = valor.talle.id_talle
             item.Id_categ = valor.Productos.Categoria.id_categoria
+            item.Id_talle_prod = valor.id_talle_prod
             If valor.Productos.id_estado_producto = 1 Then
                 item.Estado = "Activo"
             Else

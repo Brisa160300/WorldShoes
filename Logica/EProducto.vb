@@ -10,6 +10,7 @@
     Private _id_marca As Integer
     Private _id_talle As Integer
     Private _id_categ As Integer
+    Private _id_talle_prod As Integer
 
     Public Property Codigo As Integer
         Get
@@ -106,6 +107,15 @@
         End Get
         Set(value As Integer)
             _id_categ = value
+        End Set
+    End Property
+
+    Public Property Id_talle_prod As Integer
+        Get
+            Return _id_talle_prod
+        End Get
+        Set(value As Integer)
+            _id_talle_prod = value
         End Set
     End Property
 End Class

@@ -112,4 +112,34 @@
         End Try
     End Function
 
+    Function getLoginUser(iduser As String, pass As String)
+        Try
+            Dim user = (From u In ctx.Usuarios Where (u.Nombre = iduser And u.Contraseña = pass) Select u).First
+            Return user
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
+    Function VerifUser(usuario As String, pass As String) As Boolean
+        Try
+            Dim user As Usuarios = (From u In ctx.Usuarios Where (u.Nombre = usuario) Select u).First
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+        'Try
+        '    Dim user = (From u In ctx.Usuarios Where (u.Nombre = iduser And u.Contraseña = pass) Select u).First
+        '    Return True
+        '    MsgBox("true")
+        'Catch ex As Exception
+        '    Return False
+        '    MsgBox("false")
+        'End Try
+
+
+    End Function
+
 End Class

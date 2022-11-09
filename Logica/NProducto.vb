@@ -30,6 +30,7 @@ Public Class NProducto
         grid.Columns(8).Visible = False
         grid.Columns(9).Visible = False
         grid.Columns(10).Visible = False
+        grid.Columns(11).Visible = False
         grid.ClearSelection()
     End Sub
 

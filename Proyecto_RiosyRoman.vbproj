@@ -132,12 +132,14 @@
     <Compile Include="Datos\DCategoria.vb" />
     <Compile Include="Datos\Dcliente.vb" />
     <Compile Include="Datos\DEmpleado.vb" />
+    <Compile Include="Datos\DFactura.vb" />
     <Compile Include="Datos\DMarca.vb" />
     <Compile Include="Datos\DPerfil.vb" />
     <Compile Include="Datos\DProducto.vb" />
     <Compile Include="Datos\DTalle.vb" />
     <Compile Include="Datos\DTalle_Producto.vb" />
     <Compile Include="Datos\DUsuario.vb" />
+    <Compile Include="Datos\DFacturaDetalle.vb" />
     <Compile Include="detalles_factura.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -151,6 +153,8 @@
     <Compile Include="Logica\EProducto.vb" />
     <Compile Include="Logica\EUsuario.vb" />
     <Compile Include="Logica\NEmpleado.vb" />
+    <Compile Include="Logica\NFactura.vb" />
+    <Compile Include="Logica\NFacturaDetalle.vb" />
     <Compile Include="Logica\NMarca.vb" />
     <Compile Include="Logica\NPerfil.vb" />
     <Compile Include="Logica\NProducto.vb" />

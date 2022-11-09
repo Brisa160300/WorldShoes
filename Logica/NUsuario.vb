@@ -61,7 +61,7 @@
         combo.DropDownStyle = 2
         combo.SelectedValue = -1
         combo.FlatStyle = FlatStyle.Flat
-
     End Sub
+
 
 End Class

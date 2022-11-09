@@ -27,6 +27,20 @@
 
     End Function
 
+    Function ActualizarStock(idTalleProducto As Integer, cantidad As Integer, cod As Integer) As Boolean
+        Try
+            Dim TalleProdMod = (From t In ctx.talle_producto Where t.id_talle = idTalleProducto And t.cod_producto = cod
+                                Select t).First
+            TalleProdMod.cantidad_talle = CInt(TalleProdMod.cantidad_talle) - cantidad
+            ctx.SaveChanges()
+            Return True
+        Catch ex As Exception
+            MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
+            Return False
+        End Try
+
+    End Function
+
     Function EliminarTalle(idtalleProducto As Integer, cod As Integer) As Boolean
         Try
             Dim talleProdDelete = (From t In ctx.talle_producto Where t.id_talle = idtalleProducto And t.cod_producto = cod

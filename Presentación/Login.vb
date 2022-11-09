@@ -2,6 +2,7 @@
     Dim state As Integer
     Dim px, py As Integer
     Dim mover As Boolean
+    Dim objDusuario = New DUsuario
     Private Sub TBUsuario_Keypress(sender As Object, e As KeyPressEventArgs) Handles TBUsuario.KeyPress
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
@@ -11,28 +12,33 @@
 
     Private Sub BLogin_Click(sender As Object, e As EventArgs) Handles BLogin.Click
         Dim usuario As String = TBUsuario.Text
-        Dim contraseña As String = TBContraseña.Text
+        Dim pass As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
-            If (usuario = "BRISA") And (contraseña = "123") Then
-                MenuG.Show()
-                Me.Hide()
+            'If objDusuario.VerifUser(usuario, pass) Then
+            '    Dim user As Usuarios = objDusuario.getLoginUser(usuario, pass)
+            '    MenuV.Show()
+            '    Me.Hide()
+            '    'Select Case user.id_Perfil
+            '    '    Case = 1
+            '    '        MenuV.Show()
+            '    '        Me.Hide()
+            '    '    Case = 2
+            '    '        MenuGerente.Show()
+            '    '        Me.Hide()
+            '    '    Case = 3
+            '    '        MenuG.Show()
+            '    '        Me.Hide()
+            '    '    Case = 4
+            '    '        MenuA.Show()
+            '    '        Me.Hide()
+            '    '    Case Else
+            '    '        MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
+            '    '        TBUsuario.Clear()
+            '    '        TBContraseña.Clear()
+            '    '        TBUsuario.Focus()
+            '    'End Select
+            'End If
 
-            ElseIf (usuario = "GABRIEL") And (contraseña = "123") Then
-                Me.Hide()
-                MenuV.Show()
-
-            ElseIf (usuario = "ABI") And (contraseña = "123") Then
-                Me.Hide()
-                MenuA.Show()
-            ElseIf (usuario = "MARIA") And (contraseña = "123") Then
-                Me.Hide()
-                MenuGerente.Show()
-            Else
-                MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
-                TBUsuario.Clear()
-                TBContraseña.Clear()
-                TBUsuario.Focus()
-            End If
         End If
 
 
@@ -55,8 +61,8 @@
     End Function
 
     Private Sub TBUsuario_TextChanged(sender As Object, e As EventArgs) Handles TBUsuario.TextChanged
-        TBUsuario.Text = UCase(TBUsuario.Text)
-        TBUsuario.SelectionStart = Len(TBUsuario.Text)
+        'TBUsuario.Text = UCase(TBUsuario.Text)
+        'TBUsuario.SelectionStart = Len(TBUsuario.Text)
     End Sub
 
     Private Sub PictureBoxContraseña_Click(sender As Object, e As EventArgs) Handles PictureBoxContraseña.Click
