@@ -16,10 +16,17 @@
         Return listarFactura
     End Function
 
-    Function buscarfactura() As Integer
-        Dim ultimafactura = (From f In ctx.factura
-                             Select f.id_factura).Max
-        Return ultimafactura
+
+    Function buscarfactura()
+        Dim check = ctx.factura.Count()
+        Return check
     End Function
+
+    Function buscarfactura2()
+        Dim idf = (From f In ctx.factura
+                   Select f.id_factura).Max
+        Return idf
+    End Function
+
 
 End Class

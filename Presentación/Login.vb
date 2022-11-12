@@ -14,30 +14,30 @@
         Dim usuario As String = TBUsuario.Text
         Dim pass As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
-            'If objDusuario.VerifUser(usuario, pass) Then
-            '    Dim user As Usuarios = objDusuario.getLoginUser(usuario, pass)
-            '    MenuV.Show()
-            '    Me.Hide()
-            '    'Select Case user.id_Perfil
-            '    '    Case = 1
-            '    '        MenuV.Show()
-            '    '        Me.Hide()
-            '    '    Case = 2
-            '    '        MenuGerente.Show()
-            '    '        Me.Hide()
-            '    '    Case = 3
-            '    '        MenuG.Show()
-            '    '        Me.Hide()
-            '    '    Case = 4
-            '    '        MenuA.Show()
-            '    '        Me.Hide()
-            '    '    Case Else
-            '    '        MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
-            '    '        TBUsuario.Clear()
-            '    '        TBContraseña.Clear()
-            '    '        TBUsuario.Focus()
-            '    'End Select
-            'End If
+            If objDusuario.VerifUser(usuario, pass) Then
+                Dim user As Usuarios = objDusuario.getLoginUser(usuario, pass)
+                Select Case user.id_Perfil
+                    Case = 1
+                        MenuV.Show()
+                        MenuV.iduser = user.id_Usuario
+                        MenuV.nombre = user.Nombre
+                        Me.Hide()
+                    Case = 2
+                        MenuGerente.Show()
+                        Me.Hide()
+                    Case = 3
+                        MenuG.Show()
+                        Me.Hide()
+                    Case = 4
+                        MenuA.Show()
+                        Me.Hide()
+                    Case Else
+                        MsgBox("Nombre de Usuario y/o Contraseña no validos", vbCritical, "Datos invalidos")
+                        TBUsuario.Clear()
+                        TBContraseña.Clear()
+                        TBUsuario.Focus()
+                End Select
+            End If
 
         End If
 

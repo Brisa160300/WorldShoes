@@ -3,8 +3,12 @@ Imports System.Text.RegularExpressions
 
 Public Class AñadirVentas
     Private objNfactura = New NFactura
+    Private objDfactura = New DFactura
     Private objNcliente = New Dcliente
     Private descripcionProd As String
+    Public idUsuario As Integer
+    Dim modprod As Boolean = False
+    Public prodtotal As Integer = 0
     Public Function EspacioEnBlanco() As Boolean
         Dim ask As MsgBoxResult = False
         Dim idcliente As String = TBIdCliVenta.Text
@@ -14,6 +18,9 @@ Public Class AñadirVentas
            String.IsNullOrWhiteSpace(codigo) Or
            String.IsNullOrWhiteSpace(cantidad) Then
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
+            ask = True
+        ElseIf dgvListaVentas.Rows.Count() = 0 Then
+            MsgBox("Debe añadir un producto", vbCritical, "Error")
             ask = True
         End If
         Return ask
@@ -39,10 +46,10 @@ Public Class AñadirVentas
         frm.ShowDialog(Me)
         If frm.result = False Then
             TBCodigoProducto.Text = frm.dgvListaProductos.CurrentRow.Cells(0).Value.ToString
+            descripcionProd = frm.dgvListaProductos.CurrentRow.Cells(1).Value.ToString
             TBPrecio.Text = frm.dgvListaProductos.CurrentRow.Cells(4).Value.ToString
             TBStock.Text = frm.dgvListaProductos.CurrentRow.Cells(3).Value.ToString
-            TBTalle.Text = frm.dgvListaProductos.CurrentRow.Cells(3).Value.ToString
-            descripcionProd = frm.dgvListaProductos.CurrentRow.Cells(2).Value.ToString
+            TBTalle.Text = frm.dgvListaProductos.CurrentRow.Cells(7).Value.ToString
         End If
         frm.Close()
 
@@ -69,8 +76,6 @@ Public Class AñadirVentas
             If ask = vbYes Then
                 If objNfactura.agregar_factura(CInt(TBVendedor.Text), CInt(TBIdCliVenta.Text), CInt(TBCantidad.Text), CDec(TBTotalVenta.Text), dgvListaVentas) Then
                     MsgBox("Se completo la venta", vbExclamation, "Venta confirmada")
-                Else
-                    MsgBox("Algunos de los articulos seleccionados no cuentan con stock disponible")
                 End If
             End If
         End If
@@ -82,24 +87,110 @@ Public Class AñadirVentas
     End Sub
 
     Private Sub AñadirVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TBVendedor.Text = idUsuario
+        Bconfmodificacion.Visible = False
+        If objDfactura.buscarfactura() = 0 Then
+            TBNroFactura.Text = 1
+        Else
+            TBNroFactura.Text = objDfactura.buscarfactura2() + 1
+        End If
+        TBTotalVenta.Text = 0
         AgregarProducto.Enabled = False
         dgvListaVentas.ClearSelection()
+        TBCantidad.Enabled = False
     End Sub
 
-    Private Sub TBCodigoProducto_TextChanged(sender As Object, e As EventArgs) Handles TBCodigoProducto.TextChanged
-        AgregarProducto.Enabled = True
+    Private Sub validar()
+        If TBCodigoProducto.Text <> String.Empty Or TBCantidad.Text <> String.Empty Then
+            AgregarProducto.Enabled = True
+        End If
     End Sub
+
 
     Private Sub AgregarProducto_Click(sender As Object, e As EventArgs) Handles AgregarProducto.Click
-        If TBCantidad.Text = "" Then
-            ErrorProviderCantidad.SetError(TBCantidad, "Debe especificar una cantidad")
-        Else
-            Dim codigo As Integer = CInt(TBCodigoProducto.Text)
-            Dim precio As Decimal = CDec(TBPrecio.Text)
-            Dim cantidad As Integer = CInt(TBCantidad.Text)
-            Dim talle As Integer = CInt(TBTalle.Text)
-            dgvListaVentas.Rows.Add(TBCodigoProducto.Text, descripcionProd, TBPrecio.Text, TBCantidad.Text, TBTalle.Text)
+        Dim codigo As Integer = CInt(TBCodigoProducto.Text)
+        Dim precio As Decimal = CDec(TBPrecio.Text)
+        Dim cantidad As Integer = CInt(TBCantidad.Text)
+        Dim talle As Integer = CInt(TBTalle.Text)
+        Dim cantfila As Integer = dgvListaVentas.Rows.Count() - 1
+        Dim i As Integer
+        Dim res As Boolean = True
+        For i = 0 To cantfila
+            If dgvListaVentas.Item(0, i).Value = codigo And dgvListaVentas.Item(5, i).Value = talle Then
+                dgvListaVentas.Item(3, i).Value = dgvListaVentas.Item(3, i).Value + CInt(TBCantidad.Text)
+                dgvListaVentas.Item(4, i).Value = dgvListaVentas.Item(4, i).Value + precio
+                TBTotalVenta.Text = CDec(TBTotalVenta.Text) + dgvListaVentas.Item(2, i).Value
+                res = False
+            End If
+        Next
+        If res = True Then
+            Dim subtotal As Decimal = precio * cantidad
+            TBTotalVenta.Text = CDec(TBTotalVenta.Text) + subtotal
+            dgvListaVentas.Rows.Add(codigo, descripcionProd, precio, cantidad, subtotal, talle)
             dgvListaVentas.ClearSelection()
         End If
     End Sub
+
+    Private Sub BModificarProducto_Click(sender As Object, e As EventArgs) Handles BModificarProducto.Click
+        Bconfmodificacion.Visible = True
+        If (dgvListaVentas.SelectedRows.Count > 0) Or (dgvListaVentas.SelectedCells.Count > 0) Then
+            modprod = True
+            TBCodigoProducto.Text = dgvListaVentas.CurrentRow.Cells(0).Value.ToString
+            TBPrecio.Text = dgvListaVentas.CurrentRow.Cells(2).Value.ToString
+            TBCantidad.Text = dgvListaVentas.CurrentRow.Cells(3).Value.ToString
+            TBTalle.Text = dgvListaVentas.CurrentRow.Cells(5).Value.ToString
+            'dgvListaVentas.Rows.Remove(dgvListaVentas.CurrentRow)
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
+
+    Private Sub BEliminarProducto_Click_1(sender As Object, e As EventArgs) Handles BEliminarProducto.Click
+        If (dgvListaVentas.SelectedRows.Count > 0) Or (dgvListaVentas.SelectedCells.Count > 0) Then
+            TBTotalVenta.Text = CDec(TBTotalVenta.Text) - CDec(dgvListaVentas.CurrentRow.Cells(4).Value.ToString)
+            dgvListaVentas.Rows.Remove(dgvListaVentas.CurrentRow)
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
+
+    Private Sub TBCantidad_TextChanged(sender As Object, e As EventArgs) Handles TBCantidad.TextChanged
+        If Not TBCantidad.Text = "" Then
+            AgregarProducto.Enabled = True
+        Else
+            AgregarProducto.Enabled = False
+        End If
+    End Sub
+
+    Private Sub TBCodigoProducto_TextChanged(sender As Object, e As EventArgs) Handles TBCodigoProducto.TextChanged
+        If TBCodigoProducto.Text = "" Then
+            TBCantidad.Enabled = False
+        Else
+            TBCantidad.Enabled = True
+        End If
+    End Sub
+
+    Private Sub Bconfmodificacion_Click(sender As Object, e As EventArgs) Handles Bconfmodificacion.Click
+        Dim fila = dgvListaVentas.CurrentRow()
+        Dim codigo As Integer = CInt(TBCodigoProducto.Text)
+        Dim precio As Decimal = CDec(TBPrecio.Text)
+        Dim cantidad As Integer = CInt(TBCantidad.Text)
+        Dim talle As Integer = CInt(TBTalle.Text)
+        Dim cantfila As Integer = dgvListaVentas.Rows.Count() - 1
+        Dim i As Integer
+        Dim res As Boolean = True
+        For i = 0 To cantfila
+            If dgvListaVentas.Item(0, i).Value = codigo And dgvListaVentas.Item(5, i).Value = talle And modprod = True Then
+                Dim subtotactual As Decimal = CDec(dgvListaVentas.Item(4, i).Value.ToString)
+                TBTotalVenta.Text = CDec(TBTotalVenta.Text) - subtotactual
+                Dim subtotal As Decimal = precio * cantidad
+                TBTotalVenta.Text = CDec(TBTotalVenta.Text) + subtotal
+                dgvListaVentas.Item(4, i).Value = subtotal
+                dgvListaVentas.Item(3, i).Value = CInt(TBCantidad.Text)
+                modprod = False
+                Bconfmodificacion.Visible = False
+            End If
+        Next
+    End Sub
+
 End Class

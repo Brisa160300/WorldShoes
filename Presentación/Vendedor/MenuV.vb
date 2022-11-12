@@ -3,6 +3,8 @@
     Private state As Integer
     Private px, py As Integer
     Private mover As Boolean
+    Public iduser As Integer
+    Public nombre As String
 
     Private Sub MenuV_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
@@ -48,7 +50,29 @@
         showSubMenu(PanelSubMenuFacturación)
     End Sub
     Private Sub BNuevaVenta_Click(sender As Object, e As EventArgs) Handles BNuevaVenta.Click
-        AbrirFormulariosVendedor(New AñadirVentas)
+        'AbrirFormulariosVendedor(New AñadirVentas)
+        If Not formActivo IsNot Nothing Then
+            Dim formHijo = New AñadirVentas
+            PanelFormVendedor.Controls.Clear()
+            formHijo.TopLevel = False
+            formHijo.FormBorderStyle = FormBorderStyle.None
+            formHijo.Dock = DockStyle.Fill
+            formHijo.Visible = True
+            formHijo.AutoScroll = True
+            formHijo.VerticalScroll.Value = 0
+            formHijo.VerticalScroll.Minimum = 0
+            formHijo.VerticalScroll.Maximum = formHijo.Size.Height - 100
+            formHijo.HorizontalScroll.Value = 0
+            formHijo.HorizontalScroll.Minimum = 0
+            formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
+            PanelFormVendedor.Controls.Add(formHijo)
+            PanelFormVendedor.Tag = formHijo
+            PanelFormVendedor.BringToFront()
+            PanelFormVendedor.AutoScroll = True
+            formHijo.TBVendedor.Text = iduser
+            formHijo.Show()
+            hideSubMenu()
+        End If
     End Sub
 
     Private Sub BListarVentas_Click(sender As Object, e As EventArgs) Handles BListarVentas.Click
@@ -151,6 +175,8 @@
     Private Sub PanelBarraMenu_MouseUp(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseUp
         mover = False
     End Sub
+
+
     Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove
         If mover Then
             Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))

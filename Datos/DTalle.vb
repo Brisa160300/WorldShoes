@@ -60,4 +60,9 @@
         End Try
 
     End Function
+
+    Function getTallesId(descrip As Integer) As Integer
+        Dim talleid = (From t In ctx.talle Where t.descripcion = descrip Select t.id_talle).First
+        Return talleid
+    End Function
 End Class

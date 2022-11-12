@@ -53,7 +53,7 @@
           <Key>
             <PropertyRef Name="id_factura" />
           </Key>
-          <Property Name="id_factura" Type="int" Nullable="false" />
+          <Property Name="id_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="id_cliente" Type="int" Nullable="false" />
           <Property Name="fecha_factura" Type="date" />
@@ -347,7 +347,7 @@
           <Key>
             <PropertyRef Name="id_factura" />
           </Key>
-          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <Property Name="id_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="id_cliente" Type="Int32" Nullable="false" />
           <Property Name="fecha_factura" Type="DateTime" Precision="0" />

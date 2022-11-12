@@ -1,11 +1,14 @@
 ﻿Public Class DFacturaDetalle
     Dim ctx As WorldShoes_Roman_RiosEntities = New WorldShoes_Roman_RiosEntities
     Function Dguardar_facturaDetalle(ofacturadetalle As detalles_factura) As Boolean
+        MsgBox("p0")
         Try
+            MsgBox("p1")
             ctx.detalles_factura.Add(ofacturadetalle)
             ctx.SaveChanges()
             Return True
         Catch ex As Exception
+            MsgBox(ex.ToString)
             Return False
         End Try
     End Function

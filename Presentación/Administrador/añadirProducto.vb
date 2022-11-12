@@ -14,6 +14,12 @@
         Dim precio As String = TBPrecio.Text.Trim
         Dim talle As String = CBTalle.Text.Trim
         Dim marca As String = CBMarca.Text.Trim
+        If Not Char.IsNumber(Strings.Right(precio, 1)) Then
+            ErrorProviderPrecio2.SetError(TBPrecio, "Debe ingresar un numero valido")
+            Ask = True
+        Else
+            ErrorProviderPrecio.Clear()
+        End If
         If codigo = "" Then
             ErrorProviderCodigo.SetError(TBCodProducto, "Ingrese el codigo del producto")
             Ask = True
@@ -95,12 +101,38 @@
         Me.Close()
     End Sub
 
-    Private Sub TBPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBPrecio.KeyPress, TBCodProducto.KeyPress
-        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+    Private Sub TBnumero_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBStock.KeyPress, TBCodProducto.KeyPress
+        ErrorProviderPrecio.Clear()
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.OemPeriod) Then
             e.Handled = True
-            MsgBox("Solo se aceptan caracteres númericos", vbCritical, "Error")
+            MsgBox("Solo se aceptan caracteres numericos")
         End If
 
+    End Sub
+
+    Private Sub TBPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBPrecio.KeyPress
+        ErrorProviderPrecio.Clear()
+        Dim tecla As Short = Asc(e.KeyChar)
+        Dim dis As Integer = CInt(TBPrecio.TextLength)
+
+        If TBPrecio.TextLength = 0 Then
+            If Char.IsNumber(e.KeyChar) Or e.KeyChar = Chr(Keys.Delete) Or e.KeyChar = Chr(Keys.Back) Or e.KeyChar = Chr(Keys.OemPeriod) Then
+            Else
+                e.Handled = True
+            End If
+        ElseIf e.KeyChar = "." And TBPrecio.Text.Contains(".") Then
+            e.Handled = True
+        ElseIf TBPrecio.Text.Contains(".") Then
+            If TBPrecio.Text.Substring(TBPrecio.Text.IndexOf(".")).Length >= 3 Then
+                e.Handled = True
+                If e.KeyChar = Chr(Keys.Delete) Or e.KeyChar = Chr(Keys.Back) Then
+                    e.Handled = False
+                End If
+            ElseIf tecla >= 48 And tecla <= 57 Or tecla = 8 Or e.KeyChar = Chr(Keys.Delete) Or e.KeyChar = Chr(Keys.Back) Then
+            End If
+        ElseIf Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.OemPeriod) Then
+            e.Handled = True
+        End If
     End Sub
 
     Private Sub TBNombreProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreProducto.KeyPress
@@ -116,5 +148,13 @@
         objNProducto.cargarComboxMarca(CBMarca)
         objNProducto.cargarComboxTalle(CBTalle)
         objNProducto.cargarGrid(dgvListaProductos)
+    End Sub
+
+    Private Sub TBPrecio_TextChanged(sender As Object, e As EventArgs) Handles TBPrecio.TextChanged
+        If Not Char.IsNumber(Strings.Right(TBPrecio.Text, 1)) Then
+            ErrorProviderPrecio2.SetError(TBPrecio, "Debe ingresar un numero valido")
+        Else
+            ErrorProviderPrecio2.Clear()
+        End If
     End Sub
 End Class
