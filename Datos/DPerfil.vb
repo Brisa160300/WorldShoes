@@ -70,6 +70,17 @@
         End Try
     End Function
 
+    Public Function buscarPerfil(p_perfil As String, ByVal grid As DataGridView)
+        Try
+            Dim objMostrar = (From q In ctx.Perfiles Where q.id_Perfil.ToString.Contains(p_perfil) Or q.Descripcion.ToString.Contains(p_perfil)
+                              Select ID = q.id_Perfil, Perfil = q.Descripcion).ToList
+
+            grid.DataSource = objMostrar
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 
 
 End Class

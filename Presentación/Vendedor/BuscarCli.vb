@@ -2,6 +2,7 @@
 Public Class BuscarCli
     Public result As Boolean = True
     Private objNcliente = New NCliente
+    Dim objDcliente = New Dcliente
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
         Me.Close()
     End Sub
@@ -15,6 +16,7 @@ Public Class BuscarCli
 
     Private Sub BuscarCli_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNcliente.cargarGrid(dgvListarCliente)
+        objNcliente.cargarComboxDNI(ComboBoxBuscarDni)
     End Sub
 
     Private Sub dgvListarCliente_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListarCliente.CellDoubleClick
@@ -24,4 +26,7 @@ Public Class BuscarCli
         End If
     End Sub
 
+    Private Sub BBuscar_Click(sender As Object, e As EventArgs) Handles BBuscar.Click
+        objDcliente.buscarClientes(TBBuscar.Text, dgvListarCliente)
+    End Sub
 End Class

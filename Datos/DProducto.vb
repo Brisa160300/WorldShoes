@@ -91,24 +91,26 @@ Public Class DProducto
 
     End Function
 
-    '----------cambios 02-11-22----------buscar productos by categoria o marca'
 
     'Public Function buscarProductos(p_category As String, p_brand As String, ByVal grid As DataGridView)
-    '    Try
-    '        Using Mostrar As New WorldShoes_Roman_RiosEntities
+    Public Function buscarProductos(p_nombre As String, ByVal grid As DataGridView)
+        Try
 
-    '            Dim objMostrar = (From q In Mostrar.Productos Where q.id_categoria.ToString.Contains(p_category) And q.id_marca.ToString.Contains(p_brand)
-    '                              Select ProductoCod = q.cod_producto, Nombre = q.nombre, CategoriaId = q.id_categoria, Stock = "",
-    '                                       Precio = q.precio, Marca = q.id_marca, Estado = q.id_estado_producto, Talle = q.talle_producto).ToList
-    '            grid.DataSource = objMostrar
+            Dim objMostrar = (From q In ctx.Productos Where q.nombre.ToString.Contains(p_nombre) 'And q.id_marca.ToString.Contains(p_brand)'
+                              Select Codigo = q.cod_producto, Nombre = q.nombre, CategoriaId = q.id_categoria, Stock = "",
+                                           Precio = q.precio, Marca = q.id_marca, Estado = q.id_estado_producto, Talle = q.talle_producto).ToList
+            grid.DataSource = objMostrar
 
-    '            grid.Columns.Item(6).Visible = False
-    '            grid.Columns.Item(8).Visible = False
-    '        End Using
-    '        Return True
-    '    Catch ex As Exception
-    '        Return False
-    '    End Try
-    'End Function
+            grid.Columns.Item(2).Visible = False
+            grid.Columns.Item(3).Visible = False
+            grid.Columns.Item(5).Visible = False
+            grid.Columns.Item(6).Visible = False
+            grid.Columns.Item(7).Visible = False
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class
 

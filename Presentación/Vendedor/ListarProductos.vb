@@ -23,8 +23,7 @@ Public Class ListarProductos
     End Sub
 
     Private Sub BBuscarProducto_Click(sender As Object, e As EventArgs) Handles BBuscarProducto.Click
-
         'objDProducto.buscarProductos(CBCatProducto.Text, CBMarcas.Text, DataGridViewListaProductos)
-        'objDProducto.buscarProductos(TBBuscar.Text, DataGridViewListaProductos)
+        objDProducto.buscarProductos(TBBuscar.Text, DataGridViewListaProductos)
     End Sub
 End Class

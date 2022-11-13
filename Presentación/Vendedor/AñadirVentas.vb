@@ -76,6 +76,11 @@ Public Class AñadirVentas
             If ask = vbYes Then
                 If objNfactura.agregar_factura(CInt(TBVendedor.Text), CInt(TBIdCliVenta.Text), CInt(TBCantidad.Text), CDec(TBTotalVenta.Text), dgvListaVentas) Then
                     MsgBox("Se completo la venta", vbExclamation, "Venta confirmada")
+                    TBIdCliVenta.Clear()
+                    TBNombreCliVenta.Clear()
+                    TBApellido.Clear()
+                    TBTelCli.Clear()
+                    TBDniCliente.Clear()
                 End If
             End If
         End If
@@ -129,6 +134,16 @@ Public Class AñadirVentas
             dgvListaVentas.Rows.Add(codigo, descripcionProd, precio, cantidad, subtotal, talle)
             dgvListaVentas.ClearSelection()
         End If
+        'TBIdCliVenta.Clear()
+        'TBNombreCliVenta.Clear()
+        'TBApellido.Clear()
+        'TBTelCli.Clear()
+        'TBDniCliente.Clear()
+        TBCodigoProducto.Clear()
+        TBPrecio.Clear()
+        TBStock.Clear()
+        TBTalle.Clear()
+        TBCantidad.Clear()
     End Sub
 
     Private Sub BModificarProducto_Click(sender As Object, e As EventArgs) Handles BModificarProducto.Click

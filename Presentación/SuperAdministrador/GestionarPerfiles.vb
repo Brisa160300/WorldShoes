@@ -47,4 +47,8 @@
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
     End Sub
+
+    Private Sub BBuscarPerfil_Click(sender As Object, e As EventArgs) Handles BBuscarPerfil.Click
+        objDperfil.buscarPerfil(TBGestionPerfil.Text, dgvListaPerfiles)
+    End Sub
 End Class
