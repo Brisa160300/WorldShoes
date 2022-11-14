@@ -13,7 +13,7 @@ Public Class ListarProductos
     Private Sub ListarProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNProducto.cargarComboxCateg(CBCatProducto) 'combo As ComboBox, marca As String'
         objNProducto.cargarComboxMarca(CBMarcas)
-        objNProducto.cargarGrid(dgvListaProductos)
+        objDProducto.getProductosVendedorAll(dgvListaProductos)
 
     End Sub
 
@@ -39,7 +39,7 @@ Public Class ListarProductos
         CBCatProducto.SelectedValue = -1
         CBMarcas.ResetText()
         CBMarcas.SelectedValue = -1
-        objNProducto.cargarGrid(dgvListaProductos)
+        objNProducto.getProductosVendedorAll(dgvListaProductos)
     End Sub
 
 End Class

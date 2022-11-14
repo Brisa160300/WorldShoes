@@ -62,6 +62,49 @@ Public Class DProducto
 
     End Function
 
+    Function getProductosVendedorAll(grid As DataGridView)
+        Try
+            Dim objMostrar = (From tp In ctx.talle_producto Select tp).ToList
+            Dim listaProductos = New List(Of EProducto)
+            For Each valor In objMostrar
+                If valor.estado_talle_producto = 1 Then
+                    Dim item As EProducto = New EProducto
+                    item.Codigo = valor.Productos.cod_producto
+                    item.Nombre = valor.Productos.nombre
+                    item.Descripcion_categoria = valor.Productos.Categoria.descripcion_categoria
+                    item.Stock = valor.cantidad_talle
+                    item.Precio = valor.Productos.precio
+                    item.Descripcion_marca = valor.Productos.Marcas.Descripcion
+                    item.Descripcion_talle = valor.talle.descripcion
+                    item.Id_marca = valor.Productos.Marcas.id_Marca
+                    item.Id_talle = valor.talle.id_talle
+                    item.Id_categ = valor.Productos.Categoria.id_categoria
+                    item.Id_talle_prod = valor.id_talle_prod
+                    If valor.estado_talle_producto = 1 Then
+                        item.Estado = "Activo"
+                    Else
+                        item.Estado = "Inactivo"
+                    End If
+                    listaProductos.Add(item)
+                End If
+            Next
+            grid.DataSource = listaProductos
+            grid.Columns(2).HeaderText = "Categoria"
+            grid.Columns(5).HeaderText = "Marca"
+            grid.Columns(6).HeaderText = "Talle"
+            grid.Columns(7).HeaderText = "Estado"
+            grid.Columns(8).Visible = False
+            grid.Columns(9).Visible = False
+            grid.Columns(10).Visible = False
+            grid.Columns(11).Visible = False
+            grid.ClearSelection()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
     Function modProducto(codigo As Integer, nombre As String, categ As Integer, precio As Decimal, marca As Integer) As Boolean
         Try
             Dim pMod = (From p In ctx.Productos Where p.cod_producto = codigo
