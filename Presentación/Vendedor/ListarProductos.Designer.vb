@@ -47,11 +47,11 @@ Partial Class ListarProductos
         '
         Me.TabControlListaProductos.Controls.Add(Me.TabPageListaProducto)
         Me.TabControlListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlListaProductos.Location = New System.Drawing.Point(37, 183)
-        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControlListaProductos.Location = New System.Drawing.Point(28, 149)
+        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControlListaProductos.Name = "TabControlListaProductos"
         Me.TabControlListaProductos.SelectedIndex = 0
-        Me.TabControlListaProductos.Size = New System.Drawing.Size(1068, 362)
+        Me.TabControlListaProductos.Size = New System.Drawing.Size(801, 294)
         Me.TabControlListaProductos.TabIndex = 16
         '
         'TabPageListaProducto
@@ -59,11 +59,11 @@ Partial Class ListarProductos
         Me.TabPageListaProducto.Controls.Add(Me.dgvListaProductos)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
-        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 25)
+        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPageListaProducto.Name = "TabPageListaProducto"
-        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaProducto.Size = New System.Drawing.Size(1060, 330)
+        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(793, 265)
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Producto"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
@@ -90,8 +90,7 @@ Partial Class ListarProductos
         Me.dgvListaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListaProductos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaProductos.EnableHeadersVisualStyles = False
-        Me.dgvListaProductos.Location = New System.Drawing.Point(3, 2)
-        Me.dgvListaProductos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListaProductos.Location = New System.Drawing.Point(2, 2)
         Me.dgvListaProductos.Name = "dgvListaProductos"
         Me.dgvListaProductos.ReadOnly = True
         Me.dgvListaProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -105,7 +104,7 @@ Partial Class ListarProductos
         Me.dgvListaProductos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListaProductos.RowHeadersWidth = 51
         Me.dgvListaProductos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvListaProductos.Size = New System.Drawing.Size(1054, 326)
+        Me.dgvListaProductos.Size = New System.Drawing.Size(789, 261)
         Me.dgvListaProductos.TabIndex = 6
         '
         'GroupBoxBuscarProducto
@@ -120,11 +119,9 @@ Partial Class ListarProductos
         Me.GroupBoxBuscarProducto.Controls.Add(Me.TBBuscar)
         Me.GroupBoxBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxBuscarProducto.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxBuscarProducto.Location = New System.Drawing.Point(37, 50)
-        Me.GroupBoxBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxBuscarProducto.Location = New System.Drawing.Point(28, 41)
         Me.GroupBoxBuscarProducto.Name = "GroupBoxBuscarProducto"
-        Me.GroupBoxBuscarProducto.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBoxBuscarProducto.Size = New System.Drawing.Size(1068, 100)
+        Me.GroupBoxBuscarProducto.Size = New System.Drawing.Size(801, 81)
         Me.GroupBoxBuscarProducto.TabIndex = 17
         Me.GroupBoxBuscarProducto.TabStop = False
         Me.GroupBoxBuscarProducto.Text = "Productos"
@@ -134,42 +131,40 @@ Partial Class ListarProductos
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(492, 16)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(369, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 21)
+        Me.Label1.Size = New System.Drawing.Size(59, 16)
         Me.Label1.TabIndex = 37
-        Me.Label1.Text = "DNI"
+        Me.Label1.Text = "Marcas:"
         '
         'LMarcas
         '
         Me.LMarcas.AutoSize = True
         Me.LMarcas.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
         Me.LMarcas.ForeColor = System.Drawing.Color.White
-        Me.LMarcas.Location = New System.Drawing.Point(311, 16)
-        Me.LMarcas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LMarcas.Location = New System.Drawing.Point(233, 17)
         Me.LMarcas.Name = "LMarcas"
-        Me.LMarcas.Size = New System.Drawing.Size(98, 21)
+        Me.LMarcas.Size = New System.Drawing.Size(82, 16)
         Me.LMarcas.TabIndex = 36
-        Me.LMarcas.Text = "Categorias"
+        Me.LMarcas.Text = "Categorias:"
         '
         'CBMarcas
         '
         Me.CBMarcas.FormattingEnabled = True
-        Me.CBMarcas.Location = New System.Drawing.Point(496, 39)
-        Me.CBMarcas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CBMarcas.Location = New System.Drawing.Point(372, 35)
+        Me.CBMarcas.Margin = New System.Windows.Forms.Padding(2)
         Me.CBMarcas.Name = "CBMarcas"
-        Me.CBMarcas.Size = New System.Drawing.Size(160, 30)
+        Me.CBMarcas.Size = New System.Drawing.Size(121, 25)
         Me.CBMarcas.TabIndex = 29
         Me.CBMarcas.Text = "Marcas"
         '
         'CBCatProducto
         '
         Me.CBCatProducto.FormattingEnabled = True
-        Me.CBCatProducto.Location = New System.Drawing.Point(315, 39)
-        Me.CBCatProducto.Margin = New System.Windows.Forms.Padding(5, 2, 3, 2)
+        Me.CBCatProducto.Location = New System.Drawing.Point(236, 35)
+        Me.CBCatProducto.Margin = New System.Windows.Forms.Padding(4, 2, 2, 2)
         Me.CBCatProducto.Name = "CBCatProducto"
-        Me.CBCatProducto.Size = New System.Drawing.Size(160, 30)
+        Me.CBCatProducto.Size = New System.Drawing.Size(121, 25)
         Me.CBCatProducto.TabIndex = 28
         Me.CBCatProducto.Text = "Categorias"
         '
@@ -181,10 +176,9 @@ Partial Class ListarProductos
         Me.BImprimriVentedores.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BImprimriVentedores.ForeColor = System.Drawing.Color.White
         Me.BImprimriVentedores.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.printer_4_32
-        Me.BImprimriVentedores.Location = New System.Drawing.Point(980, 30)
-        Me.BImprimriVentedores.Margin = New System.Windows.Forms.Padding(4)
+        Me.BImprimriVentedores.Location = New System.Drawing.Point(735, 24)
         Me.BImprimriVentedores.Name = "BImprimriVentedores"
-        Me.BImprimriVentedores.Size = New System.Drawing.Size(65, 50)
+        Me.BImprimriVentedores.Size = New System.Drawing.Size(49, 41)
         Me.BImprimriVentedores.TabIndex = 26
         Me.BImprimriVentedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BImprimriVentedores.UseVisualStyleBackColor = False
@@ -198,10 +192,9 @@ Partial Class ListarProductos
         Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
         Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarProducto.Location = New System.Drawing.Point(204, 37)
-        Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarProducto.Location = New System.Drawing.Point(154, 30)
         Me.BBuscarProducto.Name = "BBuscarProducto"
-        Me.BBuscarProducto.Size = New System.Drawing.Size(67, 43)
+        Me.BBuscarProducto.Size = New System.Drawing.Size(50, 35)
         Me.BBuscarProducto.TabIndex = 14
         Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
@@ -209,10 +202,9 @@ Partial Class ListarProductos
         '
         Me.TBBuscar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBBuscar.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.TBBuscar.Location = New System.Drawing.Point(23, 43)
-        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBBuscar.Location = New System.Drawing.Point(17, 35)
         Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(173, 30)
+        Me.TBBuscar.Size = New System.Drawing.Size(131, 25)
         Me.TBBuscar.TabIndex = 6
         '
         'BVolver
@@ -222,10 +214,9 @@ Partial Class ListarProductos
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(975, 562)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVolver.Location = New System.Drawing.Point(731, 457)
         Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(131, 52)
+        Me.BVolver.Size = New System.Drawing.Size(98, 42)
         Me.BVolver.TabIndex = 25
         Me.BVolver.Text = "Volver"
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -233,15 +224,15 @@ Partial Class ListarProductos
         '
         'ListarProductos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1149, 656)
+        Me.ClientSize = New System.Drawing.Size(862, 533)
         Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxBuscarProducto)
         Me.Controls.Add(Me.TabControlListaProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ListarProductos"
         Me.Text = "ListarProductos"
         Me.TabControlListaProductos.ResumeLayout(False)

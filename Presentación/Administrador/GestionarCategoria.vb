@@ -78,4 +78,12 @@
         End If
     End Sub
 
+    Private Sub BBuscarCategoria_Click(sender As Object, e As EventArgs) Handles BBuscarCategoria.Click
+        If TBGestionCategoria.Text = "" Then
+            objDCategoria.getCategoriasAll()
+        Else
+            objDCategoria.buscarCategorias(TBGestionCategoria.Text, dgvListarCategorias)
+            TBGestionCategoria.Clear()
+        End If
+    End Sub
 End Class

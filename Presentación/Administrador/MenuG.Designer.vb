@@ -76,7 +76,7 @@ Partial Class MenuG
         Me.PanelSubMenuCategorias.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuCategorias.Location = New System.Drawing.Point(0, 611)
         Me.PanelSubMenuCategorias.Name = "PanelSubMenuCategorias"
-        Me.PanelSubMenuCategorias.Size = New System.Drawing.Size(229, 100)
+        Me.PanelSubMenuCategorias.Size = New System.Drawing.Size(233, 100)
         Me.PanelSubMenuCategorias.TabIndex = 13
         '
         'BGestionarCategorias
@@ -90,7 +90,7 @@ Partial Class MenuG
         Me.BGestionarCategorias.Location = New System.Drawing.Point(0, 50)
         Me.BGestionarCategorias.Name = "BGestionarCategorias"
         Me.BGestionarCategorias.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BGestionarCategorias.Size = New System.Drawing.Size(229, 50)
+        Me.BGestionarCategorias.Size = New System.Drawing.Size(233, 50)
         Me.BGestionarCategorias.TabIndex = 0
         Me.BGestionarCategorias.Text = "Listar Categorias"
         Me.BGestionarCategorias.UseVisualStyleBackColor = False
@@ -106,7 +106,7 @@ Partial Class MenuG
         Me.BAñadirCategoria.Location = New System.Drawing.Point(0, 0)
         Me.BAñadirCategoria.Name = "BAñadirCategoria"
         Me.BAñadirCategoria.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BAñadirCategoria.Size = New System.Drawing.Size(229, 50)
+        Me.BAñadirCategoria.Size = New System.Drawing.Size(233, 50)
         Me.BAñadirCategoria.TabIndex = 0
         Me.BAñadirCategoria.Text = "Nueva Categoria"
         Me.BAñadirCategoria.UseVisualStyleBackColor = False
@@ -120,7 +120,7 @@ Partial Class MenuG
         Me.PanelSubMenuVentasGerente.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuVentasGerente.Location = New System.Drawing.Point(0, 436)
         Me.PanelSubMenuVentasGerente.Name = "PanelSubMenuVentasGerente"
-        Me.PanelSubMenuVentasGerente.Size = New System.Drawing.Size(229, 100)
+        Me.PanelSubMenuVentasGerente.Size = New System.Drawing.Size(233, 100)
         Me.PanelSubMenuVentasGerente.TabIndex = 11
         '
         'BListarVendedoresGerente
@@ -134,7 +134,7 @@ Partial Class MenuG
         Me.BListarVendedoresGerente.Location = New System.Drawing.Point(0, 50)
         Me.BListarVendedoresGerente.Name = "BListarVendedoresGerente"
         Me.BListarVendedoresGerente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BListarVendedoresGerente.Size = New System.Drawing.Size(229, 50)
+        Me.BListarVendedoresGerente.Size = New System.Drawing.Size(233, 50)
         Me.BListarVendedoresGerente.TabIndex = 1
         Me.BListarVendedoresGerente.Text = "Listar Vendedores"
         Me.BListarVendedoresGerente.UseVisualStyleBackColor = False
@@ -150,7 +150,7 @@ Partial Class MenuG
         Me.BListarVentasGerente.Location = New System.Drawing.Point(0, 0)
         Me.BListarVentasGerente.Name = "BListarVentasGerente"
         Me.BListarVentasGerente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BListarVentasGerente.Size = New System.Drawing.Size(229, 50)
+        Me.BListarVentasGerente.Size = New System.Drawing.Size(233, 50)
         Me.BListarVentasGerente.TabIndex = 0
         Me.BListarVentasGerente.Text = "Listar Ventas"
         Me.BListarVentasGerente.UseVisualStyleBackColor = False
@@ -165,7 +165,7 @@ Partial Class MenuG
         Me.PanelSubMenuProductosGerente.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuProductosGerente.Location = New System.Drawing.Point(0, 211)
         Me.PanelSubMenuProductosGerente.Name = "PanelSubMenuProductosGerente"
-        Me.PanelSubMenuProductosGerente.Size = New System.Drawing.Size(229, 150)
+        Me.PanelSubMenuProductosGerente.Size = New System.Drawing.Size(233, 150)
         Me.PanelSubMenuProductosGerente.TabIndex = 9
         '
         'BAñadirTalleProducto
@@ -179,7 +179,7 @@ Partial Class MenuG
         Me.BAñadirTalleProducto.Location = New System.Drawing.Point(0, 100)
         Me.BAñadirTalleProducto.Name = "BAñadirTalleProducto"
         Me.BAñadirTalleProducto.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BAñadirTalleProducto.Size = New System.Drawing.Size(229, 50)
+        Me.BAñadirTalleProducto.Size = New System.Drawing.Size(233, 50)
         Me.BAñadirTalleProducto.TabIndex = 2
         Me.BAñadirTalleProducto.Text = "Añadir Talle"
         Me.BAñadirTalleProducto.UseVisualStyleBackColor = False
@@ -195,7 +195,7 @@ Partial Class MenuG
         Me.BGestionarProductosGerente.Location = New System.Drawing.Point(0, 50)
         Me.BGestionarProductosGerente.Name = "BGestionarProductosGerente"
         Me.BGestionarProductosGerente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BGestionarProductosGerente.Size = New System.Drawing.Size(229, 50)
+        Me.BGestionarProductosGerente.Size = New System.Drawing.Size(233, 50)
         Me.BGestionarProductosGerente.TabIndex = 1
         Me.BGestionarProductosGerente.Text = "Listar Productos"
         Me.BGestionarProductosGerente.UseVisualStyleBackColor = False
@@ -211,7 +211,7 @@ Partial Class MenuG
         Me.BAñadirProductoGerente.Location = New System.Drawing.Point(0, 0)
         Me.BAñadirProductoGerente.Name = "BAñadirProductoGerente"
         Me.BAñadirProductoGerente.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BAñadirProductoGerente.Size = New System.Drawing.Size(229, 50)
+        Me.BAñadirProductoGerente.Size = New System.Drawing.Size(233, 50)
         Me.BAñadirProductoGerente.TabIndex = 0
         Me.BAñadirProductoGerente.Text = "Añadir Productos"
         Me.BAñadirProductoGerente.UseVisualStyleBackColor = False
@@ -223,7 +223,7 @@ Partial Class MenuG
         Me.PanelIconMenuGerente.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelIconMenuGerente.Location = New System.Drawing.Point(0, 0)
         Me.PanelIconMenuGerente.Name = "PanelIconMenuGerente"
-        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(229, 136)
+        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(233, 136)
         Me.PanelIconMenuGerente.TabIndex = 0
         '
         'LIconMenu
@@ -236,7 +236,7 @@ Partial Class MenuG
         Me.LIconMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LIconMenu.Location = New System.Drawing.Point(32, 55)
         Me.LIconMenu.Name = "LIconMenu"
-        Me.LIconMenu.Size = New System.Drawing.Size(198, 35)
+        Me.LIconMenu.Size = New System.Drawing.Size(158, 27)
         Me.LIconMenu.TabIndex = 0
         Me.LIconMenu.Text = "WorldShoes"
         Me.LIconMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -273,7 +273,7 @@ Partial Class MenuG
         Me.PanelSubMenuClientes.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuClientes.Location = New System.Drawing.Point(0, 1136)
         Me.PanelSubMenuClientes.Name = "PanelSubMenuClientes"
-        Me.PanelSubMenuClientes.Size = New System.Drawing.Size(229, 50)
+        Me.PanelSubMenuClientes.Size = New System.Drawing.Size(233, 50)
         Me.PanelSubMenuClientes.TabIndex = 21
         '
         'BListaClientes
@@ -287,7 +287,7 @@ Partial Class MenuG
         Me.BListaClientes.Location = New System.Drawing.Point(0, 0)
         Me.BListaClientes.Name = "BListaClientes"
         Me.BListaClientes.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BListaClientes.Size = New System.Drawing.Size(229, 50)
+        Me.BListaClientes.Size = New System.Drawing.Size(233, 50)
         Me.BListaClientes.TabIndex = 1
         Me.BListaClientes.Text = "Listar Clientes"
         Me.BListaClientes.UseVisualStyleBackColor = False
@@ -305,7 +305,7 @@ Partial Class MenuG
         Me.BClientes.Location = New System.Drawing.Point(0, 1061)
         Me.BClientes.Name = "BClientes"
         Me.BClientes.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BClientes.Size = New System.Drawing.Size(229, 75)
+        Me.BClientes.Size = New System.Drawing.Size(233, 75)
         Me.BClientes.TabIndex = 20
         Me.BClientes.Text = "Clientes"
         Me.BClientes.UseVisualStyleBackColor = False
@@ -319,7 +319,7 @@ Partial Class MenuG
         Me.PanelSubMenuMarcas.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuMarcas.Location = New System.Drawing.Point(0, 961)
         Me.PanelSubMenuMarcas.Name = "PanelSubMenuMarcas"
-        Me.PanelSubMenuMarcas.Size = New System.Drawing.Size(229, 100)
+        Me.PanelSubMenuMarcas.Size = New System.Drawing.Size(233, 100)
         Me.PanelSubMenuMarcas.TabIndex = 19
         '
         'BGestionarMarcas
@@ -333,7 +333,7 @@ Partial Class MenuG
         Me.BGestionarMarcas.Location = New System.Drawing.Point(0, 50)
         Me.BGestionarMarcas.Name = "BGestionarMarcas"
         Me.BGestionarMarcas.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BGestionarMarcas.Size = New System.Drawing.Size(229, 50)
+        Me.BGestionarMarcas.Size = New System.Drawing.Size(233, 50)
         Me.BGestionarMarcas.TabIndex = 0
         Me.BGestionarMarcas.Text = "Listar Marcas"
         Me.BGestionarMarcas.UseVisualStyleBackColor = False
@@ -349,7 +349,7 @@ Partial Class MenuG
         Me.BAñadirMarca.Location = New System.Drawing.Point(0, 0)
         Me.BAñadirMarca.Name = "BAñadirMarca"
         Me.BAñadirMarca.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BAñadirMarca.Size = New System.Drawing.Size(229, 50)
+        Me.BAñadirMarca.Size = New System.Drawing.Size(233, 50)
         Me.BAñadirMarca.TabIndex = 0
         Me.BAñadirMarca.Text = "Nueva Marca"
         Me.BAñadirMarca.UseVisualStyleBackColor = False
@@ -367,7 +367,7 @@ Partial Class MenuG
         Me.BMarcas.Location = New System.Drawing.Point(0, 886)
         Me.BMarcas.Name = "BMarcas"
         Me.BMarcas.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BMarcas.Size = New System.Drawing.Size(229, 75)
+        Me.BMarcas.Size = New System.Drawing.Size(233, 75)
         Me.BMarcas.TabIndex = 18
         Me.BMarcas.Text = "Marcas"
         Me.BMarcas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -382,7 +382,7 @@ Partial Class MenuG
         Me.PanelSubMenuTalles.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuTalles.Location = New System.Drawing.Point(0, 786)
         Me.PanelSubMenuTalles.Name = "PanelSubMenuTalles"
-        Me.PanelSubMenuTalles.Size = New System.Drawing.Size(229, 100)
+        Me.PanelSubMenuTalles.Size = New System.Drawing.Size(233, 100)
         Me.PanelSubMenuTalles.TabIndex = 17
         '
         'BGestionarTalles
@@ -396,7 +396,7 @@ Partial Class MenuG
         Me.BGestionarTalles.Location = New System.Drawing.Point(0, 50)
         Me.BGestionarTalles.Name = "BGestionarTalles"
         Me.BGestionarTalles.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BGestionarTalles.Size = New System.Drawing.Size(229, 50)
+        Me.BGestionarTalles.Size = New System.Drawing.Size(233, 50)
         Me.BGestionarTalles.TabIndex = 0
         Me.BGestionarTalles.Text = "Listar Talles"
         Me.BGestionarTalles.UseVisualStyleBackColor = False
@@ -412,7 +412,7 @@ Partial Class MenuG
         Me.BAñadirTalle.Location = New System.Drawing.Point(0, 0)
         Me.BAñadirTalle.Name = "BAñadirTalle"
         Me.BAñadirTalle.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.BAñadirTalle.Size = New System.Drawing.Size(229, 50)
+        Me.BAñadirTalle.Size = New System.Drawing.Size(233, 50)
         Me.BAñadirTalle.TabIndex = 0
         Me.BAñadirTalle.Text = "Nuevo Talle"
         Me.BAñadirTalle.UseVisualStyleBackColor = False
@@ -430,7 +430,7 @@ Partial Class MenuG
         Me.BTalles.Location = New System.Drawing.Point(0, 711)
         Me.BTalles.Name = "BTalles"
         Me.BTalles.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BTalles.Size = New System.Drawing.Size(229, 75)
+        Me.BTalles.Size = New System.Drawing.Size(233, 75)
         Me.BTalles.TabIndex = 15
         Me.BTalles.Text = "Talles"
         Me.BTalles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -449,7 +449,7 @@ Partial Class MenuG
         Me.BSalir.Location = New System.Drawing.Point(0, 1186)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BSalir.Size = New System.Drawing.Size(229, 75)
+        Me.BSalir.Size = New System.Drawing.Size(233, 75)
         Me.BSalir.TabIndex = 14
         Me.BSalir.Text = "Cerrar Sesión"
         Me.BSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -468,7 +468,7 @@ Partial Class MenuG
         Me.BCategoriasGerente.Location = New System.Drawing.Point(0, 536)
         Me.BCategoriasGerente.Name = "BCategoriasGerente"
         Me.BCategoriasGerente.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BCategoriasGerente.Size = New System.Drawing.Size(229, 75)
+        Me.BCategoriasGerente.Size = New System.Drawing.Size(233, 75)
         Me.BCategoriasGerente.TabIndex = 12
         Me.BCategoriasGerente.Text = "Categorias"
         Me.BCategoriasGerente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -487,7 +487,7 @@ Partial Class MenuG
         Me.BVentasGerente.Location = New System.Drawing.Point(0, 361)
         Me.BVentasGerente.Name = "BVentasGerente"
         Me.BVentasGerente.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BVentasGerente.Size = New System.Drawing.Size(229, 75)
+        Me.BVentasGerente.Size = New System.Drawing.Size(233, 75)
         Me.BVentasGerente.TabIndex = 10
         Me.BVentasGerente.Text = "Ventas"
         Me.BVentasGerente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -506,7 +506,7 @@ Partial Class MenuG
         Me.BProductosGerente.Location = New System.Drawing.Point(0, 136)
         Me.BProductosGerente.Name = "BProductosGerente"
         Me.BProductosGerente.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BProductosGerente.Size = New System.Drawing.Size(229, 75)
+        Me.BProductosGerente.Size = New System.Drawing.Size(233, 75)
         Me.BProductosGerente.TabIndex = 8
         Me.BProductosGerente.Text = "Productos"
         Me.BProductosGerente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -592,7 +592,7 @@ Partial Class MenuG
         '
         'MenuG
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1370, 749)

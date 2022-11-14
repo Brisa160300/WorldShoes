@@ -59,4 +59,18 @@
         End Try
 
     End Function
+
+    Public Function buscarCategorias(p_categoria As String, ByVal grid As DataGridView)
+        Try
+            Dim CategoriasFilter = (From c In ctx.Categoria Where c.descripcion_categoria.ToString.Contains(p_categoria) Or c.id_categoria.ToString.Contains(p_categoria)
+                                    Select ID = c.id_categoria,
+                                        Descripción = c.descripcion_categoria,
+                                        Estado = c.id_estado_categoria).ToList  
+            grid.DataSource = CategoriasFilter
+            grid.ClearSelection()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

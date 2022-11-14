@@ -22,10 +22,10 @@ Partial Class BuscarCli
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.BCancelar = New System.Windows.Forms.Button()
         Me.BSeleccionar = New System.Windows.Forms.Button()
@@ -54,10 +54,9 @@ Partial Class BuscarCli
         Me.Panel3.Controls.Add(Me.BCancelar)
         Me.Panel3.Controls.Add(Me.BSeleccionar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 394)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Location = New System.Drawing.Point(0, 320)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(983, 84)
+        Me.Panel3.Size = New System.Drawing.Size(737, 68)
         Me.Panel3.TabIndex = 28
         '
         'BCancelar
@@ -67,10 +66,9 @@ Partial Class BuscarCli
         Me.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BCancelar.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
         Me.BCancelar.ForeColor = System.Drawing.Color.White
-        Me.BCancelar.Location = New System.Drawing.Point(485, 17)
-        Me.BCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BCancelar.Location = New System.Drawing.Point(364, 14)
         Me.BCancelar.Name = "BCancelar"
-        Me.BCancelar.Size = New System.Drawing.Size(129, 52)
+        Me.BCancelar.Size = New System.Drawing.Size(97, 42)
         Me.BCancelar.TabIndex = 26
         Me.BCancelar.Text = "Cancelar"
         Me.BCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -83,10 +81,9 @@ Partial Class BuscarCli
         Me.BSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BSeleccionar.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
         Me.BSeleccionar.ForeColor = System.Drawing.Color.White
-        Me.BSeleccionar.Location = New System.Drawing.Point(348, 17)
-        Me.BSeleccionar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BSeleccionar.Location = New System.Drawing.Point(261, 14)
         Me.BSeleccionar.Name = "BSeleccionar"
-        Me.BSeleccionar.Size = New System.Drawing.Size(129, 52)
+        Me.BSeleccionar.Size = New System.Drawing.Size(97, 42)
         Me.BSeleccionar.TabIndex = 27
         Me.BSeleccionar.Text = "Seleccionar"
         Me.BSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -96,50 +93,49 @@ Partial Class BuscarCli
         '
         Me.dgvListarCliente.AllowUserToAddRows = False
         Me.dgvListarCliente.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvListarCliente.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvListarCliente.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListarCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvListarCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarCliente.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.dgvListarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListarCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarCliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarCliente.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListarCliente.ColumnHeadersHeight = 20
         Me.dgvListarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvListarCliente.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvListarCliente.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListarCliente.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListarCliente.EnableHeadersVisualStyles = False
-        Me.dgvListarCliente.Location = New System.Drawing.Point(3, 2)
-        Me.dgvListarCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListarCliente.Location = New System.Drawing.Point(2, 2)
         Me.dgvListarCliente.Name = "dgvListarCliente"
         Me.dgvListarCliente.ReadOnly = True
         Me.dgvListarCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListarCliente.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListarCliente.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvListarCliente.RowHeadersWidth = 51
         Me.dgvListarCliente.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         Me.dgvListarCliente.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvListarCliente.Size = New System.Drawing.Size(943, 343)
+        Me.dgvListarCliente.Size = New System.Drawing.Size(721, 276)
         Me.dgvListarCliente.TabIndex = 7
         '
         'Panel1
@@ -148,9 +144,8 @@ Partial Class BuscarCli
         Me.Panel1.Controls.Add(Me.GroupBoxClientes)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(983, 123)
+        Me.Panel1.Size = New System.Drawing.Size(737, 100)
         Me.Panel1.TabIndex = 37
         '
         'GroupBoxClientes
@@ -161,11 +156,9 @@ Partial Class BuscarCli
         Me.GroupBoxClientes.Controls.Add(Me.TBBuscar)
         Me.GroupBoxClientes.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.GroupBoxClientes.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxClientes.Location = New System.Drawing.Point(11, 13)
-        Me.GroupBoxClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxClientes.Location = New System.Drawing.Point(8, 11)
         Me.GroupBoxClientes.Name = "GroupBoxClientes"
-        Me.GroupBoxClientes.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBoxClientes.Size = New System.Drawing.Size(957, 106)
+        Me.GroupBoxClientes.Size = New System.Drawing.Size(718, 86)
         Me.GroupBoxClientes.TabIndex = 12
         Me.GroupBoxClientes.TabStop = False
         Me.GroupBoxClientes.Text = "Clientes"
@@ -175,10 +168,9 @@ Partial Class BuscarCli
         Me.LDni.AutoSize = True
         Me.LDni.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
         Me.LDni.ForeColor = System.Drawing.Color.White
-        Me.LDni.Location = New System.Drawing.Point(536, 23)
-        Me.LDni.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LDni.Location = New System.Drawing.Point(402, 19)
         Me.LDni.Name = "LDni"
-        Me.LDni.Size = New System.Drawing.Size(39, 21)
+        Me.LDni.Size = New System.Drawing.Size(32, 16)
         Me.LDni.TabIndex = 36
         Me.LDni.Text = "DNI"
         '
@@ -188,10 +180,9 @@ Partial Class BuscarCli
         Me.CBBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBBuscar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.CBBuscar.FormattingEnabled = True
-        Me.CBBuscar.Location = New System.Drawing.Point(540, 48)
-        Me.CBBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBBuscar.Location = New System.Drawing.Point(405, 39)
         Me.CBBuscar.Name = "CBBuscar"
-        Me.CBBuscar.Size = New System.Drawing.Size(152, 30)
+        Me.CBBuscar.Size = New System.Drawing.Size(115, 25)
         Me.CBBuscar.TabIndex = 10
         Me.CBBuscar.Text = "DNI"
         '
@@ -203,20 +194,20 @@ Partial Class BuscarCli
         Me.BBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
         Me.BBuscar.ForeColor = System.Drawing.Color.White
         Me.BBuscar.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscar.Location = New System.Drawing.Point(893, 38)
-        Me.BBuscar.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
+        Me.BBuscar.Location = New System.Drawing.Point(670, 31)
+        Me.BBuscar.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(53, 49)
+        Me.BBuscar.Size = New System.Drawing.Size(40, 40)
         Me.BBuscar.TabIndex = 2
         Me.BBuscar.UseVisualStyleBackColor = False
         '
         'TBBuscar
         '
         Me.TBBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.0!)
-        Me.TBBuscar.Location = New System.Drawing.Point(701, 48)
-        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(5, 2, 5, 2)
+        Me.TBBuscar.Location = New System.Drawing.Point(526, 39)
+        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(180, 29)
+        Me.TBBuscar.Size = New System.Drawing.Size(136, 24)
         Me.TBBuscar.TabIndex = 8
         '
         'Panel2
@@ -225,21 +216,20 @@ Partial Class BuscarCli
         Me.Panel2.Controls.Add(Me.TabControlListaClientes)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 123)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 100)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(983, 478)
+        Me.Panel2.Size = New System.Drawing.Size(737, 388)
         Me.Panel2.TabIndex = 38
         '
         'TabControlListaClientes
         '
         Me.TabControlListaClientes.Controls.Add(Me.TabPafeListaClientes)
         Me.TabControlListaClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TabControlListaClientes.Location = New System.Drawing.Point(11, 6)
-        Me.TabControlListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControlListaClientes.Location = New System.Drawing.Point(2, 5)
+        Me.TabControlListaClientes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControlListaClientes.Name = "TabControlListaClientes"
         Me.TabControlListaClientes.SelectedIndex = 0
-        Me.TabControlListaClientes.Size = New System.Drawing.Size(957, 382)
+        Me.TabControlListaClientes.Size = New System.Drawing.Size(733, 310)
         Me.TabControlListaClientes.TabIndex = 14
         '
         'TabPafeListaClientes
@@ -248,24 +238,24 @@ Partial Class BuscarCli
         Me.TabPafeListaClientes.Controls.Add(Me.dgvListarCliente)
         Me.TabPafeListaClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TabPafeListaClientes.ForeColor = System.Drawing.Color.White
-        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 31)
-        Me.TabPafeListaClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 26)
+        Me.TabPafeListaClientes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPafeListaClientes.Name = "TabPafeListaClientes"
-        Me.TabPafeListaClientes.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPafeListaClientes.Size = New System.Drawing.Size(949, 347)
+        Me.TabPafeListaClientes.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPafeListaClientes.Size = New System.Drawing.Size(725, 280)
         Me.TabPafeListaClientes.TabIndex = 0
         Me.TabPafeListaClientes.Text = "Lista de Clientes"
         '
         'BuscarCli
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(983, 601)
+        Me.ClientSize = New System.Drawing.Size(737, 488)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "BuscarCli"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BuscarCli"

@@ -65,7 +65,7 @@
         End Try
 
     End Function
-    'nuevos cambios 02 11 2022'
+
     Public Function buscarClientes(p_busq As String, ByVal grid As DataGridView)
         Try
             Using Mostrar As New WorldShoes_Roman_RiosEntities

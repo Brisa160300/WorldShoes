@@ -41,4 +41,5 @@ Public Class ListarProductos
         CBMarcas.SelectedValue = -1
         objNProducto.cargarGrid(dgvListaProductos)
     End Sub
+
 End Class
