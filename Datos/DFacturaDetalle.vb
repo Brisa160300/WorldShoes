@@ -18,4 +18,6 @@
                                     Select fd).ToList
         Return listarFacturaDetalle
     End Function
+
+
 End Class

@@ -36,7 +36,7 @@
 
     Private Sub BCerrarMenuGerente_Click(sender As Object, e As EventArgs) Handles BCerrarMenuGerente.Click
         Dim ask As MsgBoxResult
-        ask = MsgBox("¿Esta segruro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
+        ask = MsgBox("¿Esta seguro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
         If ask = vbYes Then
             Application.Exit()
         End If
@@ -77,7 +77,7 @@
 
 
     Private Sub BAñadirUsuario_Click(sender As Object, e As EventArgs) Handles BAñadirUsuario.Click
-        AbrirFormulariosAdministrador(New añadirUsuario)
+        AbrirFormulariosAdministrador(New añadirUsuarios)
     End Sub
 
     Private Sub BGestionarUsuarios_Click(sender As Object, e As EventArgs) Handles BGestionarUsuarios.Click

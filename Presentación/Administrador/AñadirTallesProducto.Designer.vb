@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AñadirTallesProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AñadirTallesProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -31,8 +31,10 @@ Partial Class AñadirTallesProducto
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelRegClientes = New System.Windows.Forms.Panel()
+        Me.BBuscarProducto = New System.Windows.Forms.Button()
         Me.CBTalle = New System.Windows.Forms.ComboBox()
         Me.TBCantidadProducto = New System.Windows.Forms.TextBox()
+        Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LCantidad = New System.Windows.Forms.Label()
         Me.TBCodProducto = New System.Windows.Forms.TextBox()
@@ -65,24 +67,42 @@ Partial Class AñadirTallesProducto
         '
         Me.PanelRegClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.PanelRegClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PanelRegClientes.Controls.Add(Me.BBuscarProducto)
         Me.PanelRegClientes.Controls.Add(Me.CBTalle)
         Me.PanelRegClientes.Controls.Add(Me.TBCantidadProducto)
+        Me.PanelRegClientes.Controls.Add(Me.TBBuscar)
         Me.PanelRegClientes.Controls.Add(Me.Label2)
         Me.PanelRegClientes.Controls.Add(Me.LCantidad)
         Me.PanelRegClientes.Controls.Add(Me.TBCodProducto)
         Me.PanelRegClientes.Controls.Add(Me.LProducto)
-        Me.PanelRegClientes.Location = New System.Drawing.Point(45, 125)
+        Me.PanelRegClientes.Location = New System.Drawing.Point(45, 116)
         Me.PanelRegClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelRegClientes.Name = "PanelRegClientes"
-        Me.PanelRegClientes.Size = New System.Drawing.Size(346, 266)
+        Me.PanelRegClientes.Size = New System.Drawing.Size(346, 275)
         Me.PanelRegClientes.TabIndex = 8
+        '
+        'BBuscarProducto
+        '
+        Me.BBuscarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BBuscarProducto.FlatAppearance.BorderSize = 2
+        Me.BBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
+        Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
+        Me.BBuscarProducto.Location = New System.Drawing.Point(32, 22)
+        Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBuscarProducto.Name = "BBuscarProducto"
+        Me.BBuscarProducto.Size = New System.Drawing.Size(65, 50)
+        Me.BBuscarProducto.TabIndex = 20
+        Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
         'CBTalle
         '
         Me.CBTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBTalle.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.CBTalle.FormattingEnabled = True
-        Me.CBTalle.Location = New System.Drawing.Point(140, 126)
+        Me.CBTalle.Location = New System.Drawing.Point(141, 144)
         Me.CBTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.CBTalle.Name = "CBTalle"
         Me.CBTalle.Size = New System.Drawing.Size(177, 30)
@@ -91,18 +111,27 @@ Partial Class AñadirTallesProducto
         'TBCantidadProducto
         '
         Me.TBCantidadProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBCantidadProducto.Location = New System.Drawing.Point(140, 186)
+        Me.TBCantidadProducto.Location = New System.Drawing.Point(141, 204)
         Me.TBCantidadProducto.Margin = New System.Windows.Forms.Padding(4)
         Me.TBCantidadProducto.Name = "TBCantidadProducto"
         Me.TBCantidadProducto.Size = New System.Drawing.Size(177, 30)
         Me.TBCantidadProducto.TabIndex = 17
+        '
+        'TBBuscar
+        '
+        Me.TBBuscar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBBuscar.Location = New System.Drawing.Point(141, 32)
+        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBBuscar.Name = "TBBuscar"
+        Me.TBBuscar.Size = New System.Drawing.Size(177, 30)
+        Me.TBBuscar.TabIndex = 19
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(27, 126)
+        Me.Label2.Location = New System.Drawing.Point(28, 147)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 22)
@@ -114,7 +143,7 @@ Partial Class AñadirTallesProducto
         Me.LCantidad.AutoSize = True
         Me.LCantidad.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LCantidad.ForeColor = System.Drawing.Color.White
-        Me.LCantidad.Location = New System.Drawing.Point(27, 190)
+        Me.LCantidad.Location = New System.Drawing.Point(28, 208)
         Me.LCantidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LCantidad.Name = "LCantidad"
         Me.LCantidad.Size = New System.Drawing.Size(65, 22)
@@ -125,7 +154,7 @@ Partial Class AñadirTallesProducto
         '
         Me.TBCodProducto.Enabled = False
         Me.TBCodProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBCodProducto.Location = New System.Drawing.Point(140, 56)
+        Me.TBCodProducto.Location = New System.Drawing.Point(141, 89)
         Me.TBCodProducto.Margin = New System.Windows.Forms.Padding(4)
         Me.TBCodProducto.Name = "TBCodProducto"
         Me.TBCodProducto.Size = New System.Drawing.Size(177, 30)
@@ -136,7 +165,7 @@ Partial Class AñadirTallesProducto
         Me.LProducto.AutoSize = True
         Me.LProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.LProducto.ForeColor = System.Drawing.Color.White
-        Me.LProducto.Location = New System.Drawing.Point(27, 60)
+        Me.LProducto.Location = New System.Drawing.Point(28, 92)
         Me.LProducto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LProducto.Name = "LProducto"
         Me.LProducto.Size = New System.Drawing.Size(97, 22)
@@ -151,7 +180,7 @@ Partial Class AñadirTallesProducto
         Me.BRegistrarTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarTalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BRegistrarTalle.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarTalle.Location = New System.Drawing.Point(953, 460)
+        Me.BRegistrarTalle.Location = New System.Drawing.Point(953, 457)
         Me.BRegistrarTalle.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarTalle.Name = "BRegistrarTalle"
         Me.BRegistrarTalle.Size = New System.Drawing.Size(131, 52)
@@ -166,7 +195,7 @@ Partial Class AñadirTallesProducto
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(953, 540)
+        Me.BVolver.Location = New System.Drawing.Point(953, 517)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
         Me.BVolver.Size = New System.Drawing.Size(131, 52)
@@ -385,4 +414,6 @@ Partial Class AñadirTallesProducto
     Friend WithEvents ErrorPProd As ErrorProvider
     Friend WithEvents ErrorPTalle As ErrorProvider
     Friend WithEvents ErrorPCant As ErrorProvider
+    Friend WithEvents BBuscarProducto As Button
+    Friend WithEvents TBBuscar As TextBox
 End Class

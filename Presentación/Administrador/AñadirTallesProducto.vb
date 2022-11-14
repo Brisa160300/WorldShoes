@@ -1,11 +1,12 @@
 ﻿Public Class AñadirTallesProducto
-    Private objNProducto = New NProducto
+    Private objDProducto = New DProducto
     Private objNTalle = New NTalle
     Private objNTalleProd = New NTalle_Producto
     Private objDTalle = New DTalle
+    Private objNProducto = New NProducto
     Private Sub AñadirTallesProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        objNProducto.cargarGrid(dgvListarProductos)
-        objNProducto.cargarGrid2(dgvDetalleProductos)
+        objDProducto.getProductosAll(dgvListarProductos)
+        objDProducto.DetalleProductosAdmin(dgvDetalleProductos)
         CBTalle.Enabled = False
     End Sub
 
@@ -48,7 +49,7 @@
             ask = MsgBox("Esta seguro que desea añadir el talle y stock", vbYesNo + vbQuestion, "Confirmar operacion")
             If ask = vbYes Then
                 If objNTalleProd.agregar_talle_producto(cod_producto, talleProducto, cantidad) Then
-                    objNProducto.cargarGrid(dgvListarProductos)
+                    objDProducto.getProductosAll(dgvListarProductos)
                     MsgBox("Registrado con exito", vbInformation)
                 Else
                     MsgBox("El producto ya cuanta con inventario para el talle ingresado", vbCritical, "Error")
@@ -57,13 +58,27 @@
         End If
     End Sub
     Private Sub dgvListarProductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListarProductos.CellClick
-        Dim codProd As Integer = CInt(dgvListarProductos.CurrentRow.Cells(0).Value.ToString)
+        Dim codProd = dgvListarProductos.CurrentRow.Cells(0).Value.ToString
         TBCodProducto.Text = codProd
         objNProducto.cargarComboxTalle(CBTalle)
         CBTalle.Enabled = True
+        objDProducto.buscarProductosDetalleAdmin(codProd, dgvDetalleProductos)
         Dim fil As Integer = dgvListarProductos.CurrentRow.Index
+
     End Sub
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
+
+    Private Sub BBuscarProducto_Click(sender As Object, e As EventArgs) Handles BBuscarProducto.Click
+        If TBBuscar.Text = "" Then
+            objDProducto.getProductosAll(dgvListarProductos)
+            objDProducto.DetalleProductosAdmin(dgvDetalleProductos)
+            TBCodProducto.Clear()
+        Else
+            objDProducto.buscarProductosGeneralAdmin(TBBuscar.Text, dgvListarProductos)
+            TBBuscar.Clear()
+        End If
+    End Sub
+
 End Class

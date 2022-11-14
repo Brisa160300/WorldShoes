@@ -17,9 +17,15 @@ Public Class ModificarEmpleado
         ErrorProviderEmail.Clear()
         ErrorProviderTelefono.Clear()
         If EspacioEnBlanco() = False Then
+            Dim nombre As String = TBNombreEmpleado.Text
+            Dim apellido As String = TBApellidoEmpleado.Text
+            Dim dni As Integer = CInt(TBDniEmpleado.Text)
+            Dim tel As Long = CLng(TBTelEmpleado.Text)
+            Dim correo As String = TBCorreoEmpleado.Text
+            Dim direccion As String = TBDireccionEmpleado.Text
             ask = MsgBox("Seguro que desea modificar a este empleado", vbQuestion + vbYesNo, "Confirmar Modificación")
             If ask = vbYes Then
-                If objDempleado.modempleado(fila, TBNombreEmpleado.Text, TBApellidoEmpleado.Text, CInt(TBDniEmpleado.Text), CLng(TBTelEmpleado.Text), TBDireccionEmpleado.Text, TBCorreoEmpleado.Text) Then
+                If objDempleado.modempleado(fila, nombre, apellido, dni, tel, direccion, correo) Then
                     MsgBox("Se han modificado los datos con exito", vbInformation, "Confirmar Modificacion")
                     Me.Close()
                 End If

@@ -39,12 +39,14 @@ Partial Class Mod_Producto
         Me.ErrorProviderNombre = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderMarca = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderCategoria = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProviderPrecio2 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelModClientes.SuspendLayout()
         Me.GroupBoxDatosCliente.SuspendLayout()
         CType(Me.ErrorProviderPrecio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProviderCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProviderPrecio2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelModClientes
@@ -211,6 +213,10 @@ Partial Class Mod_Producto
         '
         Me.ErrorProviderCategoria.ContainerControl = Me
         '
+        'ErrorProviderPrecio2
+        '
+        Me.ErrorProviderPrecio2.ContainerControl = Me
+        '
         'Mod_Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -229,6 +235,7 @@ Partial Class Mod_Producto
         CType(Me.ErrorProviderNombre, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProviderMarca, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProviderCategoria, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProviderPrecio2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -249,4 +256,5 @@ Partial Class Mod_Producto
     Friend WithEvents ErrorProviderNombre As ErrorProvider
     Friend WithEvents ErrorProviderMarca As ErrorProvider
     Friend WithEvents ErrorProviderCategoria As ErrorProvider
+    Friend WithEvents ErrorProviderPrecio2 As ErrorProvider
 End Class

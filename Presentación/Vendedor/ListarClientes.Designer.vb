@@ -30,6 +30,7 @@ Partial Class ListarClientes
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.ComboBoxBuscarDni = New System.Windows.Forms.ComboBox()
         Me.GroupBoxClientes = New System.Windows.Forms.GroupBox()
+        Me.LMarcas = New System.Windows.Forms.Label()
         Me.BBuscar = New System.Windows.Forms.Button()
         Me.TabControlListaClientes = New System.Windows.Forms.TabControl()
         Me.TabPafeListaClientes = New System.Windows.Forms.TabPage()
@@ -51,7 +52,6 @@ Partial Class ListarClientes
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         Me.dgvListarClientes.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvListarClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvListarClientes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListarClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -83,7 +83,7 @@ Partial Class ListarClientes
         Me.dgvListarClientes.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvListarClientes.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
         Me.dgvListarClientes.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 294)
+        Me.dgvListarClientes.Size = New System.Drawing.Size(982, 289)
         Me.dgvListarClientes.TabIndex = 5
         '
         'TBBuscar
@@ -92,7 +92,7 @@ Partial Class ListarClientes
         Me.TBBuscar.Location = New System.Drawing.Point(610, 59)
         Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(290, 24)
+        Me.TBBuscar.Size = New System.Drawing.Size(290, 29)
         Me.TBBuscar.TabIndex = 8
         '
         'ComboBoxBuscarDni
@@ -103,12 +103,13 @@ Partial Class ListarClientes
         Me.ComboBoxBuscarDni.FormattingEnabled = True
         Me.ComboBoxBuscarDni.Location = New System.Drawing.Point(444, 59)
         Me.ComboBoxBuscarDni.Name = "ComboBoxBuscarDni"
-        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 25)
+        Me.ComboBoxBuscarDni.Size = New System.Drawing.Size(142, 30)
         Me.ComboBoxBuscarDni.TabIndex = 10
         Me.ComboBoxBuscarDni.Text = "DNI"
         '
         'GroupBoxClientes
         '
+        Me.GroupBoxClientes.Controls.Add(Me.LMarcas)
         Me.GroupBoxClientes.Controls.Add(Me.ComboBoxBuscarDni)
         Me.GroupBoxClientes.Controls.Add(Me.TBBuscar)
         Me.GroupBoxClientes.Controls.Add(Me.BBuscar)
@@ -120,6 +121,18 @@ Partial Class ListarClientes
         Me.GroupBoxClientes.TabIndex = 11
         Me.GroupBoxClientes.TabStop = False
         Me.GroupBoxClientes.Text = "Clientes"
+        '
+        'LMarcas
+        '
+        Me.LMarcas.AutoSize = True
+        Me.LMarcas.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
+        Me.LMarcas.ForeColor = System.Drawing.Color.White
+        Me.LMarcas.Location = New System.Drawing.Point(440, 37)
+        Me.LMarcas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LMarcas.Name = "LMarcas"
+        Me.LMarcas.Size = New System.Drawing.Size(39, 21)
+        Me.LMarcas.TabIndex = 35
+        Me.LMarcas.Text = "DNI"
         '
         'BBuscar
         '
@@ -152,10 +165,10 @@ Partial Class ListarClientes
         Me.TabPafeListaClientes.Controls.Add(Me.dgvListarClientes)
         Me.TabPafeListaClientes.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TabPafeListaClientes.ForeColor = System.Drawing.Color.White
-        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 26)
+        Me.TabPafeListaClientes.Location = New System.Drawing.Point(4, 31)
         Me.TabPafeListaClientes.Name = "TabPafeListaClientes"
         Me.TabPafeListaClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 300)
+        Me.TabPafeListaClientes.Size = New System.Drawing.Size(988, 295)
         Me.TabPafeListaClientes.TabIndex = 0
         Me.TabPafeListaClientes.Text = "Lista de Clientes"
         '
@@ -210,7 +223,7 @@ Partial Class ListarClientes
         '
         'ListarClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
@@ -244,4 +257,5 @@ Partial Class ListarClientes
     Friend WithEvents TabPafeListaClientes As TabPage
     Friend WithEvents BEditarCliente As Button
     Friend WithEvents BVolver As Button
+    Friend WithEvents LMarcas As Label
 End Class

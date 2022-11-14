@@ -14,7 +14,7 @@
         Dim usuario As String = TBUsuario.Text
         Dim pass As String = TBContraseña.Text
         If EspacioEnBlanco() = False Then
-            If objDusuario.VerifUser(usuario, pass) Then
+            If objDusuario.VerifUser(usuario, pass) <> 0 Then
                 Dim user As Usuarios = objDusuario.getLoginUser(usuario, pass)
                 Select Case user.id_Perfil
                     Case = 1
@@ -37,6 +37,11 @@
                         TBContraseña.Clear()
                         TBUsuario.Focus()
                 End Select
+            Else
+                MsgBox("Usuario y/o Contraseña incorrectos", vbCritical + MsgBoxStyle.OkOnly, "Error en Inicio de Sesion")
+                TBUsuario.Clear()
+                TBContraseña.Clear()
+                TBUsuario.Focus()
             End If
 
         End If

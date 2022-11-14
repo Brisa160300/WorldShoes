@@ -56,6 +56,8 @@ Partial Class añadirUsuarios
         Me.ErrorProviderConfPass = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderPerfil = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProviderPass = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BBuscar = New System.Windows.Forms.Button()
+        Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox3.SuspendLayout()
         Me.TabControlRegUsuarios.SuspendLayout()
         Me.TabPageListaUsuarios.SuspendLayout()
@@ -209,7 +211,7 @@ Partial Class añadirUsuarios
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(963, 549)
+        Me.BVolver.Location = New System.Drawing.Point(894, 564)
         Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
         Me.BVolver.Size = New System.Drawing.Size(134, 52)
@@ -225,7 +227,7 @@ Partial Class añadirUsuarios
         Me.TabControlRegUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlRegUsuarios.Name = "TabControlRegUsuarios"
         Me.TabControlRegUsuarios.SelectedIndex = 0
-        Me.TabControlRegUsuarios.Size = New System.Drawing.Size(887, 230)
+        Me.TabControlRegUsuarios.Size = New System.Drawing.Size(823, 230)
         Me.TabControlRegUsuarios.TabIndex = 25
         '
         'TabPageListaUsuarios
@@ -237,7 +239,7 @@ Partial Class añadirUsuarios
         Me.TabPageListaUsuarios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaUsuarios.Name = "TabPageListaUsuarios"
         Me.TabPageListaUsuarios.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPageListaUsuarios.Size = New System.Drawing.Size(879, 198)
+        Me.TabPageListaUsuarios.Size = New System.Drawing.Size(815, 198)
         Me.TabPageListaUsuarios.TabIndex = 0
         Me.TabPageListaUsuarios.Text = "Lista de Usuarios"
         Me.TabPageListaUsuarios.UseVisualStyleBackColor = True
@@ -246,7 +248,6 @@ Partial Class añadirUsuarios
         '
         Me.dgvListaUsuarios.AllowUserToAddRows = False
         Me.dgvListaUsuarios.AllowUserToDeleteRows = False
-        Me.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvListaUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -285,7 +286,7 @@ Partial Class añadirUsuarios
         Me.dgvListaUsuarios.RowHeadersWidth = 51
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.dgvListaUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvListaUsuarios.Size = New System.Drawing.Size(873, 194)
+        Me.dgvListaUsuarios.Size = New System.Drawing.Size(809, 194)
         Me.dgvListaUsuarios.TabIndex = 2
         '
         'BRegistrarUsuario
@@ -296,7 +297,7 @@ Partial Class añadirUsuarios
         Me.BRegistrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BRegistrarUsuario.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.BRegistrarUsuario.ForeColor = System.Drawing.Color.White
-        Me.BRegistrarUsuario.Location = New System.Drawing.Point(963, 479)
+        Me.BRegistrarUsuario.Location = New System.Drawing.Point(894, 494)
         Me.BRegistrarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.BRegistrarUsuario.Name = "BRegistrarUsuario"
         Me.BRegistrarUsuario.Size = New System.Drawing.Size(134, 51)
@@ -345,6 +346,8 @@ Partial Class añadirUsuarios
         'dgvEmpleados
         '
         Me.dgvEmpleados.AllowUserToDeleteRows = False
+        Me.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvEmpleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -407,12 +410,39 @@ Partial Class añadirUsuarios
         '
         Me.ErrorProviderPass.ContainerControl = Me
         '
+        'BBuscar
+        '
+        Me.BBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBuscar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.BBuscar.ForeColor = System.Drawing.Color.White
+        Me.BBuscar.Location = New System.Drawing.Point(1040, 422)
+        Me.BBuscar.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
+        Me.BBuscar.Name = "BBuscar"
+        Me.BBuscar.Size = New System.Drawing.Size(90, 49)
+        Me.BBuscar.TabIndex = 31
+        Me.BBuscar.Text = "Filtrar"
+        Me.BBuscar.UseVisualStyleBackColor = False
+        '
+        'TBBuscar
+        '
+        Me.TBBuscar.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBBuscar.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.TBBuscar.Location = New System.Drawing.Point(894, 434)
+        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(5, 2, 5, 2)
+        Me.TBBuscar.Name = "TBBuscar"
+        Me.TBBuscar.Size = New System.Drawing.Size(134, 26)
+        Me.TBBuscar.TabIndex = 32
+        '
         'añadirUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1150, 656)
+        Me.Controls.Add(Me.BBuscar)
+        Me.Controls.Add(Me.TBBuscar)
         Me.Controls.Add(Me.TabControlListaEmpleados)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.BVolver)
@@ -465,4 +495,6 @@ Partial Class añadirUsuarios
     Friend WithEvents ErrorProviderConfPass As ErrorProvider
     Friend WithEvents ErrorProviderPerfil As ErrorProvider
     Friend WithEvents ErrorProviderPass As ErrorProvider
+    Friend WithEvents BBuscar As Button
+    Friend WithEvents TBBuscar As TextBox
 End Class

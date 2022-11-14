@@ -1,4 +1,6 @@
-﻿Public Class NFactura
+﻿Imports System.Windows.Media
+
+Public Class NFactura
 
     Function agregar_factura(iduser As Integer, idcli As Integer, cantidad As Integer, importe As Decimal, dgv As DataGridView)
         Dim objdfacturadetalle = New DFacturaDetalle
@@ -30,7 +32,7 @@
 
             If objdtalleProd.validarStock(codigo, talleid, cantidadsolicitada) Then
                 resultado = False
-                MsgBox("No hay stock disponible, para el producto" + " " + dgv.Item(1, i).Value + " En el talle: " + dgv.Item(5, i).Value)
+                MsgBox("No hay stock disponible, para el producto" + " " + dgv.Item(1, i).Value.ToString + " En el talle: " + dgv.Item(5, i).Value.ToString)
                 'Abrir factura'
                 Exit Function
             End If
@@ -64,4 +66,31 @@
             End If
         End If
     End Function
+
+
+    Public Sub cargarGridVendedor(grid As DataGridView, iduser As Integer)
+        Dim vent As DFactura = New DFactura
+        grid.DataSource = vent.getVentasVendedorAll(iduser)
+        grid.Columns(0).HeaderText = "N° Factura"
+        grid.Columns(1).HeaderText = "Nombre Cliente"
+        grid.Columns(2).HeaderText = "Apellido Cliente"
+        grid.Columns(3).HeaderText = "Fecha"
+        grid.Columns(4).HeaderText = "Importe"
+        grid.Columns(5).HeaderText = "Cantidad"
+        grid.ClearSelection()
+    End Sub
+    Public Sub cargarGrid(grid As DataGridView)
+        Dim vent As DFactura = New DFactura
+        grid.DataSource = vent.getVentasAll()
+        grid.Columns(0).HeaderText = "N° Factura"
+        grid.Columns(1).HeaderText = "ID vendedor"
+        grid.Columns(2).HeaderText = "Nombre Vendedor"
+        grid.Columns(3).HeaderText = "Apellido Vendedor"
+        grid.Columns(4).HeaderText = "Nombre Cliente"
+        grid.Columns(5).HeaderText = "Apellido Cliente"
+        grid.Columns(6).HeaderText = "Fecha"
+        grid.Columns(7).HeaderText = "Importe"
+        grid.Columns(8).HeaderText = "Cantidad"
+        grid.ClearSelection()
+    End Sub
 End Class

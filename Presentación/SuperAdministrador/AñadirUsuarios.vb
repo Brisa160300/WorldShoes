@@ -3,6 +3,7 @@
     Private objNEmpleado = New NEmpleado
     Private objNPerfil = New NPerfil
     Private objDPerfil = New DPerfil
+    Private objDEmpleado = New DEmpleado
 
     Public Function EspacioEnBlanco() As Boolean
         Dim Ask As Boolean = False
@@ -105,4 +106,13 @@
         TBEmpleado.Text = dgvEmpleados.CurrentRow.Cells(0).Value.ToString
     End Sub
 
+    Private Sub BBuscar_Click(sender As Object, e As EventArgs) Handles BBuscar.Click
+        If TBBuscar.Text.Trim = "" Then
+            objNEmpleado.cargarGrid(dgvEmpleados)
+        Else
+            objDEmpleado.buscarEmpleado(TBBuscar.Text, dgvEmpleados)
+            TBBuscar.Clear()
+        End If
+
+    End Sub
 End Class

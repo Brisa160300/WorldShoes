@@ -27,7 +27,29 @@
     End Sub
 
     Private Sub BBuscarProducto_Click(sender As Object, e As EventArgs) Handles BBuscarProducto.Click
+        If TBBuscar.Text = "" Then
+            objNProductos.cargarGrid(dgvListaProductos)
+        Else
+            objDProducto.buscarProductos(TBBuscar.Text, dgvListaProductos)
+            TBBuscar.Clear()
+        End If
         'objDProducto.buscarProductos(CBCatProducto.Text, CBMarcas.Text, DataGridViewListaProductos)
-        objDProducto.buscarProductos(TBBuscar.Text, dgvListaProductos)
+
+    End Sub
+
+    Private Sub CBCatProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBCatProducto.SelectedIndexChanged
+        objDProducto.buscarProductos(CBCatProducto.Text, dgvListaProductos)
+    End Sub
+
+    Private Sub GroupBoxProductos_click(sender As Object, e As EventArgs) Handles GroupBoxProductos.Click
+        CBCatProducto.ResetText()
+        CBCatProducto.SelectedValue = -1
+        CBMarcas.ResetText()
+        CBMarcas.SelectedValue = -1
+        objNProductos.cargarGrid(dgvListaProductos)
+    End Sub
+
+    Private Sub CBMarcas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBMarcas.SelectedIndexChanged
+        objDProducto.buscarProductos(CBMarcas.Text, dgvListaProductos)
     End Sub
 End Class

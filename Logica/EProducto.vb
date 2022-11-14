@@ -5,8 +5,8 @@
     Private _stock As Integer
     Private _precio As Integer
     Private _descripcion_marca As String
-    Private _estado As String
     Private _descripcion_talle As String
+    Private _estado As String
     Private _id_marca As Integer
     Private _id_talle As Integer
     Private _id_categ As Integer
@@ -20,6 +20,7 @@
             _codigo = value
         End Set
     End Property
+
     Public Property Nombre As String
         Get
             Return _nombre
@@ -65,21 +66,21 @@
         End Set
     End Property
 
-    Public Property Estado As String
-        Get
-            Return _estado
-        End Get
-        Set(value As String)
-            _estado = value
-        End Set
-    End Property
-
     Public Property Descripcion_talle As String
         Get
             Return _descripcion_talle
         End Get
         Set(value As String)
             _descripcion_talle = value
+        End Set
+    End Property
+
+    Public Property Estado As String
+        Get
+            Return _estado
+        End Get
+        Set(value As String)
+            _estado = value
         End Set
     End Property
 

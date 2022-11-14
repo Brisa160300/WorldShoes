@@ -147,7 +147,7 @@
         objNProducto.cargarComboxCateg(CBCategoria)
         objNProducto.cargarComboxMarca(CBMarca)
         objNProducto.cargarComboxTalle(CBTalle)
-        objNProducto.cargarGrid(dgvListaProductos)
+        objDProducto.getProductosAll(dgvListaProductos)
     End Sub
 
     Private Sub TBPrecio_TextChanged(sender As Object, e As EventArgs) Handles TBPrecio.TextChanged

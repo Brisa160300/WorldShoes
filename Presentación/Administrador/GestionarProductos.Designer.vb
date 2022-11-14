@@ -28,12 +28,14 @@ Partial Class GestionarProductos
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
         Me.dgvListaProductos = New System.Windows.Forms.DataGridView()
         Me.GroupBoxGestionProductos = New System.Windows.Forms.GroupBox()
+        Me.LCatPro = New System.Windows.Forms.Label()
+        Me.LMarcas = New System.Windows.Forms.Label()
         Me.CBMarca = New System.Windows.Forms.ComboBox()
         Me.CBCateg = New System.Windows.Forms.ComboBox()
         Me.BEliminarProducto = New System.Windows.Forms.Button()
         Me.BModificarProducto = New System.Windows.Forms.Button()
         Me.BBuscarProducto = New System.Windows.Forms.Button()
-        Me.TBGestionProductos = New System.Windows.Forms.TextBox()
+        Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.TabListaCategorias.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
@@ -107,12 +109,14 @@ Partial Class GestionarProductos
         'GroupBoxGestionProductos
         '
         Me.GroupBoxGestionProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.GroupBoxGestionProductos.Controls.Add(Me.LCatPro)
+        Me.GroupBoxGestionProductos.Controls.Add(Me.LMarcas)
         Me.GroupBoxGestionProductos.Controls.Add(Me.CBMarca)
         Me.GroupBoxGestionProductos.Controls.Add(Me.CBCateg)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BEliminarProducto)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BModificarProducto)
         Me.GroupBoxGestionProductos.Controls.Add(Me.BBuscarProducto)
-        Me.GroupBoxGestionProductos.Controls.Add(Me.TBGestionProductos)
+        Me.GroupBoxGestionProductos.Controls.Add(Me.TBBuscar)
         Me.GroupBoxGestionProductos.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxGestionProductos.ForeColor = System.Drawing.Color.White
         Me.GroupBoxGestionProductos.Location = New System.Drawing.Point(29, 50)
@@ -124,10 +128,34 @@ Partial Class GestionarProductos
         Me.GroupBoxGestionProductos.TabStop = False
         Me.GroupBoxGestionProductos.Text = "Gestión de Productos"
         '
+        'LCatPro
+        '
+        Me.LCatPro.AutoSize = True
+        Me.LCatPro.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
+        Me.LCatPro.ForeColor = System.Drawing.Color.White
+        Me.LCatPro.Location = New System.Drawing.Point(320, 29)
+        Me.LCatPro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LCatPro.Name = "LCatPro"
+        Me.LCatPro.Size = New System.Drawing.Size(98, 21)
+        Me.LCatPro.TabIndex = 37
+        Me.LCatPro.Text = "Categorias"
+        '
+        'LMarcas
+        '
+        Me.LMarcas.AutoSize = True
+        Me.LMarcas.Font = New System.Drawing.Font("Britannic Bold", 11.0!)
+        Me.LMarcas.ForeColor = System.Drawing.Color.White
+        Me.LMarcas.Location = New System.Drawing.Point(502, 29)
+        Me.LMarcas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LMarcas.Name = "LMarcas"
+        Me.LMarcas.Size = New System.Drawing.Size(61, 21)
+        Me.LMarcas.TabIndex = 36
+        Me.LMarcas.Text = "Marca"
+        '
         'CBMarca
         '
         Me.CBMarca.FormattingEnabled = True
-        Me.CBMarca.Location = New System.Drawing.Point(506, 43)
+        Me.CBMarca.Location = New System.Drawing.Point(506, 53)
         Me.CBMarca.Name = "CBMarca"
         Me.CBMarca.Size = New System.Drawing.Size(160, 30)
         Me.CBMarca.TabIndex = 31
@@ -136,7 +164,7 @@ Partial Class GestionarProductos
         'CBCateg
         '
         Me.CBCateg.FormattingEnabled = True
-        Me.CBCateg.Location = New System.Drawing.Point(324, 43)
+        Me.CBCateg.Location = New System.Drawing.Point(324, 53)
         Me.CBCateg.Margin = New System.Windows.Forms.Padding(5, 3, 3, 3)
         Me.CBCateg.Name = "CBCateg"
         Me.CBCateg.Size = New System.Drawing.Size(160, 30)
@@ -191,14 +219,14 @@ Partial Class GestionarProductos
         Me.BBuscarProducto.TabIndex = 14
         Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
-        'TBGestionProductos
+        'TBBuscar
         '
-        Me.TBGestionProductos.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TBGestionProductos.Location = New System.Drawing.Point(27, 43)
-        Me.TBGestionProductos.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBGestionProductos.Name = "TBGestionProductos"
-        Me.TBGestionProductos.Size = New System.Drawing.Size(173, 30)
-        Me.TBGestionProductos.TabIndex = 6
+        Me.TBBuscar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBBuscar.Location = New System.Drawing.Point(27, 43)
+        Me.TBBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TBBuscar.Name = "TBBuscar"
+        Me.TBBuscar.Size = New System.Drawing.Size(173, 30)
+        Me.TBBuscar.TabIndex = 6
         '
         'BVolver
         '
@@ -244,9 +272,11 @@ Partial Class GestionarProductos
     Friend WithEvents BEliminarProducto As Button
     Friend WithEvents BModificarProducto As Button
     Friend WithEvents BBuscarProducto As Button
-    Friend WithEvents TBGestionProductos As TextBox
+    Friend WithEvents TBBuscar As TextBox
     Friend WithEvents BVolver As Button
     Friend WithEvents dgvListaProductos As DataGridView
     Friend WithEvents CBMarca As ComboBox
     Friend WithEvents CBCateg As ComboBox
+    Friend WithEvents LCatPro As Label
+    Friend WithEvents LMarcas As Label
 End Class

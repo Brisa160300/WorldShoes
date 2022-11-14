@@ -152,6 +152,8 @@
     <Compile Include="Logica\EDetalleProducto.vb" />
     <Compile Include="Logica\EProducto.vb" />
     <Compile Include="Logica\EUsuario.vb" />
+    <Compile Include="Logica\EVenta.vb" />
+    <Compile Include="Logica\EventaAdmin.vb" />
     <Compile Include="Logica\NEmpleado.vb" />
     <Compile Include="Logica\NFactura.vb" />
     <Compile Include="Logica\NFacturaDetalle.vb" />

@@ -1,4 +1,6 @@
-﻿Public Class NCliente
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
+
+Public Class NCliente
     Function agregar_cliente(nombre As String, apellido As String, dni As Integer, telefono As Integer, direccion As String, email As String)
         Dim ocliente = New clientes
         With ocliente
@@ -27,7 +29,7 @@
         grid.Columns(3).HeaderText = "DNI"
         grid.Columns(4).HeaderText = "Telefono"
         grid.Columns(5).HeaderText = "Direccion"
-        grid.Columns(6).HeaderText = "E-mail"
+        grid.Columns(6).HeaderText = "Correo Electronico"
         grid.Columns(7).Visible = False
         grid.Columns(8).Visible = False
         grid.ClearSelection()

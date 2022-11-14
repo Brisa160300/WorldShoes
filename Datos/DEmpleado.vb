@@ -15,7 +15,7 @@
         Return listarEmpleado
     End Function
 
-    Function modempleado(idempleado As Integer, nombre As String, apel As String, dni As Integer, tel As Integer,
+    Function modempleado(idempleado As Integer, nombre As String, apel As String, dni As Integer, tel As Long,
                         domi As String, correo As String) As Boolean
         Try
             Dim EmpMod = (From e In ctx.empleados Where e.Id_empleado = idempleado
@@ -63,6 +63,28 @@
             Return False
         End Try
 
+    End Function
+
+    Public Function buscarEmpleado(p_busq As String, ByVal grid As DataGridView)
+        Try
+            Using Mostrar As New WorldShoes_Roman_RiosEntities
+                Dim objMostrar = (From q In Mostrar.empleados Where q.dni.ToString.Contains(p_busq) Or q.nombre.ToString.Contains(p_busq) Or q.apellido.ToString.Contains(p_busq)
+                                  Select q).ToList
+                grid.DataSource = objMostrar
+                grid.Columns(0).HeaderText = "ID"
+                grid.Columns(1).HeaderText = "Nombre"
+                grid.Columns(2).HeaderText = "Apellido"
+                grid.Columns(3).HeaderText = "DNI"
+                grid.Columns(4).HeaderText = "Telefono"
+                grid.Columns(5).HeaderText = "Direccion"
+                grid.Columns(6).HeaderText = "Correo Electronico"
+                grid.Columns(5).HeaderText = "Correo Electronico"
+                grid.ClearSelection()
+            End Using
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 
 End Class

@@ -22,11 +22,11 @@
         grid.DataSource = user.getUsuariosAll()
         grid.Columns(0).HeaderText = "Nombre Empleado"
         grid.Columns(1).HeaderText = "Apellido Empleado"
-        grid.Columns(2).HeaderText = "Nombre de Usuario"
+        grid.Columns(2).HeaderText = "Nombre Usuario"
         grid.Columns(3).HeaderText = "Contraseña"
-        grid.Columns(4).HeaderText = "Perfil"
+        grid.Columns(4).HeaderText = "Perfil Usuario"
         grid.Columns(5).HeaderText = "Estado"
-        grid.Columns(6).HeaderText = "id" 'columna id usuario supuestamente
+        grid.Columns(6).HeaderText = "ID Empleado"
         grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader
         grid.ClearSelection()
 

@@ -26,6 +26,7 @@ Public Class NProducto
         grid.DataSource = prod.getProductosDetallesAll()
         grid.Columns(2).HeaderText = "Categoria"
         grid.Columns(5).HeaderText = "Marca"
+        grid.Columns(6).Visible = False
         grid.Columns(7).HeaderText = "Talle"
         grid.Columns(8).Visible = False
         grid.Columns(9).Visible = False
@@ -34,20 +35,20 @@ Public Class NProducto
         grid.ClearSelection()
     End Sub
 
-    Public Sub cargarGrid2(grid As DataGridView)
-        Dim prod As DProducto = New DProducto
-        grid.DataSource = prod.getProductosAll()
-        grid.Columns(0).HeaderText = "ID"
-        grid.Columns(1).HeaderText = "Nombre"
-        grid.Columns(2).HeaderText = "Categoria"
-        grid.Columns(3).HeaderText = "Precio"
-        grid.Columns(4).HeaderText = "Marca"
-        grid.Columns(5).HeaderText = "Estado"
-        grid.Columns(6).Visible = False
-        grid.Columns(7).Visible = False
-        grid.ClearSelection()
+    'Public Sub cargarGrid2(grid As DataGridView)
+    '    Dim prod As DProducto = New DProducto
+    '    grid.DataSource = prod.getProductosAll()
+    '    grid.Columns(0).HeaderText = "ID"
+    '    grid.Columns(1).HeaderText = "Nombre"
+    '    grid.Columns(2).HeaderText = "Categoria"
+    '    grid.Columns(3).HeaderText = "Precio"
+    '    grid.Columns(4).HeaderText = "Marca"
+    '    grid.Columns(5).HeaderText = "Estado"
+    '    grid.Columns(6).Visible = False
+    '    grid.Columns(7).Visible = False
+    '    grid.ClearSelection()
 
-    End Sub
+    'End Sub
 
     Public Sub cargarComboxCateg(combo As ComboBox)
         Dim categ As DCategoria = New DCategoria
@@ -55,7 +56,6 @@ Public Class NProducto
         combo.DisplayMember = "descripcion_categoria"
         combo.ValueMember = "id_categoria"
         combo.DropDownStyle = 2
-        combo.FlatStyle = FlatStyle.Flat
         combo.SelectedValue = -1
         If combo.SelectedValue = 0 Then
             combo.SelectedValue = -1
@@ -71,7 +71,6 @@ Public Class NProducto
         combo.ValueMember = "id_talle"
         combo.SelectedValue = -1
         combo.DropDownStyle = 2
-        combo.FlatStyle = FlatStyle.Flat
         If combo.SelectedValue = 0 Then
             combo.SelectedValue = -1
         End If
@@ -84,7 +83,6 @@ Public Class NProducto
         combo.ValueMember = "id_Marca"
         combo.SelectedValue = -1
         combo.DropDownStyle = 2
-        combo.FlatStyle = FlatStyle.Flat
     End Sub
     Public Sub cargarComboxMarca2(combo As ComboBox, marca As String)
         Dim marc As DMarca = New DMarca
@@ -92,7 +90,6 @@ Public Class NProducto
         combo.DisplayMember = "Descripcion"
         combo.ValueMember = "id_Marca"
         combo.DropDownStyle = 2
-        combo.FlatStyle = FlatStyle.Flat
         combo.SelectedIndex = combo.FindString(marca)
 
     End Sub
@@ -103,7 +100,6 @@ Public Class NProducto
         combo.DisplayMember = "descripcion_categoria"
         combo.ValueMember = "id_categoria"
         combo.DropDownStyle = 2
-        combo.FlatStyle = FlatStyle.Flat
         combo.SelectedIndex = combo.FindString(ctg)
     End Sub
 End Class

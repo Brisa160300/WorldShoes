@@ -9,14 +9,11 @@ Public Class AñadirVentas
     Public idUsuario As Integer
     Dim modprod As Boolean = False
     Public prodtotal As Integer = 0
+    Dim cantidadVenta As Integer = 0
     Public Function EspacioEnBlanco() As Boolean
         Dim ask As MsgBoxResult = False
         Dim idcliente As String = TBIdCliVenta.Text
-        Dim codigo As String = TBCodigoProducto.Text
-        Dim cantidad As String = TBCantidad.Text
-        If String.IsNullOrWhiteSpace(idcliente) Or
-           String.IsNullOrWhiteSpace(codigo) Or
-           String.IsNullOrWhiteSpace(cantidad) Then
+        If String.IsNullOrWhiteSpace(idcliente) Then
             MsgBox("Debe Completar todos los campos", vbCritical, "Error")
             ask = True
         ElseIf dgvListaVentas.Rows.Count() = 0 Then
@@ -74,16 +71,20 @@ Public Class AñadirVentas
         If EspacioEnBlanco() = False Then
             ask = MsgBox("Desea confirmar la venta", vbYesNo + vbQuestion, "Confirmar venta?")
             If ask = vbYes Then
-                If objNfactura.agregar_factura(CInt(TBVendedor.Text), CInt(TBIdCliVenta.Text), CInt(TBCantidad.Text), CDec(TBTotalVenta.Text), dgvListaVentas) Then
+                If objNfactura.agregar_factura(CInt(TBVendedor.Text), CInt(TBIdCliVenta.Text), cantidadVenta, CDec(TBTotalVenta.Text), dgvListaVentas) Then
                     MsgBox("Se completo la venta", vbExclamation, "Venta confirmada")
                     TBIdCliVenta.Clear()
                     TBNombreCliVenta.Clear()
                     TBApellido.Clear()
                     TBTelCli.Clear()
                     TBDniCliente.Clear()
+                    TBTotalVenta.Text = 0
+                    cantidadVenta = 0
+                    dgvListaVentas.Rows.Clear()
+                    TBNroFactura.Text = objDfactura.buscarfactura2() + 1
                 End If
             End If
-        End If
+            End If
     End Sub
 
 
@@ -118,27 +119,26 @@ Public Class AñadirVentas
         Dim cantidad As Integer = CInt(TBCantidad.Text)
         Dim talle As Integer = CInt(TBTalle.Text)
         Dim cantfila As Integer = dgvListaVentas.Rows.Count() - 1
+        Dim stock As Integer = CInt(TBStock.Text)
         Dim i As Integer
         Dim res As Boolean = True
         For i = 0 To cantfila
             If dgvListaVentas.Item(0, i).Value = codigo And dgvListaVentas.Item(5, i).Value = talle Then
+                cantidadVenta = cantidadVenta - dgvListaVentas.Item(3, i).Value
                 dgvListaVentas.Item(3, i).Value = dgvListaVentas.Item(3, i).Value + CInt(TBCantidad.Text)
+                cantidadVenta = cantidadVenta + dgvListaVentas.Item(3, i).Value
                 dgvListaVentas.Item(4, i).Value = dgvListaVentas.Item(4, i).Value + precio
                 TBTotalVenta.Text = CDec(TBTotalVenta.Text) + dgvListaVentas.Item(2, i).Value
                 res = False
             End If
         Next
         If res = True Then
+            cantidadVenta = cantidadVenta + cantidad
             Dim subtotal As Decimal = precio * cantidad
             TBTotalVenta.Text = CDec(TBTotalVenta.Text) + subtotal
-            dgvListaVentas.Rows.Add(codigo, descripcionProd, precio, cantidad, subtotal, talle)
+            dgvListaVentas.Rows.Add(codigo, descripcionProd, precio, cantidad, subtotal, talle, stock)
             dgvListaVentas.ClearSelection()
         End If
-        'TBIdCliVenta.Clear()
-        'TBNombreCliVenta.Clear()
-        'TBApellido.Clear()
-        'TBTelCli.Clear()
-        'TBDniCliente.Clear()
         TBCodigoProducto.Clear()
         TBPrecio.Clear()
         TBStock.Clear()
@@ -154,6 +154,7 @@ Public Class AñadirVentas
             TBPrecio.Text = dgvListaVentas.CurrentRow.Cells(2).Value.ToString
             TBCantidad.Text = dgvListaVentas.CurrentRow.Cells(3).Value.ToString
             TBTalle.Text = dgvListaVentas.CurrentRow.Cells(5).Value.ToString
+            TBStock.Text = dgvListaVentas.CurrentRow.Cells(6).Value.ToString
             'dgvListaVentas.Rows.Remove(dgvListaVentas.CurrentRow)
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
@@ -192,6 +193,7 @@ Public Class AñadirVentas
         Dim cantidad As Integer = CInt(TBCantidad.Text)
         Dim talle As Integer = CInt(TBTalle.Text)
         Dim cantfila As Integer = dgvListaVentas.Rows.Count() - 1
+        Dim stock As Integer = CInt(TBStock.Text)
         Dim i As Integer
         Dim res As Boolean = True
         For i = 0 To cantfila
@@ -201,11 +203,18 @@ Public Class AñadirVentas
                 Dim subtotal As Decimal = precio * cantidad
                 TBTotalVenta.Text = CDec(TBTotalVenta.Text) + subtotal
                 dgvListaVentas.Item(4, i).Value = subtotal
+                cantidadVenta = cantidadVenta - dgvListaVentas.Item(3, i).Value
                 dgvListaVentas.Item(3, i).Value = CInt(TBCantidad.Text)
+                cantidadVenta = cantidadVenta + dgvListaVentas.Item(3, i).Value
                 modprod = False
                 Bconfmodificacion.Visible = False
             End If
         Next
+        TBCodigoProducto.Clear()
+        TBPrecio.Clear()
+        TBStock.Clear()
+        TBTalle.Clear()
+        TBCantidad.Clear()
     End Sub
 
 End Class

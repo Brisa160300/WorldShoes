@@ -8,4 +8,7 @@
         objNEmpleados.cargarGrid(dgvEmpleados)
     End Sub
 
+    Private Sub BRegistrarCliente_Click(sender As Object, e As EventArgs) Handles BRegistrarCliente.Click
+
+    End Sub
 End Class

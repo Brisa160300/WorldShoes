@@ -76,7 +76,29 @@
     End Sub
 
     Private Sub BListarVentas_Click(sender As Object, e As EventArgs) Handles BListarVentas.Click
-        AbrirFormulariosVendedor(New ListarVentas)
+        'AbrirFormulariosVendedor(New ListarVentas)
+        If Not formActivo IsNot Nothing Then
+            Dim formHijo = New ListarVentas
+            PanelFormVendedor.Controls.Clear()
+            formHijo.TopLevel = False
+            formHijo.FormBorderStyle = FormBorderStyle.None
+            formHijo.Dock = DockStyle.Fill
+            formHijo.Visible = True
+            formHijo.AutoScroll = True
+            formHijo.VerticalScroll.Value = 0
+            formHijo.VerticalScroll.Minimum = 0
+            formHijo.VerticalScroll.Maximum = formHijo.Size.Height - 100
+            formHijo.HorizontalScroll.Value = 0
+            formHijo.HorizontalScroll.Minimum = 0
+            formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
+            PanelFormVendedor.Controls.Add(formHijo)
+            PanelFormVendedor.Tag = formHijo
+            PanelFormVendedor.BringToFront()
+            PanelFormVendedor.AutoScroll = True
+            formHijo.idVendedor = iduser
+            formHijo.Show()
+            hideSubMenu()
+        End If
     End Sub
 
     Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
@@ -118,7 +140,7 @@
 
     Private Sub BCerrarMenu_Click(sender As Object, e As EventArgs) Handles BCerrarMenu.Click
         Dim ask As MsgBoxResult
-        ask = MsgBox("¿Esta segruro de que quiere cerrar la Aplicación?", vbExclamation + vbYesNo, "Cerrar Aplicación")
+        ask = MsgBox("¿Esta seguro de que quiere cerrar la Aplicación?", vbExclamation + vbYesNo, "Cerrar Aplicación")
         If ask = vbYes Then
             Application.Exit()
         End If

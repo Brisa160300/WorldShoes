@@ -170,6 +170,10 @@
         showSubMenu(PanelSubMenuClientes)
     End Sub
 
+    Private Sub BAñadirTalleProducto_Click(sender As Object, e As EventArgs) Handles BAñadirTalleProducto.Click
+        AbrirFormulariosGerente(New AñadirTallesProducto)
+    End Sub
+
     Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove
         If mover Then
             Me.Location = Me.PointToScreen(New Point(MousePosition.X - Me.Location.X - px, MousePosition.Y - Me.Location.Y - py))

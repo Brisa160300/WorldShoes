@@ -66,17 +66,16 @@
 
     End Function
     'nuevos cambios 02 11 2022'
-    Public Function buscarClientes(p_dni As String, ByVal grid As DataGridView)
+    Public Function buscarClientes(p_busq As String, ByVal grid As DataGridView)
         Try
             Using Mostrar As New WorldShoes_Roman_RiosEntities
-                Dim objMostrar = (From q In Mostrar.clientes Where q.Dni.ToString.Contains(p_dni)
-                                  Select ClienteId = q.Id_Cliente, Nombre = q.Nombre, Apellido = q.Apellido,
+                Dim objMostrar = (From q In Mostrar.clientes Where q.Dni.ToString.Contains(p_busq) Or q.Nombre.ToString.Contains(p_busq) Or q.Apellido.ToString.Contains(p_busq)
+                                  Select ID = q.Id_Cliente, Nombre = q.Nombre, Apellido = q.Apellido,
                                            DNI = q.Dni, Telefono = q.telefono,
-                                           Domicilio = q.direccion, Correo = q.email).ToList
-
+                                           Dirección = q.direccion, q.email).ToList
                 grid.DataSource = objMostrar
-                grid.Columns.Item(6).Visible = False
-                grid.Columns.Item(8).Visible = False
+                grid.Columns(6).HeaderText = "Correo Electronico"
+                grid.ClearSelection()
             End Using
             Return True
         Catch ex As Exception

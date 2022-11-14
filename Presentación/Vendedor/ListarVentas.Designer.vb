@@ -25,37 +25,34 @@ Partial Class ListarVentas
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBoxBuscarProducto = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.BFiltrar = New System.Windows.Forms.Button()
+        Me.DTFechaFinal = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BVerDetalle = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BBuscarVenta = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DTFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.TBBuscar = New System.Windows.Forms.TextBox()
         Me.TabControlListaProductos = New System.Windows.Forms.TabControl()
         Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
-        Me.DataGridViewListaVentas = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvListaVentas = New System.Windows.Forms.DataGridView()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.GroupBoxBuscarProducto.SuspendLayout()
         Me.TabControlListaProductos.SuspendLayout()
         Me.TabPageListaProducto.SuspendLayout()
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBoxBuscarProducto
         '
         Me.GroupBoxBuscarProducto.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBoxBuscarProducto.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBoxBuscarProducto.Controls.Add(Me.BFiltrar)
+        Me.GroupBoxBuscarProducto.Controls.Add(Me.DTFechaFinal)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.Label2)
-        Me.GroupBoxBuscarProducto.Controls.Add(Me.Button1)
+        Me.GroupBoxBuscarProducto.Controls.Add(Me.BVerDetalle)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.Label1)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.BBuscarVenta)
-        Me.GroupBoxBuscarProducto.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBoxBuscarProducto.Controls.Add(Me.DTFechaInicio)
         Me.GroupBoxBuscarProducto.Controls.Add(Me.TBBuscar)
         Me.GroupBoxBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxBuscarProducto.ForeColor = System.Drawing.Color.White
@@ -68,42 +65,58 @@ Partial Class ListarVentas
         Me.GroupBoxBuscarProducto.TabStop = False
         Me.GroupBoxBuscarProducto.Text = "Ventas"
         '
-        'DateTimePicker2
+        'BFiltrar
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(197, 54)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(119, 26)
-        Me.DateTimePicker2.TabIndex = 33
+        Me.BFiltrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BFiltrar.FlatAppearance.BorderSize = 2
+        Me.BFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BFiltrar.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.BFiltrar.ForeColor = System.Drawing.Color.White
+        Me.BFiltrar.Location = New System.Drawing.Point(299, 43)
+        Me.BFiltrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BFiltrar.Name = "BFiltrar"
+        Me.BFiltrar.Size = New System.Drawing.Size(86, 47)
+        Me.BFiltrar.TabIndex = 34
+        Me.BFiltrar.Text = "Filtrar"
+        Me.BFiltrar.UseVisualStyleBackColor = False
+        '
+        'DTFechaFinal
+        '
+        Me.DTFechaFinal.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.DTFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTFechaFinal.Location = New System.Drawing.Point(172, 54)
+        Me.DTFechaFinal.Margin = New System.Windows.Forms.Padding(4)
+        Me.DTFechaFinal.Name = "DTFechaFinal"
+        Me.DTFechaFinal.Size = New System.Drawing.Size(119, 26)
+        Me.DTFechaFinal.TabIndex = 33
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(193, 28)
+        Me.Label2.Location = New System.Drawing.Point(168, 31)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 19)
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "Fecha Fin:"
         '
-        'Button1
+        'BVerDetalle
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(900, 39)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 52)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Ver Detalle"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BVerDetalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BVerDetalle.FlatAppearance.BorderSize = 2
+        Me.BVerDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVerDetalle.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVerDetalle.ForeColor = System.Drawing.Color.White
+        Me.BVerDetalle.Location = New System.Drawing.Point(900, 39)
+        Me.BVerDetalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BVerDetalle.Name = "BVerDetalle"
+        Me.BVerDetalle.Size = New System.Drawing.Size(148, 52)
+        Me.BVerDetalle.TabIndex = 27
+        Me.BVerDetalle.Text = "Ver Detalle"
+        Me.BVerDetalle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BVerDetalle.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -132,15 +145,15 @@ Partial Class ListarVentas
         Me.BBuscarVenta.TabIndex = 14
         Me.BBuscarVenta.UseVisualStyleBackColor = False
         '
-        'DateTimePicker1
+        'DTFechaInicio
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(27, 54)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(125, 26)
-        Me.DateTimePicker1.TabIndex = 30
+        Me.DTFechaInicio.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.DTFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTFechaInicio.Location = New System.Drawing.Point(27, 54)
+        Me.DTFechaInicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.DTFechaInicio.Name = "DTFechaInicio"
+        Me.DTFechaInicio.Size = New System.Drawing.Size(125, 26)
+        Me.DTFechaInicio.TabIndex = 30
         '
         'TBBuscar
         '
@@ -165,7 +178,7 @@ Partial Class ListarVentas
         '
         'TabPageListaProducto
         '
-        Me.TabPageListaProducto.Controls.Add(Me.DataGridViewListaVentas)
+        Me.TabPageListaProducto.Controls.Add(Me.dgvListaVentas)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
         Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
@@ -177,13 +190,13 @@ Partial Class ListarVentas
         Me.TabPageListaProducto.Text = "Lista de Ventas"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
         '
-        'DataGridViewListaVentas
+        'dgvListaVentas
         '
-        Me.DataGridViewListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridViewListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridViewListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewListaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridViewListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -191,16 +204,15 @@ Partial Class ListarVentas
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewListaVentas.ColumnHeadersHeight = 20
-        Me.DataGridViewListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridViewListaVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column6})
-        Me.DataGridViewListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewListaVentas.EnableHeadersVisualStyles = False
-        Me.DataGridViewListaVentas.Location = New System.Drawing.Point(3, 2)
-        Me.DataGridViewListaVentas.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewListaVentas.Name = "DataGridViewListaVentas"
-        Me.DataGridViewListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvListaVentas.ColumnHeadersHeight = 20
+        Me.dgvListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListaVentas.EnableHeadersVisualStyles = False
+        Me.dgvListaVentas.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListaVentas.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListaVentas.Name = "dgvListaVentas"
+        Me.dgvListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -208,40 +220,11 @@ Partial Class ListarVentas
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewListaVentas.RowHeadersWidth = 51
-        Me.DataGridViewListaVentas.Size = New System.Drawing.Size(1051, 323)
-        Me.DataGridViewListaVentas.TabIndex = 5
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "N° Factura"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Fecha"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Cliente"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Total"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
+        Me.dgvListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvListaVentas.RowHeadersWidth = 51
+        Me.dgvListaVentas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvListaVentas.Size = New System.Drawing.Size(1051, 323)
+        Me.dgvListaVentas.TabIndex = 5
         '
         'BVolver
         '
@@ -276,7 +259,7 @@ Partial Class ListarVentas
         Me.GroupBoxBuscarProducto.PerformLayout()
         Me.TabControlListaProductos.ResumeLayout(False)
         Me.TabPageListaProducto.ResumeLayout(False)
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -286,16 +269,12 @@ Partial Class ListarVentas
     Friend WithEvents TBBuscar As TextBox
     Friend WithEvents TabControlListaProductos As TabControl
     Friend WithEvents TabPageListaProducto As TabPage
-    Friend WithEvents DataGridViewListaVentas As DataGridView
+    Friend WithEvents dgvListaVentas As DataGridView
     Friend WithEvents BVolver As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents BVerDetalle As Button
+    Friend WithEvents DTFechaFinal As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents DTFechaInicio As DateTimePicker
+    Friend WithEvents BFiltrar As Button
 End Class

@@ -3,8 +3,7 @@
     Private objDUsuarios As DUsuario = New DUsuario
 
     Private Sub BModificarUsuario_Click(sender As Object, e As EventArgs) Handles BModificarUsuario.Click
-        If (dgvListaUsuarios.SelectedRows.Count > 0) Then
-
+        If (dgvListaUsuarios.SelectedRows.Count > 0) Or (dgvListaUsuarios.SelectedCells.Count > 0) Then
             Dim frm As New ModificarUsuario
             frm.fila = CInt(dgvListaUsuarios.CurrentRow.Cells(6).Value.ToString)
             frm.perfildesc = dgvListaUsuarios.CurrentRow.Cells(4).Value.ToString
@@ -13,6 +12,7 @@
             frm.TBConfirmarPass.Text = dgvListaUsuarios.CurrentRow.Cells(3).Value.ToString
             frm.ShowInTaskbar = False
             frm.ShowDialog()
+            objNUsuarios.cargarGrid(dgvListaUsuarios)
         Else
             MsgBox("Por favor, seleccione una fila...")
         End If
