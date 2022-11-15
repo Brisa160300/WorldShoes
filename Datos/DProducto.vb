@@ -51,9 +51,10 @@ Public Class DProducto
                                   Select Codigo = p.cod_producto,
                                                   Descripcion = p.nombre,
                                                   Categoria = p.Categoria.descripcion_categoria,
-                                                  Precio = p.precio, Marca = p.Marcas.Descripcion
+                                                  Precio = p.precio, Marca = p.Marcas.Descripcion, Estado = p.id_estado_producto
                                                   ).ToList
             grid.DataSource = listaProductos
+            grid.Columns(5).Visible = False
             grid.ClearSelection()
             Return True
         Catch ex As Exception

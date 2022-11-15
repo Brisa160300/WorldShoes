@@ -21,9 +21,20 @@
 
     Private Sub BEliminarUsuario_Click(sender As Object, e As EventArgs) Handles BEliminarUsuario.Click
         If (dgvListaUsuarios.SelectedRows.Count > 0) Or (dgvListaUsuarios.SelectedCells.Count > 0) Then
-            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar a este usuario?", vbExclamation + vbYesNo)
             If ask = vbYes Then
-                objDUsuarios.EliminarUsuario(CInt(dgvListaUsuarios.CurrentRow.Cells(0).Value.ToString))
+                objDUsuarios.EliminarUsuario(CInt(dgvListaUsuarios.CurrentRow.Cells(6).Value.ToString))
+                objNUsuarios.cargarGrid(dgvListaUsuarios)
+            End If
+        Else
+            MsgBox("Por favor seleccione una fila", vbExclamation)
+        End If
+    End Sub
+    Private Sub BAltaUsuario_Click(sender As Object, e As EventArgs) Handles BAltaUsuario.Click
+        If (dgvListaUsuarios.SelectedRows.Count > 0) Or (dgvListaUsuarios.SelectedCells.Count > 0) Then
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea dar de alta a este usuario?", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDUsuarios.AltaUsuario(CInt(dgvListaUsuarios.CurrentRow.Cells(6).Value.ToString))
                 objNUsuarios.cargarGrid(dgvListaUsuarios)
             End If
         Else
@@ -43,4 +54,14 @@
         objDUsuarios.buscarUsuarios(TBGestionUsuario.Text, dgvListaUsuarios)
     End Sub
 
+    Private Sub dgvListaUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListaUsuarios.CellClick
+        Dim fil As Integer = dgvListaUsuarios.CurrentRow.Index
+        If dgvListaUsuarios.Rows(fil).Cells(5).Value = "Activo" Then
+            BEliminarUsuario.Visible = True
+            BAltaUsuario.Visible = False
+        Else
+            BEliminarUsuario.Visible = False
+            BAltaUsuario.Visible = True
+        End If
+    End Sub
 End Class

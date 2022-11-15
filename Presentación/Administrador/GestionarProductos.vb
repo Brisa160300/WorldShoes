@@ -84,6 +84,31 @@
             CBCateg.SelectedValue = -1
         End If
     End Sub
+
+    Private Sub BAltaProducto_Click(sender As Object, e As EventArgs) Handles BAltaProducto.Click
+        Dim ask As MsgBoxResult = MsgBox("Seguro desea dar de alta este producto?", vbExclamation + vbYesNo)
+        If ask = vbYes Then
+            If objDProductos.AltaProducto(CInt(dgvListaProductos.CurrentRow.Cells(0).Value.ToString)) Then
+                objDProductos.getProductosAll(dgvListaProductos)
+                BEliminarProducto.Visible = True
+                BAltaProducto.Visible = False
+            Else
+                MsgBox("No se pudo dar de alta el producto", vbExclamation, "Error")
+            End If
+
+        End If
+    End Sub
+
+    Private Sub dgvListaProductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListaProductos.CellClick
+        Dim fil As Integer = dgvListaProductos.CurrentRow.Index
+        If dgvListaProductos.Rows(fil).Cells(5).Value = 1 Then
+            BEliminarProducto.Visible = True
+            BAltaProducto.Visible = False
+        Else
+            BEliminarProducto.Visible = False
+            BAltaProducto.Visible = True
+        End If
+    End Sub
 End Class
 
 

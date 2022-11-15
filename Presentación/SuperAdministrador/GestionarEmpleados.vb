@@ -29,7 +29,7 @@
 
     Private Sub BAltaEmpleado_Click(sender As Object, e As EventArgs) Handles BAltaEmpleado.Click
         If (dgvEmpleados.SelectedRows.Count > 0) Or (dgvEmpleados.SelectedCells.Count > 0) Then
-            Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            Dim ask As MsgBoxResult = MsgBox("Seguro desea dar de alta a este empleado?", vbExclamation + vbYesNo)
             If ask = vbYes Then
                 objDEmpleado.AltaEmpleado(CInt(dgvEmpleados.CurrentRow.Cells(0).Value.ToString))
                 objNEmpleado.cargarGrid(dgvEmpleados)
@@ -50,4 +50,16 @@
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
     End Sub
+
+    Private Sub dgvEmpleados_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpleados.CellClick
+        Dim fil As Integer = dgvEmpleados.CurrentRow.Index
+        If dgvEmpleados.Rows(fil).Cells(7).Value = 1 Then
+            BEliminarUsuario.Visible = True
+            BAltaEmpleado.Visible = False
+        Else
+            BEliminarUsuario.Visible = False
+            BAltaEmpleado.Visible = True
+        End If
+    End Sub
+
 End Class

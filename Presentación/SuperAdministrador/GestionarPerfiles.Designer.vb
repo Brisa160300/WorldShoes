@@ -147,7 +147,7 @@ Partial Class GestionarPerfiles
         Me.TabListaPerfiles.Controls.Add(Me.TabPagePerfiles)
         Me.TabListaPerfiles.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabListaPerfiles.Location = New System.Drawing.Point(30, 135)
-        Me.TabListaPerfiles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabListaPerfiles.Margin = New System.Windows.Forms.Padding(2)
         Me.TabListaPerfiles.Name = "TabListaPerfiles"
         Me.TabListaPerfiles.SelectedIndex = 0
         Me.TabListaPerfiles.Size = New System.Drawing.Size(803, 307)
@@ -159,9 +159,9 @@ Partial Class GestionarPerfiles
         Me.TabPagePerfiles.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPagePerfiles.ForeColor = System.Drawing.Color.White
         Me.TabPagePerfiles.Location = New System.Drawing.Point(4, 25)
-        Me.TabPagePerfiles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePerfiles.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPagePerfiles.Name = "TabPagePerfiles"
-        Me.TabPagePerfiles.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePerfiles.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPagePerfiles.Size = New System.Drawing.Size(795, 278)
         Me.TabPagePerfiles.TabIndex = 0
         Me.TabPagePerfiles.Text = "Lista de Perfiles"
@@ -215,7 +215,7 @@ Partial Class GestionarPerfiles
         Me.Controls.Add(Me.GroupBoxGestionPerfil)
         Me.Controls.Add(Me.TabListaPerfiles)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "GestionarPerfiles"
         Me.Text = "GestionarPerfiles"
         Me.GroupBoxGestionPerfil.ResumeLayout(False)
