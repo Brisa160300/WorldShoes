@@ -46,7 +46,7 @@ Public Class AñadirVentas
             descripcionProd = frm.dgvListaProductos.CurrentRow.Cells(1).Value.ToString
             TBPrecio.Text = frm.dgvListaProductos.CurrentRow.Cells(4).Value.ToString
             TBStock.Text = frm.dgvListaProductos.CurrentRow.Cells(3).Value.ToString
-            TBTalle.Text = frm.dgvListaProductos.CurrentRow.Cells(7).Value.ToString
+            TBTalle.Text = frm.dgvListaProductos.CurrentRow.Cells(6).Value.ToString
         End If
         frm.Close()
 

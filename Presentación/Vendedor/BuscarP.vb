@@ -17,7 +17,7 @@
     Private Sub BuscarP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNProductos.cargarComboxCateg(CBCatProducto) 'combo As ComboBox, marca As String'
         objNProductos.cargarComboxMarca(CBMarcas)
-        objNProductos.cargarGrid(dgvListaProductos)
+        objDProducto.getProductosVendedorAll(dgvListaProductos)
     End Sub
 
     Private Sub dgvListaProductos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListaProductos.CellDoubleClick
@@ -28,7 +28,7 @@
 
     Private Sub BBuscarProducto_Click(sender As Object, e As EventArgs) Handles BBuscarProducto.Click
         If TBBuscar.Text = "" Then
-            objNProductos.cargarGrid(dgvListaProductos)
+            objDProducto.getProductosVendedorAll(dgvListaProductos)
         Else
             objDProducto.buscarProductos(TBBuscar.Text, dgvListaProductos)
             TBBuscar.Clear()

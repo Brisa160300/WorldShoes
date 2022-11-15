@@ -22,6 +22,10 @@
     Private Sub BEliminarUsuario_Click(sender As Object, e As EventArgs) Handles BEliminarUsuario.Click
         If (dgvListaUsuarios.SelectedRows.Count > 0) Or (dgvListaUsuarios.SelectedCells.Count > 0) Then
             Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDUsuarios.EliminarUsuario(CInt(dgvListaUsuarios.CurrentRow.Cells(0).Value.ToString))
+                objNUsuarios.cargarGrid(dgvListaUsuarios)
+            End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If

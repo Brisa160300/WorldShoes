@@ -27,6 +27,10 @@
     Private Sub BEliminarProducto_Click(sender As Object, e As EventArgs) Handles BEliminarProducto.Click
         If (dgvListaProductos.SelectedRows.Count > 0) Or (dgvListaProductos.SelectedCells.Count > 0) Then
             Dim ask As MsgBoxResult = MsgBox("Seguro desea eliminar esta registro", vbExclamation + vbYesNo)
+            If ask = vbYes Then
+                objDProductos.EliminarProducto(CInt(dgvListaProductos.CurrentRow.Cells(0).Value.ToString))
+                objDProductos.getProductosAll(dgvListaProductos)
+            End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
