@@ -18,24 +18,31 @@
         LTotal.Text = total
         dgvVentasNetas.Rows.Add(1, CStr(DTHasta.Value), total)
         dgvVentasNetas.ClearSelection()
-        Dim cantidadElementos As Integer = dgvListaVentas.Rows.Count
-        Dim valorY As Integer
-        ChartGrafico.Titles.Clear()
-        ChartGrafico.Series.Clear()
-        ChartGrafico.Series.Add(0)
-        ChartGrafico.Titles.Add("Ventas Diarias")
-        ChartGrafico.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        ChartGrafico.ChartAreas(0).Area3DStyle.Enable3D = True
-        ChartGrafico.ChartAreas(0).BackColor = Color.Azure
-        ChartGrafico.Series(0).IsValueShownAsLabel = True
-        For i = 0 To cantidadElementos - 1
-            valorY = dgvListaVentas.Rows(i).Cells(7).Value.ToString
-            ChartGrafico.Series(0).Points.AddXY(i, valorY)
-        Next
+        grafico()
+
+
 
     End Sub
 
 
+    Private Sub grafico()
+        Dim cantidadElementos As Integer = dgvListaVentas.Rows.Count
+        Dim valorY As Decimal
+        Dim fecha As Date = Date.Today
+        ChartGrafico.Titles.Clear()
+        ChartGrafico.Series.Clear()
+        ChartGrafico.Series.Add("Ventas")
+        ChartGrafico.Titles.Add("Ventas Diarias")
+        ChartGrafico.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Column
+        ChartGrafico.ChartAreas(0).BackColor = Color.Azure
+        'ChartGrafico.Series(0).IsValueShownAsLabel = True
+        For i = 0 To cantidadElementos - 1
+            valorY = valorY + dgvListaVentas.Rows(i).Cells(7).Value.ToString
+        Next
+        Dim fec As String = fecha.ToString("dd \de MMMM \de yyyy")
+        ChartGrafico.Series(0).Points.AddXY(fec, valorY)
+
+    End Sub
     Private Sub BVolver_Click_1(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub

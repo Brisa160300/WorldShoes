@@ -33,19 +33,18 @@ Public Class DTalle_Producto
 
     End Function
 
-    Function ActualizarStock(cod As Integer, idtalle As Integer, cantidad As Integer) As Boolean
+    Function ActualizarStock(idtalleprod As Integer, cantidad As Integer) As Boolean
         Try
-            MsgBox("actualiza")
             Dim talleProd = (From tp In ctx.talle_producto
-                             Where tp.cod_producto = cod And tp.id_talle = idtalle
+                             Where tp.id_talle_prod = idtalleprod
                              Select tp).First
             Dim stock = (From tp In ctx.talle_producto
-                         Where tp.cod_producto = cod And tp.id_talle = idtalle
+                         Where tp.id_talle_prod = idtalleprod
                          Select tp.cantidad_talle).First
             talleProd.cantidad_talle = stock - cantidad
             ctx.SaveChanges()
             Dim stock2 = (From tp In ctx.talle_producto
-                          Where tp.cod_producto = cod And tp.id_talle = idtalle
+                          Where tp.id_talle_prod = idtalleprod
                           Select tp.cantidad_talle).First
             If stock2 = 0 Then
                 EliminarTalleProd(talleProd.cod_producto, talleProd.id_talle_prod)

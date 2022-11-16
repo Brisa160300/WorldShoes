@@ -85,8 +85,6 @@ Public Class AñadirVentas
                     cantidadVenta = 0
                     dgvListaVentas.Rows.Clear()
                     TBNroFactura.Text = objDfactura.buscarfactura2() + 1
-                    factura.ShowDialog()
-                    factura.ShowInTaskbar = False
                 End If
             End If
         End If

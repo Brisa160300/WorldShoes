@@ -40,9 +40,7 @@ Partial Class MenuGerente
         Me.PanelSubMenuFiltrarFecha = New System.Windows.Forms.Panel()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -50,6 +48,8 @@ Partial Class MenuGerente
         Me.BReporteVenta = New System.Windows.Forms.Button()
         Me.BSalir = New System.Windows.Forms.Button()
         Me.PanelFormAdmnistrador = New System.Windows.Forms.Panel()
+        Me.DTDesdeFiltro = New System.Windows.Forms.DateTimePicker()
+        Me.DTHastaFiltro = New System.Windows.Forms.DateTimePicker()
         Me.PanelBarraMenuAdmin.SuspendLayout()
         Me.PanelIconMenuGerente.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -277,11 +277,11 @@ Partial Class MenuGerente
         'PanelSubMenuFiltrarFecha
         '
         Me.PanelSubMenuFiltrarFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DTHastaFiltro)
+        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DTDesdeFiltro)
         Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.BVolver)
         Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.Label2)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DateTimePicker2)
         Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.Label1)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DateTimePicker1)
         Me.PanelSubMenuFiltrarFecha.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSubMenuFiltrarFecha.ForeColor = System.Drawing.Color.Gainsboro
         Me.PanelSubMenuFiltrarFecha.Location = New System.Drawing.Point(0, 594)
@@ -318,16 +318,6 @@ Partial Class MenuGerente
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Hasta"
         '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(91, 112)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(119, 26)
-        Me.DateTimePicker2.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -339,16 +329,6 @@ Partial Class MenuGerente
         Me.Label1.Size = New System.Drawing.Size(53, 19)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Desde"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(91, 40)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(119, 26)
-        Me.DateTimePicker1.TabIndex = 0
         '
         'PanelMenuLateral
         '
@@ -485,6 +465,22 @@ Partial Class MenuGerente
         Me.PanelFormAdmnistrador.Size = New System.Drawing.Size(1130, 656)
         Me.PanelFormAdmnistrador.TabIndex = 24
         '
+        'DTDesdeFiltro
+        '
+        Me.DTDesdeFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTDesdeFiltro.Location = New System.Drawing.Point(90, 40)
+        Me.DTDesdeFiltro.Name = "DTDesdeFiltro"
+        Me.DTDesdeFiltro.Size = New System.Drawing.Size(140, 27)
+        Me.DTDesdeFiltro.TabIndex = 0
+        '
+        'DTHastaFiltro
+        '
+        Me.DTHastaFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTHastaFiltro.Location = New System.Drawing.Point(88, 113)
+        Me.DTHastaFiltro.Name = "DTHastaFiltro"
+        Me.DTHastaFiltro.Size = New System.Drawing.Size(140, 27)
+        Me.DTHastaFiltro.TabIndex = 25
+        '
         'MenuGerente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
@@ -533,13 +529,13 @@ Partial Class MenuGerente
     Friend WithEvents PanelSubMenuFiltrarFecha As Panel
     Friend WithEvents BVolver As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents Label1 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents PanelMenuLateral As Panel
     Friend WithEvents PanelFormAdmnistrador As Panel
     Friend WithEvents PanelLogo As Panel
     Friend WithEvents LIconMenu As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents DTHastaFiltro As DateTimePicker
+    Friend WithEvents DTDesdeFiltro As DateTimePicker
 End Class

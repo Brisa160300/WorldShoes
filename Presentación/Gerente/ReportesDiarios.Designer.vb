@@ -46,6 +46,7 @@ Partial Class ReportesDiarios
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LTotal = New System.Windows.Forms.Label()
         Me.ChartGrafico = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.CategoriaTableAdapter1 = New Proyecto_RiosyRoman.WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter()
         Me.TabControl.SuspendLayout()
         Me.PagPageVentasDiarias.SuspendLayout()
         CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,6 +117,7 @@ Partial Class ReportesDiarios
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvListaVentas.RowHeadersVisible = False
         Me.dgvListaVentas.RowHeadersWidth = 51
         Me.dgvListaVentas.Size = New System.Drawing.Size(1047, 174)
         Me.dgvListaVentas.TabIndex = 7
@@ -194,6 +196,7 @@ Partial Class ReportesDiarios
         Me.dgvVentasNetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvVentasNetas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvVentasNetas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.dgvVentasNetas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvVentasNetas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -203,8 +206,7 @@ Partial Class ReportesDiarios
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvVentasNetas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvVentasNetas.ColumnHeadersHeight = 20
-        Me.dgvVentasNetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvVentasNetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVentasNetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaNumero, Me.Column6, Me.Column7})
         Me.dgvVentasNetas.Enabled = False
         Me.dgvVentasNetas.EnableHeadersVisualStyles = False
@@ -221,9 +223,11 @@ Partial Class ReportesDiarios
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvVentasNetas.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvVentasNetas.RowHeadersVisible = False
         Me.dgvVentasNetas.RowHeadersWidth = 51
+        Me.dgvVentasNetas.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvVentasNetas.RowTemplate.Height = 24
-        Me.dgvVentasNetas.Size = New System.Drawing.Size(309, 47)
+        Me.dgvVentasNetas.Size = New System.Drawing.Size(309, 84)
         Me.dgvVentasNetas.TabIndex = 77
         '
         'ColumnaNumero
@@ -272,15 +276,19 @@ Partial Class ReportesDiarios
         Me.ChartGrafico.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.ChartGrafico.Legends.Add(Legend1)
-        Me.ChartGrafico.Location = New System.Drawing.Point(31, 155)
+        Me.ChartGrafico.Location = New System.Drawing.Point(35, 155)
         Me.ChartGrafico.Name = "ChartGrafico"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
+        Series1.Name = "Ventas"
         Me.ChartGrafico.Series.Add(Series1)
         Me.ChartGrafico.Size = New System.Drawing.Size(622, 226)
         Me.ChartGrafico.TabIndex = 88
         Me.ChartGrafico.Text = "Chart1"
+        '
+        'CategoriaTableAdapter1
+        '
+        Me.CategoriaTableAdapter1.ClearBeforeFill = True
         '
         'ReportesDiarios
         '
@@ -329,4 +337,5 @@ Partial Class ReportesDiarios
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LTotal As Label
     Friend WithEvents ChartGrafico As DataVisualization.Charting.Chart
+    Friend WithEvents CategoriaTableAdapter1 As WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter
 End Class

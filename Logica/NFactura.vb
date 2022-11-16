@@ -57,7 +57,7 @@ Public Class NFactura
                     Dim d As String = odetalle.id_talle_prod.ToString
                     If objdfacturadetalle.Dguardar_facturaDetalle(odetalle) Then
                         Dim objDTalle_Prod = New DTalle_Producto
-                        objDTalle_Prod.ActualizarStock(codigo, idtalleprod, cantidadsolicitada)
+                        objDTalle_Prod.ActualizarStock(idtalleprod, cantidadsolicitada)
                     End If
                 Next
                 Return True

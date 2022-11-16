@@ -103,7 +103,7 @@
 
     Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
         Dim ask As MsgBoxResult
-        ask = MsgBox("¿Esta segruro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
+        ask = MsgBox("¿Esta seguro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
         If ask = vbYes Then
             Me.Close()
             Login.Show()

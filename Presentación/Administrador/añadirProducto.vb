@@ -86,7 +86,7 @@
             If Ask = vbYes Then
                 If objNProducto.agregar_Producto(codigo, nombre, categoria, precio, marca) Then
                     If objNtalleProd.agregar_talle_producto(codigo, talle, stock) Then
-                        objNProducto.cargarGrid(dgvListaProductos)
+                        objDProducto.getProductosAll(dgvListaProductos)
                     End If
                     MsgBox("El producto" + TBNombreProducto.Text + "se insertó correctamente", vbInformation, "Guardar")
                 Else
@@ -135,13 +135,13 @@
         End If
     End Sub
 
-    Private Sub TBNombreProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreProducto.KeyPress
+    'Private Sub TBNombreProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombreProducto.KeyPress
 
-        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
-            e.Handled = True
-            MsgBox("Solo se aceptan letras", vbCritical, "Error")
-        End If
-    End Sub
+    '    If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
+    '        e.Handled = True
+    '        MsgBox("Solo se aceptan letras", vbCritical, "Error")
+    '    End If
+    'End Sub
 
     Private Sub AñadirProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         objNProducto.cargarComboxCateg(CBCategoria)

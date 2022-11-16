@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
 
 Public Class NCliente
-    Function agregar_cliente(nombre As String, apellido As String, dni As Integer, telefono As Integer, direccion As String, email As String)
+    Function agregar_cliente(nombre As String, apellido As String, dni As Integer, telefono As ULong, direccion As String, email As String)
         Dim ocliente = New clientes
         With ocliente
             .Nombre = nombre

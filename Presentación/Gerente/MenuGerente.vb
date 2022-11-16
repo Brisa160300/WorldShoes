@@ -2,6 +2,7 @@
     Private state As Integer
     Private px, py As Integer
     Private mover As Boolean
+
     Private Sub MenuGerente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(900, 500)
         hideSubMenu()
@@ -96,7 +97,35 @@
     End Sub
 
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
-        AbrirFormulariosGerente(New ReporteFiltradoFecha)
+        Dim formHijo = New ReporteFiltradoFecha
+        Dim de As String = DTDesdeFiltro.Value.ToShortDateString
+        Dim ha As String = DTHastaFiltro.Value.ToShortDateString
+        Dim fecha As String = de & " a " & ha
+        If Not formActivoVendedor IsNot Nothing Then
+            PanelFormAdmnistrador.Controls.Clear()
+            formHijo.TopLevel = False
+            formHijo.FormBorderStyle = FormBorderStyle.None
+            formHijo.Dock = DockStyle.Fill
+            formHijo.Visible = True
+            formHijo.AutoScroll = True
+            formHijo.VerticalScroll.Value = 0
+            formHijo.VerticalScroll.Minimum = 0
+            formHijo.VerticalScroll.Maximum = formHijo.Size.Height - 100
+            formHijo.HorizontalScroll.Value = 0
+            formHijo.HorizontalScroll.Minimum = 0
+            formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
+            formHijo.DTDesde.Value = DTDesdeFiltro.Value
+            formHijo.DTHasta.Value = DTHastaFiltro.Value
+            formHijo.objDfactura.filtrarVentasAdminAll(de, ha, formHijo.dgvListaVentas)
+            formHijo.cargargrid(fecha)
+            formHijo.grafico(de, ha)
+            PanelFormAdmnistrador.AutoScroll = True
+            PanelFormAdmnistrador.Controls.Add(formHijo)
+            PanelFormAdmnistrador.Tag = formHijo
+            PanelFormAdmnistrador.BringToFront()
+            formHijo.Show()
+            hideSubMenu()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -114,7 +143,9 @@
         AbrirFormulariosGerente(New ReportePorVendedores)
     End Sub
 
+
     Private Sub AbrirFormulariosGerente(formHijo As Form)
+
         If Not formActivoVendedor IsNot Nothing Then
             PanelFormAdmnistrador.Controls.Clear()
             formHijo.TopLevel = False
