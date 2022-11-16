@@ -45,7 +45,7 @@
     Private Sub BListarVentasGerente_Click(sender As Object, e As EventArgs) Handles BListarVentasGerente.Click
         AbrirFormulariosGerente(New ListarVentasGerente)
     End Sub
-    Private Sub BListarVendedoresGerente_Click(sender As Object, e As EventArgs) Handles BListarVendedoresGerente.Click
+    Private Sub BListarVendedoresGerente_Click(sender As Object, e As EventArgs) 
         AbrirFormulariosGerente(New ListaVendedores)
     End Sub
 
@@ -163,7 +163,7 @@
     End Sub
 
     Private Sub BListaClientes_Click(sender As Object, e As EventArgs) Handles BListaClientes.Click
-        AbrirFormulariosGerente(New ListarClienteGerente)
+        AbrirFormulariosGerente(New GestionarClientesAdministrador)
     End Sub
 
     Private Sub BClientes_Click(sender As Object, e As EventArgs) Handles BClientes.Click
@@ -172,6 +172,10 @@
 
     Private Sub BAñadirTalleProducto_Click(sender As Object, e As EventArgs) Handles BAñadirTalleProducto.Click
         AbrirFormulariosGerente(New AñadirTallesProducto)
+    End Sub
+
+    Private Sub BModificar_Click(sender As Object, e As EventArgs)
+        AbrirFormulariosGerente(New ListarTalleProductos)
     End Sub
 
     Private Sub PanelBarraMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraMenu.MouseMove

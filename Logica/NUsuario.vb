@@ -20,14 +20,14 @@
     Public Sub cargarGrid(grid As DataGridView)
         Dim user As DUsuario = New DUsuario
         grid.DataSource = user.getUsuariosAll()
-        grid.Columns(0).HeaderText = "Nombre Empleado"
-        grid.Columns(1).HeaderText = "Apellido Empleado"
+        grid.Columns(0).Visible = False
+        grid.Columns(1).Visible = False
         grid.Columns(2).HeaderText = "Nombre Usuario"
         grid.Columns(3).HeaderText = "Contraseña"
         grid.Columns(4).HeaderText = "Perfil Usuario"
         grid.Columns(5).HeaderText = "Estado"
         grid.Columns(6).HeaderText = "ID Empleado"
-        grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader
+        grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         grid.ClearSelection()
 
     End Sub
@@ -35,8 +35,8 @@
     Public Sub cargarComboxPerfiles(combo As ComboBox)
         Dim perf As DPerfil = New DPerfil
         combo.DataSource = perf.getPerfilAll()
-        combo.DisplayMember = "Descripcion"
-        combo.ValueMember = "id_Perfil"
+        combo.DisplayMember = "descripcion"
+        combo.ValueMember = "id_perfil"
         combo.DropDownStyle = 2
         combo.SelectedValue = -1
         combo.FlatStyle = FlatStyle.Flat
@@ -46,8 +46,8 @@
     Public Sub cargarComboxPerfiles2(combo As ComboBox, perfil As String)
         Dim perf As DPerfil = New DPerfil
         combo.DataSource = perf.getPerfilAll()
-        combo.DisplayMember = "Descripcion"
-        combo.ValueMember = "id_Perfil"
+        combo.DisplayMember = "descripcion"
+        combo.ValueMember = "id_perfil"
         combo.DropDownStyle = 2
         combo.SelectedValue = -1
         combo.FlatStyle = FlatStyle.Flat

@@ -17,10 +17,13 @@ Public Class DTalle_Producto
         Dim listartalleProducto = (From t In ctx.talle_producto Select t).ToList
         Return listartalleProducto
     End Function
-    Function modTalle(idTalleProducto As Integer, cod As Integer) As Boolean
+
+
+    Function modTalle(idTalleProducto As Integer, cod As Integer, stock As Integer) As Boolean
         Try
             Dim TalleProdMod = (From t In ctx.talle_producto Where t.id_talle = idTalleProducto And t.cod_producto = cod
                                 Select t).First
+            TalleProdMod.cantidad_talle = stock
             ctx.SaveChanges()
             Return True
         Catch ex As Exception
@@ -45,17 +48,16 @@ Public Class DTalle_Producto
                           Where tp.cod_producto = cod And tp.id_talle = idtalle
                           Select tp.cantidad_talle).First
             If stock2 = 0 Then
-                EliminarTalle(talleProd.cod_producto, talleProd.id_talle_prod)
+                EliminarTalleProd(talleProd.cod_producto, talleProd.id_talle_prod)
             End If
             Return True
         Catch ex As Exception
-            MsgBox(" no actualiza")
             MsgBox("No se han podido implementar los cambios", vbCritical, "Error")
             Return False
         End Try
     End Function
 
-    Function EliminarTalle(cod As Integer, idtalleProducto As Integer) As Boolean
+    Function EliminarTalleProd(cod As Integer, idtalleProducto As Integer) As Boolean
         Try
             Dim talleProdDelete = (From t In ctx.talle_producto Where t.cod_producto = cod And t.id_talle = idtalleProducto
                                    Select t).First
@@ -68,7 +70,7 @@ Public Class DTalle_Producto
 
     End Function
 
-    Function Altatalle(idtalleProducto As Integer, cod As Integer) As Boolean
+    Function AltaTalleProd(idtalleProducto As Integer, cod As Integer) As Boolean
         Try
             Dim talleProdAlta = (From t In ctx.talle_producto Where t.id_talle = idtalleProducto And t.cod_producto = cod
                                  Select t).First

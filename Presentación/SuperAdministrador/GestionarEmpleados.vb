@@ -53,7 +53,7 @@
 
     Private Sub dgvEmpleados_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpleados.CellClick
         Dim fil As Integer = dgvEmpleados.CurrentRow.Index
-        If dgvEmpleados.Rows(fil).Cells(7).Value = 1 Then
+        If dgvEmpleados.Rows(fil).Cells(7).Value = "Activo" Then
             BEliminarUsuario.Visible = True
             BAltaEmpleado.Visible = False
         Else

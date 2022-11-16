@@ -2,6 +2,7 @@
     Private objDProducto = New DProducto
     Private objNTalle = New NTalle
     Private objNTalleProd = New NTalle_Producto
+    Private objDTalleProd = New DTalle_Producto
     Private objDTalle = New DTalle
     Private objNProducto = New NProducto
     Private Sub AñadirTallesProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -52,7 +53,17 @@
                     objDProducto.getProductosAll(dgvListarProductos)
                     MsgBox("Registrado con exito", vbInformation)
                 Else
-                    MsgBox("El producto ya cuanta con inventario para el talle ingresado", vbCritical, "Error")
+                    ask = MsgBox("Ese producto ya cuenta con stock disponible, ¿Desea actualizar el stock?", vbYesNo + vbInformation, "Confirmar")
+                    If ask = vbYes Then
+                        If objDTalleProd.modTalle(talleProducto, cod_producto, cantidad) Then
+                            objDProducto.getProductosAll(dgvListarProductos)
+                            objDProducto.buscarProductosDetalleAdmin(cod_producto, dgvDetalleProductos)
+                            TBCantidadProducto.Clear()
+                            TBCodProducto.Clear()
+                            CBTalle.ResetText()
+                            CBTalle.SelectedValue = -1
+                        End If
+                    End If
                 End If
             End If
         End If

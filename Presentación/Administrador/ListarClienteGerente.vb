@@ -12,7 +12,7 @@
             frm.TBDireccion.Text = dgvListarClientes.CurrentRow.Cells(5).Value
             frm.TBCorreoCliente.Text = dgvListarClientes.CurrentRow.Cells(6).Value
             frm.ShowDialog()
-            objNcliente.cargarGrid(dgvListarClientes)
+            objNcliente.getClientesEstadoAll(dgvListarClientes)
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub ListarClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        objNcliente.cargarGrid(dgvListarClientes)
+        objDcliente.getClientesEstadoAll(dgvListarClientes)
         objNcliente.cargarComboxDNI(CBBuscarDni)
     End Sub
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
@@ -37,7 +37,7 @@
 
     Private Sub BBuscar_Click(sender As Object, e As EventArgs) Handles BBuscar.Click
         If TBBuscar.Text.Trim = "" Then
-            objNcliente.cargarGrid(dgvListarClientes)
+            objNcliente.cargarGrid2(dgvListarClientes)
         Else
             objDcliente.buscarClientes(TBBuscar.Text, dgvListarClientes)
             TBBuscar.Clear()
@@ -51,7 +51,7 @@
     Private Sub GroupBoxClientes_Click(sender As Object, e As EventArgs) Handles GroupBoxClientes.Click
         CBBuscarDni.ResetText()
         CBBuscarDni.SelectedValue = -1
-        objNcliente.cargarGrid(dgvListarClientes)
+        objNcliente.getClientesEstadoAll(dgvListarClientes)
     End Sub
 
 End Class

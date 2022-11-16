@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub BVentas7dias_Click(sender As Object, e As EventArgs) Handles BVentas7dias.Click
-        AbrirFormulariosGerente(New Reportes7dias)
+        AbrirFormulariosGerente(New Reportes7Dia)
     End Sub
 
     Private Sub BVentas30dias_Click(sender As Object, e As EventArgs) Handles BVentas30dias.Click

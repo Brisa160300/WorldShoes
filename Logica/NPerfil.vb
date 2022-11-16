@@ -17,9 +17,6 @@
         Dim perf As DPerfil = New DPerfil
         grid.DataSource = perf.getPerfilAll()
         grid.Columns(0).HeaderText = "ID"
-        grid.Columns(1).HeaderText = "Descripción"
-        grid.Columns(2).Visible = False
-        grid.Columns(3).Visible = False
         grid.ClearSelection()
     End Sub
 End Class

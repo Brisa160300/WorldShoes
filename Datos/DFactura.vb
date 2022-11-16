@@ -15,8 +15,6 @@
                              Select f).ToList
         Return listarFactura
     End Function
-
-
     Function buscarfactura()
         Dim check = ctx.factura.Count()
         Return check
@@ -86,7 +84,7 @@
             grid.Columns(4).HeaderText = "Nombre Cliente"
             grid.Columns(5).HeaderText = "Apellido Cliente"
             grid.Columns(6).HeaderText = "Fecha"
-            grid.Columns(7).HeaderText = "Importe"
+            grid.Columns(7).HeaderText = "Total"
             grid.Columns(8).HeaderText = "Cantidad"
             grid.ClearSelection()
             Return True
@@ -119,7 +117,7 @@
             grid.Columns(1).HeaderText = "Nombre Cliente"
             grid.Columns(2).HeaderText = "Apellido Cliente"
             grid.Columns(3).HeaderText = "Fecha"
-            grid.Columns(4).HeaderText = "Importe"
+            grid.Columns(4).HeaderText = "Total"
             grid.Columns(5).HeaderText = "Cantidad"
             Return True
         Catch ex As Exception
@@ -169,7 +167,7 @@
             grid.Columns(1).HeaderText = "Nombre Cliente"
             grid.Columns(2).HeaderText = "Apellido Cliente"
             grid.Columns(3).HeaderText = "Fecha"
-            grid.Columns(4).HeaderText = "Importe"
+            grid.Columns(4).HeaderText = "Total"
             grid.Columns(5).HeaderText = "Cantidad"
             grid.ClearSelection()
             Return True
@@ -203,7 +201,7 @@
             grid.Columns(4).HeaderText = "Nombre Cliente"
             grid.Columns(5).HeaderText = "Apellido Cliente"
             grid.Columns(6).HeaderText = "Fecha"
-            grid.Columns(7).HeaderText = "Importe"
+            grid.Columns(7).HeaderText = "Total"
             grid.Columns(8).HeaderText = "Cantidad"
             grid.ClearSelection()
             Return True

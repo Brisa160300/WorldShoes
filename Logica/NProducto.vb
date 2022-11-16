@@ -53,7 +53,7 @@ Public Class NProducto
     Public Sub cargarComboxCateg(combo As ComboBox)
         Dim categ As DCategoria = New DCategoria
         combo.DataSource = categ.getCategoriasAll()
-        combo.DisplayMember = "descripcion_categoria"
+        combo.DisplayMember = "descripcion"
         combo.ValueMember = "id_categoria"
         combo.DropDownStyle = 2
         combo.SelectedValue = -1
@@ -67,7 +67,7 @@ Public Class NProducto
     Public Sub cargarComboxTalle(combo As ComboBox)
         Dim tal As DTalle = New DTalle
         combo.DataSource = tal.getTallesAll()
-        combo.DisplayMember = "descripcion"
+        combo.DisplayMember = "talle"
         combo.ValueMember = "id_talle"
         combo.SelectedValue = -1
         combo.DropDownStyle = 2
@@ -79,25 +79,24 @@ Public Class NProducto
     Public Sub cargarComboxMarca(combo As ComboBox)
         Dim marc As DMarca = New DMarca
         combo.DataSource = marc.getMarcasAll()
-        combo.DisplayMember = "Descripcion"
-        combo.ValueMember = "id_Marca"
+        combo.DisplayMember = "descripcion"
+        combo.ValueMember = "id_marca"
         combo.SelectedValue = -1
         combo.DropDownStyle = 2
     End Sub
     Public Sub cargarComboxMarca2(combo As ComboBox, marca As String)
         Dim marc As DMarca = New DMarca
         combo.DataSource = marc.getMarcasAll()
-        combo.DisplayMember = "Descripcion"
-        combo.ValueMember = "id_Marca"
+        combo.DisplayMember = "descripcion"
+        combo.ValueMember = "id_marca"
         combo.DropDownStyle = 2
         combo.SelectedIndex = combo.FindString(marca)
-
     End Sub
 
     Public Sub cargarComboxCateg2(combo As ComboBox, ctg As String)
         Dim categ As DCategoria = New DCategoria
         combo.DataSource = categ.getCategoriasAll()
-        combo.DisplayMember = "descripcion_categoria"
+        combo.DisplayMember = "descripcion"
         combo.ValueMember = "id_categoria"
         combo.DropDownStyle = 2
         combo.SelectedIndex = combo.FindString(ctg)

@@ -53,8 +53,8 @@
 
     Private Sub dgvListarCategorias_Click(sender As Object, e As EventArgs) Handles dgvListarCategorias.Click
         Dim fil As Integer = dgvListarCategorias.CurrentRow.Index
-        Dim codigo As Integer = dgvListarCategorias.Rows(fil).Cells(2).Value
-        If codigo = 1 Then
+        Dim codigo As String = dgvListarCategorias.Rows(fil).Cells(2).Value
+        If codigo = "Activo" Then
             BEliminarCategoria.Visible = True
             BAltaCategoria.Visible = False
         Else

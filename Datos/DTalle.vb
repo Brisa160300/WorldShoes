@@ -11,8 +11,20 @@
         End Try
     End Function
 
-    Function getTallesAll() As List(Of talle)
-        Dim listartalle = (From t In ctx.talle Select t).ToList
+    Function getTallesAll() As List(Of ETalle)
+        Dim lista = (From t In ctx.talle Select t).ToList
+        Dim listarTalle = New List(Of ETalle)
+        For Each valor In lista
+            Dim item = New ETalle
+            item.Id_talle = valor.id_talle
+            item.Talle = valor.descripcion
+            If valor.estado_talle = 1 Then
+                item.Estado = "Activo"
+            Else
+                item.Estado = "Inactivo"
+            End If
+            listarTalle.Add(item)
+        Next
         Return listartalle
     End Function
 

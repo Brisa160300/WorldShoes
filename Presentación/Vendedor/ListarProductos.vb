@@ -40,7 +40,7 @@ Public Class ListarProductos
         CBCatProducto.SelectedValue = -1
         CBMarcas.ResetText()
         CBMarcas.SelectedValue = -1
-        objNProducto.getProductosVendedorAll(dgvListaProductos)
+        objDProducto.getProductosVendedorAll(dgvListaProductos)
     End Sub
 
 End Class

@@ -11,8 +11,20 @@
         End Try
     End Function
 
-    Function getMarcasAll() As List(Of Marcas)
-        Dim listarMarca = (From m In ctx.Marcas Select m).ToList
+    Function getMarcasAll() As List(Of EMarca)
+        Dim lista = (From m In ctx.Marcas Select m).ToList
+        Dim listarMarca = New List(Of EMarca)
+        For Each valor In lista
+            Dim item = New EMarca
+            item.Id_marca = valor.id_Marca
+            item.Descripcion = valor.Descripcion
+            If valor.Estado = 1 Then
+                item.Estado = "Activo"
+            Else
+                item.Estado = "Inactivo"
+            End If
+            listarMarca.Add(item)
+        Next
         Return listarMarca
     End Function
 

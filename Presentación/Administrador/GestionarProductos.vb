@@ -101,7 +101,7 @@
 
     Private Sub dgvListaProductos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListaProductos.CellClick
         Dim fil As Integer = dgvListaProductos.CurrentRow.Index
-        If dgvListaProductos.Rows(fil).Cells(5).Value = 1 Then
+        If dgvListaProductos.Rows(fil).Cells(5).Value = "Activo" Then
             BEliminarProducto.Visible = True
             BAltaProducto.Visible = False
         Else

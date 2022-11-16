@@ -15,26 +15,12 @@
         End If
 
     End Sub
-    Private Sub TBBuscarTalle_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBBuscarTalle.KeyPress
-
-        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
-            e.Handled = True
-            MsgBox("Solo se aceptan letras", vbCritical, "Error")
-        End If
-    End Sub
 
     Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
         Me.Close()
     End Sub
 
     Private Sub GestionarTalle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not dgvRegTalles.Rows.Count > 0 Then
-            BEliminarTalle.Enabled = True
-            BModificarTalle.Enabled = True
-        Else
-            BEliminarTalle.Enabled = False
-            BModificarTalle.Enabled = False
-        End If
         objNTalle.cargarGrid(dgvRegTalles)
     End Sub
 
@@ -44,6 +30,8 @@
             If ask = vbYes Then
                 objDtalle.EliminarTalle(CInt(dgvRegTalles.CurrentRow.Cells(0).Value.ToString))
                 objNTalle.cargarGrid(dgvRegTalles)
+                BEliminarTalle.Visible = False
+                BAltaTalle.Visible = True
             End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
@@ -57,6 +45,8 @@
             If ask = vbYes Then
                 objDtalle.Altatalle(CInt(dgvRegTalles.CurrentRow.Cells(0).Value.ToString))
                 objNTalle.cargarGrid(dgvRegTalles)
+                BEliminarTalle.Visible = True
+                BAltaTalle.Visible = False
             End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
@@ -74,4 +64,5 @@
             BAltaTalle.Visible = True
         End If
     End Sub
+
 End Class

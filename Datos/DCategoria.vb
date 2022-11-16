@@ -1,4 +1,6 @@
-﻿Public Class DCategoria
+﻿Imports System.Windows.Documents
+
+Public Class DCategoria
     Dim ctx As WorldShoes_Roman_RiosEntities = New WorldShoes_Roman_RiosEntities
     Function Dguardar_categoria(ocategoria As Categoria) As Boolean
         Try
@@ -11,9 +13,22 @@
         End Try
     End Function
 
-    Function getCategoriasAll() As List(Of Categoria)
-        Dim listarCategoria = (From categ In ctx.Categoria Select categ).ToList
-        Return listarCategoria
+    Function getCategoriasAll() As List(Of ECategoria)
+        Dim lista = (From categ In ctx.Categoria Select categ).ToList
+        Dim listaCategoria = New List(Of ECategoria)
+        For Each valor In lista
+            Dim item = New ECategoria
+            item.Id_categoria = valor.id_categoria
+            item.Descripcion = valor.descripcion_categoria
+            If valor.id_estado_categoria = 1 Then
+                item.Estado = "Activo"
+            Else
+                item.Estado = "Inactivo"
+            End If
+            listaCategoria.Add(item)
+        Next
+        Return listaCategoria
+
     End Function
 
     Function ModCateg(idcateg As Integer, descripcion As String) As Boolean

@@ -10,6 +10,9 @@ Public Class AñadirVentas
     Dim modprod As Boolean = False
     Public prodtotal As Integer = 0
     Dim cantidadVenta As Integer = 0
+    Private printLine As Integer = 0
+    Private contador As Integer = 0
+    Private posicion_encabezado As Integer = Me.Top
     Public Function EspacioEnBlanco() As Boolean
         Dim ask As MsgBoxResult = False
         Dim idcliente As String = TBIdCliVenta.Text
@@ -82,9 +85,11 @@ Public Class AñadirVentas
                     cantidadVenta = 0
                     dgvListaVentas.Rows.Clear()
                     TBNroFactura.Text = objDfactura.buscarfactura2() + 1
+                    factura.ShowDialog()
+                    factura.ShowInTaskbar = False
                 End If
             End If
-            End If
+        End If
     End Sub
 
 

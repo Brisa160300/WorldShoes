@@ -148,9 +148,17 @@
     </Compile>
     <Compile Include="factura.vb">
       <DependentUpon>Model1.tt</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logica\ECategoria.vb" />
+    <Compile Include="Logica\ECliente.vb" />
     <Compile Include="Logica\EDetalleProducto.vb" />
+    <Compile Include="Logica\EEmpleado.vb" />
+    <Compile Include="Logica\EMarca.vb" />
+    <Compile Include="Logica\EPerfil.vb" />
     <Compile Include="Logica\EProducto.vb" />
+    <Compile Include="Logica\EProductoAdmin.vb" />
+    <Compile Include="Logica\ETalle.vb" />
     <Compile Include="Logica\EUsuario.vb" />
     <Compile Include="Logica\EVenta.vb" />
     <Compile Include="Logica\EventaAdmin.vb" />
@@ -208,6 +216,18 @@
     <Compile Include="Presentación\Administrador\AñadirTallesProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Administrador\GestionarClientesAdministrador.Designer.vb">
+      <DependentUpon>GestionarClientesAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\GestionarClientesAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Administrador\ListarTalleProductos.Designer.vb">
+      <DependentUpon>ListarTalleProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Administrador\ListarTalleProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Administrador\ModificarMarca.Designer.vb">
       <DependentUpon>ModificarMarca.vb</DependentUpon>
     </Compile>
@@ -218,6 +238,12 @@
       <DependentUpon>Mod_Producto.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Administrador\Mod_Producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes7Dia.Designer.vb">
+      <DependentUpon>Reportes7Dia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Gerente\Reportes7Dia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\SuperAdministrador\AñadirPerfil.Designer.vb">
@@ -320,12 +346,6 @@
       <DependentUpon>Reportes30dias.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\Gerente\Reportes30dias.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\Gerente\Reportes7dias.Designer.vb">
-      <DependentUpon>Reportes7dias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\Gerente\Reportes7dias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentación\SuperAdministrador\añadirUsuario.Designer.vb">
@@ -478,6 +498,18 @@
     <Compile Include="Presentación\Vendedor\DetalleVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\Vendedor\Factura.Designer.vb">
+      <DependentUpon>Factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\Factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\Vendedor\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\Vendedor\GestionarCliente.Designer.vb">
       <DependentUpon>GestionarCliente.vb</DependentUpon>
     </Compile>
@@ -554,11 +586,20 @@
     <EmbeddedResource Include="Presentación\Administrador\AñadirTallesProducto.resx">
       <DependentUpon>AñadirTallesProducto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\GestionarClientesAdministrador.resx">
+      <DependentUpon>GestionarClientesAdministrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Administrador\ListarTalleProductos.resx">
+      <DependentUpon>ListarTalleProductos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Administrador\ModificarMarca.resx">
       <DependentUpon>ModificarMarca.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Administrador\Mod_Producto.resx">
       <DependentUpon>Mod_Producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Gerente\Reportes7Dia.resx">
+      <DependentUpon>Reportes7Dia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\SuperAdministrador\AñadirPerfil.resx">
       <DependentUpon>AñadirPerfil.vb</DependentUpon>
@@ -610,9 +651,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\Reportes30dias.resx">
       <DependentUpon>Reportes30dias.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\Reportes7dias.resx">
-      <DependentUpon>Reportes7dias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\SuperAdministrador\añadirUsuario.resx">
       <DependentUpon>añadirUsuario.vb</DependentUpon>
@@ -688,6 +726,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\DetalleVenta.resx">
       <DependentUpon>DetalleVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\Factura.resx">
+      <DependentUpon>Factura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\Vendedor\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Vendedor\GestionarCliente.resx">
       <DependentUpon>GestionarCliente.vb</DependentUpon>

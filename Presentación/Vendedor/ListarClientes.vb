@@ -60,9 +60,9 @@
     End Sub
 
     Private Sub GroupBoxClientes_Click(sender As Object, e As EventArgs) Handles GroupBoxClientes.Click
+        objNcliente.cargarComboxDNI(ComboBoxBuscarDni)
         ComboBoxBuscarDni.ResetText()
         ComboBoxBuscarDni.SelectedValue = -1
-        objNcliente.cargarGrid(dgvListarClientes)
     End Sub
 
 End Class

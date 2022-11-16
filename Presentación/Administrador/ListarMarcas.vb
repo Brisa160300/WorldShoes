@@ -37,13 +37,15 @@
             If ask = vbYes Then
                 objDMarca.EliminarMarca(CInt(dgvListaMarca.CurrentRow.Cells(0).Value.ToString))
                 objNMarca.cargarGrid(dgvListaMarca)
+                BEliminarMarca.Visible = False
+                BAltaMarca.Visible = True
             End If
         Else
             MsgBox("Por favor seleccione una fila", vbExclamation)
         End If
     End Sub
 
-    Private Sub BAltaMarca_Click(sender As Object, e As EventArgs) Handles BAltaMarca.Click
+    Private Sub BAltasMarcas_Click(sender As Object, e As EventArgs) Handles BAltasMarcas.Click
         If (dgvListaMarca.SelectedRows.Count > 0) Or (dgvListaMarca.SelectedCells.Count > 0) Then
             Dim ask As MsgBoxResult = MsgBox("Seguro desea dar de alta esta marca", vbExclamation + vbYesNo)
             If ask = vbYes Then
@@ -59,8 +61,8 @@
 
     Private Sub dgvListaMarca_Click(sender As Object, e As EventArgs) Handles dgvListaMarca.Click
         Dim fil As Integer = dgvListaMarca.CurrentRow.Index
-        Dim codigo As Integer = dgvListaMarca.Rows(fil).Cells(2).Value
-        If codigo = 1 Then
+        Dim codigo As String = dgvListaMarca.Rows(fil).Cells(2).Value
+        If codigo = "Activo" Then
             BEliminarMarca.Visible = True
             BAltaMarca.Visible = False
         Else
@@ -68,4 +70,5 @@
             BAltaMarca.Visible = True
         End If
     End Sub
+
 End Class

@@ -46,15 +46,30 @@ Public Class DProducto
     Function getProductosAll(grid As DataGridView)
 
         Try
-            Dim listaProductos = (From p In ctx.Productos
-                                  Order By p.cod_producto
-                                  Select Codigo = p.cod_producto,
+            Dim lista = (From p In ctx.Productos
+                         Order By p.cod_producto
+                         Select Codigo = p.cod_producto,
                                                   Descripcion = p.nombre,
                                                   Categoria = p.Categoria.descripcion_categoria,
                                                   Precio = p.precio, Marca = p.Marcas.Descripcion, Estado = p.id_estado_producto
                                                   ).ToList
+            Dim listaProductos = New List(Of EProductoAdmin)
+            For Each valor In lista
+                Dim item = New EProductoAdmin
+                item.Codigo = valor.Codigo
+                item.Descripcion = valor.Descripcion
+                item.Categoria = valor.Categoria
+                item.Precio = valor.Precio
+                item.Marca = valor.Marca
+                If valor.Estado = 1 Then
+                    item.Estado = "Activo"
+                Else
+                    item.Estado = "Inactivo"
+                End If
+                listaProductos.Add(item)
+            Next
+
             grid.DataSource = listaProductos
-            grid.Columns(5).Visible = False
             grid.ClearSelection()
             Return True
         Catch ex As Exception
@@ -154,7 +169,7 @@ Public Class DProducto
             grid.Columns(2).HeaderText = "Categoria"
             grid.Columns(5).HeaderText = "Marca"
             grid.Columns(6).HeaderText = "Talle"
-            grid.Columns(7).Visible = False
+            grid.Columns(7).HeaderText = "Estado"
             grid.Columns(8).Visible = False
             grid.Columns(9).Visible = False
             grid.Columns(10).Visible = False
@@ -226,7 +241,7 @@ Public Class DProducto
             grid.Columns(2).HeaderText = "Categoria"
             grid.Columns(5).HeaderText = "Marca"
             grid.Columns(6).HeaderText = "Talle"
-            grid.Columns(7).HeaderText = "Estado"
+            grid.Columns(7).Visible = False
             grid.Columns(8).Visible = False
             grid.Columns(9).Visible = False
             grid.Columns(10).Visible = False
@@ -238,32 +253,33 @@ Public Class DProducto
         End Try
     End Function
 
-    Public Function buscarProductosDetalleAdmin(p_nombre As String, ByVal grid As DataGridView)
+
+
+
+    Public Function buscarProductosDetalleAdmin(p_nombre As Integer, ByVal grid As DataGridView)
         Try
             Dim objMostrar = (From tp In ctx.talle_producto Where tp.cod_producto = p_nombre
                               Select tp).ToList
             Dim listaProductos = New List(Of EProducto)
             For Each valor In objMostrar
+                Dim item As EProducto = New EProducto
+                item.Codigo = valor.Productos.cod_producto
+                item.Nombre = valor.Productos.nombre
+                item.Descripcion_categoria = valor.Productos.Categoria.descripcion_categoria
+                item.Stock = valor.cantidad_talle
+                item.Precio = valor.Productos.precio
+                item.Descripcion_marca = valor.Productos.Marcas.Descripcion
+                item.Descripcion_talle = valor.talle.descripcion
+                item.Id_marca = valor.Productos.Marcas.id_Marca
+                item.Id_talle = valor.talle.id_talle
+                item.Id_categ = valor.Productos.Categoria.id_categoria
+                item.Id_talle_prod = valor.id_talle_prod
                 If valor.estado_talle_producto = 1 Then
-                    Dim item As EProducto = New EProducto
-                    item.Codigo = valor.Productos.cod_producto
-                    item.Nombre = valor.Productos.nombre
-                    item.Descripcion_categoria = valor.Productos.Categoria.descripcion_categoria
-                    item.Stock = valor.cantidad_talle
-                    item.Precio = valor.Productos.precio
-                    item.Descripcion_marca = valor.Productos.Marcas.Descripcion
-                    item.Descripcion_talle = valor.talle.descripcion
-                    item.Id_marca = valor.Productos.Marcas.id_Marca
-                    item.Id_talle = valor.talle.id_talle
-                    item.Id_categ = valor.Productos.Categoria.id_categoria
-                    item.Id_talle_prod = valor.id_talle_prod
-                    If valor.estado_talle_producto = 1 Then
-                        item.Estado = "Activo"
-                    Else
-                        item.Estado = "Inactivo"
-                    End If
-                    listaProductos.Add(item)
+                    item.Estado = "Activo"
+                Else
+                    item.Estado = "Inactivo"
                 End If
+                listaProductos.Add(item)
             Next
             grid.DataSource = listaProductos
             grid.Columns(2).HeaderText = "Categoria"
@@ -280,6 +296,7 @@ Public Class DProducto
             Return False
         End Try
     End Function
+
     Public Function buscarProductosGeneralAdmin(p_nombre As String, ByVal grid As DataGridView)
         Try
             Dim listaProductos = (From p In ctx.Productos Where p.cod_producto.ToString.Contains(p_nombre) Or p.Categoria.descripcion_categoria.ToString.Contains(p_nombre) Or p.Marcas.Descripcion.ToString.Contains(p_nombre) Or p.nombre.ToString.Contains(p_nombre)

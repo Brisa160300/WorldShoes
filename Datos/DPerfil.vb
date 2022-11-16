@@ -11,9 +11,22 @@
         End Try
     End Function
 
-    Function getPerfilAll() As List(Of Perfiles)
-        Dim listarPerfiles = (From p In ctx.Perfiles Select p).ToList
-        Return listarPerfiles
+    Function getPerfilAll() As List(Of EPerfil)
+        Dim lista = (From p In ctx.Perfiles Select p).ToList
+        Dim listaPerfiles = New List(Of EPerfil)
+        For Each valor In lista
+            Dim item = New EPerfil
+            item.Id_perfil = valor.id_Perfil
+            item.Descripcion = valor.Descripcion
+            If valor.estado_perfil = 1 Then
+                item.Estado = "Activo"
+            Else
+                item.Estado = "Inactivo"
+            End If
+            listaPerfiles.Add(item)
+        Next
+        Return listaPerfiles
+
     End Function
 
 

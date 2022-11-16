@@ -34,7 +34,7 @@
 
     Private Sub BCerrarMenuGerente_Click(sender As Object, e As EventArgs) Handles BCerrarMenuGerente.Click
         Dim ask As MsgBoxResult
-        ask = MsgBox("¿Esta segruro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
+        ask = MsgBox("¿Esta seguro de que quiere cerrar sesión?", vbExclamation + vbYesNo, "Cerrar Sesión")
         If ask = vbYes Then
             Application.Exit()
         End If
@@ -88,7 +88,7 @@
     Private formActivoVendedor As Form = Nothing
 
     Private Sub BReportesSemanal_Click(sender As Object, e As EventArgs) Handles BReportesSemanal.Click
-        AbrirFormulariosGerente(New Reportes7dias)
+        AbrirFormulariosGerente(New Reportes7Dia)
     End Sub
 
     Private Sub BReportesMensual_Click(sender As Object, e As EventArgs) Handles BReportesMensual.Click

@@ -54,7 +54,7 @@
 
     Private Sub dgvListaPerfiles_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListaPerfiles.CellClick
         Dim fil As Integer = dgvListaPerfiles.CurrentRow.Index
-        If dgvListaPerfiles.Rows(fil).Cells(2).Value = 1 Then
+        If dgvListaPerfiles.Rows(fil).Cells(2).Value = "Activo" Then
             BEliminarPerfiles.Visible = True
             BAltaPerfil.Visible = False
         Else

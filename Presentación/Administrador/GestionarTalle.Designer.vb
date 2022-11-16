@@ -30,11 +30,11 @@ Partial Class GestionarTalle
         Me.TabPageListaTalle = New System.Windows.Forms.TabPage()
         Me.dgvRegTalles = New System.Windows.Forms.DataGridView()
         Me.GroupBoxGestionarTalles = New System.Windows.Forms.GroupBox()
-        Me.BAltaTalle = New System.Windows.Forms.Button()
         Me.BBuscarTalle = New System.Windows.Forms.Button()
         Me.BModificarTalle = New System.Windows.Forms.Button()
         Me.TBBuscarTalle = New System.Windows.Forms.TextBox()
         Me.BEliminarTalle = New System.Windows.Forms.Button()
+        Me.BAltaTalle = New System.Windows.Forms.Button()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.TabGestionTalles.SuspendLayout()
         Me.TabPageListaTalle.SuspendLayout()
@@ -131,22 +131,6 @@ Partial Class GestionarTalle
         Me.GroupBoxGestionarTalles.TabStop = False
         Me.GroupBoxGestionarTalles.Text = "Búsqueda de talles"
         '
-        'BAltaTalle
-        '
-        Me.BAltaTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BAltaTalle.FlatAppearance.BorderSize = 2
-        Me.BAltaTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BAltaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BAltaTalle.ForeColor = System.Drawing.Color.White
-        Me.BAltaTalle.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
-        Me.BAltaTalle.Location = New System.Drawing.Point(947, 33)
-        Me.BAltaTalle.Margin = New System.Windows.Forms.Padding(4)
-        Me.BAltaTalle.Name = "BAltaTalle"
-        Me.BAltaTalle.Size = New System.Drawing.Size(65, 50)
-        Me.BAltaTalle.TabIndex = 18
-        Me.BAltaTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BAltaTalle.UseVisualStyleBackColor = False
-        '
         'BBuscarTalle
         '
         Me.BBuscarTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -203,6 +187,22 @@ Partial Class GestionarTalle
         Me.BEliminarTalle.TabIndex = 17
         Me.BEliminarTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarTalle.UseVisualStyleBackColor = False
+        '
+        'BAltaTalle
+        '
+        Me.BAltaTalle.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BAltaTalle.FlatAppearance.BorderSize = 2
+        Me.BAltaTalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BAltaTalle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAltaTalle.ForeColor = System.Drawing.Color.White
+        Me.BAltaTalle.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
+        Me.BAltaTalle.Location = New System.Drawing.Point(947, 33)
+        Me.BAltaTalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.BAltaTalle.Name = "BAltaTalle"
+        Me.BAltaTalle.Size = New System.Drawing.Size(65, 50)
+        Me.BAltaTalle.TabIndex = 18
+        Me.BAltaTalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BAltaTalle.UseVisualStyleBackColor = False
         '
         'BVolver
         '

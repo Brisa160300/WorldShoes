@@ -12,22 +12,25 @@
     End Function
 
     Function getUsuariosAll() As List(Of EUsuario)
+        Dim objDempleado = New DEmpleado
         Dim lista = (From u In ctx.Usuarios Select u).ToList
         Dim listaUsuarios = New List(Of EUsuario)
         For Each valor In lista
-            Dim item As EUsuario = New EUsuario
-            item.Nombre = valor.empleados.nombre
-            item.Apellido = valor.empleados.apellido
-            item.NombreUsuario = valor.Nombre
-            item.Pass = valor.Contraseña
-            If valor.estado_usuario = 1 Then
-                item.Estado = "Activo"
-            Else
-                item.Estado = "Inactivo"
+            If objDempleado.verificarEmpleado(valor.id_empleado) <> 0 Then
+                Dim item As EUsuario = New EUsuario
+                item.Nombre = valor.empleados.nombre
+                item.Apellido = valor.empleados.apellido
+                item.NombreUsuario = valor.Nombre
+                item.Pass = valor.Contraseña
+                If valor.estado_usuario = 1 Then
+                    item.Estado = "Activo"
+                Else
+                    item.Estado = "Inactivo"
+                End If
+                item.Descripcion_perfil = valor.Perfiles.Descripcion
+                item.Id_usuario = valor.id_Usuario
+                listaUsuarios.Add(item)
             End If
-            item.Descripcion_perfil = valor.Perfiles.Descripcion
-            item.Id_usuario = valor.id_Usuario
-            listaUsuarios.Add(item)
         Next
         Return listaUsuarios
 
@@ -95,6 +98,15 @@
     End Function
 
     'cambios---03/11/22 11:04
+
+    Public Function verificarUsuarioEmpleado(id As Integer)
+        Try
+            Dim user As Integer = (From u In ctx.Usuarios Where u.id_empleado = id Select u).Count()
+            Return user
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
     Public Function buscarUsuarios(p_NombreEmpleado As String, ByVal grid As DataGridView)
         Try
             Using Mostrar As New WorldShoes_Roman_RiosEntities
@@ -125,7 +137,7 @@
 
     Function VerifUser(usuario As String, pass As String) As Integer
         Try
-            Dim user As Integer = (From u In ctx.Usuarios Where u.Nombre = usuario And u.Contraseña = pass Select u).Count()
+            Dim user As Integer = (From u In ctx.Usuarios Where u.Nombre = usuario And u.Contraseña = pass And u.estado_usuario = 1 Select u).Count()
             Return user
         Catch ex As Exception
             Return 0

@@ -59,20 +59,18 @@ Partial Class Reportes30dias
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.PagPageVentasDiarias = New System.Windows.Forms.TabPage()
-        Me.DataGridViewListaVentas = New System.Windows.Forms.DataGridView()
+        Me.dgvListaVentas = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DTHasta = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DTDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridViewVentasNetas = New System.Windows.Forms.DataGridView()
@@ -80,6 +78,8 @@ Partial Class Reportes30dias
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.LTotal = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +87,7 @@ Partial Class Reportes30dias
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl.SuspendLayout()
         Me.PagPageVentasDiarias.SuspendLayout()
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewVentasNetas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -387,26 +387,6 @@ Partial Class Reportes30dias
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(985, 352)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 46)
-        Me.Label5.TabIndex = 85
-        Me.Label5.Text = "$"
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(784, 352)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(195, 46)
-        Me.Label1.TabIndex = 84
-        Me.Label1.Text = "Ventas Netas:"
-        '
         'TabControl
         '
         Me.TabControl.Controls.Add(Me.PagPageVentasDiarias)
@@ -419,7 +399,7 @@ Partial Class Reportes30dias
         '
         'PagPageVentasDiarias
         '
-        Me.PagPageVentasDiarias.Controls.Add(Me.DataGridViewListaVentas)
+        Me.PagPageVentasDiarias.Controls.Add(Me.dgvListaVentas)
         Me.PagPageVentasDiarias.Location = New System.Drawing.Point(4, 29)
         Me.PagPageVentasDiarias.Name = "PagPageVentasDiarias"
         Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(3)
@@ -428,13 +408,13 @@ Partial Class Reportes30dias
         Me.PagPageVentasDiarias.Text = "Detalle de Ventas"
         Me.PagPageVentasDiarias.UseVisualStyleBackColor = True
         '
-        'DataGridViewListaVentas
+        'dgvListaVentas
         '
-        Me.DataGridViewListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridViewListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridViewListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewListaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridViewListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle11.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -442,16 +422,16 @@ Partial Class Reportes30dias
         DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.DataGridViewListaVentas.ColumnHeadersHeight = 20
-        Me.DataGridViewListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridViewListaVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.DataGridViewTextBoxColumn1})
-        Me.DataGridViewListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewListaVentas.EnableHeadersVisualStyles = False
-        Me.DataGridViewListaVentas.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridViewListaVentas.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewListaVentas.Name = "DataGridViewListaVentas"
-        Me.DataGridViewListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.dgvListaVentas.ColumnHeadersHeight = 20
+        Me.dgvListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvListaVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.DataGridViewTextBoxColumn1})
+        Me.dgvListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListaVentas.EnableHeadersVisualStyles = False
+        Me.dgvListaVentas.Location = New System.Drawing.Point(3, 3)
+        Me.dgvListaVentas.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListaVentas.Name = "dgvListaVentas"
+        Me.dgvListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle12.BackColor = System.Drawing.Color.NavajoWhite
         DataGridViewCellStyle12.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -459,10 +439,10 @@ Partial Class Reportes30dias
         DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewListaVentas.RowHeadersWidth = 51
-        Me.DataGridViewListaVentas.Size = New System.Drawing.Size(1047, 174)
-        Me.DataGridViewListaVentas.TabIndex = 7
+        Me.dgvListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.dgvListaVentas.RowHeadersWidth = 51
+        Me.dgvListaVentas.Size = New System.Drawing.Size(1047, 174)
+        Me.dgvListaVentas.TabIndex = 7
         '
         'Column1
         '
@@ -510,16 +490,16 @@ Partial Class Reportes30dias
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'DateTimePicker2
+        'DTHasta
         '
-        Me.DateTimePicker2.Enabled = False
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(769, 104)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(143, 30)
-        Me.DateTimePicker2.TabIndex = 81
-        Me.DateTimePicker2.Value = New Date(2022, 10, 31, 5, 3, 0, 0)
+        Me.DTHasta.Enabled = False
+        Me.DTHasta.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTHasta.Location = New System.Drawing.Point(769, 104)
+        Me.DTHasta.Name = "DTHasta"
+        Me.DTHasta.Size = New System.Drawing.Size(143, 30)
+        Me.DTHasta.TabIndex = 81
+        Me.DTHasta.Value = New Date(2022, 10, 31, 5, 3, 0, 0)
         '
         'Label4
         '
@@ -531,16 +511,16 @@ Partial Class Reportes30dias
         Me.Label4.TabIndex = 80
         Me.Label4.Text = "Hasta:"
         '
-        'DateTimePicker1
+        'DTDesde
         '
-        Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(519, 104)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(139, 30)
-        Me.DateTimePicker1.TabIndex = 79
-        Me.DateTimePicker1.Value = New Date(2022, 10, 1, 5, 12, 0, 0)
+        Me.DTDesde.Enabled = False
+        Me.DTDesde.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTDesde.Location = New System.Drawing.Point(519, 104)
+        Me.DTDesde.Name = "DTDesde"
+        Me.DTDesde.Size = New System.Drawing.Size(139, 30)
+        Me.DTDesde.TabIndex = 79
+        Me.DTDesde.Value = New Date(2022, 10, 1, 5, 12, 0, 0)
         '
         'Label3
         '
@@ -638,24 +618,43 @@ Partial Class Reportes30dias
         Me.Chart1.Size = New System.Drawing.Size(618, 226)
         Me.Chart1.TabIndex = 76
         '
+        'LTotal
+        '
+        Me.LTotal.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
+        Me.LTotal.ForeColor = System.Drawing.SystemColors.Window
+        Me.LTotal.Location = New System.Drawing.Point(962, 358)
+        Me.LTotal.Name = "LTotal"
+        Me.LTotal.Size = New System.Drawing.Size(136, 46)
+        Me.LTotal.TabIndex = 103
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label1.Location = New System.Drawing.Point(745, 358)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(222, 46)
+        Me.Label1.TabIndex = 102
+        Me.Label1.Text = "Ventas Netas: $"
+        '
         'Reportes30dias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1251, 656)
+        Me.Controls.Add(Me.LTotal)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView4)
         Me.Controls.Add(Me.DataGridView5)
         Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TabControl)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DTHasta)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DTDesde)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DataGridViewVentasNetas)
@@ -671,7 +670,7 @@ Partial Class Reportes30dias
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl.ResumeLayout(False)
         Me.PagPageVentasDiarias.ResumeLayout(False)
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewVentasNetas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -698,20 +697,18 @@ Partial Class Reportes30dias
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents TabControl As TabControl
     Friend WithEvents PagPageVentasDiarias As TabPage
-    Friend WithEvents DataGridViewListaVentas As DataGridView
+    Friend WithEvents dgvListaVentas As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents Button1 As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DTHasta As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DTDesde As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents DataGridViewVentasNetas As DataGridView
@@ -719,4 +716,6 @@ Partial Class Reportes30dias
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents LTotal As Label
+    Friend WithEvents Label1 As Label
 End Class

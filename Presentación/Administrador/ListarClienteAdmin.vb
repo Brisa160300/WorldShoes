@@ -1,4 +1,4 @@
-﻿Public Class Modificar_Clientes_Adminvb
+﻿Public Class ListarClienteAdmin
     Dim objNcliente = New NCliente
     Private Sub BEditarCliente_Click(sender As Object, e As EventArgs) Handles BEditarCliente.Click
         If (dgvListarClientes.SelectedRows.Count > 0) Or (dgvListarClientes.SelectedCells.Count > 0) Then

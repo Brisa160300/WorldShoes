@@ -25,6 +25,7 @@ Partial Class ListarMarcas
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBoxBuscarMarcas = New System.Windows.Forms.GroupBox()
+        Me.BAltasMarcas = New System.Windows.Forms.Button()
         Me.BEliminarMarca = New System.Windows.Forms.Button()
         Me.BEditarMarca = New System.Windows.Forms.Button()
         Me.BBuscarMarca = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class ListarMarcas
         Me.TabPageListaProducto = New System.Windows.Forms.TabPage()
         Me.dgvListaMarca = New System.Windows.Forms.DataGridView()
         Me.BVolver = New System.Windows.Forms.Button()
-        Me.BAltaMarca = New System.Windows.Forms.Button()
         Me.GroupBoxBuscarMarcas.SuspendLayout()
         Me.TabControlListaProductos.SuspendLayout()
         Me.TabPageListaProducto.SuspendLayout()
@@ -49,14 +49,33 @@ Partial Class ListarMarcas
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.BBuscarMarca)
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.TBBuscarMarca)
         Me.GroupBoxBuscarMarcas.Controls.Add(Me.BAltaMarca)
+        Me.GroupBoxBuscarMarcas.Controls.Add(Me.BAltasMarcas)
         Me.GroupBoxBuscarMarcas.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.GroupBoxBuscarMarcas.ForeColor = System.Drawing.Color.White
-        Me.GroupBoxBuscarMarcas.Location = New System.Drawing.Point(29, 41)
+        Me.GroupBoxBuscarMarcas.Location = New System.Drawing.Point(39, 50)
+        Me.GroupBoxBuscarMarcas.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBoxBuscarMarcas.Name = "GroupBoxBuscarMarcas"
-        Me.GroupBoxBuscarMarcas.Size = New System.Drawing.Size(801, 81)
+        Me.GroupBoxBuscarMarcas.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBoxBuscarMarcas.Size = New System.Drawing.Size(1068, 100)
         Me.GroupBoxBuscarMarcas.TabIndex = 23
         Me.GroupBoxBuscarMarcas.TabStop = False
         Me.GroupBoxBuscarMarcas.Text = "Marcas"
+        '
+        'BAltasMarcas
+        '
+        Me.BAltasMarcas.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BAltasMarcas.FlatAppearance.BorderSize = 2
+        Me.BAltasMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BAltasMarcas.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BAltasMarcas.ForeColor = System.Drawing.Color.White
+        Me.BAltasMarcas.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
+        Me.BAltasMarcas.Location = New System.Drawing.Point(988, 30)
+        Me.BAltasMarcas.Margin = New System.Windows.Forms.Padding(4)
+        Me.BAltasMarcas.Name = "BAltasMarcas"
+        Me.BAltasMarcas.Size = New System.Drawing.Size(65, 50)
+        Me.BAltasMarcas.TabIndex = 18
+        Me.BAltasMarcas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BAltasMarcas.UseVisualStyleBackColor = False
         '
         'BEliminarMarca
         '
@@ -66,9 +85,10 @@ Partial Class ListarMarcas
         Me.BEliminarMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BEliminarMarca.ForeColor = System.Drawing.Color.White
         Me.BEliminarMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.trash_6_32
-        Me.BEliminarMarca.Location = New System.Drawing.Point(741, 24)
+        Me.BEliminarMarca.Location = New System.Drawing.Point(988, 30)
+        Me.BEliminarMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.BEliminarMarca.Name = "BEliminarMarca"
-        Me.BEliminarMarca.Size = New System.Drawing.Size(49, 41)
+        Me.BEliminarMarca.Size = New System.Drawing.Size(65, 50)
         Me.BEliminarMarca.TabIndex = 15
         Me.BEliminarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BEliminarMarca.UseVisualStyleBackColor = False
@@ -82,9 +102,10 @@ Partial Class ListarMarcas
         Me.BEditarMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BEditarMarca.ForeColor = System.Drawing.Color.White
         Me.BEditarMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.edit_12_32
-        Me.BEditarMarca.Location = New System.Drawing.Point(686, 24)
+        Me.BEditarMarca.Location = New System.Drawing.Point(915, 30)
+        Me.BEditarMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.BEditarMarca.Name = "BEditarMarca"
-        Me.BEditarMarca.Size = New System.Drawing.Size(49, 41)
+        Me.BEditarMarca.Size = New System.Drawing.Size(65, 50)
         Me.BEditarMarca.TabIndex = 16
         Me.BEditarMarca.UseVisualStyleBackColor = False
         '
@@ -97,9 +118,10 @@ Partial Class ListarMarcas
         Me.BBuscarMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarMarca.ForeColor = System.Drawing.Color.White
         Me.BBuscarMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarMarca.Location = New System.Drawing.Point(153, 24)
+        Me.BBuscarMarca.Location = New System.Drawing.Point(204, 30)
+        Me.BBuscarMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarMarca.Name = "BBuscarMarca"
-        Me.BBuscarMarca.Size = New System.Drawing.Size(49, 41)
+        Me.BBuscarMarca.Size = New System.Drawing.Size(65, 50)
         Me.BBuscarMarca.TabIndex = 14
         Me.BBuscarMarca.UseVisualStyleBackColor = False
         '
@@ -107,9 +129,10 @@ Partial Class ListarMarcas
         '
         Me.TBBuscarMarca.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Me.TBBuscarMarca.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.TBBuscarMarca.Location = New System.Drawing.Point(17, 35)
+        Me.TBBuscarMarca.Location = New System.Drawing.Point(23, 43)
+        Me.TBBuscarMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.TBBuscarMarca.Name = "TBBuscarMarca"
-        Me.TBBuscarMarca.Size = New System.Drawing.Size(131, 25)
+        Me.TBBuscarMarca.Size = New System.Drawing.Size(173, 30)
         Me.TBBuscarMarca.TabIndex = 6
         '
         'BAltaMarca
@@ -120,9 +143,10 @@ Partial Class ListarMarcas
         Me.BAltaMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BAltaMarca.ForeColor = System.Drawing.Color.White
         Me.BAltaMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
-        Me.BAltaMarca.Location = New System.Drawing.Point(741, 24)
+        Me.BAltaMarca.Location = New System.Drawing.Point(1317, 37)
+        Me.BAltaMarca.Margin = New System.Windows.Forms.Padding(5)
         Me.BAltaMarca.Name = "BAltaMarca"
-        Me.BAltaMarca.Size = New System.Drawing.Size(49, 41)
+        Me.BAltaMarca.Size = New System.Drawing.Size(87, 62)
         Me.BAltaMarca.TabIndex = 17
         Me.BAltaMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BAltaMarca.UseVisualStyleBackColor = False
@@ -131,11 +155,11 @@ Partial Class ListarMarcas
         '
         Me.TabControlListaProductos.Controls.Add(Me.TabPageListaProducto)
         Me.TabControlListaProductos.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControlListaProductos.Location = New System.Drawing.Point(32, 149)
-        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControlListaProductos.Location = New System.Drawing.Point(43, 183)
+        Me.TabControlListaProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControlListaProductos.Name = "TabControlListaProductos"
         Me.TabControlListaProductos.SelectedIndex = 0
-        Me.TabControlListaProductos.Size = New System.Drawing.Size(801, 288)
+        Me.TabControlListaProductos.Size = New System.Drawing.Size(1068, 354)
         Me.TabControlListaProductos.TabIndex = 22
         '
         'TabPageListaProducto
@@ -143,11 +167,11 @@ Partial Class ListarMarcas
         Me.TabPageListaProducto.Controls.Add(Me.dgvListaMarca)
         Me.TabPageListaProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPageListaProducto.ForeColor = System.Drawing.Color.White
-        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPageListaProducto.Location = New System.Drawing.Point(4, 28)
+        Me.TabPageListaProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPageListaProducto.Name = "TabPageListaProducto"
-        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPageListaProducto.Size = New System.Drawing.Size(793, 259)
+        Me.TabPageListaProducto.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPageListaProducto.Size = New System.Drawing.Size(1060, 322)
         Me.TabPageListaProducto.TabIndex = 0
         Me.TabPageListaProducto.Text = "Lista de Marcas"
         Me.TabPageListaProducto.UseVisualStyleBackColor = True
@@ -173,7 +197,8 @@ Partial Class ListarMarcas
         Me.dgvListaMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListaMarca.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaMarca.EnableHeadersVisualStyles = False
-        Me.dgvListaMarca.Location = New System.Drawing.Point(2, 2)
+        Me.dgvListaMarca.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListaMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListaMarca.Name = "dgvListaMarca"
         Me.dgvListaMarca.ReadOnly = True
         Me.dgvListaMarca.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -188,7 +213,7 @@ Partial Class ListarMarcas
         Me.dgvListaMarca.RowHeadersWidth = 51
         Me.dgvListaMarca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvListaMarca.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.dgvListaMarca.Size = New System.Drawing.Size(789, 255)
+        Me.dgvListaMarca.Size = New System.Drawing.Size(1054, 318)
         Me.dgvListaMarca.TabIndex = 5
         '
         'BVolver
@@ -198,41 +223,26 @@ Partial Class ListarMarcas
         Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(736, 464)
+        Me.BVolver.Location = New System.Drawing.Point(981, 571)
+        Me.BVolver.Margin = New System.Windows.Forms.Padding(4)
         Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(98, 41)
+        Me.BVolver.Size = New System.Drawing.Size(131, 50)
         Me.BVolver.TabIndex = 25
         Me.BVolver.Text = "Volver"
         Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BVolver.UseVisualStyleBackColor = False
         '
-        'BAltaMarca
-        '
-        Me.BAltaMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BAltaMarca.FlatAppearance.BorderSize = 2
-        Me.BAltaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BAltaMarca.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BAltaMarca.ForeColor = System.Drawing.Color.White
-        Me.BAltaMarca.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.plus_32
-        Me.BAltaMarca.Location = New System.Drawing.Point(988, 30)
-        Me.BAltaMarca.Margin = New System.Windows.Forms.Padding(4)
-        Me.BAltaMarca.Name = "BAltaMarca"
-        Me.BAltaMarca.Size = New System.Drawing.Size(65, 50)
-        Me.BAltaMarca.TabIndex = 17
-        Me.BAltaMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BAltaMarca.UseVisualStyleBackColor = False
-        '
         'ListarMarcas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(862, 533)
+        Me.ClientSize = New System.Drawing.Size(1149, 656)
         Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.GroupBoxBuscarMarcas)
         Me.Controls.Add(Me.TabControlListaProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "ListarMarcas"
         Me.Text = "ListarMarcas"
         Me.GroupBoxBuscarMarcas.ResumeLayout(False)
@@ -254,4 +264,5 @@ Partial Class ListarMarcas
     Friend WithEvents BEliminarMarca As Button
     Friend WithEvents BEditarMarca As Button
     Friend WithEvents BAltaMarca As Button
+    Friend WithEvents BAltasMarcas As Button
 End Class
