@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub BVentasHoy_Click(sender As Object, e As EventArgs) Handles BVentasHoy.Click
-        AbrirFormulariosGerente(New ReporteHoy)
+        AbrirFormulariosGerente(New ReportesDiarios)
     End Sub
 
     Private Sub BVentas7dias_Click(sender As Object, e As EventArgs) Handles BVentas7dias.Click

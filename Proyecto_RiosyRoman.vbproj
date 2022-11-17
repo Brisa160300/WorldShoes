@@ -330,12 +330,6 @@
     <Compile Include="Presentación\Administrador\ListarClienteGerente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentación\Gerente\ReporteHoy.Designer.vb">
-      <DependentUpon>ReporteHoy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\Gerente\ReporteHoy.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Presentación\Gerente\Reportes.Designer.vb">
       <DependentUpon>Reportes.vb</DependentUpon>
     </Compile>
@@ -642,9 +636,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Administrador\ListarClienteGerente.resx">
       <DependentUpon>ListarClienteGerente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentación\Gerente\ReporteHoy.resx">
-      <DependentUpon>ReporteHoy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentación\Gerente\Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>

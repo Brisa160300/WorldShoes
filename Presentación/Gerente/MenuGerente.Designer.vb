@@ -38,6 +38,8 @@ Partial Class MenuGerente
         Me.Button4 = New System.Windows.Forms.Button()
         Me.BVentasPorCategoria = New System.Windows.Forms.Button()
         Me.PanelSubMenuFiltrarFecha = New System.Windows.Forms.Panel()
+        Me.DTHastaFiltro = New System.Windows.Forms.DateTimePicker()
+        Me.DTDesdeFiltro = New System.Windows.Forms.DateTimePicker()
         Me.BVolver = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,8 +50,6 @@ Partial Class MenuGerente
         Me.BReporteVenta = New System.Windows.Forms.Button()
         Me.BSalir = New System.Windows.Forms.Button()
         Me.PanelFormAdmnistrador = New System.Windows.Forms.Panel()
-        Me.DTDesdeFiltro = New System.Windows.Forms.DateTimePicker()
-        Me.DTHastaFiltro = New System.Windows.Forms.DateTimePicker()
         Me.PanelBarraMenuAdmin.SuspendLayout()
         Me.PanelIconMenuGerente.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -137,7 +137,7 @@ Partial Class MenuGerente
         Me.PanelIconMenuGerente.Location = New System.Drawing.Point(0, 0)
         Me.PanelIconMenuGerente.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelIconMenuGerente.Name = "PanelIconMenuGerente"
-        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(249, 136)
+        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(253, 136)
         Me.PanelIconMenuGerente.TabIndex = 0
         '
         'PanelLogo
@@ -147,7 +147,7 @@ Partial Class MenuGerente
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(249, 136)
+        Me.PanelLogo.Size = New System.Drawing.Size(253, 136)
         Me.PanelLogo.TabIndex = 1
         '
         'LIconMenu
@@ -160,7 +160,7 @@ Partial Class MenuGerente
         Me.LIconMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LIconMenu.Location = New System.Drawing.Point(32, 55)
         Me.LIconMenu.Name = "LIconMenu"
-        Me.LIconMenu.Size = New System.Drawing.Size(198, 35)
+        Me.LIconMenu.Size = New System.Drawing.Size(158, 27)
         Me.LIconMenu.TabIndex = 0
         Me.LIconMenu.Text = "WorldShoes"
         Me.LIconMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -176,7 +176,7 @@ Partial Class MenuGerente
         Me.LIconMenuAdmin.Location = New System.Drawing.Point(46, 58)
         Me.LIconMenuAdmin.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LIconMenuAdmin.Name = "LIconMenuAdmin"
-        Me.LIconMenuAdmin.Size = New System.Drawing.Size(198, 35)
+        Me.LIconMenuAdmin.Size = New System.Drawing.Size(158, 27)
         Me.LIconMenuAdmin.TabIndex = 0
         Me.LIconMenuAdmin.Text = "WorldShoes"
         Me.LIconMenuAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -192,7 +192,7 @@ Partial Class MenuGerente
         Me.BReportesHoy.Location = New System.Drawing.Point(0, 136)
         Me.BReportesHoy.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesHoy.Name = "BReportesHoy"
-        Me.BReportesHoy.Size = New System.Drawing.Size(249, 62)
+        Me.BReportesHoy.Size = New System.Drawing.Size(253, 62)
         Me.BReportesHoy.TabIndex = 22
         Me.BReportesHoy.Text = "Diario"
         Me.BReportesHoy.UseVisualStyleBackColor = False
@@ -208,7 +208,7 @@ Partial Class MenuGerente
         Me.BReportesSemanal.Location = New System.Drawing.Point(0, 198)
         Me.BReportesSemanal.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesSemanal.Name = "BReportesSemanal"
-        Me.BReportesSemanal.Size = New System.Drawing.Size(249, 62)
+        Me.BReportesSemanal.Size = New System.Drawing.Size(253, 62)
         Me.BReportesSemanal.TabIndex = 23
         Me.BReportesSemanal.Text = "Semanal"
         Me.BReportesSemanal.UseVisualStyleBackColor = False
@@ -224,7 +224,7 @@ Partial Class MenuGerente
         Me.BReportesMensual.Location = New System.Drawing.Point(0, 260)
         Me.BReportesMensual.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesMensual.Name = "BReportesMensual"
-        Me.BReportesMensual.Size = New System.Drawing.Size(249, 62)
+        Me.BReportesMensual.Size = New System.Drawing.Size(253, 62)
         Me.BReportesMensual.TabIndex = 24
         Me.BReportesMensual.Text = "Mensual"
         Me.BReportesMensual.UseVisualStyleBackColor = False
@@ -239,7 +239,7 @@ Partial Class MenuGerente
         Me.PanelSubMenuVentasPor.Location = New System.Drawing.Point(0, 397)
         Me.PanelSubMenuVentasPor.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelSubMenuVentasPor.Name = "PanelSubMenuVentasPor"
-        Me.PanelSubMenuVentasPor.Size = New System.Drawing.Size(249, 122)
+        Me.PanelSubMenuVentasPor.Size = New System.Drawing.Size(253, 122)
         Me.PanelSubMenuVentasPor.TabIndex = 26
         '
         'Button4
@@ -253,7 +253,7 @@ Partial Class MenuGerente
         Me.Button4.Location = New System.Drawing.Point(0, 62)
         Me.Button4.Margin = New System.Windows.Forms.Padding(5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(249, 62)
+        Me.Button4.Size = New System.Drawing.Size(253, 62)
         Me.Button4.TabIndex = 2
         Me.Button4.Text = "Ventas Por Marca"
         Me.Button4.UseVisualStyleBackColor = False
@@ -269,7 +269,7 @@ Partial Class MenuGerente
         Me.BVentasPorCategoria.Location = New System.Drawing.Point(0, 0)
         Me.BVentasPorCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.BVentasPorCategoria.Name = "BVentasPorCategoria"
-        Me.BVentasPorCategoria.Size = New System.Drawing.Size(249, 62)
+        Me.BVentasPorCategoria.Size = New System.Drawing.Size(253, 62)
         Me.BVentasPorCategoria.TabIndex = 1
         Me.BVentasPorCategoria.Text = "Ventas Por Categoria"
         Me.BVentasPorCategoria.UseVisualStyleBackColor = False
@@ -287,8 +287,24 @@ Partial Class MenuGerente
         Me.PanelSubMenuFiltrarFecha.Location = New System.Drawing.Point(0, 594)
         Me.PanelSubMenuFiltrarFecha.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelSubMenuFiltrarFecha.Name = "PanelSubMenuFiltrarFecha"
-        Me.PanelSubMenuFiltrarFecha.Size = New System.Drawing.Size(249, 250)
+        Me.PanelSubMenuFiltrarFecha.Size = New System.Drawing.Size(253, 250)
         Me.PanelSubMenuFiltrarFecha.TabIndex = 28
+        '
+        'DTHastaFiltro
+        '
+        Me.DTHastaFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTHastaFiltro.Location = New System.Drawing.Point(88, 113)
+        Me.DTHastaFiltro.Name = "DTHastaFiltro"
+        Me.DTHastaFiltro.Size = New System.Drawing.Size(140, 23)
+        Me.DTHastaFiltro.TabIndex = 25
+        '
+        'DTDesdeFiltro
+        '
+        Me.DTDesdeFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTDesdeFiltro.Location = New System.Drawing.Point(90, 40)
+        Me.DTDesdeFiltro.Name = "DTDesdeFiltro"
+        Me.DTDesdeFiltro.Size = New System.Drawing.Size(140, 23)
+        Me.DTDesdeFiltro.TabIndex = 0
         '
         'BVolver
         '
@@ -314,7 +330,7 @@ Partial Class MenuGerente
         Me.Label2.Location = New System.Drawing.Point(30, 119)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 19)
+        Me.Label2.Size = New System.Drawing.Size(43, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Hasta"
         '
@@ -326,7 +342,7 @@ Partial Class MenuGerente
         Me.Label1.Location = New System.Drawing.Point(30, 46)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 19)
+        Me.Label1.Size = New System.Drawing.Size(46, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Desde"
         '
@@ -366,7 +382,7 @@ Partial Class MenuGerente
         Me.Button2.Margin = New System.Windows.Forms.Padding(5)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Button2.Size = New System.Drawing.Size(249, 75)
+        Me.Button2.Size = New System.Drawing.Size(253, 75)
         Me.Button2.TabIndex = 30
         Me.Button2.Text = "Reportes de Vendedores"
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -386,7 +402,7 @@ Partial Class MenuGerente
         Me.Button1.Margin = New System.Windows.Forms.Padding(5)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(249, 75)
+        Me.Button1.Size = New System.Drawing.Size(253, 75)
         Me.Button1.TabIndex = 29
         Me.Button1.Text = "Productos Mas Vendidos"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -406,7 +422,7 @@ Partial Class MenuGerente
         Me.BReportesPorFecha.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesPorFecha.Name = "BReportesPorFecha"
         Me.BReportesPorFecha.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.BReportesPorFecha.Size = New System.Drawing.Size(249, 75)
+        Me.BReportesPorFecha.Size = New System.Drawing.Size(253, 75)
         Me.BReportesPorFecha.TabIndex = 27
         Me.BReportesPorFecha.Text = "Reportes por Fecha"
         Me.BReportesPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -426,7 +442,7 @@ Partial Class MenuGerente
         Me.BReporteVenta.Margin = New System.Windows.Forms.Padding(5)
         Me.BReporteVenta.Name = "BReporteVenta"
         Me.BReporteVenta.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.BReporteVenta.Size = New System.Drawing.Size(249, 75)
+        Me.BReporteVenta.Size = New System.Drawing.Size(253, 75)
         Me.BReporteVenta.TabIndex = 16
         Me.BReporteVenta.Text = "Reportes"
         Me.BReporteVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -446,7 +462,7 @@ Partial Class MenuGerente
         Me.BSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BSalir.Size = New System.Drawing.Size(249, 75)
+        Me.BSalir.Size = New System.Drawing.Size(253, 75)
         Me.BSalir.TabIndex = 14
         Me.BSalir.Text = "Cerrar Sesión"
         Me.BSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -465,25 +481,9 @@ Partial Class MenuGerente
         Me.PanelFormAdmnistrador.Size = New System.Drawing.Size(1130, 656)
         Me.PanelFormAdmnistrador.TabIndex = 24
         '
-        'DTDesdeFiltro
-        '
-        Me.DTDesdeFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTDesdeFiltro.Location = New System.Drawing.Point(90, 40)
-        Me.DTDesdeFiltro.Name = "DTDesdeFiltro"
-        Me.DTDesdeFiltro.Size = New System.Drawing.Size(140, 27)
-        Me.DTDesdeFiltro.TabIndex = 0
-        '
-        'DTHastaFiltro
-        '
-        Me.DTHastaFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTHastaFiltro.Location = New System.Drawing.Point(88, 113)
-        Me.DTHastaFiltro.Name = "DTHastaFiltro"
-        Me.DTHastaFiltro.Size = New System.Drawing.Size(140, 27)
-        Me.DTHastaFiltro.TabIndex = 25
-        '
         'MenuGerente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1400, 750)

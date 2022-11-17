@@ -7,42 +7,30 @@
         Me.Close()
     End Sub
     Private Sub Reportes30Dias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim diames
-        Dim dd As Integer
-        diames = Date.Today
-        dd = diames.day()
         DTHasta.Value = Date.Today
-        Dim fec As Date = Date.Today
-        Dim hasta As Date = CDate(DTHasta.Value)
-        Select Case Date.Today.DayOfWeek
-            Case 1
-                fec = Date.Today
-            Case 2
-                fec = fec.AddDays(-1)
-            Case = 3
-                fec = fec.AddDays(-2)
-            Case = 4
-                fec = fec.AddDays(-3)
-            Case = 5
-                fec = fec.AddDays(-4)
-        End Select
-        DTDesde.Value = fec
-        'Dim dt As Date = Date.Now
-        objDfactura.filtrarVentasAdminAll(fec, CDate(DTHasta.Value), dgvListaVentas)
+        DTDesde.Value = PrimerDiaDelMes(DTHasta.Value.Date)
+        MsgBox(DTDesde.Value.ToString & "a" & DTHasta.Value.Date)
+        Dim desde As Date = DTDesde.Value.Date
+        Dim hasta As Date = DTHasta.Value.Date
+        objDfactura.filtrarVentasAdminAll(desde, hasta, dgvListaVentas)
         If dgvListaVentas.Rows.Count > 0 Then
             For i = 0 To (dgvListaVentas.Rows().Count().ToString - 1)
                 total = total + dgvListaVentas.Rows(i).Cells(7).Value.ToString
-                cantidad = cantidad + dgvListaVentas.Rows(i).Cells(8).Value.ToString
             Next
         End If
-        For i = 0 To DateDiff(DateInterval.Day, fec, hasta)
-            hasta.AddDays(i - 5)
-            Dim d = DateDiff(DateInterval.Day, fec, hasta)
-            ventasfechas(hasta.AddDays(i - d), i + 1)
-        Next
+        ventasfechas(desde, 1)
         LTotal.Text = total
+
+        For i = 0 To DateTime.DaysInMonth(desde.Year, desde.Month) - 1
+
+            ventasfechas(desde.AddDays(i + 1), i + 1)
+        Next
         grafico()
     End Sub
+
+    Function PrimerDiaDelMes(ByVal dtmFecha As Date) As Date
+        PrimerDiaDelMes = DateSerial(Year(dtmFecha), Month(dtmFecha), 1)
+    End Function
 
     Private Sub grafico()
         Dim cantidadElementos As Integer = dgvVentasNetas.Rows.Count
@@ -59,7 +47,7 @@
         For i = 0 To cantidadElementos - 1
             fecha = dgvVentasNetas.Rows(i).Cells(1).Value.ToString()
             valorY = valorY + dgvVentasNetas.Rows(i).Cells(2).Value.ToString
-            ChartGrafico.Series(0).Points.AddXY(fecha, valorY)
+            ChartGrafico.Series(0).Points.AddXY(i + 1, valorY)
             valorY = 0
         Next
 
@@ -73,7 +61,7 @@
                 totalxfecha = totalxfecha + CDec(dgvListaVentas.Rows(i).Cells(7).Value.ToString)
             End If
         Next
-        dgvVentasNetas.Rows.Add(n, fecha, totalxfecha)
+        dgvVentasNetas.Rows.Add(n, fecha.ToShortDateString, totalxfecha)
         Return True
     End Function
 

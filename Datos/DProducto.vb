@@ -1,7 +1,6 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 Imports System.Windows.Media
-
 Public Class DProducto
     Dim ctx As WorldShoes_Roman_RiosEntities = New WorldShoes_Roman_RiosEntities
 
@@ -313,5 +312,21 @@ Public Class DProducto
         End Try
     End Function
 
+
+    Public Function topProductosVendidos(grid As DataGridView)
+        Try
+            'Dim listaProductos = (From p In ctx.Productos Where p.cod_producto.ToString.Contains(p_nombre) Or p.Categoria.descripcion_categoria.ToString.Contains(p_nombre) Or p.Marcas.Descripcion.ToString.Contains(p_nombre) Or p.nombre.ToString.Contains(p_nombre)
+            '                      Select Codigo = p.cod_producto,
+            '                                      Descripcion = p.nombre,
+            '                                      Categoria = p.Categoria.descripcion_categoria,
+            '                                      Precio = p.precio, Marca = p.Marcas.Descripcion
+            ''                                      ).ToList
+            'grid.DataSource = listaProductos
+            'grid.ClearSelection()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class
 

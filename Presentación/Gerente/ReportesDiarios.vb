@@ -1,4 +1,11 @@
-﻿Public Class ReportesDiarios
+﻿Imports System.Data.SqlClient
+Imports System.Data
+
+Public Class ReportesDiarios
+    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim cmd As SqlCommand
+    Dim dr As SqlDataReader
+
     Private objDfactura = New DFactura
     Dim total As Decimal = 0
     Dim cantidad As Integer = 0
@@ -9,7 +16,6 @@
         objDfactura.filtrarVentasAdminAll(CDate(DTDesde.Value), CDate(DTHasta.Value), dgvListaVentas)
         LTotal.Text = 0
         If dgvListaVentas.Rows.Count > 0 Then
-
             For i = 0 To (dgvListaVentas.Rows().Count().ToString - 1)
                 total = total + dgvListaVentas.Rows(i).Cells(7).Value.ToString
                 cantidad = cantidad + dgvListaVentas.Rows(i).Cells(8).Value.ToString
@@ -29,10 +35,7 @@
         Dim cantidadElementos As Integer = dgvListaVentas.Rows.Count
         Dim valorY As Decimal
         Dim fecha As Date = Date.Today
-        ChartGrafico.Titles.Clear()
-        ChartGrafico.Series.Clear()
         ChartGrafico.Series.Add("Ventas")
-        ChartGrafico.Titles.Add("Ventas Diarias")
         ChartGrafico.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Column
         ChartGrafico.ChartAreas(0).BackColor = Color.Azure
         'ChartGrafico.Series(0).IsValueShownAsLabel = True
