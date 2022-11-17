@@ -258,6 +258,12 @@
     <Compile Include="Presentación\SuperAdministrador\AñadirUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentación\SuperAdministrador\BackupDatabase.Designer.vb">
+      <DependentUpon>BackupDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\SuperAdministrador\BackupDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\SuperAdministrador\GestionarPerfiles.Designer.vb">
       <DependentUpon>GestionarPerfiles.vb</DependentUpon>
     </Compile>
@@ -601,6 +607,9 @@
     <EmbeddedResource Include="Presentación\SuperAdministrador\AñadirUsuarios.resx">
       <DependentUpon>AñadirUsuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentación\SuperAdministrador\BackupDatabase.resx">
+      <DependentUpon>BackupDatabase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentación\SuperAdministrador\GestionarPerfiles.resx">
       <DependentUpon>GestionarPerfiles.vb</DependentUpon>
     </EmbeddedResource>
@@ -914,6 +923,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-base-de-datos-50.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

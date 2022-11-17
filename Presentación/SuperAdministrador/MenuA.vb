@@ -102,6 +102,11 @@
 
 
     Private formActivoAdministrador As Form = Nothing
+
+    Private Sub BBasededatos_Click(sender As Object, e As EventArgs) Handles BBasededatos.Click
+        AbrirFormulariosAdministrador(New BackupDatabase)
+    End Sub
+
     Private Sub AbrirFormulariosAdministrador(formHijo As Form)
         If Not formActivoAdministrador IsNot Nothing Then
             PanelFormAdmnistrador.Controls.Clear()

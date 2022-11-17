@@ -23,6 +23,7 @@ Partial Class MenuA
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
+        Me.BBasededatos = New System.Windows.Forms.Button()
         Me.PanelSubMenuEmpleados = New System.Windows.Forms.Panel()
         Me.BGestionarEmpleados = New System.Windows.Forms.Button()
         Me.BNuevoEmpleado = New System.Windows.Forms.Button()
@@ -51,6 +52,7 @@ Partial Class MenuA
         '
         Me.PanelMenuLateral.AutoScroll = True
         Me.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelMenuLateral.Controls.Add(Me.BBasededatos)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuEmpleados)
         Me.PanelMenuLateral.Controls.Add(Me.BEmpleados)
         Me.PanelMenuLateral.Controls.Add(Me.BSalir)
@@ -61,8 +63,28 @@ Partial Class MenuA
         Me.PanelMenuLateral.Location = New System.Drawing.Point(0, 94)
         Me.PanelMenuLateral.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelMenuLateral.Name = "PanelMenuLateral"
-        Me.PanelMenuLateral.Size = New System.Drawing.Size(250, 656)
+        Me.PanelMenuLateral.Size = New System.Drawing.Size(250, 655)
         Me.PanelMenuLateral.TabIndex = 19
+        '
+        'BBasededatos
+        '
+        Me.BBasededatos.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.BBasededatos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BBasededatos.FlatAppearance.BorderSize = 0
+        Me.BBasededatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BBasededatos.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BBasededatos.ForeColor = System.Drawing.Color.White
+        Me.BBasededatos.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_base_de_datos_50
+        Me.BBasededatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BBasededatos.Location = New System.Drawing.Point(0, 490)
+        Me.BBasededatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.BBasededatos.Name = "BBasededatos"
+        Me.BBasededatos.Padding = New System.Windows.Forms.Padding(6, 0, 0, 0)
+        Me.BBasededatos.Size = New System.Drawing.Size(250, 60)
+        Me.BBasededatos.TabIndex = 17
+        Me.BBasededatos.Text = "Base de Datos"
+        Me.BBasededatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BBasededatos.UseVisualStyleBackColor = False
         '
         'PanelSubMenuEmpleados
         '
@@ -141,7 +163,7 @@ Partial Class MenuA
         Me.BSalir.ForeColor = System.Drawing.Color.White
         Me.BSalir.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_50
         Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(0, 596)
+        Me.BSalir.Location = New System.Drawing.Point(0, 595)
         Me.BSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Padding = New System.Windows.Forms.Padding(6, 0, 0, 0)
@@ -240,7 +262,7 @@ Partial Class MenuA
         Me.LIconMenuAdmin.Location = New System.Drawing.Point(40, 69)
         Me.LIconMenuAdmin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LIconMenuAdmin.Name = "LIconMenuAdmin"
-        Me.LIconMenuAdmin.Size = New System.Drawing.Size(198, 35)
+        Me.LIconMenuAdmin.Size = New System.Drawing.Size(158, 27)
         Me.LIconMenuAdmin.TabIndex = 0
         Me.LIconMenuAdmin.Text = "WorldShoes"
         Me.LIconMenuAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -256,7 +278,7 @@ Partial Class MenuA
         Me.PanelBarraMenuAdmin.Location = New System.Drawing.Point(0, 0)
         Me.PanelBarraMenuAdmin.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.PanelBarraMenuAdmin.Name = "PanelBarraMenuAdmin"
-        Me.PanelBarraMenuAdmin.Size = New System.Drawing.Size(1400, 94)
+        Me.PanelBarraMenuAdmin.Size = New System.Drawing.Size(1370, 94)
         Me.PanelBarraMenuAdmin.TabIndex = 21
         '
         'BMaximizarMenuGerente
@@ -266,7 +288,7 @@ Partial Class MenuA
         Me.BMaximizarMenuGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BMaximizarMenuGerente.FlatAppearance.BorderSize = 0
         Me.BMaximizarMenuGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BMaximizarMenuGerente.Location = New System.Drawing.Point(1295, 30)
+        Me.BMaximizarMenuGerente.Location = New System.Drawing.Point(1265, 30)
         Me.BMaximizarMenuGerente.Margin = New System.Windows.Forms.Padding(4)
         Me.BMaximizarMenuGerente.Name = "BMaximizarMenuGerente"
         Me.BMaximizarMenuGerente.Size = New System.Drawing.Size(41, 39)
@@ -280,7 +302,7 @@ Partial Class MenuA
         Me.BMinimizarMenuGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BMinimizarMenuGerente.FlatAppearance.BorderSize = 0
         Me.BMinimizarMenuGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BMinimizarMenuGerente.Location = New System.Drawing.Point(1246, 30)
+        Me.BMinimizarMenuGerente.Location = New System.Drawing.Point(1216, 30)
         Me.BMinimizarMenuGerente.Margin = New System.Windows.Forms.Padding(4)
         Me.BMinimizarMenuGerente.Name = "BMinimizarMenuGerente"
         Me.BMinimizarMenuGerente.Size = New System.Drawing.Size(41, 39)
@@ -294,7 +316,7 @@ Partial Class MenuA
         Me.BCerrarMenuGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BCerrarMenuGerente.FlatAppearance.BorderSize = 0
         Me.BCerrarMenuGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BCerrarMenuGerente.Location = New System.Drawing.Point(1344, 30)
+        Me.BCerrarMenuGerente.Location = New System.Drawing.Point(1314, 30)
         Me.BCerrarMenuGerente.Margin = New System.Windows.Forms.Padding(4)
         Me.BCerrarMenuGerente.Name = "BCerrarMenuGerente"
         Me.BCerrarMenuGerente.Size = New System.Drawing.Size(41, 39)
@@ -308,7 +330,7 @@ Partial Class MenuA
         Me.BRestaurarMenuGerente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BRestaurarMenuGerente.FlatAppearance.BorderSize = 0
         Me.BRestaurarMenuGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BRestaurarMenuGerente.Location = New System.Drawing.Point(1295, 30)
+        Me.BRestaurarMenuGerente.Location = New System.Drawing.Point(1265, 30)
         Me.BRestaurarMenuGerente.Margin = New System.Windows.Forms.Padding(4)
         Me.BRestaurarMenuGerente.Name = "BRestaurarMenuGerente"
         Me.BRestaurarMenuGerente.Size = New System.Drawing.Size(41, 39)
@@ -330,10 +352,10 @@ Partial Class MenuA
         '
         'MenuA
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1400, 750)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.PanelFormAdmnistrador)
         Me.Controls.Add(Me.PanelMenuLateral)
         Me.Controls.Add(Me.PanelBarraMenuAdmin)
@@ -371,4 +393,5 @@ Partial Class MenuA
     Friend WithEvents PanelSubMenuEmpleados As Panel
     Friend WithEvents BGestionarEmpleados As Button
     Friend WithEvents BNuevoEmpleado As Button
+    Friend WithEvents BBasededatos As Button
 End Class
