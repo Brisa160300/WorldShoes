@@ -85,7 +85,7 @@ Partial Class BackupDatabase
         Me.Panel2.Controls.Add(Me.BRestaurar)
         Me.Panel2.Controls.Add(Me.BCancelar)
         Me.Panel2.Controls.Add(Me.BResguardar)
-        Me.Panel2.Location = New System.Drawing.Point(138, 229)
+        Me.Panel2.Location = New System.Drawing.Point(142, 234)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(595, 176)
         Me.Panel2.TabIndex = 30
