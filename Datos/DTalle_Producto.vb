@@ -23,7 +23,7 @@ Public Class DTalle_Producto
         Try
             Dim TalleProdMod = (From t In ctx.talle_producto Where t.id_talle = idTalleProducto And t.cod_producto = cod
                                 Select t).First
-            TalleProdMod.cantidad_talle = stock
+            TalleProdMod.cantidad_talle = CInt(TalleProdMod.cantidad_talle) + stock
             ctx.SaveChanges()
             Return True
         Catch ex As Exception

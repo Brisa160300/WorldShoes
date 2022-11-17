@@ -47,7 +47,7 @@
             Dim cod_producto As Integer = TBCodProducto.Text
             Dim talleProducto As Integer = Int(CBTalle.SelectedValue)
             Dim cantidad As Integer = TBCantidadProducto.Text
-            ask = MsgBox("Esta seguro que desea añadir el talle y stock", vbYesNo + vbQuestion, "Confirmar operacion")
+            ask = MsgBox("Esta seguro de que desa confirmar la operacion", vbYesNo + vbQuestion, "Confirmar operacion")
             If ask = vbYes Then
                 If objNTalleProd.agregar_talle_producto(cod_producto, talleProducto, cantidad) Then
                     objDProducto.getProductosAll(dgvListarProductos)

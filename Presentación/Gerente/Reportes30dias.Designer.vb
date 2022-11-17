@@ -29,6 +29,7 @@ Partial Class Reportes30dias
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.PagPageVentasDiarias = New System.Windows.Forms.TabPage()
         Me.dgvListaVentas = New System.Windows.Forms.DataGridView()
@@ -39,12 +40,12 @@ Partial Class Reportes30dias
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgvVentasNetas = New System.Windows.Forms.DataGridView()
-        Me.ChartGrafico = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.LTotal = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ColumnaNumero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChartGrafico = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.LTotal = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl.SuspendLayout()
         Me.PagPageVentasDiarias.SuspendLayout()
         CType(Me.dgvListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +58,7 @@ Partial Class Reportes30dias
         Me.TabControl.Controls.Add(Me.PagPageVentasDiarias)
         Me.TabControl.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl.Location = New System.Drawing.Point(26, 331)
-        Me.TabControl.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
         Me.TabControl.Size = New System.Drawing.Size(796, 173)
@@ -67,9 +68,9 @@ Partial Class Reportes30dias
         '
         Me.PagPageVentasDiarias.Controls.Add(Me.dgvListaVentas)
         Me.PagPageVentasDiarias.Location = New System.Drawing.Point(4, 25)
-        Me.PagPageVentasDiarias.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PagPageVentasDiarias.Margin = New System.Windows.Forms.Padding(2)
         Me.PagPageVentasDiarias.Name = "PagPageVentasDiarias"
-        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(2)
         Me.PagPageVentasDiarias.Size = New System.Drawing.Size(788, 144)
         Me.PagPageVentasDiarias.TabIndex = 0
         Me.PagPageVentasDiarias.Text = "Detalle de Ventas"
@@ -134,7 +135,7 @@ Partial Class Reportes30dias
         Me.DTHasta.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTHasta.Location = New System.Drawing.Point(577, 84)
-        Me.DTHasta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DTHasta.Margin = New System.Windows.Forms.Padding(2)
         Me.DTHasta.Name = "DTHasta"
         Me.DTHasta.Size = New System.Drawing.Size(108, 25)
         Me.DTHasta.TabIndex = 81
@@ -157,7 +158,7 @@ Partial Class Reportes30dias
         Me.DTDesde.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTDesde.Location = New System.Drawing.Point(389, 84)
-        Me.DTDesde.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DTDesde.Margin = New System.Windows.Forms.Padding(2)
         Me.DTDesde.Name = "DTDesde"
         Me.DTDesde.Size = New System.Drawing.Size(105, 25)
         Me.DTDesde.TabIndex = 79
@@ -205,7 +206,7 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaNumero, Me.Column6, Me.Column7})
         Me.dgvVentasNetas.EnableHeadersVisualStyles = False
         Me.dgvVentasNetas.Location = New System.Drawing.Point(539, 137)
-        Me.dgvVentasNetas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvVentasNetas.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvVentasNetas.Name = "dgvVentasNetas"
         Me.dgvVentasNetas.ReadOnly = True
         Me.dgvVentasNetas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -221,44 +222,6 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.RowTemplate.Height = 24
         Me.dgvVentasNetas.Size = New System.Drawing.Size(280, 129)
         Me.dgvVentasNetas.TabIndex = 77
-        '
-        'ChartGrafico
-        '
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartGrafico.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartGrafico.Legends.Add(Legend1)
-        Me.ChartGrafico.Location = New System.Drawing.Point(26, 126)
-        Me.ChartGrafico.Name = "ChartGrafico"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Ventas Netas Diarias"
-        Series1.XValueMember = "65"
-        Series1.YValueMembers = "0"
-        Me.ChartGrafico.Series.Add(Series1)
-        Me.ChartGrafico.Size = New System.Drawing.Size(464, 184)
-        Me.ChartGrafico.TabIndex = 76
-        '
-        'LTotal
-        '
-        Me.LTotal.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
-        Me.LTotal.ForeColor = System.Drawing.SystemColors.Window
-        Me.LTotal.Location = New System.Drawing.Point(715, 291)
-        Me.LTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LTotal.Name = "LTotal"
-        Me.LTotal.Size = New System.Drawing.Size(102, 37)
-        Me.LTotal.TabIndex = 103
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(534, 292)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 37)
-        Me.Label1.TabIndex = 102
-        Me.Label1.Text = "Ventas Netas: $"
         '
         'ColumnaNumero
         '
@@ -283,6 +246,52 @@ Partial Class Reportes30dias
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        '
+        'ChartGrafico
+        '
+        ChartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartGrafico.ChartAreas.Add(ChartArea1)
+        Legend1.Font = New System.Drawing.Font("Britannic Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend1.IsTextAutoFit = False
+        Legend1.Name = "Legend1"
+        Me.ChartGrafico.Legends.Add(Legend1)
+        Me.ChartGrafico.Location = New System.Drawing.Point(26, 126)
+        Me.ChartGrafico.Name = "ChartGrafico"
+        Me.ChartGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Ventas Netas Diarias"
+        Series1.XValueMember = "65"
+        Series1.YValueMembers = "0"
+        Me.ChartGrafico.Series.Add(Series1)
+        Me.ChartGrafico.Size = New System.Drawing.Size(464, 184)
+        Me.ChartGrafico.TabIndex = 76
+        Title1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Title1.Name = "Title1"
+        Title1.Text = "Ventas Mensuales"
+        Me.ChartGrafico.Titles.Add(Title1)
+        '
+        'LTotal
+        '
+        Me.LTotal.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
+        Me.LTotal.ForeColor = System.Drawing.SystemColors.Window
+        Me.LTotal.Location = New System.Drawing.Point(715, 291)
+        Me.LTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LTotal.Name = "LTotal"
+        Me.LTotal.Size = New System.Drawing.Size(102, 37)
+        Me.LTotal.TabIndex = 103
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label1.Location = New System.Drawing.Point(534, 292)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 37)
+        Me.Label1.TabIndex = 102
+        Me.Label1.Text = "Ventas Netas: $"
         '
         'Reportes30dias
         '

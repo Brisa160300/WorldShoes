@@ -83,7 +83,7 @@ Public Class NFactura
         Dim vent As DFactura = New DFactura
         grid.DataSource = vent.getVentasAll()
         grid.Columns(0).HeaderText = "N° Factura"
-        grid.Columns(1).HeaderText = "ID Vendedor"
+        grid.Columns(1).Visible = False
         grid.Columns(2).HeaderText = "Nombre Vendedor"
         grid.Columns(3).HeaderText = "Apellido Vendedor"
         grid.Columns(4).HeaderText = "Nombre Cliente"

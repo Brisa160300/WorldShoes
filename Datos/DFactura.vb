@@ -66,6 +66,7 @@
             For Each valor In listaVentas
                 Dim item = New EVentaAdmin
                 item.Id_vendedor = valor.id_usuario
+                item.Id_factura = valor.id_factura
                 item.Nombre_vendedor_ = valor.Usuarios.Nombre
                 item.Apellido_vendedor_ = valor.Usuarios.empleados.apellido
                 item.Id_factura = valor.id_factura
@@ -78,7 +79,7 @@
             Next
             grid.DataSource = lista
             grid.Columns(0).HeaderText = "N° Factura"
-            grid.Columns(1).HeaderText = "ID vendedor"
+            grid.Columns(1).Visible = False
             grid.Columns(2).HeaderText = "Nombre Vendedor"
             grid.Columns(3).HeaderText = "Apellido Vendedor"
             grid.Columns(4).HeaderText = "Nombre Cliente"
@@ -183,6 +184,7 @@
             For Each valor In listaVentas
                 Dim item = New EVentaAdmin
                 item.Id_vendedor = valor.id_usuario
+                item.Id_factura = valor.id_factura
                 item.Nombre_vendedor_ = valor.Usuarios.Nombre
                 item.Apellido_vendedor_ = valor.Usuarios.empleados.apellido
                 item.Id_factura = valor.id_factura
@@ -195,7 +197,7 @@
             Next
             grid.DataSource = lista
             grid.Columns(0).HeaderText = "N° Factura"
-            grid.Columns(1).HeaderText = "ID vendedor"
+            grid.Columns(1).Visible = False
             grid.Columns(2).HeaderText = "Nombre Vendedor"
             grid.Columns(3).HeaderText = "Apellido Vendedor"
             grid.Columns(4).HeaderText = "Nombre Cliente"
