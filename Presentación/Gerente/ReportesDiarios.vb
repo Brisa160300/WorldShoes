@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class ReportesDiarios
-    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
     Dim cmd As SqlCommand
     Dim dr As SqlDataReader
 

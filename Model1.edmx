@@ -243,7 +243,24 @@
         <Function Name="VentasDiarias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="fechaHoy" Type="date" Mode="In" />
         </Function>
+        <Function Name="VentasFiltradas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="desde" Type="date" Mode="In" />
+          <Parameter Name="hasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="VentasNetas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="desde" Type="date" Mode="In" />
+          <Parameter Name="hasta" Type="date" Mode="In" />
+        </Function>
         <Function Name="VentasPorCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VentasPorCategoriaFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fdesde" Type="date" Mode="In" />
+          <Parameter Name="fhasta" Type="date" Mode="In" />
+        </Function>
+        <Function Name="VentasPorMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VentasPorMarcaFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fdesde" Type="date" Mode="In" />
+          <Parameter Name="fhasta" Type="date" Mode="In" />
+        </Function>
         <Function Name="VentasPorVendedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="VentasPorVendedorFiltradoPorFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="min" Type="date" Mode="In" />
@@ -617,7 +634,24 @@
           <FunctionImport Name="VentasDiarias" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasDiarias_Result)">
             <Parameter Name="fechaHoy" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="VentasFiltradas" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasFiltradas_Result)">
+            <Parameter Name="desde" Mode="In" Type="DateTime" />
+            <Parameter Name="hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="VentasNetas" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasNetas_Result)">
+            <Parameter Name="desde" Mode="In" Type="DateTime" />
+            <Parameter Name="hasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="VentasPorCategoria" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorCategoria_Result)" />
+          <FunctionImport Name="VentasPorCategoriaFecha" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorCategoriaFecha_Result)">
+            <Parameter Name="fdesde" Mode="In" Type="DateTime" />
+            <Parameter Name="fhasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="VentasPorMarca" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorMarca_Result)" />
+          <FunctionImport Name="VentasPorMarcaFecha" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorMarcaFecha_Result)">
+            <Parameter Name="fdesde" Mode="In" Type="DateTime" />
+            <Parameter Name="fhasta" Mode="In" Type="DateTime" />
+          </FunctionImport>
           <FunctionImport Name="VentasPorVendedor" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorVendedor_Result)" />
           <FunctionImport Name="VentasPorVendedorFiltradoPorFecha" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorVendedorFiltradoPorFecha_Result)">
             <Parameter Name="min" Mode="In" Type="DateTime" />
@@ -650,9 +684,38 @@
           <Property Type="Int16" Name="Cantidad" Nullable="false" />
           <Property Type="String" Name="Total" Nullable="false" MaxLength="42" />
         </ComplexType>
+        <ComplexType Name="VentasFiltradas_Result">
+          <Property Type="Int32" Name="N__Factura" Nullable="false" />
+          <Property Type="String" Name="Vendedor" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="Decimal" Name="Total" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Int16" Name="Cantidad" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="VentasNetas_Result">
+          <Property Type="Int64" Name="N_" Nullable="true" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="Decimal" Name="Ventas_Netas" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
         <ComplexType Name="VentasPorCategoria_Result">
           <Property Type="String" Name="Categoria" Nullable="false" MaxLength="100" />
           <Property Type="Int32" Name="Unidades_Vendidas" Nullable="true" />
+          <Property Type="Decimal" Name="Monto_Ganado" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="VentasPorCategoriaFecha_Result">
+          <Property Type="String" Name="Categoria" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Unidades_Vendidas" Nullable="true" />
+          <Property Type="Decimal" Name="Monto_Ganado" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="VentasPorMarca_Result">
+          <Property Type="String" Name="Marca" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Unidades_Vendidas" Nullable="true" />
+          <Property Type="Decimal" Name="Monto_Ganado" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="VentasPorMarcaFecha_Result">
+          <Property Type="String" Name="Marca" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Unidades_Vendidas" Nullable="true" />
+          <Property Type="Decimal" Name="Monto_Ganado" Nullable="true" Precision="38" Scale="2" />
         </ComplexType>
         <ComplexType Name="VentasPorVendedor_Result">
           <Property Type="String" Name="Vendedor" Nullable="false" MaxLength="101" />
@@ -838,11 +901,60 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasFiltradas" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasFiltradas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasFiltradas_Result">
+                <ScalarProperty Name="N__Factura" ColumnName="N° Factura" />
+                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasNetas" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasNetas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasNetas_Result">
+                <ScalarProperty Name="N_" ColumnName="N°" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Ventas_Netas" ColumnName="Ventas Netas" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="VentasPorCategoria" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorCategoria">
             <ResultMapping>
               <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorCategoria_Result">
                 <ScalarProperty Name="Categoria" ColumnName="Categoria" />
                 <ScalarProperty Name="Unidades_Vendidas" ColumnName="Unidades Vendidas" />
+                <ScalarProperty Name="Monto_Ganado" ColumnName="Monto Ganado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorCategoriaFecha" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorCategoriaFecha">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorCategoriaFecha_Result">
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Unidades_Vendidas" ColumnName="Unidades Vendidas" />
+                <ScalarProperty Name="Monto_Ganado" ColumnName="Monto Ganado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorMarca" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorMarca">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorMarca_Result">
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Unidades_Vendidas" ColumnName="Unidades Vendidas" />
+                <ScalarProperty Name="Monto_Ganado" ColumnName="Monto Ganado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorMarcaFecha" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorMarcaFecha">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorMarcaFecha_Result">
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Unidades_Vendidas" ColumnName="Unidades Vendidas" />
+                <ScalarProperty Name="Monto_Ganado" ColumnName="Monto Ganado" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

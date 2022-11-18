@@ -1,0 +1,15 @@
+Perfil Vendedor
+Usuario: Brisa
+Contraseña: 12345678
+
+Perfil Gerente
+Usuario: Gabriel
+Contraseña: 12345678
+
+Perfil SuperAdministrador
+Usuario: Diana
+Contraseña: 12345678
+
+Perfil Administrador
+Usuario: Maria
+Contraseña: 12345678

@@ -22,22 +22,22 @@ Partial Class Factura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Factura))
         Me.LCantidad = New System.Windows.Forms.Label()
         Me.TBTotalVenta = New System.Windows.Forms.TextBox()
         Me.LTotalVenta = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TBCantidad = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DTFECHA = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TBFactura = New System.Windows.Forms.TextBox()
+        Me.TBVendedor = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvVentas = New System.Windows.Forms.DataGridView()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,15 +45,15 @@ Partial Class Factura
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TBCliente = New System.Windows.Forms.TextBox()
+        Me.TBDireccion = New System.Windows.Forms.TextBox()
+        Me.TBTelefono = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BImprimir = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,16 +95,16 @@ Partial Class Factura
         Me.LTotalVenta.TabIndex = 68
         Me.LTotalVenta.Text = "Total:"
         '
-        'TextBox1
+        'TBCantidad
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(687, 537)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 30)
-        Me.TextBox1.TabIndex = 70
+        Me.TBCantidad.BackColor = System.Drawing.SystemColors.Window
+        Me.TBCantidad.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
+        Me.TBCantidad.Location = New System.Drawing.Point(687, 537)
+        Me.TBCantidad.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBCantidad.Name = "TBCantidad"
+        Me.TBCantidad.ReadOnly = True
+        Me.TBCantidad.Size = New System.Drawing.Size(100, 30)
+        Me.TBCantidad.TabIndex = 70
         '
         'Label1
         '
@@ -147,15 +147,15 @@ Partial Class Factura
         Me.Label4.TabIndex = 87
         Me.Label4.Text = "Direccion"
         '
-        'DateTimePicker2
+        'DTFECHA
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(358, 189)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(116, 26)
-        Me.DateTimePicker2.TabIndex = 89
+        Me.DTFECHA.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.DTFECHA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTFECHA.Location = New System.Drawing.Point(358, 189)
+        Me.DTFECHA.Margin = New System.Windows.Forms.Padding(4)
+        Me.DTFECHA.Name = "DTFECHA"
+        Me.DTFECHA.Size = New System.Drawing.Size(116, 26)
+        Me.DTFECHA.TabIndex = 89
         '
         'Label5
         '
@@ -183,28 +183,28 @@ Partial Class Factura
         Me.Label6.TabIndex = 90
         Me.Label6.Text = "N° Factura:"
         '
-        'TextBox2
+        'TBFactura
         '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox2.CausesValidation = False
-        Me.TextBox2.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(36, 189)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(116, 26)
-        Me.TextBox2.TabIndex = 91
+        Me.TBFactura.BackColor = System.Drawing.SystemColors.Window
+        Me.TBFactura.CausesValidation = False
+        Me.TBFactura.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBFactura.Location = New System.Drawing.Point(36, 189)
+        Me.TBFactura.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBFactura.Name = "TBFactura"
+        Me.TBFactura.ReadOnly = True
+        Me.TBFactura.Size = New System.Drawing.Size(116, 26)
+        Me.TBFactura.TabIndex = 91
         '
-        'TextBox3
+        'TBVendedor
         '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox3.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(358, 253)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(116, 26)
-        Me.TextBox3.TabIndex = 92
+        Me.TBVendedor.BackColor = System.Drawing.SystemColors.Window
+        Me.TBVendedor.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBVendedor.Location = New System.Drawing.Point(358, 253)
+        Me.TBVendedor.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBVendedor.Name = "TBVendedor"
+        Me.TBVendedor.ReadOnly = True
+        Me.TBVendedor.Size = New System.Drawing.Size(116, 26)
+        Me.TBVendedor.TabIndex = 92
         '
         'Label7
         '
@@ -219,32 +219,32 @@ Partial Class Factura
         Me.Label7.TabIndex = 93
         Me.Label7.Text = "Vendedor:"
         '
-        'DataGridView1
+        'dgvVentas
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
-        Me.DataGridView1.EnableHeadersVisualStyles = False
-        Me.DataGridView1.Location = New System.Drawing.Point(36, 334)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(750, 178)
-        Me.DataGridView1.TabIndex = 94
+        Me.dgvVentas.AllowUserToAddRows = False
+        Me.dgvVentas.AllowUserToDeleteRows = False
+        Me.dgvVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
+        Me.dgvVentas.EnableHeadersVisualStyles = False
+        Me.dgvVentas.Location = New System.Drawing.Point(36, 334)
+        Me.dgvVentas.Name = "dgvVentas"
+        Me.dgvVentas.ReadOnly = True
+        Me.dgvVentas.RowHeadersVisible = False
+        Me.dgvVentas.RowHeadersWidth = 51
+        Me.dgvVentas.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvVentas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvVentas.RowTemplate.Height = 24
+        Me.dgvVentas.Size = New System.Drawing.Size(750, 178)
+        Me.dgvVentas.TabIndex = 94
         '
         'Column7
         '
@@ -299,38 +299,38 @@ Partial Class Factura
         Me.PictureBox1.TabIndex = 95
         Me.PictureBox1.TabStop = False
         '
-        'TextBox4
+        'TBCliente
         '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox4.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(192, 189)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(116, 26)
-        Me.TextBox4.TabIndex = 96
+        Me.TBCliente.BackColor = System.Drawing.SystemColors.Window
+        Me.TBCliente.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBCliente.Location = New System.Drawing.Point(192, 189)
+        Me.TBCliente.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBCliente.Name = "TBCliente"
+        Me.TBCliente.ReadOnly = True
+        Me.TBCliente.Size = New System.Drawing.Size(116, 26)
+        Me.TBCliente.TabIndex = 96
         '
-        'TextBox5
+        'TBDireccion
         '
-        Me.TextBox5.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox5.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(36, 253)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(116, 26)
-        Me.TextBox5.TabIndex = 97
+        Me.TBDireccion.BackColor = System.Drawing.SystemColors.Window
+        Me.TBDireccion.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBDireccion.Location = New System.Drawing.Point(36, 253)
+        Me.TBDireccion.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBDireccion.Name = "TBDireccion"
+        Me.TBDireccion.ReadOnly = True
+        Me.TBDireccion.Size = New System.Drawing.Size(116, 26)
+        Me.TBDireccion.TabIndex = 97
         '
-        'TextBox6
+        'TBTelefono
         '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox6.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(192, 253)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(116, 26)
-        Me.TextBox6.TabIndex = 99
+        Me.TBTelefono.BackColor = System.Drawing.SystemColors.Window
+        Me.TBTelefono.Font = New System.Drawing.Font("Britannic Bold", 10.0!)
+        Me.TBTelefono.Location = New System.Drawing.Point(192, 253)
+        Me.TBTelefono.Margin = New System.Windows.Forms.Padding(5)
+        Me.TBTelefono.Name = "TBTelefono"
+        Me.TBTelefono.ReadOnly = True
+        Me.TBTelefono.Size = New System.Drawing.Size(116, 26)
+        Me.TBTelefono.TabIndex = 99
         '
         'Label2
         '
@@ -362,9 +362,6 @@ Partial Class Factura
         Me.BImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BImprimir.UseVisualStyleBackColor = False
         '
-        'PrintDocument1
-        '
-        '
         'PrintDialog1
         '
         Me.PrintDialog1.UseEXDialog = True
@@ -385,28 +382,28 @@ Partial Class Factura
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 766)
         Me.Controls.Add(Me.BImprimir)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TBTelefono)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TBDireccion)
+        Me.Controls.Add(Me.TBCliente)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.dgvVentas)
+        Me.Controls.Add(Me.TBVendedor)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.TBFactura)
+        Me.Controls.Add(Me.DTFECHA)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TBCantidad)
         Me.Controls.Add(Me.TBTotalVenta)
         Me.Controls.Add(Me.LTotalVenta)
         Me.Controls.Add(Me.LCantidad)
         Me.Name = "Factura"
         Me.Text = "Factura"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -415,17 +412,17 @@ Partial Class Factura
     Friend WithEvents LCantidad As Label
     Friend WithEvents TBTotalVenta As TextBox
     Friend WithEvents LTotalVenta As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TBCantidad As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DTFECHA As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TBFactura As TextBox
+    Friend WithEvents TBVendedor As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvVentas As DataGridView
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
@@ -433,9 +430,9 @@ Partial Class Factura
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TBCliente As TextBox
+    Friend WithEvents TBDireccion As TextBox
+    Friend WithEvents TBTelefono As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents BImprimir As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument

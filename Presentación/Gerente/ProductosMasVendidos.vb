@@ -5,7 +5,7 @@ Imports System.Collections
 
 Public Class ProductosMasVendidos
     Dim objDProductos = New DProducto
-    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
     Dim cmd As SqlCommand
     Dim dr As SqlDataReader
 
@@ -52,4 +52,5 @@ Public Class ProductosMasVendidos
         cargarGridVentas()
         'objDProductos.DetalleProductosAdmin(dgvVentasProductos)
     End Sub
+
 End Class

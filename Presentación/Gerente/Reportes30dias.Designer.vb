@@ -98,7 +98,7 @@ Partial Class Reportes30dias
         Me.dgvListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaVentas.EnableHeadersVisualStyles = False
         Me.dgvListaVentas.Location = New System.Drawing.Point(3, 2)
-        Me.dgvListaVentas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvListaVentas.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvListaVentas.Name = "dgvListaVentas"
         Me.dgvListaVentas.ReadOnly = True
         Me.dgvListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -123,7 +123,7 @@ Partial Class Reportes30dias
         Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(1116, 501)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 52)
         Me.Button1.TabIndex = 82
@@ -204,7 +204,7 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVentasNetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaNumero, Me.Column6, Me.Column7})
         Me.dgvVentasNetas.EnableHeadersVisualStyles = False
-        Me.dgvVentasNetas.Location = New System.Drawing.Point(719, 169)
+        Me.dgvVentasNetas.Location = New System.Drawing.Point(704, 169)
         Me.dgvVentasNetas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVentasNetas.Name = "dgvVentasNetas"
         Me.dgvVentasNetas.ReadOnly = True
@@ -219,7 +219,7 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvVentasNetas.RowHeadersWidth = 51
         Me.dgvVentasNetas.RowTemplate.Height = 24
-        Me.dgvVentasNetas.Size = New System.Drawing.Size(373, 159)
+        Me.dgvVentasNetas.Size = New System.Drawing.Size(388, 159)
         Me.dgvVentasNetas.TabIndex = 77
         '
         'ColumnaNumero
@@ -257,7 +257,7 @@ Partial Class Reportes30dias
         Legend1.Name = "Legend1"
         Me.ChartGrafico.Legends.Add(Legend1)
         Me.ChartGrafico.Location = New System.Drawing.Point(35, 155)
-        Me.ChartGrafico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ChartGrafico.Margin = New System.Windows.Forms.Padding(4)
         Me.ChartGrafico.Name = "ChartGrafico"
         Me.ChartGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
         Series1.ChartArea = "ChartArea1"
@@ -310,7 +310,7 @@ Partial Class Reportes30dias
         Me.Controls.Add(Me.dgvVentasNetas)
         Me.Controls.Add(Me.ChartGrafico)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Reportes30dias"
         Me.Text = "Reportes30dias"
         Me.TabControl.ResumeLayout(False)

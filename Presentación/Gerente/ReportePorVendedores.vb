@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Collections
 Public Class ReportePorVendedores
 
-    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
     Dim cmd As SqlCommand
     Dim dr As SqlDataReader
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -40,10 +40,10 @@ Public Class ReportePorVendedores
 
 
     Private Sub cargarGridVentasPorFechas(desde As Date, hasta As Date)
-        cmd = New SqlCommand("VentasPorVendedorFiltradoPorFecha2", conexion)
+        cmd = New SqlCommand("VentasPorVendedorFiltradoPorFecha3", conexion)
         cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@min", desde)
-        cmd.Parameters.AddWithValue("@max", hasta)
+        cmd.Parameters.AddWithValue("@fdesde", desde)
+        cmd.Parameters.AddWithValue("@fhasta", hasta)
         conexion.open()
         cmd.ExecuteNonQuery()
         dr = cmd.ExecuteReader()
@@ -80,7 +80,8 @@ Public Class ReportePorVendedores
             cargarGridVentasPorFechas(fecDesde, fecHasta)
         End If
         If elec = 2 Then
-            cargarGridVentasPorFechas(fecDesde, fecHasta.AddDays(1))
+            fecDesde = PrimerDiaDelMes(fecHasta.AddMonths(-2))
+            cargarGridVentasPorFechas(fecDesde, fecHasta)
         End If
     End Sub
 

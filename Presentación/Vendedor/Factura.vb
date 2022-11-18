@@ -11,26 +11,11 @@ Public Class Factura
     End Sub
 
     Private Sub BImprimri_Click(sender As Object, e As EventArgs) Handles BImprimir.Click
-        printline = 0
-        contador = 0
-
-        PrintDialog1.Document = PrintDocument1
-        BImprimir.Visible = False
-
-
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.WindowState = FormWindowState.Maximized
-        PrintPreviewDialog1.ShowDialog()
-
+        Dim fac As datos_factura = New datos_factura
+        fac.Id_factura = 1
+        fac.Cliente = TBCliente.Text
+        Dim pdf As Procesar_PDF = New Procesar_PDF
+        pdf.crearPDF(fac, dgvVentas)
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        Dim titulo As New Font("Britannic", 22)
-        Dim subtitulo As New Font("Arial", 16)
-        Dim negrita As New Font("Arial", 9, FontStyle.Bold)
-        Dim detalles As New Font("Arial", 22)
-        e.Graphics.DrawString(AñadirVentas.LTituloVentas.Text, titulo, Brushes.Black, AñadirVentas.LTituloVentas.Left, AñadirVentas.Top)
-        e.Graphics.DrawString(AñadirVentas.LNombreCli.Text, subtitulo, Brushes.Black, AñadirVentas.LNombreCli.Left, AñadirVentas.Top)
-
-    End Sub
 End Class

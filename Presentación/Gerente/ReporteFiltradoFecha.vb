@@ -6,14 +6,14 @@ Public Class ReporteFiltradoFecha
     Dim total As Decimal = 0
     Dim cantidad As Integer = 0
 
-    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
     Dim cmd As SqlCommand
     Dim dr As SqlDataReader
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
     Private Sub ReportesFiltradoFecha_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim desde As Date = DTDesde.Value.Date
+        Dim desde As Date = "31/10/2022"
         Dim hasta As Date = DTHasta.Value.Date
         If cargarGridVentas(desde, hasta) Then
             totalRecaudada()
@@ -92,7 +92,7 @@ Public Class ReporteFiltradoFecha
             fecha = dgvVentasNetas.Rows(i).Cells(1).Value.ToString()
             f = fecha.ToShortDateString
             valorY = valorY + dgvVentasNetas.Rows(i).Cells(2).Value.ToString
-            ChartGrafico.Series(0).Points.AddXY(f, valorY)
+            ChartGrafico.Series(0).Points.AddXY(i + 1, valorY)
             valorY = 0
         Next
 

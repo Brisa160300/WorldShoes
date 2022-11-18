@@ -21,6 +21,10 @@
                 fec = fec.AddDays(-3)
             Case = 5
                 fec = fec.AddDays(-4)
+            Case = 6
+                fec = fec.AddDays(-5)
+            Case 7
+                fec = fec.AddDays(-6)
         End Select
         DTDesde.Value = fec
         'Dim dt As Date = Date.Now

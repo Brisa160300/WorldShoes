@@ -18,12 +18,10 @@
             Next
         End If
         LTotal.Text = total
-        Dim ii = 1
-        While ii <= DateDiff(DateInterval.Day, desde, hasta)
-
-            ventasfechas(desde.AddDays(ii -1), ii)
-            ii = ii + 1
-        End While
+        Dim ii
+        For ii = 1 To DateDiff(DateInterval.Day, desde, hasta) + 1
+            ventasfechas(desde.AddDays(ii - 1), ii)
+        Next
         grafico()
     End Sub
 

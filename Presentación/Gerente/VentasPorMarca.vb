@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
     Imports System.Collections
 Public Class VentasPorMarca
 
-    Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+    Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
     Dim cmd As SqlCommand
     Dim dr As SqlDataReader
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

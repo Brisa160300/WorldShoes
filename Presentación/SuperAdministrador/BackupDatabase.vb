@@ -2,17 +2,16 @@
 Public Class BackupDatabase
     Private Sub BResguardar_Click(sender As Object, e As EventArgs) Handles BResguardar.Click
         Dim AnswerYes As String
-
-        AnswerYes = MsgBox("Seguro desea realizar el backup?", vbCritical + vbYesNo, "BACKUP")
+        Dim fechaHoy As String = Date.Today.ToString
+        AnswerYes = MsgBox("Seguro desea realizar el backup?", vbQuestion + vbYesNo, "BACKUP")
 
         If AnswerYes = vbYes Then
             Dim sfd As New SaveFileDialog() With {
             .Filter = "Backup File | *.bak",
             .FileName = ""
             }
-
             If sfd.ShowDialog = DialogResult.OK Then
-                Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+                Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
                 Using conexion
                     conexion.Open()
                     Cursor = Cursors.WaitCursor
@@ -27,7 +26,7 @@ Public Class BackupDatabase
         ElseIf AnswerYes = vbNo Then
             Me.Close()
         Else
-            MsgBox("No se ha podido realizar el backup de la base de datos", vbCritical + vbYesNo, "BACKUP")
+            MsgBox("No se ha podido realizar el backup de la base de datos", vbQuestion + vbYesNo, "BACKUP")
         End If
 
     End Sub
@@ -41,7 +40,7 @@ Public Class BackupDatabase
             .FileName = ""
         }
         If ofd.ShowDialog = DialogResult.OK Then
-            Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
+            Dim conexion = New SqlConnection("server=.\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
             Using conexion
                 conexion.Open()
                 Cursor = Cursors.WaitCursor

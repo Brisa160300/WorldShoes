@@ -10,9 +10,12 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class VentasPorCategoria_Result
-    Public Property Categoria As String
-    Public Property Unidades_Vendidas As Nullable(Of Integer)
-    Public Property Monto_Ganado As Nullable(Of Decimal)
+Partial Public Class VentasFiltradas_Result
+    Public Property N__Factura As Integer
+    Public Property Vendedor As String
+    Public Property Column1 As String
+    Public Property Fecha As Nullable(Of Date)
+    Public Property Total As Decimal
+    Public Property Cantidad As Short
 
 End Class

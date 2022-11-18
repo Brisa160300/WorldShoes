@@ -177,7 +177,7 @@ Partial Class ReporteFiltradoFecha
         Me.DTDesde.Name = "DTDesde"
         Me.DTDesde.Size = New System.Drawing.Size(139, 30)
         Me.DTDesde.TabIndex = 108
-        Me.DTDesde.Value = New Date(2022, 11, 18, 0, 0, 0, 0)
+        Me.DTDesde.Value = New Date(2022, 10, 31, 0, 0, 0, 0)
         '
         'Label3
         '
@@ -197,7 +197,7 @@ Partial Class ReporteFiltradoFecha
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(305, 46)
         Me.Label6.TabIndex = 104
-        Me.Label6.Text = "Reportes Por Fecha"
+        Me.Label6.Text = "Reportes Historicos"
         '
         'dgvVentasNetas
         '
@@ -239,7 +239,6 @@ Partial Class ReporteFiltradoFecha
         'ChartGrafico
         '
         ChartArea1.AxisX.Crossing = -1.7976931348623157E+308R
-        ChartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days
         ChartArea1.AxisX.MajorGrid.Enabled = False
         ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Microsoft Sans Serif", 4.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartArea1.Name = "ChartArea1"
@@ -256,7 +255,6 @@ Partial Class ReporteFiltradoFecha
         Series1.Legend = "Legend1"
         Series1.Name = "Ventas Netas Diarias"
         Series1.XValueMember = "65"
-        Series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Date]
         Series1.YValueMembers = "0"
         Series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Double]
         Me.ChartGrafico.Series.Add(Series1)

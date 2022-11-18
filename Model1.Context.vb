@@ -58,8 +58,44 @@ Partial Public Class WorldShoes_Roman_RiosEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasDiarias_Result)("VentasDiarias", fechaHoyParameter)
     End Function
 
+    Public Overridable Function VentasFiltradas(desde As Nullable(Of Date), hasta As Nullable(Of Date)) As ObjectResult(Of VentasFiltradas_Result)
+        Dim desdeParameter As ObjectParameter = If(desde.HasValue, New ObjectParameter("desde", desde), New ObjectParameter("desde", GetType(Date)))
+
+        Dim hastaParameter As ObjectParameter = If(hasta.HasValue, New ObjectParameter("hasta", hasta), New ObjectParameter("hasta", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasFiltradas_Result)("VentasFiltradas", desdeParameter, hastaParameter)
+    End Function
+
+    Public Overridable Function VentasNetas(desde As Nullable(Of Date), hasta As Nullable(Of Date)) As ObjectResult(Of VentasNetas_Result)
+        Dim desdeParameter As ObjectParameter = If(desde.HasValue, New ObjectParameter("desde", desde), New ObjectParameter("desde", GetType(Date)))
+
+        Dim hastaParameter As ObjectParameter = If(hasta.HasValue, New ObjectParameter("hasta", hasta), New ObjectParameter("hasta", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasNetas_Result)("VentasNetas", desdeParameter, hastaParameter)
+    End Function
+
     Public Overridable Function VentasPorCategoria() As ObjectResult(Of VentasPorCategoria_Result)
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorCategoria_Result)("VentasPorCategoria")
+    End Function
+
+    Public Overridable Function VentasPorCategoriaFecha(fdesde As Nullable(Of Date), fhasta As Nullable(Of Date)) As ObjectResult(Of VentasPorCategoriaFecha_Result)
+        Dim fdesdeParameter As ObjectParameter = If(fdesde.HasValue, New ObjectParameter("fdesde", fdesde), New ObjectParameter("fdesde", GetType(Date)))
+
+        Dim fhastaParameter As ObjectParameter = If(fhasta.HasValue, New ObjectParameter("fhasta", fhasta), New ObjectParameter("fhasta", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorCategoriaFecha_Result)("VentasPorCategoriaFecha", fdesdeParameter, fhastaParameter)
+    End Function
+
+    Public Overridable Function VentasPorMarca() As ObjectResult(Of VentasPorMarca_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorMarca_Result)("VentasPorMarca")
+    End Function
+
+    Public Overridable Function VentasPorMarcaFecha(fdesde As Nullable(Of Date), fhasta As Nullable(Of Date)) As ObjectResult(Of VentasPorMarcaFecha_Result)
+        Dim fdesdeParameter As ObjectParameter = If(fdesde.HasValue, New ObjectParameter("fdesde", fdesde), New ObjectParameter("fdesde", GetType(Date)))
+
+        Dim fhastaParameter As ObjectParameter = If(fhasta.HasValue, New ObjectParameter("fhasta", fhasta), New ObjectParameter("fhasta", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorMarcaFecha_Result)("VentasPorMarcaFecha", fdesdeParameter, fhastaParameter)
     End Function
 
     Public Overridable Function VentasPorVendedor() As ObjectResult(Of VentasPorVendedor_Result)

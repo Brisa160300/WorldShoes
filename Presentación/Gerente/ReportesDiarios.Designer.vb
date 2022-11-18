@@ -45,7 +45,7 @@ Partial Class ReportesDiarios
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LTotal = New System.Windows.Forms.Label()
-        Me.CategoriaTableAdapter1 = New Proyecto_RiosyRoman.WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter()
+        'Me.CategoriaTableAdapter1 = New Proyecto_RiosyRoman.WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter()
         Me.ChartGrafico = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabControl.SuspendLayout()
         Me.PagPageVentasDiarias.SuspendLayout()
@@ -277,7 +277,7 @@ Partial Class ReportesDiarios
         '
         'CategoriaTableAdapter1
         '
-        Me.CategoriaTableAdapter1.ClearBeforeFill = True
+        ''Me.CategoriaTableAdapter1.ClearBeforeFill = True
         '
         'ChartGrafico
         '
@@ -353,6 +353,6 @@ Partial Class ReportesDiarios
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LTotal As Label
-    Friend WithEvents CategoriaTableAdapter1 As WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter
+    'Friend WithEvents CategoriaTableAdapter1 As WorldShoes_Roman_RiosDataSetTableAdapters.CategoriaTableAdapter
     Friend WithEvents ChartGrafico As DataVisualization.Charting.Chart
 End Class

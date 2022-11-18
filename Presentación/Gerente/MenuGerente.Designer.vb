@@ -340,7 +340,7 @@ Partial Class MenuGerente
         Me.BReportesPorFecha.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
         Me.BReportesPorFecha.Size = New System.Drawing.Size(249, 75)
         Me.BReportesPorFecha.TabIndex = 27
-        Me.BReportesPorFecha.Text = "Reportes por Fecha"
+        Me.BReportesPorFecha.Text = "Reportes Historicos"
         Me.BReportesPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BReportesPorFecha.UseVisualStyleBackColor = False
         '
