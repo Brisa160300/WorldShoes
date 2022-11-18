@@ -9,7 +9,6 @@
     End Sub
 
     Private Sub hideSubMenu()
-        PanelSubMenuFiltrarFecha.Visible = False
         PanelSubMenuVentasPor.Visible = False
     End Sub
 
@@ -72,7 +71,7 @@
     End Sub
 
     Private Sub BReportesPorFecha_Click(sender As Object, e As EventArgs) Handles BReportesPorFecha.Click
-        showSubMenu(PanelSubMenuFiltrarFecha)
+        AbrirFormulariosGerente(New ReporteFiltradoFecha)
     End Sub
 
     Private Sub BReportesHoy_Click(sender As Object, e As EventArgs) Handles BReportesHoy.Click
@@ -86,7 +85,6 @@
         End If
     End Sub
 
-    Private formActivoVendedor As Form = Nothing
 
     Private Sub BReportesSemanal_Click(sender As Object, e As EventArgs) Handles BReportesSemanal.Click
         AbrirFormulariosGerente(New Reportes7Dia)
@@ -96,37 +94,6 @@
         AbrirFormulariosGerente(New Reportes30dias)
     End Sub
 
-    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
-        Dim formHijo = New ReporteFiltradoFecha
-        Dim de As String = DTDesdeFiltro.Value.ToShortDateString
-        Dim ha As String = DTHastaFiltro.Value.ToShortDateString
-        Dim fecha As String = de & " a " & ha
-        If Not formActivoVendedor IsNot Nothing Then
-            PanelFormAdmnistrador.Controls.Clear()
-            formHijo.TopLevel = False
-            formHijo.FormBorderStyle = FormBorderStyle.None
-            formHijo.Dock = DockStyle.Fill
-            formHijo.Visible = True
-            formHijo.AutoScroll = True
-            formHijo.VerticalScroll.Value = 0
-            formHijo.VerticalScroll.Minimum = 0
-            formHijo.VerticalScroll.Maximum = formHijo.Size.Height - 100
-            formHijo.HorizontalScroll.Value = 0
-            formHijo.HorizontalScroll.Minimum = 0
-            formHijo.HorizontalScroll.Maximum = formHijo.Size.Width - 100
-            formHijo.DTDesde.Value = DTDesdeFiltro.Value
-            formHijo.DTHasta.Value = DTHastaFiltro.Value
-            formHijo.objDfactura.filtrarVentasAdminAll(de, ha, formHijo.dgvListaVentas)
-            formHijo.cargargrid(fecha)
-            formHijo.grafico(de, ha)
-            PanelFormAdmnistrador.AutoScroll = True
-            PanelFormAdmnistrador.Controls.Add(formHijo)
-            PanelFormAdmnistrador.Tag = formHijo
-            PanelFormAdmnistrador.BringToFront()
-            formHijo.Show()
-            hideSubMenu()
-        End If
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         AbrirFormulariosGerente(New ProductosMasVendidos)
@@ -143,6 +110,9 @@
         AbrirFormulariosGerente(New ReportePorVendedores)
     End Sub
 
+
+
+    Private formActivoVendedor As Form = Nothing
     Private Sub AbrirFormulariosGerente(formHijo As Form)
 
         If Not formActivoVendedor IsNot Nothing Then

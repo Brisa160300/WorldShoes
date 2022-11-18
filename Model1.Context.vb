@@ -10,6 +10,8 @@
 Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
+Imports System.Data.Entity.Core.Objects
+Imports System.Linq
 
 Partial Public Class WorldShoes_Roman_RiosEntities
     Inherits DbContext
@@ -33,5 +35,43 @@ Partial Public Class WorldShoes_Roman_RiosEntities
     Public Overridable Property talle() As DbSet(Of talle)
     Public Overridable Property talle_producto() As DbSet(Of talle_producto)
     Public Overridable Property Usuarios() As DbSet(Of Usuarios)
+
+    Public Overridable Function MostrarTop5Vendidos() As ObjectResult(Of MostrarTop5Vendidos_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of MostrarTop5Vendidos_Result)("MostrarTop5Vendidos")
+    End Function
+
+    Public Overridable Function Top5ProductosVendidos() As ObjectResult(Of Top5ProductosVendidos_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Top5ProductosVendidos_Result)("Top5ProductosVendidos")
+    End Function
+
+    Public Overridable Function Top5ProductosVendidos2() As ObjectResult(Of Top5ProductosVendidos2_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of Top5ProductosVendidos2_Result)("Top5ProductosVendidos2")
+    End Function
+
+    Public Overridable Function topProductos() As ObjectResult(Of topProductos_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of topProductos_Result)("topProductos")
+    End Function
+
+    Public Overridable Function VentasDiarias(fechaHoy As Nullable(Of Date)) As ObjectResult(Of VentasDiarias_Result)
+        Dim fechaHoyParameter As ObjectParameter = If(fechaHoy.HasValue, New ObjectParameter("fechaHoy", fechaHoy), New ObjectParameter("fechaHoy", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasDiarias_Result)("VentasDiarias", fechaHoyParameter)
+    End Function
+
+    Public Overridable Function VentasPorCategoria() As ObjectResult(Of VentasPorCategoria_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorCategoria_Result)("VentasPorCategoria")
+    End Function
+
+    Public Overridable Function VentasPorVendedor() As ObjectResult(Of VentasPorVendedor_Result)
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorVendedor_Result)("VentasPorVendedor")
+    End Function
+
+    Public Overridable Function VentasPorVendedorFiltradoPorFecha(min As Nullable(Of Date), max As Nullable(Of Date)) As ObjectResult(Of VentasPorVendedorFiltradoPorFecha_Result)
+        Dim minParameter As ObjectParameter = If(min.HasValue, New ObjectParameter("min", min), New ObjectParameter("min", GetType(Date)))
+
+        Dim maxParameter As ObjectParameter = If(max.HasValue, New ObjectParameter("max", max), New ObjectParameter("max", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of VentasPorVendedorFiltradoPorFecha_Result)("VentasPorVendedorFiltradoPorFecha", minParameter, maxParameter)
+    End Function
 
 End Class

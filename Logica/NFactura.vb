@@ -34,6 +34,7 @@ Public Class NFactura
                 resultado = False
                 MsgBox("No hay stock disponible, para el producto" + " " + dgv.Item(1, i).Value.ToString + " En el talle: " + dgv.Item(5, i).Value.ToString)
                 'Abrir factura'
+                Return False
                 Exit Function
             End If
         Next
@@ -65,6 +66,7 @@ Public Class NFactura
                 Return False
             End If
         End If
+        Return False
     End Function
 
 

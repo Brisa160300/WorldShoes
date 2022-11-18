@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class VentasPorMarca
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,30 +20,26 @@ Partial Class VentasPorMarca
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.PagPageVentasDiarias = New System.Windows.Forms.TabPage()
-        Me.DataGridViewListaVentas = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ventas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvListaCategorias = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BBuscarProducto = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CBPeriodo = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DTHasta = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DTDesde = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl.SuspendLayout()
         Me.PagPageVentasDiarias.SuspendLayout()
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListaCategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,81 +48,60 @@ Partial Class VentasPorMarca
         Me.TabControl.Controls.Add(Me.PagPageVentasDiarias)
         Me.TabControl.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl.Location = New System.Drawing.Point(32, 217)
+        Me.TabControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
         Me.TabControl.Size = New System.Drawing.Size(1061, 406)
-        Me.TabControl.TabIndex = 96
+        Me.TabControl.TabIndex = 108
         '
         'PagPageVentasDiarias
         '
-        Me.PagPageVentasDiarias.Controls.Add(Me.DataGridViewListaVentas)
+        Me.PagPageVentasDiarias.Controls.Add(Me.dgvListaCategorias)
         Me.PagPageVentasDiarias.Location = New System.Drawing.Point(4, 29)
+        Me.PagPageVentasDiarias.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PagPageVentasDiarias.Name = "PagPageVentasDiarias"
-        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(3)
+        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PagPageVentasDiarias.Size = New System.Drawing.Size(1053, 373)
         Me.PagPageVentasDiarias.TabIndex = 0
-        Me.PagPageVentasDiarias.Text = "Ventas Diarias"
+        Me.PagPageVentasDiarias.Text = "Ventas"
         Me.PagPageVentasDiarias.UseVisualStyleBackColor = True
         '
-        'DataGridViewListaVentas
+        'dgvListaCategorias
         '
-        Me.DataGridViewListaVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridViewListaVentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridViewListaVentas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.DataGridViewListaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridViewListaVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewListaVentas.ColumnHeadersHeight = 20
-        Me.DataGridViewListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridViewListaVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.Categoria, Me.Ventas, Me.Column1})
-        Me.DataGridViewListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewListaVentas.EnableHeadersVisualStyles = False
-        Me.DataGridViewListaVentas.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridViewListaVentas.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridViewListaVentas.Name = "DataGridViewListaVentas"
-        Me.DataGridViewListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewListaVentas.RowHeadersWidth = 51
-        Me.DataGridViewListaVentas.Size = New System.Drawing.Size(1047, 367)
-        Me.DataGridViewListaVentas.TabIndex = 7
-        '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        '
-        'Categoria
-        '
-        Me.Categoria.HeaderText = "Marca"
-        Me.Categoria.MinimumWidth = 6
-        Me.Categoria.Name = "Categoria"
-        '
-        'Ventas
-        '
-        Me.Ventas.HeaderText = "Ventas"
-        Me.Ventas.MinimumWidth = 6
-        Me.Ventas.Name = "Ventas"
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Porcentaje"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
+        Me.dgvListaCategorias.AllowUserToAddRows = False
+        Me.dgvListaCategorias.AllowUserToDeleteRows = False
+        Me.dgvListaCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvListaCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvListaCategorias.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.dgvListaCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvListaCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListaCategorias.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListaCategorias.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvListaCategorias.EnableHeadersVisualStyles = False
+        Me.dgvListaCategorias.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListaCategorias.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvListaCategorias.Name = "dgvListaCategorias"
+        Me.dgvListaCategorias.ReadOnly = True
+        Me.dgvListaCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListaCategorias.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvListaCategorias.RowHeadersWidth = 51
+        Me.dgvListaCategorias.Size = New System.Drawing.Size(1047, 369)
+        Me.dgvListaCategorias.TabIndex = 7
         '
         'Button1
         '
@@ -139,7 +114,7 @@ Partial Class VentasPorMarca
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 52)
-        Me.Button1.TabIndex = 95
+        Me.Button1.TabIndex = 107
         Me.Button1.Text = "Volver"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button1.UseVisualStyleBackColor = False
@@ -150,25 +125,27 @@ Partial Class VentasPorMarca
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(471, 34)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(330, 46)
-        Me.Label6.TabIndex = 94
+        Me.Label6.Size = New System.Drawing.Size(331, 46)
+        Me.Label6.TabIndex = 106
         Me.Label6.Text = "Ventas Por Marca"
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.BBuscarProducto)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.CBPeriodo)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox1.Controls.Add(Me.DTHasta)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.DTDesde)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(32, 93)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 94)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Size = New System.Drawing.Size(1057, 100)
-        Me.GroupBox1.TabIndex = 97
+        Me.GroupBox1.TabIndex = 109
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filtrar Busqueda"
         '
@@ -181,21 +158,25 @@ Partial Class VentasPorMarca
         Me.BBuscarProducto.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BBuscarProducto.ForeColor = System.Drawing.Color.White
         Me.BBuscarProducto.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.search_3_32
-        Me.BBuscarProducto.Location = New System.Drawing.Point(954, 27)
+        Me.BBuscarProducto.Location = New System.Drawing.Point(955, 27)
         Me.BBuscarProducto.Margin = New System.Windows.Forms.Padding(4)
         Me.BBuscarProducto.Name = "BBuscarProducto"
         Me.BBuscarProducto.Size = New System.Drawing.Size(65, 50)
         Me.BBuscarProducto.TabIndex = 93
         Me.BBuscarProducto.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'CBPeriodo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"La ultima semana", "El ultimo mes", "Los ultimos 3meses", "Los ultimos 6 meses", "Los ultimos 12 meses"})
-        Me.ComboBox1.Location = New System.Drawing.Point(214, 45)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(184, 28)
-        Me.ComboBox1.TabIndex = 92
+        Me.CBPeriodo.DisplayMember = "Ultima Semana, Ultimos Mes, Ultimo 3 Mese"
+        Me.CBPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBPeriodo.FormattingEnabled = True
+        Me.CBPeriodo.Items.AddRange(New Object() {"La ultima semana", "El ultimo mes", "Los ultimos 3meses"})
+        Me.CBPeriodo.Location = New System.Drawing.Point(213, 46)
+        Me.CBPeriodo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CBPeriodo.Name = "CBPeriodo"
+        Me.CBPeriodo.Size = New System.Drawing.Size(184, 28)
+        Me.CBPeriodo.TabIndex = 92
+        Me.CBPeriodo.ValueMember = "1,2,3"
         '
         'Label2
         '
@@ -207,15 +188,16 @@ Partial Class VentasPorMarca
         Me.Label2.TabIndex = 91
         Me.Label2.Text = "Periodo de Tiempo"
         '
-        'DateTimePicker2
+        'DTHasta
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(775, 40)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(143, 30)
-        Me.DateTimePicker2.TabIndex = 81
-        Me.DateTimePicker2.Value = New Date(2022, 10, 14, 5, 3, 0, 0)
+        Me.DTHasta.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTHasta.Location = New System.Drawing.Point(760, 39)
+        Me.DTHasta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DTHasta.Name = "DTHasta"
+        Me.DTHasta.Size = New System.Drawing.Size(157, 30)
+        Me.DTHasta.TabIndex = 81
+        Me.DTHasta.Value = New Date(2022, 10, 14, 5, 3, 0, 0)
         '
         'Label3
         '
@@ -223,18 +205,19 @@ Partial Class VentasPorMarca
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(433, 43)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 26)
+        Me.Label3.Size = New System.Drawing.Size(85, 26)
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Desde:"
         '
-        'DateTimePicker1
+        'DTDesde
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(525, 43)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(139, 30)
-        Me.DateTimePicker1.TabIndex = 79
+        Me.DTDesde.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DTDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTDesde.Location = New System.Drawing.Point(524, 42)
+        Me.DTDesde.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DTDesde.Name = "DTDesde"
+        Me.DTDesde.Size = New System.Drawing.Size(139, 30)
+        Me.DTDesde.TabIndex = 79
         '
         'Label4
         '
@@ -242,7 +225,7 @@ Partial Class VentasPorMarca
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(679, 43)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(90, 26)
+        Me.Label4.Size = New System.Drawing.Size(91, 26)
         Me.Label4.TabIndex = 80
         Me.Label4.Text = "Hasta:"
         '
@@ -261,7 +244,7 @@ Partial Class VentasPorMarca
         Me.Text = "VentasPorMarca"
         Me.TabControl.ResumeLayout(False)
         Me.PagPageVentasDiarias.ResumeLayout(False)
-        CType(Me.DataGridViewListaVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListaCategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -269,19 +252,15 @@ Partial Class VentasPorMarca
 
     Friend WithEvents TabControl As TabControl
     Friend WithEvents PagPageVentasDiarias As TabPage
-    Friend WithEvents DataGridViewListaVentas As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Categoria As DataGridViewTextBoxColumn
-    Friend WithEvents Ventas As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents dgvListaCategorias As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BBuscarProducto As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CBPeriodo As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DTHasta As DateTimePicker
     Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DTDesde As DateTimePicker
     Friend WithEvents Label4 As Label
 End Class

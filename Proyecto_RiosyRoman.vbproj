@@ -191,6 +191,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="MostrarTop5Vendidos_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -567,7 +570,28 @@
     <Compile Include="talle_producto.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Top5ProductosVendidos2_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Top5ProductosVendidos_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="topProductos_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasDiarias_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorCategoria_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorVendedorFiltradoPorFecha_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorVendedor_Result.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="WorldShoes_Roman_RiosDataSet1.Designer.vb">
@@ -913,6 +937,7 @@
     <None Include="Resources\Captura de pantalla %28356%29.png" />
     <None Include="Resources\Captura de pantalla %28357%29.png" />
     <None Include="Resources\Captura de pantalla %28364%29.png" />
+    <None Include="Resources\icons8-base-de-datos-50.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -923,7 +948,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.vb</LastGenOutput>
     </Content>
-    <None Include="Resources\icons8-base-de-datos-50.png" />
     <Content Include="Resources\user_locked_21967.png" />
   </ItemGroup>
   <ItemGroup>

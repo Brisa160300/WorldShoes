@@ -236,6 +236,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="MostrarTop5Vendidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Top5ProductosVendidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Top5ProductosVendidos2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="topProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VentasDiarias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fechaHoy" Type="date" Mode="In" />
+        </Function>
+        <Function Name="VentasPorCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VentasPorVendedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VentasPorVendedorFiltradoPorFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="min" Type="date" Mode="In" />
+          <Parameter Name="max" Type="date" Mode="In" />
+        </Function>
         <EntityContainer Name="WorldShoes_Roman_RiosModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
@@ -597,7 +610,60 @@
             <End Role="talle" EntitySet="talle" />
             <End Role="talle_producto" EntitySet="talle_producto" />
           </AssociationSet>
+          <FunctionImport Name="MostrarTop5Vendidos" ReturnType="Collection(WorldShoes_Roman_RiosModel.MostrarTop5Vendidos_Result)" />
+          <FunctionImport Name="Top5ProductosVendidos" ReturnType="Collection(WorldShoes_Roman_RiosModel.Top5ProductosVendidos_Result)" />
+          <FunctionImport Name="Top5ProductosVendidos2" ReturnType="Collection(WorldShoes_Roman_RiosModel.Top5ProductosVendidos2_Result)" />
+          <FunctionImport Name="topProductos" ReturnType="Collection(WorldShoes_Roman_RiosModel.topProductos_Result)" />
+          <FunctionImport Name="VentasDiarias" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasDiarias_Result)">
+            <Parameter Name="fechaHoy" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="VentasPorCategoria" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorCategoria_Result)" />
+          <FunctionImport Name="VentasPorVendedor" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorVendedor_Result)" />
+          <FunctionImport Name="VentasPorVendedorFiltradoPorFecha" ReturnType="Collection(WorldShoes_Roman_RiosModel.VentasPorVendedorFiltradoPorFecha_Result)">
+            <Parameter Name="min" Mode="In" Type="DateTime" />
+            <Parameter Name="max" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="MostrarTop5Vendidos_Result">
+          <Property Type="String" Name="Producto" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Precio" Nullable="false" MaxLength="43" />
+          <Property Type="Int32" Name="Vendidos" Nullable="true" />
+          <Property Type="String" Name="Ventas_Netas" Nullable="false" MaxLength="43" />
+        </ComplexType>
+        <ComplexType Name="Top5ProductosVendidos_Result">
+          <Property Type="String" Name="Producto" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Top5ProductosVendidos2_Result">
+          <Property Type="String" Name="Producto" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="topProductos_Result">
+          <Property Type="Decimal" Name="Cantidad_de_Ventas" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="152" />
+        </ComplexType>
+        <ComplexType Name="VentasDiarias_Result">
+          <Property Type="Int32" Name="N__Factura" Nullable="false" />
+          <Property Type="String" Name="Vendedor" Nullable="false" MaxLength="101" />
+          <Property Type="String" Name="Cliente" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="Int16" Name="Cantidad" Nullable="false" />
+          <Property Type="String" Name="Total" Nullable="false" MaxLength="42" />
+        </ComplexType>
+        <ComplexType Name="VentasPorCategoria_Result">
+          <Property Type="String" Name="Categoria" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Unidades_Vendidas" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="VentasPorVendedor_Result">
+          <Property Type="String" Name="Vendedor" Nullable="false" MaxLength="101" />
+          <Property Type="Int32" Name="Ventas" Nullable="true" />
+          <Property Type="String" Name="Montos_Ganados" Nullable="false" MaxLength="43" />
+        </ComplexType>
+        <ComplexType Name="VentasPorVendedorFiltradoPorFecha_Result">
+          <Property Type="String" Name="Vendedor" Nullable="false" MaxLength="101" />
+          <Property Type="Int32" Name="Ventas" Nullable="true" />
+          <Property Type="String" Name="Montos_Ganados" Nullable="false" MaxLength="43" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -726,6 +792,78 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="MostrarTop5Vendidos" FunctionName="WorldShoes_Roman_RiosModel.Store.MostrarTop5Vendidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.MostrarTop5Vendidos_Result">
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Vendidos" ColumnName="Vendidos" />
+                <ScalarProperty Name="Ventas_Netas" ColumnName="Ventas Netas" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Top5ProductosVendidos" FunctionName="WorldShoes_Roman_RiosModel.Store.Top5ProductosVendidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.Top5ProductosVendidos_Result">
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Top5ProductosVendidos2" FunctionName="WorldShoes_Roman_RiosModel.Store.Top5ProductosVendidos2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.Top5ProductosVendidos2_Result">
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="topProductos" FunctionName="WorldShoes_Roman_RiosModel.Store.topProductos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.topProductos_Result">
+                <ScalarProperty Name="Cantidad_de_Ventas" ColumnName="Cantidad de Ventas" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasDiarias" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasDiarias">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasDiarias_Result">
+                <ScalarProperty Name="N__Factura" ColumnName="N° Factura" />
+                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorCategoria" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorCategoria">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorCategoria_Result">
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Unidades_Vendidas" ColumnName="Unidades Vendidas" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorVendedor" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorVendedor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorVendedor_Result">
+                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+                <ScalarProperty Name="Ventas" ColumnName="Ventas" />
+                <ScalarProperty Name="Montos_Ganados" ColumnName="Montos Ganados" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VentasPorVendedorFiltradoPorFecha" FunctionName="WorldShoes_Roman_RiosModel.Store.VentasPorVendedorFiltradoPorFecha">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WorldShoes_Roman_RiosModel.VentasPorVendedorFiltradoPorFecha_Result">
+                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
+                <ScalarProperty Name="Ventas" ColumnName="Ventas" />
+                <ScalarProperty Name="Montos_Ganados" ColumnName="Montos Ganados" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

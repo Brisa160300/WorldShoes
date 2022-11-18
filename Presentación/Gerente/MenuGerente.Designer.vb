@@ -35,26 +35,19 @@ Partial Class MenuGerente
         Me.BReportesSemanal = New System.Windows.Forms.Button()
         Me.BReportesMensual = New System.Windows.Forms.Button()
         Me.PanelSubMenuVentasPor = New System.Windows.Forms.Panel()
+        Me.BVentasPorVendedor = New System.Windows.Forms.Button()
         Me.BVentasPorMarca = New System.Windows.Forms.Button()
         Me.BVentasPorCategoria = New System.Windows.Forms.Button()
-        Me.PanelSubMenuFiltrarFecha = New System.Windows.Forms.Panel()
-        Me.DTHastaFiltro = New System.Windows.Forms.DateTimePicker()
-        Me.DTDesdeFiltro = New System.Windows.Forms.DateTimePicker()
-        Me.BVolver = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BReportesPorFecha = New System.Windows.Forms.Button()
         Me.BReporteVenta = New System.Windows.Forms.Button()
         Me.BSalir = New System.Windows.Forms.Button()
         Me.PanelFormAdmnistrador = New System.Windows.Forms.Panel()
-        Me.BVentasPorVendedor = New System.Windows.Forms.Button()
         Me.PanelBarraMenuAdmin.SuspendLayout()
         Me.PanelIconMenuGerente.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         Me.PanelSubMenuVentasPor.SuspendLayout()
-        Me.PanelSubMenuFiltrarFecha.SuspendLayout()
         Me.PanelMenuLateral.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -137,7 +130,7 @@ Partial Class MenuGerente
         Me.PanelIconMenuGerente.Location = New System.Drawing.Point(0, 0)
         Me.PanelIconMenuGerente.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelIconMenuGerente.Name = "PanelIconMenuGerente"
-        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(253, 136)
+        Me.PanelIconMenuGerente.Size = New System.Drawing.Size(249, 136)
         Me.PanelIconMenuGerente.TabIndex = 0
         '
         'PanelLogo
@@ -147,7 +140,7 @@ Partial Class MenuGerente
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(253, 136)
+        Me.PanelLogo.Size = New System.Drawing.Size(249, 136)
         Me.PanelLogo.TabIndex = 1
         '
         'LIconMenu
@@ -160,7 +153,7 @@ Partial Class MenuGerente
         Me.LIconMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LIconMenu.Location = New System.Drawing.Point(32, 55)
         Me.LIconMenu.Name = "LIconMenu"
-        Me.LIconMenu.Size = New System.Drawing.Size(158, 27)
+        Me.LIconMenu.Size = New System.Drawing.Size(198, 35)
         Me.LIconMenu.TabIndex = 0
         Me.LIconMenu.Text = "WorldShoes"
         Me.LIconMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -176,7 +169,7 @@ Partial Class MenuGerente
         Me.LIconMenuAdmin.Location = New System.Drawing.Point(46, 58)
         Me.LIconMenuAdmin.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LIconMenuAdmin.Name = "LIconMenuAdmin"
-        Me.LIconMenuAdmin.Size = New System.Drawing.Size(158, 27)
+        Me.LIconMenuAdmin.Size = New System.Drawing.Size(198, 35)
         Me.LIconMenuAdmin.TabIndex = 0
         Me.LIconMenuAdmin.Text = "WorldShoes"
         Me.LIconMenuAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -192,7 +185,7 @@ Partial Class MenuGerente
         Me.BReportesHoy.Location = New System.Drawing.Point(0, 136)
         Me.BReportesHoy.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesHoy.Name = "BReportesHoy"
-        Me.BReportesHoy.Size = New System.Drawing.Size(253, 62)
+        Me.BReportesHoy.Size = New System.Drawing.Size(249, 62)
         Me.BReportesHoy.TabIndex = 22
         Me.BReportesHoy.Text = "Diario"
         Me.BReportesHoy.UseVisualStyleBackColor = False
@@ -208,7 +201,7 @@ Partial Class MenuGerente
         Me.BReportesSemanal.Location = New System.Drawing.Point(0, 198)
         Me.BReportesSemanal.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesSemanal.Name = "BReportesSemanal"
-        Me.BReportesSemanal.Size = New System.Drawing.Size(253, 62)
+        Me.BReportesSemanal.Size = New System.Drawing.Size(249, 62)
         Me.BReportesSemanal.TabIndex = 23
         Me.BReportesSemanal.Text = "Semanal"
         Me.BReportesSemanal.UseVisualStyleBackColor = False
@@ -224,7 +217,7 @@ Partial Class MenuGerente
         Me.BReportesMensual.Location = New System.Drawing.Point(0, 260)
         Me.BReportesMensual.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesMensual.Name = "BReportesMensual"
-        Me.BReportesMensual.Size = New System.Drawing.Size(253, 62)
+        Me.BReportesMensual.Size = New System.Drawing.Size(249, 62)
         Me.BReportesMensual.TabIndex = 24
         Me.BReportesMensual.Text = "Mensual"
         Me.BReportesMensual.UseVisualStyleBackColor = False
@@ -240,8 +233,24 @@ Partial Class MenuGerente
         Me.PanelSubMenuVentasPor.Location = New System.Drawing.Point(0, 397)
         Me.PanelSubMenuVentasPor.Margin = New System.Windows.Forms.Padding(5)
         Me.PanelSubMenuVentasPor.Name = "PanelSubMenuVentasPor"
-        Me.PanelSubMenuVentasPor.Size = New System.Drawing.Size(253, 184)
+        Me.PanelSubMenuVentasPor.Size = New System.Drawing.Size(249, 184)
         Me.PanelSubMenuVentasPor.TabIndex = 26
+        '
+        'BVentasPorVendedor
+        '
+        Me.BVentasPorVendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.BVentasPorVendedor.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BVentasPorVendedor.FlatAppearance.BorderSize = 0
+        Me.BVentasPorVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVentasPorVendedor.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
+        Me.BVentasPorVendedor.ForeColor = System.Drawing.Color.Gainsboro
+        Me.BVentasPorVendedor.Location = New System.Drawing.Point(0, 124)
+        Me.BVentasPorVendedor.Margin = New System.Windows.Forms.Padding(5)
+        Me.BVentasPorVendedor.Name = "BVentasPorVendedor"
+        Me.BVentasPorVendedor.Size = New System.Drawing.Size(249, 62)
+        Me.BVentasPorVendedor.TabIndex = 3
+        Me.BVentasPorVendedor.Text = "Ventas Por Vendedor"
+        Me.BVentasPorVendedor.UseVisualStyleBackColor = False
         '
         'BVentasPorMarca
         '
@@ -254,7 +263,7 @@ Partial Class MenuGerente
         Me.BVentasPorMarca.Location = New System.Drawing.Point(0, 62)
         Me.BVentasPorMarca.Margin = New System.Windows.Forms.Padding(5)
         Me.BVentasPorMarca.Name = "BVentasPorMarca"
-        Me.BVentasPorMarca.Size = New System.Drawing.Size(253, 62)
+        Me.BVentasPorMarca.Size = New System.Drawing.Size(249, 62)
         Me.BVentasPorMarca.TabIndex = 2
         Me.BVentasPorMarca.Text = "Ventas Por Marca"
         Me.BVentasPorMarca.UseVisualStyleBackColor = False
@@ -270,89 +279,16 @@ Partial Class MenuGerente
         Me.BVentasPorCategoria.Location = New System.Drawing.Point(0, 0)
         Me.BVentasPorCategoria.Margin = New System.Windows.Forms.Padding(5)
         Me.BVentasPorCategoria.Name = "BVentasPorCategoria"
-        Me.BVentasPorCategoria.Size = New System.Drawing.Size(253, 62)
+        Me.BVentasPorCategoria.Size = New System.Drawing.Size(249, 62)
         Me.BVentasPorCategoria.TabIndex = 1
         Me.BVentasPorCategoria.Text = "Ventas Por Categoria"
         Me.BVentasPorCategoria.UseVisualStyleBackColor = False
-        '
-        'PanelSubMenuFiltrarFecha
-        '
-        Me.PanelSubMenuFiltrarFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DTHastaFiltro)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.DTDesdeFiltro)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.BVolver)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.Label2)
-        Me.PanelSubMenuFiltrarFecha.Controls.Add(Me.Label1)
-        Me.PanelSubMenuFiltrarFecha.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubMenuFiltrarFecha.ForeColor = System.Drawing.Color.Gainsboro
-        Me.PanelSubMenuFiltrarFecha.Location = New System.Drawing.Point(0, 656)
-        Me.PanelSubMenuFiltrarFecha.Margin = New System.Windows.Forms.Padding(5)
-        Me.PanelSubMenuFiltrarFecha.Name = "PanelSubMenuFiltrarFecha"
-        Me.PanelSubMenuFiltrarFecha.Size = New System.Drawing.Size(253, 250)
-        Me.PanelSubMenuFiltrarFecha.TabIndex = 28
-        '
-        'DTHastaFiltro
-        '
-        Me.DTHastaFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTHastaFiltro.Location = New System.Drawing.Point(88, 113)
-        Me.DTHastaFiltro.Name = "DTHastaFiltro"
-        Me.DTHastaFiltro.Size = New System.Drawing.Size(140, 23)
-        Me.DTHastaFiltro.TabIndex = 25
-        '
-        'DTDesdeFiltro
-        '
-        Me.DTDesdeFiltro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTDesdeFiltro.Location = New System.Drawing.Point(90, 40)
-        Me.DTDesdeFiltro.Name = "DTDesdeFiltro"
-        Me.DTDesdeFiltro.Size = New System.Drawing.Size(140, 23)
-        Me.DTDesdeFiltro.TabIndex = 0
-        '
-        'BVolver
-        '
-        Me.BVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.BVolver.FlatAppearance.BorderSize = 2
-        Me.BVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BVolver.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BVolver.ForeColor = System.Drawing.Color.White
-        Me.BVolver.Location = New System.Drawing.Point(74, 172)
-        Me.BVolver.Margin = New System.Windows.Forms.Padding(5)
-        Me.BVolver.Name = "BVolver"
-        Me.BVolver.Size = New System.Drawing.Size(107, 42)
-        Me.BVolver.TabIndex = 24
-        Me.BVolver.Text = "Filtrar"
-        Me.BVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BVolver.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(30, 119)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Hasta"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(30, 46)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 16)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Desde"
         '
         'PanelMenuLateral
         '
         Me.PanelMenuLateral.AutoScroll = True
         Me.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.PanelMenuLateral.Controls.Add(Me.Button1)
-        Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuFiltrarFecha)
         Me.PanelMenuLateral.Controls.Add(Me.BReportesPorFecha)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubMenuVentasPor)
         Me.PanelMenuLateral.Controls.Add(Me.BReporteVenta)
@@ -378,11 +314,11 @@ Partial Class MenuGerente
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.ventas
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(0, 906)
+        Me.Button1.Location = New System.Drawing.Point(0, 656)
         Me.Button1.Margin = New System.Windows.Forms.Padding(5)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(253, 75)
+        Me.Button1.Size = New System.Drawing.Size(249, 75)
         Me.Button1.TabIndex = 29
         Me.Button1.Text = "Productos Mas Vendidos"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -402,7 +338,7 @@ Partial Class MenuGerente
         Me.BReportesPorFecha.Margin = New System.Windows.Forms.Padding(5)
         Me.BReportesPorFecha.Name = "BReportesPorFecha"
         Me.BReportesPorFecha.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.BReportesPorFecha.Size = New System.Drawing.Size(253, 75)
+        Me.BReportesPorFecha.Size = New System.Drawing.Size(249, 75)
         Me.BReportesPorFecha.TabIndex = 27
         Me.BReportesPorFecha.Text = "Reportes por Fecha"
         Me.BReportesPorFecha.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -422,9 +358,9 @@ Partial Class MenuGerente
         Me.BReporteVenta.Margin = New System.Windows.Forms.Padding(5)
         Me.BReporteVenta.Name = "BReporteVenta"
         Me.BReporteVenta.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.BReporteVenta.Size = New System.Drawing.Size(253, 75)
+        Me.BReporteVenta.Size = New System.Drawing.Size(249, 75)
         Me.BReporteVenta.TabIndex = 16
-        Me.BReporteVenta.Text = "Reportes"
+        Me.BReporteVenta.Text = "Ventas Por"
         Me.BReporteVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BReporteVenta.UseVisualStyleBackColor = False
         '
@@ -438,11 +374,11 @@ Partial Class MenuGerente
         Me.BSalir.ForeColor = System.Drawing.Color.White
         Me.BSalir.Image = Global.Proyecto_RiosyRoman.My.Resources.Resources.icons8_cierre_de_sesión_redondeado_hacia_la_izquierda_50
         Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(0, 981)
+        Me.BSalir.Location = New System.Drawing.Point(0, 731)
         Me.BSalir.Margin = New System.Windows.Forms.Padding(5)
         Me.BSalir.Name = "BSalir"
         Me.BSalir.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
-        Me.BSalir.Size = New System.Drawing.Size(253, 75)
+        Me.BSalir.Size = New System.Drawing.Size(249, 75)
         Me.BSalir.TabIndex = 14
         Me.BSalir.Text = "Cerrar Sesión"
         Me.BSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -461,25 +397,9 @@ Partial Class MenuGerente
         Me.PanelFormAdmnistrador.Size = New System.Drawing.Size(1130, 656)
         Me.PanelFormAdmnistrador.TabIndex = 24
         '
-        'BVentasPorVendedor
-        '
-        Me.BVentasPorVendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(76, Byte), Integer))
-        Me.BVentasPorVendedor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BVentasPorVendedor.FlatAppearance.BorderSize = 0
-        Me.BVentasPorVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BVentasPorVendedor.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
-        Me.BVentasPorVendedor.ForeColor = System.Drawing.Color.Gainsboro
-        Me.BVentasPorVendedor.Location = New System.Drawing.Point(0, 124)
-        Me.BVentasPorVendedor.Margin = New System.Windows.Forms.Padding(5)
-        Me.BVentasPorVendedor.Name = "BVentasPorVendedor"
-        Me.BVentasPorVendedor.Size = New System.Drawing.Size(253, 62)
-        Me.BVentasPorVendedor.TabIndex = 3
-        Me.BVentasPorVendedor.Text = "Ventas Por Vendedor"
-        Me.BVentasPorVendedor.UseVisualStyleBackColor = False
-        '
         'MenuGerente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1400, 750)
@@ -499,8 +419,6 @@ Partial Class MenuGerente
         Me.PanelLogo.ResumeLayout(False)
         Me.PanelLogo.PerformLayout()
         Me.PanelSubMenuVentasPor.ResumeLayout(False)
-        Me.PanelSubMenuFiltrarFecha.ResumeLayout(False)
-        Me.PanelSubMenuFiltrarFecha.PerformLayout()
         Me.PanelMenuLateral.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -522,16 +440,10 @@ Partial Class MenuGerente
     Friend WithEvents BVentasPorMarca As Button
     Friend WithEvents BVentasPorCategoria As Button
     Friend WithEvents BReportesPorFecha As Button
-    Friend WithEvents PanelSubMenuFiltrarFecha As Panel
-    Friend WithEvents BVolver As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PanelMenuLateral As Panel
     Friend WithEvents PanelFormAdmnistrador As Panel
     Friend WithEvents PanelLogo As Panel
     Friend WithEvents LIconMenu As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents DTHastaFiltro As DateTimePicker
-    Friend WithEvents DTDesdeFiltro As DateTimePicker
     Friend WithEvents BVentasPorVendedor As Button
 End Class

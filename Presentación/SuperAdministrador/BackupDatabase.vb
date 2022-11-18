@@ -12,15 +12,15 @@ Public Class BackupDatabase
             }
 
             If sfd.ShowDialog = DialogResult.OK Then
-                Dim conexion As New SqlConnection("Data Source=DESKTOP-H2D4K7C\SQLEXPRESS;Initial Catalog= WorldShoes_Roman_Rios;Integrated Security=True")
+                Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
                 Using conexion
                     conexion.Open()
                     Cursor = Cursors.WaitCursor
                     Dim sql As String = $"backup database WorldShoes_Roman_Rios to disk = '{sfd.FileName}'"
-                    Dim cmd As New SqlCommand(sql, conexion)
+                    Dim cmd As SqlCommand = New SqlCommand(sql, conexion)
                     cmd.ExecuteNonQuery()
                     conexion.Close()
-                    MsgBox("Se ha realizado el backup correctamente")
+                    MsgBox("Se ha realizado el backup correctamente", vbInformation, "Copia Guardada")
                     Cursor = Cursors.Default
                 End Using
             End If
@@ -41,7 +41,7 @@ Public Class BackupDatabase
             .FileName = ""
         }
         If ofd.ShowDialog = DialogResult.OK Then
-            Dim conexion As New SqlConnection("Data Source=DESKTOP-H2D4K7C\SQLEXPRESS;Initial Catalog= master;Integrated Security=True")
+            Dim conexion = New SqlConnection("server=ABI\SQLEXPRESS;database=WorldShoes_Roman_Rios;integrated security = true")
             Using conexion
                 conexion.Open()
                 Cursor = Cursors.WaitCursor

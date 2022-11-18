@@ -57,21 +57,21 @@ Partial Class Reportes30dias
         '
         Me.TabControl.Controls.Add(Me.PagPageVentasDiarias)
         Me.TabControl.Font = New System.Drawing.Font("Britannic Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl.Location = New System.Drawing.Point(26, 331)
-        Me.TabControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControl.Location = New System.Drawing.Point(35, 407)
+        Me.TabControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
-        Me.TabControl.Size = New System.Drawing.Size(796, 173)
+        Me.TabControl.Size = New System.Drawing.Size(1061, 213)
         Me.TabControl.TabIndex = 83
         '
         'PagPageVentasDiarias
         '
         Me.PagPageVentasDiarias.Controls.Add(Me.dgvListaVentas)
-        Me.PagPageVentasDiarias.Location = New System.Drawing.Point(4, 25)
-        Me.PagPageVentasDiarias.Margin = New System.Windows.Forms.Padding(2)
+        Me.PagPageVentasDiarias.Location = New System.Drawing.Point(4, 29)
+        Me.PagPageVentasDiarias.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PagPageVentasDiarias.Name = "PagPageVentasDiarias"
-        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(2)
-        Me.PagPageVentasDiarias.Size = New System.Drawing.Size(788, 144)
+        Me.PagPageVentasDiarias.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PagPageVentasDiarias.Size = New System.Drawing.Size(1053, 180)
         Me.PagPageVentasDiarias.TabIndex = 0
         Me.PagPageVentasDiarias.Text = "Detalle de Ventas"
         Me.PagPageVentasDiarias.UseVisualStyleBackColor = True
@@ -97,7 +97,8 @@ Partial Class Reportes30dias
         Me.dgvListaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListaVentas.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvListaVentas.EnableHeadersVisualStyles = False
-        Me.dgvListaVentas.Location = New System.Drawing.Point(2, 2)
+        Me.dgvListaVentas.Location = New System.Drawing.Point(3, 2)
+        Me.dgvListaVentas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvListaVentas.Name = "dgvListaVentas"
         Me.dgvListaVentas.ReadOnly = True
         Me.dgvListaVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -111,7 +112,7 @@ Partial Class Reportes30dias
         Me.dgvListaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvListaVentas.RowHeadersVisible = False
         Me.dgvListaVentas.RowHeadersWidth = 51
-        Me.dgvListaVentas.Size = New System.Drawing.Size(784, 140)
+        Me.dgvListaVentas.Size = New System.Drawing.Size(1047, 176)
         Me.dgvListaVentas.TabIndex = 7
         '
         'Button1
@@ -121,9 +122,10 @@ Partial Class Reportes30dias
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 13.0!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(837, 407)
+        Me.Button1.Location = New System.Drawing.Point(1116, 501)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 42)
+        Me.Button1.Size = New System.Drawing.Size(100, 52)
         Me.Button1.TabIndex = 82
         Me.Button1.Text = "Volver"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -134,10 +136,10 @@ Partial Class Reportes30dias
         Me.DTHasta.Enabled = False
         Me.DTHasta.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTHasta.Location = New System.Drawing.Point(577, 84)
-        Me.DTHasta.Margin = New System.Windows.Forms.Padding(2)
+        Me.DTHasta.Location = New System.Drawing.Point(769, 103)
+        Me.DTHasta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DTHasta.Name = "DTHasta"
-        Me.DTHasta.Size = New System.Drawing.Size(108, 25)
+        Me.DTHasta.Size = New System.Drawing.Size(143, 30)
         Me.DTHasta.TabIndex = 81
         Me.DTHasta.Value = New Date(2022, 10, 31, 5, 3, 0, 0)
         '
@@ -145,10 +147,9 @@ Partial Class Reportes30dias
         '
         Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(505, 84)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(673, 103)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 21)
+        Me.Label4.Size = New System.Drawing.Size(91, 26)
         Me.Label4.TabIndex = 80
         Me.Label4.Text = "Hasta:"
         '
@@ -157,10 +158,10 @@ Partial Class Reportes30dias
         Me.DTDesde.Enabled = False
         Me.DTDesde.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTDesde.Location = New System.Drawing.Point(389, 84)
-        Me.DTDesde.Margin = New System.Windows.Forms.Padding(2)
+        Me.DTDesde.Location = New System.Drawing.Point(519, 103)
+        Me.DTDesde.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DTDesde.Name = "DTDesde"
-        Me.DTDesde.Size = New System.Drawing.Size(105, 25)
+        Me.DTDesde.Size = New System.Drawing.Size(139, 30)
         Me.DTDesde.TabIndex = 79
         Me.DTDesde.Value = New Date(2022, 10, 1, 5, 12, 0, 0)
         '
@@ -168,10 +169,9 @@ Partial Class Reportes30dias
         '
         Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(320, 84)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(427, 103)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 21)
+        Me.Label3.Size = New System.Drawing.Size(85, 26)
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Desde:"
         '
@@ -179,10 +179,9 @@ Partial Class Reportes30dias
         '
         Me.Label6.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(385, 30)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(513, 37)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(229, 37)
+        Me.Label6.Size = New System.Drawing.Size(305, 46)
         Me.Label6.TabIndex = 75
         Me.Label6.Text = "Reporte Mensual"
         '
@@ -205,8 +204,8 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVentasNetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaNumero, Me.Column6, Me.Column7})
         Me.dgvVentasNetas.EnableHeadersVisualStyles = False
-        Me.dgvVentasNetas.Location = New System.Drawing.Point(539, 137)
-        Me.dgvVentasNetas.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvVentasNetas.Location = New System.Drawing.Point(719, 169)
+        Me.dgvVentasNetas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvVentasNetas.Name = "dgvVentasNetas"
         Me.dgvVentasNetas.ReadOnly = True
         Me.dgvVentasNetas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -220,7 +219,7 @@ Partial Class Reportes30dias
         Me.dgvVentasNetas.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvVentasNetas.RowHeadersWidth = 51
         Me.dgvVentasNetas.RowTemplate.Height = 24
-        Me.dgvVentasNetas.Size = New System.Drawing.Size(280, 129)
+        Me.dgvVentasNetas.Size = New System.Drawing.Size(373, 159)
         Me.dgvVentasNetas.TabIndex = 77
         '
         'ColumnaNumero
@@ -250,13 +249,15 @@ Partial Class Reportes30dias
         'ChartGrafico
         '
         ChartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount
+        ChartArea1.AxisX.MajorGrid.Enabled = False
         ChartArea1.Name = "ChartArea1"
         Me.ChartGrafico.ChartAreas.Add(ChartArea1)
         Legend1.Font = New System.Drawing.Font("Britannic Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Legend1.IsTextAutoFit = False
         Legend1.Name = "Legend1"
         Me.ChartGrafico.Legends.Add(Legend1)
-        Me.ChartGrafico.Location = New System.Drawing.Point(26, 126)
+        Me.ChartGrafico.Location = New System.Drawing.Point(35, 155)
+        Me.ChartGrafico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ChartGrafico.Name = "ChartGrafico"
         Me.ChartGrafico.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
         Series1.ChartArea = "ChartArea1"
@@ -265,7 +266,7 @@ Partial Class Reportes30dias
         Series1.XValueMember = "65"
         Series1.YValueMembers = "0"
         Me.ChartGrafico.Series.Add(Series1)
-        Me.ChartGrafico.Size = New System.Drawing.Size(464, 184)
+        Me.ChartGrafico.Size = New System.Drawing.Size(619, 226)
         Me.ChartGrafico.TabIndex = 76
         Title1.Font = New System.Drawing.Font("Britannic Bold", 12.0!)
         Title1.Name = "Title1"
@@ -276,29 +277,27 @@ Partial Class Reportes30dias
         '
         Me.LTotal.Font = New System.Drawing.Font("Britannic Bold", 18.0!)
         Me.LTotal.ForeColor = System.Drawing.SystemColors.Window
-        Me.LTotal.Location = New System.Drawing.Point(715, 291)
-        Me.LTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LTotal.Location = New System.Drawing.Point(953, 358)
         Me.LTotal.Name = "LTotal"
-        Me.LTotal.Size = New System.Drawing.Size(102, 37)
+        Me.LTotal.Size = New System.Drawing.Size(136, 46)
         Me.LTotal.TabIndex = 103
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(534, 292)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(712, 359)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 37)
+        Me.Label1.Size = New System.Drawing.Size(221, 46)
         Me.Label1.TabIndex = 102
         Me.Label1.Text = "Ventas Netas: $"
         '
         'Reportes30dias
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(938, 533)
+        Me.ClientSize = New System.Drawing.Size(1251, 656)
         Me.Controls.Add(Me.LTotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TabControl)
@@ -311,6 +310,7 @@ Partial Class Reportes30dias
         Me.Controls.Add(Me.dgvVentasNetas)
         Me.Controls.Add(Me.ChartGrafico)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Reportes30dias"
         Me.Text = "Reportes30dias"
         Me.TabControl.ResumeLayout(False)

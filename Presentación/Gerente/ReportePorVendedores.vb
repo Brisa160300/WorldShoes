@@ -40,7 +40,7 @@ Public Class ReportePorVendedores
 
 
     Private Sub cargarGridVentasPorFechas(desde As Date, hasta As Date)
-        cmd = New SqlCommand("VentasPorVendedorFiltradoPorFecha", conexion)
+        cmd = New SqlCommand("VentasPorVendedorFiltradoPorFecha2", conexion)
         cmd.CommandType = CommandType.StoredProcedure
         cmd.Parameters.AddWithValue("@min", desde)
         cmd.Parameters.AddWithValue("@max", hasta)
@@ -57,7 +57,6 @@ Public Class ReportePorVendedores
     End Sub
 
     Private Sub CPeriodo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBPeriodo.SelectedIndexChanged
-        MsgBox(CBPeriodo.SelectedIndex.ToString)
         Dim elec As Integer = CInt(CBPeriodo.SelectedIndex.ToString)
         Dim fecDesde As Date
         Dim fecHasta As Date = Date.Today
@@ -70,18 +69,17 @@ Public Class ReportePorVendedores
             ElseIf numdia = 3 Then
                 fecDesde = fecHasta.AddDays(-3)
             ElseIf numdia = 4 Then
-                MsgBox("jueves")
                 fecDesde = fecHasta.AddDays(-4)
             ElseIf numdia = 5 Then
                 fecDesde = fecHasta.AddDays(-5)
             End If
+            cargarGridVentasPorFechas(fecDesde, fecHasta)
         End If
         If elec = 1 Then
             fecDesde = PrimerDiaDelMes(fecHasta)
             cargarGridVentasPorFechas(fecDesde, fecHasta)
         End If
         If elec = 2 Then
-            fecDesde = PrimerDiaDelMes(fecHasta.AddMonths(-2))
             cargarGridVentasPorFechas(fecDesde, fecHasta.AddDays(1))
         End If
     End Sub
@@ -92,5 +90,6 @@ Public Class ReportePorVendedores
 
     Private Sub ReportePorVendedores_DoubleClick(sender As Object, e As EventArgs) Handles MyBase.DoubleClick
         cargarGridVentas()
+        CBPeriodo.ResetText()
     End Sub
 End Class

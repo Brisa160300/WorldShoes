@@ -19,7 +19,7 @@
         End If
         LTotal.Text = total
         Dim ii = 1
-        While ii <= DateTime.DaysInMonth(desde.Year, desde.Month) - 1
+        While ii <= DateDiff(DateInterval.Day, desde, hasta)
 
             ventasfechas(desde.AddDays(ii -1), ii)
             ii = ii + 1
